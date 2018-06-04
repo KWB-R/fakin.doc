@@ -8,7 +8,7 @@ bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: kwb-r/fakin.doc
-url: 'https://kwb-r.github.io/fakin.doc'
+url: 'https\://kwb-r.github.io/fakin.doc'
 description: "FAKIN Projektdokumentation"
 ---
 

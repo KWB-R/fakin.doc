@@ -1,5 +1,4 @@
 book_filename: "fakin_documentation"
 chapter_name: "Kapitel "
-repo: https://github.com/kwb-r/fakin.doc/
+repo: https://github.com/kwb-r/fakin.doc
 output_dir: docs
-
