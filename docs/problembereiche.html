@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="fallbeispiele.html">
+<link rel="prev" href="projektbausteine.html">
+<link rel="next" href="part-1.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -157,22 +157,85 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">FAKIN Documentation Index</h1>
-<h4 class="author"><em>Hauke Sonnenberg</em></h4>
-<h4 class="date"><em>2018-06-04</em></h4>
+<div id="problembereiche" class="section level1">
+<h1><span class="header-section-number">Kapitel 4</span> Problembereiche</h1>
+<div id="zeitstempel" class="section level2">
+<h2><span class="header-section-number">4.1</span> Zeitstempel</h2>
+<p><strong>Frage:</strong></p>
+<p>Wie stellen wir die Messgeräte ein? Sollen sie die Uhr automatisch umstellen oder nicht?</p>
+<p><strong>Diskussion:</strong></p>
+<p>Aus Sicht der Datenverarbeitung bereitet uns die Umstellung von Winterzeit (= Normalzeit) auf Sommerzeit und von Sommerzeit auf Winterzeit immer wieder Schwierigkeiten. Warum?</p>
+<p><strong>Umstellung von Winterzeit auf Sommerzeit</strong></p>
+<p>Die Uhr wird um eine Stunde von 02:00 CET (<em>Central European Time</em>) auf 03:00 CEST (<em>Central European Summer Time</em>) <strong>vorgestellt</strong>. Merke: Die Stühle eines Cafés werden <strong>vor</strong> den Laden gestellt.</p>
+<p>In einer Zeitreihe ergibt sich daraus am Tag der Zeitumstellung (z.B. am 25.03.2018) eine Lücke in den Zeitstempeln:</p>
+<pre><code>2018-03-25 01:45:00 CET
+2018-03-25 01:50:00 CET
+2018-03-25 01:55:00 CET
+2018-03-25 03:00:00 CEST
+2018-03-25 03:05:00 CEST
+2018-03-25 03:10:00 CEST</code></pre>
+<p>Wenn die als Text vorliegenden Zeitstempel in einen numerischen Zeitstempel umgewandelt werden, gibt es, auch wenn die Angabe <code>CET</code> oder <code>CEST</code> fehlt, im Grunde kein Problem, da sie eindeutig sind. Voraussetzung ist, dass bei der Umwandlung angegeben wird, dass diese Zeitstempel in der Zeitzone “Europe/Berlin” (in der es Sommer- und Winterzeit gibt) aufgenommen wurden.</p>
+<p>In der Programmiersprache R ist das auf unseren Rechnern das Standardverhalten, da die Zeitzone vom Betriebssystem abgefragt wird:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">as.POSIXct</span>(<span class="st">&quot;2018-03-25 01:55:00&quot;</span>)
+## [1] &quot;2018-03-25 01:55:00 CET&quot;
+<span class="kw">as.POSIXct</span>(<span class="st">&quot;2018-03-25 03:00:00&quot;</span>)
+## [1] &quot;2018-03-25 03:00:00 CEST&quot;</code></pre></div>
+<p>Interessant an dieser Stelle ist das Verhalten, wenn ein Zeitstempel, der in der Zeitzone “Europe/Berlin” nicht existiert, angegeben wird:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">as.POSIXct</span>(<span class="st">&quot;2018-03-25 02:30:00&quot;</span>)
+## [1] &quot;2018-03-25 01:30:00 CET&quot;</code></pre></div>
+<p>Leider tritt an dieser Stelle kein Fehler auf!</p>
+<p><strong>Umstellung von Sommerzeit auf Winterzeit</strong></p>
+<p>Die Uhr wird um 03:00 CEST wieder um eine Stunde auf die Normalzeit 02:00 CET <strong>zurückgestellt</strong>. Merke: Die Stühle werden wieder in den Laden <strong>zurück</strong> gestellt.</p>
+<p>In einer Zeitreihe ergeben sich daraus am Tag der Zeitumstellung (z.B. am 28.10.2018) Duplikate in den Zeitstempeln:</p>
+<pre><code>2018-10-28 02:15:00 CEST
+2018-10-28 02:30:00 CEST
+2018-10-28 02:45:00 CEST
+2018-10-28 02:00:00 CET
+2018-10-28 02:15:00 CET
+2018-10-28 02:30:00 CET </code></pre>
+<p>Ohne die Information <code>CEST</code> bzw. <code>CEST</code> sind die Zeitstempel (für sich genommen) nicht eindeutig. In Dateien, die wir von den BWB bekommen (z.B. Regendaten) würden die Zeitstempel zum Beispiel in dieser Form vorkommen:</p>
+<pre><code>28.10.2018 02:15:00
+28.10.2018 02:30:00
+28.10.2018 02:45:00
+28.10.2018 02:00:00
+28.10.2018 02:15:00
+28.10.2018 02:30:00</code></pre>
+<p>Erst aus der Reihenfolge (erstes Auftreten ist CEST, zweites Auftreten ist CET) lässt sich die Zuordnung rekonstruieren. Dies müssen wir beachten, wenn wir die Daten bearbeiten und ich denke, dass wir dies in den seltensten Fällen tun!</p>
+<p>Wir sollten eine einheitliche, eindeutige Vorgehensweise entwickeln.</p>
+<p><strong>TODO:</strong> Ggf. weitere Beschreibungen in R-Workshop, den ich mal gegeben habe…</p>
+<p><strong>Vorschlag:</strong></p>
+<ul>
+<li>Nach Möglichkeit die Messgeräte so einstellen, dass der ausgegebene Zeitstempel den UTC-Offset enthält. Am besten wäre ein Zeitstempel in einem Format, das die Differenz gegenüber <em>Greenich Mean Time (GMT)</em> bzw. <em>Coordinated Universal Time (UTC)</em> enthält, wie wir es ggf. aus unseren E-Mail-Programmen oder Terminkalendern kennen: <code>2018-06-01 23:18 GMT+02:00</code>.</li>
+<li>Manchmal gibt es auch die Möglichkeit, dass zusätzlich zum lokalen Zeitstempel der UTC-Offset (+01 im Winter und +02 im Sommer) als extra Spalte ausgegeben wird. Von dieser Möglichkeit sollte dann Gebrauch gemacht werden.</li>
+<li>Ansonsten die Geräte so einstellen, dass sie die Zeitumstellung nicht mitmachen (also immer die Normalzeit, also Winterzeit aufzeichnen). Dann sind die Zeitstempel eindeutig. Aufzupassen ist dann allerdings bei der Verarbeitung und Interpretation der Daten, dazu mehr unter <a href="projektbausteine.html#datenimport">Datenimport</a></li>
+</ul>
+<p><strong>Werkzeuge:</strong></p>
+<p>KWB-eigenes R-Paket <a href="https://kwb-r.github.io/kwb.datetime/dev"><code>kwb.datetime</code></a>. Dieses enthält unter anderem die Funktionen</p>
+<ul>
+<li><a href="https://kwb-r.github.io/kwb.datetime/dev/reference/date_range_CEST.html"><code>date_range_CEST()</code></a> zur Ermittlung der Tage, an denen die Zeitumstellung stattfindet.</li>
+<li><strong>TODO:</strong> Wichtigste Funktionen (z.B. zur Ermittlung der vollständigen Zeitstempel inklusive UTC-Offset aus fortlaufenden lokalen Zeitstempeln) dokumentieren und hier referenzieren. Oder welche Pakete sollten wir benutzen? Was bietet z.B. <code>lubridate</code>? Es scheint mir allerdings, dass unsere Problematik im WWW etwas unterbeleuchtet ist.</li>
+</ul>
+
 </div>
-<div id="einfuhrung" class="section level1">
-<h1><span class="header-section-number">Kapitel 1</span> Einführung</h1>
-<p>Hier wollen wir die Ergebnisse unseres Forschungsprojekts FAKIN (Forschungsdatenmanagement an kleinen Instituten) veröffentlichen.</p>
+</div>
+
+
+
+<li><a href="part-1.html#part-1">Part I: Motivation or “Why should I use R”?</a></li>
+<li><a href="part-2.html#part-2">Part II: Writing functions, documentation, packages</a></li>
+<li><a href="part-3.html#part-3">Part III: Database Access conventional and with package “kwb.base”</a></li>
+</ul>
+<p>Everything behind the <code>#</code> character is treated as a comment and not considered as R code.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Set working directory </span>
+wdir &lt;-<span class="st"> &quot;~/R-Development_SVN/RTraining/2012_01_17_Workshop/&quot;</span></code></pre></div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="fallbeispiele.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="projektbausteine.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="part-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

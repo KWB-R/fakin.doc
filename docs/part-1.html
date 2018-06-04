@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="fallbeispiele.html">
+<link rel="prev" href="problembereiche.html">
+<link rel="next" href="part-2.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -157,22 +157,130 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">FAKIN Documentation Index</h1>
-<h4 class="author"><em>Hauke Sonnenberg</em></h4>
-<h4 class="date"><em>2018-06-04</em></h4>
+<div id="part-1" class="section level1">
+<h1><span class="header-section-number">Kapitel 5</span> Motivation or “Why should I use R”?</h1>
+<ol style="list-style-type: decimal">
+<li><a href="part-1.html#large-datasets">R is able to handle large data sets.</a></li>
+<li><a href="part-1.html#vector-calculation">R uses vector calculation</a> instead of
+<ul>
+<li>copying a formula (Excel)</li>
+<li>loops (other programming languages) –&gt; clear code, less error-prone</li>
+</ul></li>
+<li><a href="part-1.html#easy-subsetting">Easy sub-setting, filtering of data sets</a></li>
+<li><a href="part-1.html#plotting">Easy, nice plotting</a></li>
+<li><a href="part-1.html#statistics">Statistics</a> (should be number one of this ranking but I did not yet use statistics much.)</li>
+</ol>
+<div id="large-datasets" class="section level2">
+<h2><span class="header-section-number">5.1</span> Large Data Sets</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Create a large matrix with 10 rows and 300 columns</span>
+mtx &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">rnorm</span>(<span class="dv">3000</span>, <span class="dv">50</span>), <span class="dt">ncol =</span> <span class="dv">300</span>)
+
+<span class="co"># Create a data frame</span>
+dfr &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dt">y =</span> mtx)
+
+<span class="co"># Define the path to a CSV file</span>
+file &lt;-<span class="st"> </span><span class="kw">file.path</span>(wdir, <span class="st">&quot;fields_300.csv&quot;</span>)
+
+<span class="co"># Write the data to the file</span>
+<span class="kw">write.table</span>(dfr, file, <span class="dt">sep =</span> <span class="st">&quot;;&quot;</span>, <span class="dt">row.names =</span> <span class="ot">FALSE</span>)
+
+<span class="co"># Read back the first lines of the file (shortened to 60 characters)</span>
+<span class="kw">substr</span>(<span class="kw">readLines</span>(file, <span class="dv">5</span>), <span class="dv">1</span>, <span class="dv">60</span>)</code></pre></div>
+<pre><code>## [1] &quot;\&quot;x\&quot;;\&quot;y.1\&quot;;\&quot;y.2\&quot;;\&quot;y.3\&quot;;\&quot;y.4\&quot;;\&quot;y.5\&quot;;\&quot;y.6\&quot;;\&quot;y.7\&quot;;\&quot;y.8\&quot;;\&quot;y.9\&quot;;\&quot;y&quot;
+## [2] &quot;1;51.1394540262207;50.1564099398422;51.0456277985896;50.6142&quot;                     
+## [3] &quot;2;47.8490299446612;48.9905449608972;49.3850362910198;50.0575&quot;                     
+## [4] &quot;3;49.9796819169502;50.0267676249016;50.5965566619536;51.3675&quot;                     
+## [5] &quot;4;49.7687479612058;51.23973158636;49.2302774230553;50.430821&quot;</code></pre>
 </div>
-<div id="einfuhrung" class="section level1">
-<h1><span class="header-section-number">Kapitel 1</span> Einführung</h1>
-<p>Hier wollen wir die Ergebnisse unseres Forschungsprojekts FAKIN (Forschungsdatenmanagement an kleinen Instituten) veröffentlichen.</p>
+<div id="vector-calculation" class="section level2">
+<h2><span class="header-section-number">5.2</span> Vector calculation</h2>
+<p>This is a real strength of R!</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Simple: create a sequence of numbers 1:20</span>
+<span class="dv">1</span><span class="op">:</span><span class="dv">20</span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20</code></pre>
+<p>Is there an Excel equivalent? …</p>
+<p>Ok, “easy” also in Excel.</p>
+<p>What about the following?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">100000</span>
+
+<span class="kw">head</span>(x)</code></pre></div>
+<pre><code>## [1] 1 2 3 4 5 6</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tail</span>(x)</code></pre></div>
+<pre><code>## [1]  99995  99996  99997  99998  99999 100000</code></pre>
+<p>Is there an Excel equivalent? … ???</p>
+<ol style="list-style-type: decimal">
+<li>Slower (is there a fast method to do?)</li>
+<li>limit at 65536</li>
+</ol>
+<p>But look, Excel (version 2010) shows the number of values, mean and sum!</p>
+<p>In R, we can do the same, using the functions <code>length()</code>, <code>mean()</code>, and <code>sum()</code>, respectively:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rng &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">65536</span>
+
+<span class="kw">length</span>(rng)</code></pre></div>
+<pre><code>## [1] 65536</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(rng)</code></pre></div>
+<pre><code>## [1] 32768.5</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(rng) <span class="co"># [1] NA</span></code></pre></div>
+<pre><code>## Warning in sum(rng): Integer-Überlauf - nutze sum(as.numeric(.))</code></pre>
+<pre><code>## [1] NA</code></pre>
+<p>What’s up, R, are you losing?</p>
+<p>But look, R speaks to you (see the warning above). Does Excel speak to you? R tells us what to do. So let’s do, what R proposes:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="kw">as.numeric</span>(rng)) <span class="co"># [1] 2147516416</span></code></pre></div>
+<pre><code>## [1] 2147516416</code></pre>
+<p>Aha, like that it works!</p>
+<p>Let’s say it’s a draw - as you want…</p>
+<p>What about the sum of elements 1, 3, 5, …, 65536?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">65535</span>, <span class="dt">by =</span> <span class="dv">2</span>)) <span class="co"># 1073741824</span></code></pre></div>
+<pre><code>## [1] 1073741824</code></pre>
+<p>The same in Excel?</p>
+<p>Not so easy, but possible.</p>
+<p>Again, what happens if by mistake I delete/change numbers in between?</p>
+<p>Multiply the whole column with 1000, e.g. for unit conversion</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rng1000 &lt;-<span class="st"> </span>rng <span class="op">*</span><span class="st"> </span><span class="dv">1000</span></code></pre></div>
+<p>What about multiplying only every second number with 1000?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rng1000.<span class="dv">2</span> &lt;-<span class="st"> </span>rng
+indices &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">65535</span>, <span class="dt">by =</span> <span class="dv">2</span>) 
+rng1000.<span class="dv">2</span>[indices] &lt;-<span class="st"> </span>rng[indices] <span class="op">*</span><span class="st"> </span><span class="dv">1000</span></code></pre></div>
+<p>This is even possible in Excel…</p>
+<p>But again: every cell could contain a different formula…</p>
+</div>
+<div id="easy-subsetting" class="section level2">
+<h2><span class="header-section-number">5.3</span> Easy sub-setting, filtering of data sets</h2>
+</div>
+<div id="statistics" class="section level2">
+<h2><span class="header-section-number">5.4</span> Statistics</h2>
+</div>
+<div id="timestamps" class="section level2">
+<h2><span class="header-section-number">5.5</span> Timestamps</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># As easy it is possible to create vectors of timestamps, e.g.</span>
+t1 &lt;-<span class="st"> </span><span class="kw">as.POSIXct</span>(<span class="st">&quot;2010-01-01&quot;</span>, <span class="dt">tz =</span> <span class="st">&quot;UTC&quot;</span>)
+t2 &lt;-<span class="st"> </span><span class="kw">as.POSIXct</span>(<span class="st">&quot;2011-01-01&quot;</span>, <span class="dt">tz =</span> <span class="st">&quot;UTC&quot;</span>)
+tstamps &lt;-<span class="st"> </span><span class="kw">seq</span>(t1, t2, <span class="dt">by =</span> <span class="st">&quot;60 min&quot;</span>)
+
+<span class="co"># How many timestamps did we get?</span>
+<span class="kw">length</span>(tstamps) <span class="co"># 8761</span></code></pre></div>
+<pre><code>## [1] 8761</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># What number did we expect?</span>
+<span class="dv">365</span> <span class="op">*</span><span class="st"> </span><span class="dv">24</span> <span class="co"># 105120</span></code></pre></div>
+<pre><code>## [1] 8760</code></pre>
+<p>Who wants to explain the difference of one?</p>
+<p>Let’s write the timestamps to a database table, together with random numbers, normally distributed around 100 with a standard deviation of 40</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dt">n =</span> <span class="kw">length</span>(tstamps), <span class="dt">mean =</span> <span class="dv">100</span>, <span class="dt">sd =</span> <span class="dv">40</span>)</code></pre></div>
+</div>
+<div id="plotting" class="section level2">
+<h2><span class="header-section-number">5.6</span> Easy, nice plotting</h2>
+<p>Let’s have a look at the distribution</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(x)</code></pre></div>
+<p><img src="fakin_documentation_files/figure-html/eval-1.png" width="672" /></p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="fallbeispiele.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="problembereiche.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="part-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="fallbeispiele.html">
+<link rel="prev" href="part-1.html">
+<link rel="next" href="part-3.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -157,22 +157,39 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">FAKIN Documentation Index</h1>
-<h4 class="author"><em>Hauke Sonnenberg</em></h4>
-<h4 class="date"><em>2018-06-04</em></h4>
-</div>
-<div id="einfuhrung" class="section level1">
-<h1><span class="header-section-number">Kapitel 1</span> Einführung</h1>
-<p>Hier wollen wir die Ergebnisse unseres Forschungsprojekts FAKIN (Forschungsdatenmanagement an kleinen Instituten) veröffentlichen.</p>
+<div id="part-2" class="section level1">
+<h1><span class="header-section-number">Kapitel 6</span> Writing functions, documentation, packages</h1>
+<p>Example from MIA-CSO project: How big are InfoWorks simulation result files to be expected?</p>
+<p>E.g. simulation of one year in 5 minutes result timestep with a timestamp column of format “dd/mm/yyyy HH:MM:SS” and 20 data columns of 10 characters size each?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#bytesRow &lt;- (colWidth + 1) * colNum + nchar(tsFormat) + 21 + 2</span>
+<span class="co">#nRows &lt;- nDays * (24 * 60 * 60)/timestep + 1</span>
+<span class="co">#    nRows * bytesRow + bytesHeader</span>
+
+bytesRow &lt;-<span class="st"> </span>(<span class="dv">10</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span>) <span class="op">*</span><span class="st"> </span><span class="dv">20</span> <span class="op">+</span><span class="st"> </span><span class="kw">nchar</span>(<span class="st">&quot;dd/mm/yyyy HH:MM:SS&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="dv">21</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span>
+nRows &lt;-<span class="st"> </span><span class="dv">365</span> <span class="op">*</span><span class="st"> </span>(<span class="dv">24</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span>)<span class="op">/</span><span class="dv">300</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span>
+nRows <span class="op">*</span><span class="st"> </span>bytesRow <span class="op">+</span><span class="st"> </span>bytesRow <span class="co"># assuming bytesRow for header row</span>
+
+nRows &lt;-<span class="st"> </span><span class="dv">365</span> <span class="op">*</span><span class="st"> </span><span class="dv">24</span> <span class="op">*</span><span class="st"> </span><span class="dv">12</span>
+bytesFile &lt;-<span class="st"> </span>nRows <span class="op">*</span><span class="st"> </span>bytesRow
+bytesFile
+
+<span class="co"># MBytes?</span>
+bytesFile <span class="op">/</span><span class="st"> </span>(<span class="dv">1024</span><span class="op">*</span><span class="dv">1024</span>) <span class="co">#  23.15781 </span></code></pre></div>
+<p>Do you want to check this with the windows calculator…?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system</span>(<span class="st">&quot;calc&quot;</span>)</code></pre></div>
+<p>Same result. So, what is the advantage of using R?</p>
+<ul>
+<li>We are able to store the results in variables with the arrow operator “&lt;-”</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">spd &lt;-<span class="st"> </span><span class="dv">60</span> <span class="op">*</span><span class="st"> </span><span class="dv">24</span> <span class="op">*</span><span class="st"> </span><span class="dv">24</span> <span class="co"># seconds per day</span></code></pre></div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="fallbeispiele.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="part-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="part-3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
