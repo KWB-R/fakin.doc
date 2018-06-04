@@ -1,0 +1,36 @@
+---
+title: "FAKIN Documentation Index"
+author: "Hauke Sonnenberg"
+date: "2018-06-04"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: kwb-r/fakin.doc
+url: 'https://kwb-r.github.io/fakin.doc'
+description: "FAKIN Projektdokumentation"
+---
+
+# Einführung
+
+Hier wollen wir die Ergebnisse unseres Forschungsprojekts FAKIN 
+(Forschungsdatenmanagement an kleinen Instituten) veröffentlichen.
+
+## Fallbeispiele
+
+Da wir viele, zum Teil ganz unterschiedliche Projekte bearbeiten, sind auch 
+unterschiedliche Bereiche des Forschungsdatenmanagements betroffen.
+
+Wir wollen hier zunächst versuchen, Fallbeispiele herauszuarbeiten, in die sich
+die verschiedenen Projekte einordnen lassen. Für jedes Fallbeispiel wollen wir
+dann Gemeinsamkeiten in Bezug auf Anforderungen und Problemstellungen
+herausarbeiten und für diese dann Lösungen entwickeln. Diese Lösungen sollen 
+dann in zukünftigen Projekten, die sich den jeweiligen Fallbeispielen 
+zuordnen lassen, angewendet werden.
+
+### Fallbeispiel: Monitoring
+
+### Fallbeispiel: Kanalnetzmodellierung
+
+### Fallbeispiel: LCA (Life Cycle Assessment = Lebenszyklusbewertung)
