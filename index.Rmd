@@ -165,28 +165,29 @@ Wir sollten eine einheitliche, eindeutige Vorgehensweise entwickeln.
 
 - Nach Möglichkeit die Messgeräte so einstellen, dass der ausgegebene 
   Zeitstempel den UTC-Offset enthält. Am besten wäre ein Zeitstempel in einem
-  Format, das die Differenz gegenüber *Greenich Mean Time (GMT)* bzw. 
+  Format, das die Differenz gegenüber *Greenwich Mean Time (GMT)* bzw. 
   *Coordinated Universal Time (UTC)* enthält, wie wir es ggf. aus unseren 
   E-Mail-Programmen oder Terminkalendern kennen: `2018-06-01 23:18 GMT+02:00`.
 - Manchmal gibt es auch die Möglichkeit, dass zusätzlich zum lokalen Zeitstempel
   der UTC-Offset (+01 im Winter und +02 im Sommer) als extra Spalte ausgegeben 
   wird. Von dieser Möglichkeit sollte dann Gebrauch gemacht werden.
-- Ansonsten die Geräte so einstellen, dass sie die Zeitumstellung nicht 
-  mitmachen (also immer die Normalzeit, also Winterzeit aufzeichnen). Dann sind 
-  die Zeitstempel eindeutig. Aufzupassen ist dann allerdings bei der 
-  Verarbeitung und Interpretation der Daten, dazu mehr unter 
+- Ansonsten empfehlen wir, die Geräte so einzustellen, dass sie die 
+  Zeitumstellung nicht mitmachen (also immer die Normalzeit, also Winterzeit,
+  aufzeichnen). Dann sind die Zeitstempel eindeutig. Aufzupassen ist dann 
+  allerdings bei der Verarbeitung und Interpretation der Daten, dazu mehr unter 
   [Datenimport](#datenimport)
 
 **Werkzeuge:**
 
-KWB-eigenes R-Paket [`kwb.datetime`](https://kwb-r.github.io/kwb.datetime/dev). 
-Dieses enthält unter anderem die Funktionen
+* KWB-eigenes R-Paket [`kwb.datetime`](https://kwb-r.github.io/kwb.datetime/dev). 
+  Dieses enthält unter anderem die Funktionen
+    * [`date_range_CEST()`](https://kwb-r.github.io/kwb.datetime/dev/reference/date_range_CEST.html) zur Ermittlung der Tage, an denen die Zeitumstellung stattfindet.
 
-- [`date_range_CEST()`](https://kwb-r.github.io/kwb.datetime/dev/reference/date_range_CEST.html)
-  zur Ermittlung der Tage, an denen die Zeitumstellung stattfindet.
-- **TODO:** Wichtigste Funktionen (z.B. zur Ermittlung der vollständigen 
-  Zeitstempel inklusive UTC-Offset aus fortlaufenden lokalen Zeitstempeln)
-  dokumentieren und hier referenzieren. Oder welche Pakete sollten wir benutzen?
-  Was bietet z.B. `lubridate`? Es scheint mir allerdings, dass unsere 
-  Problematik im WWW etwas unterbeleuchtet ist. 
-  
+**TODO:** 
+
+* Wichtigste Funktionen des Pakets `kwb.datetime`(z.B. zur Ermittlung 
+  der vollständigen Zeitstempel inklusive UTC-Offset aus fortlaufenden lokalen
+  Zeitstempeln) dokumentieren und hier referenzieren. 
+* Sollten wir andere Pakete benutzen und wenn ja, welche? Was bietet z.B. 
+  `lubridate`? Es scheint mir allerdings, dass unsere Problematik im WWW etwas
+  unterbeleuchtet ist. 
