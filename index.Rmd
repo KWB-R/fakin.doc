@@ -29,8 +29,51 @@ herausarbeiten und für diese dann Lösungen entwickeln. Diese Lösungen sollen
 dann in zukünftigen Projekten, die sich den jeweiligen Fallbeispielen 
 zuordnen lassen, angewendet werden.
 
-### Fallbeispiel: Monitoring
+## Projektbausteine
 
-### Fallbeispiel: Kanalnetzmodellierung
+Wir können "Projektbausteine" definieren, die in verschiedenen Projekten
+vorkommen. Diese werden im Folgenden einzeln betrachtet.
+
+### Monitoring
+
+In vielen Projekten führen wir eigene Messungen durch. Dazu verwenden wir 
+eigene Messgeräte.
+
+Problemstellungen:
+
+* verschiedene Geräte verschiedener Hersteller -> verschiedene, meist nicht
+  standardisierte Dateiformate
+* Zeitstempel der Messung
+    + Stellt das Gerät auf Sommerzeit um? 
+    -> [Problembereich Zeitstempel](#zeitstempel)
+    + Geht die interne Uhr immer richtig? Wie gewährleiste ich das?
+
+Beispielprojekte:
+
+- MIACSO
+- KURAS
+- Flusshygiene
+
+### Kanalnetzmodellierung
+
+Beispielprojekte:
+
+- MIACSO
+- KURAS
+- Flusshygiene
 
 ### Fallbeispiel: LCA (Life Cycle Assessment = Lebenszyklusbewertung)
+
+## Problembereiche
+
+### Zeitstempel {#zeitstempel}
+
+Frage:
+
+Wie stellen wir die Messgeraete ein? Sollen sie die Uhr automatisch umstellen 
+oder nicht?
+
+Diskussion:
+
+Vorschlag:
+
