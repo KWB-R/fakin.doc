@@ -71,7 +71,8 @@
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="#projektbausteine"><i class="fa fa-check"></i><b>1.2</b> Projektbausteine</a><ul>
 <li class="chapter" data-level="1.2.1" data-path="index.html"><a href="#monitoring"><i class="fa fa-check"></i><b>1.2.1</b> Monitoring</a></li>
 <li class="chapter" data-level="1.2.2" data-path="index.html"><a href="#kanalnetzmodellierung"><i class="fa fa-check"></i><b>1.2.2</b> Kanalnetzmodellierung</a></li>
-<li class="chapter" data-level="1.2.3" data-path="index.html"><a href="#fallbeispiel-lca-life-cycle-assessment-lebenszyklusbewertung"><i class="fa fa-check"></i><b>1.2.3</b> Fallbeispiel: LCA (Life Cycle Assessment = Lebenszyklusbewertung)</a></li>
+<li class="chapter" data-level="1.2.3" data-path="index.html"><a href="#datenimport"><i class="fa fa-check"></i><b>1.2.3</b> Datenimport</a></li>
+<li class="chapter" data-level="1.2.4" data-path="index.html"><a href="#fallbeispiel-lca-life-cycle-assessment-lebenszyklusbewertung"><i class="fa fa-check"></i><b>1.2.4</b> Fallbeispiel: LCA (Life Cycle Assessment = Lebenszyklusbewertung)</a></li>
 </ul></li>
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="#problembereiche"><i class="fa fa-check"></i><b>1.3</b> Problembereiche</a><ul>
 <li class="chapter" data-level="1.3.1" data-path="index.html"><a href="#zeitstempel"><i class="fa fa-check"></i><b>1.3.1</b> Zeitstempel</a></li>
@@ -141,18 +142,52 @@
 <li>Flusshygiene</li>
 </ul>
 </div>
+<div id="datenimport" class="section level3">
+<h3><span class="header-section-number">1.2.3</span> Datenimport</h3>
+</div>
 <div id="fallbeispiel-lca-life-cycle-assessment-lebenszyklusbewertung" class="section level3">
-<h3><span class="header-section-number">1.2.3</span> Fallbeispiel: LCA (Life Cycle Assessment = Lebenszyklusbewertung)</h3>
+<h3><span class="header-section-number">1.2.4</span> Fallbeispiel: LCA (Life Cycle Assessment = Lebenszyklusbewertung)</h3>
 </div>
 </div>
 <div id="problembereiche" class="section level2">
 <h2><span class="header-section-number">1.3</span> Problembereiche</h2>
 <div id="zeitstempel" class="section level3">
 <h3><span class="header-section-number">1.3.1</span> Zeitstempel</h3>
-<p>Frage:</p>
-<p>Wie stellen wir die Messgeraete ein? Sollen sie die Uhr automatisch umstellen oder nicht?</p>
-<p>Diskussion:</p>
-<p>Vorschlag:</p>
+<p><strong>Frage:</strong></p>
+<p>Wie stellen wir die Messgeräte ein? Sollen sie die Uhr automatisch umstellen oder nicht?</p>
+<p><strong>Diskussion:</strong></p>
+<p>Aus Sicht der Datenverarbeitung bereitet uns die Umstellung von Winterzeit (= Normalzeit) auf Sommerzeit und von Sommerzeit auf Winterzeit immer wieder Schwierigkeiten. Warum?</p>
+<p><strong>Umstellung von Winterzeit auf Sommerzeit</strong></p>
+<p>Die Uhr wird um eine Stunde von 02:00 CET (<em>Central European Time</em>) auf 03:00 CEST (<em>Central European Summer Time</em>) <strong>vorgestellt</strong>. Merke: Die Stühle eines Cafés werden <strong>vor</strong> den Laden gestellt.</p>
+<p>In einer Zeitreihe ergibt sich daraus am Tag der Zeitumstellung (z.B. am 25.03.2018) eine Lücke in den Zeitstempeln:</p>
+<pre><code>2018-03-25 01:45:00 CET
+2018-03-25 01:50:00 CET
+2018-03-25 01:55:00 CET
+2018-03-25 03:00:00 CEST
+2018-03-25 03:05:00 CEST
+2018-03-25 03:10:00 CEST</code></pre>
+<p><strong>Umstellung von Sommerzeit auf Winterzeit</strong></p>
+<p>Die Uhr wird um 03:00 CEST wieder um eine Stunde auf die Normalzeit 02:00 CET <strong>zurückgestellt</strong>. Merke: Die Stühle werden wieder in den Laden <strong>zurück</strong> gestellt.</p>
+<p>In einer Zeitreihe ergeben sich daraus am Tag der Zeitumstellung (z.B. am 28.10.2018) Duplikate in den Zeitstempeln:</p>
+<pre><code>2018-10-28 02:15:00 CEST
+2018-10-28 02:30:00 CEST
+2018-10-28 02:45:00 CEST
+2018-10-28 02:00:00 CET
+2018-10-28 02:15:00 CET
+2018-10-28 02:30:00 CET </code></pre>
+<p><strong>TODO:</strong> Ggf. weitere Beschreibungen in R-Workshop, den ich mal gegeben habe…</p>
+<p><strong>Vorschlag:</strong></p>
+<ul>
+<li>Nach Möglichkeit die Messgeräte so einstellen, dass der ausgegebene Zeitstempel den UTC-Offset enthält. Am besten wäre ein Zeitstempel in einem Format, das die Differenz gegenüber <em>Greenich Mean Time (GMT)</em> bzw. <em>Coordinated Universal Time (UTC)</em> enthält, wie wir es ggf. aus unseren E-Mail-Programmen oder Terminkalendern kennen: <code>2018-06-01 23:18 GMT+02:00</code>.</li>
+<li>Manchmal gibt es auch die Möglichkeit, dass zusätzlich zum lokalen Zeitstempel der UTC-Offset (+01 im Winter und +02 im Sommer) als extra Spalte ausgegeben werden kann. Von dieser Möglichkeit sollte dann Gebrauch gemacht werden.</li>
+<li>Ansonsten die Geräte so einstellen, dass sie die Zeitumstellung nicht mitmachen (also immer die Normalzeit, also Winterzeit aufzeichnen). Dann sind die Zeitstempel eindeutig. Aufzupassen ist dann allerdings bei der Verarbeitung und Interpretation der Daten, dazu mehr unter <a href="#datenimport">Datenimport</a></li>
+</ul>
+<p><strong>Werkzeuge:</strong></p>
+<p>KWB-eigenes R-Paket <a href="https://kwb-r.github.io/kwb.datetime/dev"><code>kwb.datetime</code></a>. Dieses enthält unter anderem die Funktionen</p>
+<ul>
+<li><a href="https://kwb-r.github.io/kwb.datetime/dev/reference/date_range_CEST.html"><code>date_range_CEST()</code></a> zur Ermittlung der Tage, an denen die Zeitumstellung stattfindet.</li>
+<li><strong>TODO:</strong> Wichtigste Funktionen (z.B. zur Ermittlung der vollständigen Zeitstempel inklusive UTC-Offset aus fortlaufenden lokalen Zeitstempeln) dokumentieren und hier referenzieren. Oder welche Pakete sollten wir benutzen? Was bietet z.B. <code>lubridate</code>? Es scheint mir allerdings, dass unsere Problematik im WWW etwas unterbeleuchtet ist.</li>
+</ul>
 
 </div>
 </div>
