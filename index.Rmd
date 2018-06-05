@@ -1,5 +1,5 @@
 ---
-title: "FAKIN Documentation Index"
+title: "FAKIN Projektdokumentation"
 author: "Hauke Sonnenberg"
 date: "2018-06-04"
 site: bookdown::bookdown_site
@@ -19,17 +19,84 @@ description: "FAKIN Projektdokumentation"
 Hier wollen wir die Ergebnisse unseres Forschungsprojekts FAKIN 
 (Forschungsdatenmanagement an kleinen Instituten) veröffentlichen.
 
-# Fallbeispiele
-
 Da wir viele, zum Teil ganz unterschiedliche Projekte bearbeiten, sind auch 
 unterschiedliche Bereiche des Forschungsdatenmanagements betroffen.
 
 Wir wollen hier zunächst versuchen, Fallbeispiele herauszuarbeiten, in die sich
 die verschiedenen Projekte einordnen lassen. Für jedes Fallbeispiel wollen wir
 dann Gemeinsamkeiten in Bezug auf Anforderungen und Problemstellungen
-herausarbeiten und für diese dann Lösungen entwickeln. Diese Lösungen sollen 
-dann in zukünftigen Projekten, die sich den jeweiligen Fallbeispielen 
-zuordnen lassen, angewendet werden.
+herausarbeiten und für diese dann existierende Lösungen einsammeln oder gezielt
+neue Lösungen entwickeln. Diese Lösungen sollen dann in zukünftigen Projekten, 
+die sich den jeweiligen Fallbeispielen zuordnen lassen, angewendet werden.
+
+Dazu brauchen wir Eure Mitarbeit! Wer kann Beiträge zur Beschreibung von 
+Problemfällen und eigenen Lösungen liefern? 
+
+# Projektbeschreibungen
+
+## Projektgruppen
+
+Nach welchen Kriterien können wir unsere Projekte gruppieren, wie können wir
+sie grob klassifizieren? 
+
+Was folgt daraus in Bezug auf das Datenmanagement? 
+
+Wenn wir Ähnlichkeiten finden, können wir in Zukunft gezielt auf die Lösungen, 
+die in ähnlichen Projekten erzielt (und beschrieben!) wurden, zurückgreifen.
+
+Mögliche Gruppierung nach:
+
+* Abteilung: Grundwasser, Oberflächengewässer und Kanal, Abwasser
+* Finanzierung: Sponsoring, EU-Projekt, BMBF-Projekt, Auftrag
+* Anzahl Partnern: große Projekte mit vielen Partnern, kleine Projekte mit
+wenigen Partnern
+
+Im folgenden fangen wir einfach mal an und versuchen, die Projekte, an denen
+wir mitgearbeitet haben, kurz zu beschreiben und zu charakterisieren. Wenn
+wir im Rahmen der Projekte bestimmte Lösungen erarbeitet haben, beschreiben wir 
+diese kurz unter [Problembereiche](problembereiche) oder 
+[Konkrete Aufgaben und Lösungen](loesungen).
+
+Aufbauend auf dieser ersten Aufstellung von Projekten, Aufgabenbereichen und
+Lösungen wollen wir dann mit Euch zusammen weitere Projekte in die Betrachtung
+mit einbeziehen. Wir wollen gemeinsam die Charakterisierung und Gruppierung 
+und natürlich insbesondere die Aufgabenbeschreibungen und Lösungen erweitern und
+verbessern.
+
+## Projekt: Spree2011 (2007)
+
+* Meine Diplomarbeit
+* eigene Messungen über einen begrenzten Zeitraum
+    + Wasserstand und Durchfluss in einem Kanalschacht -> Text/CSV
+    + Regen -> Text/CSV
+* kontinuierliche Messungen der Berliner Wasserbetriebe
+    + Fördermengen der Pumpwerke
+    + Wasserstände in den Pumpwerken
+    + Regen an benachbarten Regenschreibern
+    
+Aufgaben und angewandte Methoden nach Themen
+
+* Modellierung/Kanalnetz/Kalibrierung:
+
+    + [InfoWorks: Erzeugen von Regen-Inputdateien](#input-infoworks-regen)
+    + [InfoWorks: Erzeugen von Real Time Control (RTC)-Dateien](#input-infoworks-rtc)
+
+Aufgetretene Fragen:
+
+* Wo werden Präsentationen abgelegt?
+* Wo werden die Rohdaten abgelegt? Z.B. Persönlicher Ordner "Diplomarbeit"
+* Worauf beziehen sich die InfoWorks-Zeitstempel? -> 
+Themenbereich [Metadaten](#metadata)
+
+Best of aus meiner persönlichen Logdatei:
+
+>
+
+## Projekt: MIACSO {#miacso}
+
+## Projekt: KURAS {#kuras}
+
+## Projekt: Flusshygiene {#flusshygiene}
 
 # Projektbausteine
 
@@ -41,6 +108,21 @@ vorkommen. Diese werden im Folgenden einzeln betrachtet.
 In vielen Projekten führen wir eigene Messungen durch. Dazu verwenden wir 
 eigene Messgeräte.
 
+In Monitoringprojekten spielen [Metadaten](#metadaten) eine besonders wichtige 
+Rolle. Wir betreiben viele Messgeräte mit Akkus. Der Zeitpunkt des Austauschs
+des Akkus ist eine wichtige Metainformation. Wenn Akkus zu spät gewechselt 
+werden können wichtige Daten verloren gehen bzw. verpasst werden!
+Auch die Reinigung von Messgeräten ist wichtig, z.B. von Sonden mit optischen
+Messfenstern. Diese muss einerseits regelmäßig erfolgen. Andererseits ist es 
+wichtig zu wissen, wann Reinigungen erfolgten, damit Messwerte entsprechend
+interpretiert werden können.
+
+Im Projekt [MIA-CSO](#miacso) haben wir erst angefangen, diese Informationen
+in einer Exceldatei zu erfassen. Angesichts der vielen Messgeräte, Pumpen, 
+Kompressoren und anderer Geräte wurde das aber bald unübersichtlich. 
+Später habe ich eine [MS Access Anwendung](#metadatenbank) dafür entwickelt, 
+die seither in einigen Projekten zum Einsatz kam.
+
 Problemstellungen:
 
 * verschiedene Geräte verschiedener Hersteller -> verschiedene, meist nicht
@@ -50,25 +132,95 @@ Problemstellungen:
     -> [Problembereich Zeitstempel](#zeitstempel)
     + Geht die interne Uhr immer richtig? Wie gewährleiste ich das?
 
-Beispielprojekte:
+Beispielprojekte: [MIACSO](#miacso), [KURAS](kuras), [Flusshygiene](flusshygiene)
 
-- MIACSO
-- KURAS
-- Flusshygiene
+## Kanalnetzmodellierung und -simulation
 
-## Kanalnetzmodellierung
+### Unterthema: Modellkalibrierung
 
-Beispielprojekte:
+Bei der Modellkalibrierung wird versucht, die Modellparameter, die die 
+Abflussbildung auf der Oberfläche beschreiben, so einzustellen, dass die
+simulierten Abflüsse und Wasserstände den gemessenen Abflüssen und Wasserständen
+entspricht. Dazu müssen die gemessenen Regenmengen so aufbereitet werden, dass
+sie in das Modell importiert werden können.
 
-- MIACSO
-- KURAS
-- Flusshygiene
+Siehe
+
+* [InfoWorks: Erzeugen von Regen-Inputdateien](#input-infoworks-regen)
+
+Beispielprojekte: [MIACSO](#miacso), [KURAS](kuras), [Flusshygiene](flusshygiene)
 
 ## Datenimport {#datenimport}
 
-## Fallbeispiel: LCA (Life Cycle Assessment = Lebenszyklusbewertung)
+## LCA
 
-# Problembereiche
+LCA steht für Life Cycle Assessment, bedeutet also soviel wie 
+Lebenszyklusbewertung.
+
+# Problembereiche {#problembereiche}
+
+## Metadaten {#metadaten}
+
+Beispiel:
+
+Wenn wir Zeitreihen von den Beliner Wasserbetrieben bekommen, dann haben diese
+entweder eine Spalte mit Zeitstempeln oder zwei Spalten mit Zeitstempeln, wobei
+die erste den Anfang und die zweite das Ende des Zeitraums enthält, auf den
+sich die Messwerte in der entsprechenden Zeile beziehen. 
+
+Wenn nur eine Spalte Zeitstempel enthält, dann ist nicht klar, ob der 
+Zeitstempel den Anfang oder das Ende (oder gar einen anderen Zeitpunkt 
+innerhalb) des Zeitraums angibt. 
+
+Bei einer Zeitreihe mit fünfminütigen Messwerten, z.B.
+
+```
+Zeit                Wert
+2018-06-05 16:20:00    0
+2018-06-05 16:25:00    1
+2018-06-05 16:30:00    2
+2018-06-05 16:35:00    3
+2018-06-05 16:40:00    4
+```
+ 
+ist nicht klar, ob sich der Wert 1 auf den Zeitraum `16:20 - 16:25` oder auf
+den Zeitraum `16:25 - 16:30` bezieht.
+
+Dies ist ein Beispiel für eine sehr konkrete Metadatenanforderung. An dieser
+Stelle gehen wir meistens von Annahmen aus oder hat jemand von Euch schon mal
+eine Aussage darüber von einem BWB-Mitarbeiter erhalten?
+
+Die Kenntnis über den Bezugspunkt des Zeitstempels ist zum Beispiel wichtig beim
+
+* [Erzeugen von Regen-Inputdateien für die Software InfoWorks](#input-infoworks-regen)
+
+In der obigen Beispielzeitreihe ist auch nicht klar, auf welche Zeitzone sich
+die Zeitstempel beziehen. Die Zeitzone bzw. die Angabe des UTC-Offsets ist eine
+wichtige Metainformation. Am besten wäre es, wenn alle Zeitstempel diese 
+Information enthielten, z.B.
+
+```
+2018-06-05 16:20:00+02
+2018-06-05 16:25:00+02
+```
+
+Dann bräuchte man diese Information nicht extra zu führen. 
+
+Beispiel für Metadaten aus meiner persönlichen Logdatei:
+
+> Regendaten gelesen; ca. 10 Impulse gegen 14:00; Dannecker geschrubbt, 
+> neuer Akku: Batterie defect, alte Batterie drin gelassen, 
+> Daten auslesen nicht möglich; H=55cm
+
+Das müssen wir irgendwie besser hinkriegen, aber wie?
+
+Die Grundlegenden Fragen sind:
+
+- Wer ist für die Ablage von Metadaten verantwortlich?
+- Wo werden die Metadaten abgelegt? Direkt bei den Daten oder in einer 
+übergeordneten Datei/Datenbank?
+- In welchem Format werden die Metadaten abgelegt? Einfaches Textformat vs. 
+XML-Format, das sich wohl einfach nur mit Hilfe eines Programms editieren lässt.
 
 ## Zeitstempel {#zeitstempel}
 
@@ -191,3 +343,111 @@ Wir sollten eine einheitliche, eindeutige Vorgehensweise entwickeln.
 * Sollten wir andere Pakete benutzen und wenn ja, welche? Was bietet z.B. 
   `lubridate`? Es scheint mir allerdings, dass unsere Problematik im WWW etwas
   unterbeleuchtet ist. 
+
+## Excel
+
+Wie arbeite ich "sauber" mit Excel?
+
+Best Practices zum Arbeiten mit Excel:
+
+* z.B. Zellbezüge benennen, dadurch werden Formeln besser lesbar
+
+Ihr werdet es kaum glauben, aber am Anfang meiner Zeit am KWB habe ich noch 
+mit Excel gearbeitet. Ich habe auch komplexe Sachen gemacht und auch 
+Excel-Makros programmiert. Ein Beweis findet sich in meiner persönlichen
+Logdatei:
+
+> XLS-Makro laeuft
+
+Ich würde heute nicht mehr empfehlen, Excel-Makros zu programmieren. Es ist 
+umständlich, es gibt keine Bibliotheken und der Quellcode lässt sich nicht
+unabhängig von der Exceldatei verwalten, so dass keine ordentliche 
+Versionsverwaltung möglich ist. Und wir wollen nicht mehr ohne 
+Versionsverwaltung programmieren!
+
+Wenn wir programmieren, dann sollten wir das einheitlich in R tun. R ist frei,
+es gibt eine großartige Community und wir haben mittlerweile eine große 
+Expertise erlangt.
+
+## Versionsverwaltung
+
+### Subversion
+
+Wir verwenden einen KWB-internen Subversion Versionsverwaltungsserver, mit dem
+wir über die Software Tortoise SVN, die direkt in den Dateiexplorer integriert
+ist, kommunizieren.
+
+Im Rahmen von FAKIN legen wir fest, dass alle Programmcodes unter 
+Versionsverwaltung gestellt werden sollen. Das gehört rein ins QMS!
+
+### Git
+
+Wir haben auch einen öffentlich zugänglichen GitHub Account:
+
+[https://github.com/KWB-R](https://github.com/KWB-R).
+
+Auf diesem legen wir nach und nach R-Pakete ab, deren 
+Veröffentlichung keinen Beschränkungen unterliegt, z.B. weil der Code im
+Rahmen eines Auftragsprojektes erstellt wurde.
+
+# Konkrete Aufgaben und Lösungen {#loesungen}
+
+## Monitoring: Erfassen von Metadaten
+
+Zur Protokollierung von Routine- und Wartungsarbeiten an den Geräten in 
+Messkontainern habe ich eine komplexe [MS Access Anwendung](#metadatenbank) 
+geschrieben. Mit dieser können Messstellen, Geräte, Aktionen (an Geräten) und 
+Personen (die die Aktionen durchführen) verwaltet sowie Aktionen geplant und 
+dokumentiert werden. 
+
+Probleme und Fragen
+
+* Wo liegt sie?
+* Wie wird sie bedient? Es gibt keine Beschreibung. 
+* Die Software wird nicht gepflegt
+* Sollten wir sie weiter verwenden? Bestimmt gibt es mittlerweile Apps
+(womöglich kostenfrei), die auf Tablets laufen, benutzerfreundlich und gut
+dokumentiert sind.
+
+## InfoWorks: Erzeugen von Regen-Inputdateien {#input-infoworks-regen}
+
+Methode: Perl-Skript `iw_event_writer.pl`
+
+* Wo liegt dieses Skript? Erst lokal bei Hauke, mittlerweile unter Subversion,
+wurde glaube ich von Mathias in ein R-Skript umgewandelt...
+* Wie kann es verwendet werden? Dazu benötigt man Perl, das ist standardmäßig
+auf keinem Rechner installiert. Auf einem Linux-Rechner wäre das der Fall...
+Sollten wir einen Linux-Rechner für solche Fälle vorhalten? Nun haben wir ja
+Rupelton...
+
+## InfoWorks: Erzeugen von Real Time Control (RTC)-Dateien {#input-infoworks-rtc}
+
+Ziel: Steuerung der Pumpwerke im Modell, wie sie in der Realität gefördert haben.
+
+Benötigte Daten:
+
+* Regendaten der Berliner Wasserbetriebe
+
+Benötigte [Metadaten](#metadaten): 
+
+* Worauf bezieht sich der Zeitstempel in einer kontinuierlichen Zeitreihe, auf
+den Anfang oder das Ende des Zeitintervalls mit der Länge eines Zeitschritts?
+* Auf welchen UTC-Offset bezieht sich der Zeitstempel? Meiner Erfahrung nach
+ist bei den Daten der Berliner Wasserbetriebe immer der Lokalzeitstempel
+angegeben, in ihren Datenreihen gibt es also an den Tagen der Zeitumstellung
+Lücken bzw. Duplikate.
+
+Manuelle Methode: 
+
+* RTC-Modul in Infoworks-Software erzeugen
+* RTC-Modul als Text exportieren
+* Pumpwerksdaten nach CSV konvertieren 
+* Pumpwerksdaten im Texteditor mit Suchen/Ersetzen auf das von InfoWorks 
+geforderte Format bringen
+* Formatierte Pumpwerksdaten in der RTC-Textdatei an den richtigen Stellen
+einfügen
+
+Automatische Methode:
+
+* Perl-Skript `rtc_generate.pl`. Dieses macht die obigen Schritte automatisch.
+* Problem: lässt sich nur auf Rechner mit Perl laufen lassen.

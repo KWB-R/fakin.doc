@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
+<link rel="prev" href="problembereiche.html">
 
-<link rel="next" href="projektbeschreibungen.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -154,25 +154,62 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">FAKIN Projektdokumentation</h1>
-<h4 class="author"><em>Hauke Sonnenberg</em></h4>
-<h4 class="date"><em>2018-06-04</em></h4>
+<div id="loesungen" class="section level1">
+<h1><span class="header-section-number">Kapitel 5</span> Konkrete Aufgaben und Lösungen</h1>
+<div id="monitoring-erfassen-von-metadaten" class="section level2">
+<h2><span class="header-section-number">5.1</span> Monitoring: Erfassen von Metadaten</h2>
+<p>Zur Protokollierung von Routine- und Wartungsarbeiten an den Geräten in Messkontainern habe ich eine komplexe <a href="#metadatenbank">MS Access Anwendung</a> geschrieben. Mit dieser können Messstellen, Geräte, Aktionen (an Geräten) und Personen (die die Aktionen durchführen) verwaltet sowie Aktionen geplant und dokumentiert werden.</p>
+<p>Probleme und Fragen</p>
+<ul>
+<li>Wo liegt sie?</li>
+<li>Wie wird sie bedient? Es gibt keine Beschreibung.</li>
+<li>Die Software wird nicht gepflegt</li>
+<li>Sollten wir sie weiter verwenden? Bestimmt gibt es mittlerweile Apps (womöglich kostenfrei), die auf Tablets laufen, benutzerfreundlich und gut dokumentiert sind.</li>
+</ul>
 </div>
-<div id="einfuhrung" class="section level1">
-<h1><span class="header-section-number">Kapitel 1</span> Einführung</h1>
-<p>Hier wollen wir die Ergebnisse unseres Forschungsprojekts FAKIN (Forschungsdatenmanagement an kleinen Instituten) veröffentlichen.</p>
-<p>Da wir viele, zum Teil ganz unterschiedliche Projekte bearbeiten, sind auch unterschiedliche Bereiche des Forschungsdatenmanagements betroffen.</p>
-<p>Wir wollen hier zunächst versuchen, Fallbeispiele herauszuarbeiten, in die sich die verschiedenen Projekte einordnen lassen. Für jedes Fallbeispiel wollen wir dann Gemeinsamkeiten in Bezug auf Anforderungen und Problemstellungen herausarbeiten und für diese dann existierende Lösungen einsammeln oder gezielt neue Lösungen entwickeln. Diese Lösungen sollen dann in zukünftigen Projekten, die sich den jeweiligen Fallbeispielen zuordnen lassen, angewendet werden.</p>
-<p>Dazu brauchen wir Eure Mitarbeit! Wer kann Beiträge zur Beschreibung von Problemfällen und eigenen Lösungen liefern?</p>
+<div id="input-infoworks-regen" class="section level2">
+<h2><span class="header-section-number">5.2</span> InfoWorks: Erzeugen von Regen-Inputdateien</h2>
+<p>Methode: Perl-Skript <code>iw_event_writer.pl</code></p>
+<ul>
+<li>Wo liegt dieses Skript? Erst lokal bei Hauke, mittlerweile unter Subversion, wurde glaube ich von Mathias in ein R-Skript umgewandelt…</li>
+<li>Wie kann es verwendet werden? Dazu benötigt man Perl, das ist standardmäßig auf keinem Rechner installiert. Auf einem Linux-Rechner wäre das der Fall… Sollten wir einen Linux-Rechner für solche Fälle vorhalten? Nun haben wir ja Rupelton…</li>
+</ul>
+</div>
+<div id="input-infoworks-rtc" class="section level2">
+<h2><span class="header-section-number">5.3</span> InfoWorks: Erzeugen von Real Time Control (RTC)-Dateien</h2>
+<p>Ziel: Steuerung der Pumpwerke im Modell, wie sie in der Realität gefördert haben.</p>
+<p>Benötigte Daten:</p>
+<ul>
+<li>Regendaten der Berliner Wasserbetriebe</li>
+</ul>
+<p>Benötigte <a href="problembereiche.html#metadaten">Metadaten</a>:</p>
+<ul>
+<li>Worauf bezieht sich der Zeitstempel in einer kontinuierlichen Zeitreihe, auf den Anfang oder das Ende des Zeitintervalls mit der Länge eines Zeitschritts?</li>
+<li>Auf welchen UTC-Offset bezieht sich der Zeitstempel? Meiner Erfahrung nach ist bei den Daten der Berliner Wasserbetriebe immer der Lokalzeitstempel angegeben, in ihren Datenreihen gibt es also an den Tagen der Zeitumstellung Lücken bzw. Duplikate.</li>
+</ul>
+<p>Manuelle Methode:</p>
+<ul>
+<li>RTC-Modul in Infoworks-Software erzeugen</li>
+<li>RTC-Modul als Text exportieren</li>
+<li>Pumpwerksdaten nach CSV konvertieren</li>
+<li>Pumpwerksdaten im Texteditor mit Suchen/Ersetzen auf das von InfoWorks geforderte Format bringen</li>
+<li>Formatierte Pumpwerksdaten in der RTC-Textdatei an den richtigen Stellen einfügen</li>
+</ul>
+<p>Automatische Methode:</p>
+<ul>
+<li>Perl-Skript <code>rtc_generate.pl</code>. Dieses macht die obigen Schritte automatisch.</li>
+<li>Problem: lässt sich nur auf Rechner mit Perl laufen lassen.</li>
+</ul>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="problembereiche.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="projektbeschreibungen.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
