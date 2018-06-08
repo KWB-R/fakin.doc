@@ -245,6 +245,13 @@ Siehe
 
 Beispielprojekte: [MIACSO](#miacso), [KURAS](#kuras), [Flusshygiene](#flusshygiene)
 
+## LCA
+
+LCA steht für Life Cycle Assessment, bedeutet also soviel wie 
+Lebenszyklusbewertung.
+
+# Problembereiche {#problembereiche}
+
 ## Datenaustausch {#datenaustausch}
 
 Es gibt internen Datenaustausch und Austausch mit Projektpartnern. Oft werden
@@ -273,14 +280,9 @@ Wir brauchen eine einheitliche Definition der Bedeutungen von Ordnern.
 Wie die zu dokumentieren sind sollten wir in [Metadaten](#metadaten)
 beschreiben.
 
+## Datenablage {#datenablage}
+
 ## Datenimport {#datenimport}
-
-## LCA
-
-LCA steht für Life Cycle Assessment, bedeutet also soviel wie 
-Lebenszyklusbewertung.
-
-# Problembereiche {#problembereiche}
 
 ## Metadaten {#metadaten}
 
@@ -531,6 +533,22 @@ Wir haben auch einen öffentlich zugänglichen GitHub Account:
 Auf diesem legen wir nach und nach R-Pakete ab, deren 
 Veröffentlichung keinen Beschränkungen unterliegt, z.B. weil der Code im
 Rahmen eines Auftragsprojektes erstellt wurde.
+
+## Kollaboratives Schreiben
+
+Herausforderung:
+
+Projektantrag mit vielen Partnern. Wie kann gewährleistet werden das immer am aktuellen Dokument gearbeitet wird?
+
+
+Lösungsmöglichkeit:
+
+Ulf hat gute Erfahrungen mit Office365 (von KWR zur Verfügung gestellt) gemacht.
+Auch das parallele Arbieten von knapp 10 Personen gleichzeitig stellt kein Problem da, da von einem in Bearbeitung befindliche Abschnitte automatisch für andere blockiert werden. 
+
+Wenn größere Abschnitte von einem zu bearbeiten sind empfielt es sich diese kurzzeitig aus dem syncronisierten Dokument zu entfernen, die Änderungen in einer nicht syncronisierten Kopie der Word Datei zu machen und erst zum Schluss wieder im Dokument einzufügen. 
+
+Ulf strebt an, dass auch am KWB eine Office365 Lizenz erworben wird.
 
 # Konkrete Aufgaben und Lösungen {#loesungen}
 
