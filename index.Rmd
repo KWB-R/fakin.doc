@@ -112,8 +112,7 @@ Entstandene R Pakete:
 
 - Quantitatives mikrobiologisches Risikomanagement
 
-    + [kwb.qmra](https://github.com/kwb-r/kwb.qrma): wird im Rahmen von AQUANES(#aquanes)
-    weiter genutzt
+    + [kwb.qmra](https://github.com/kwb-r/kwb.qrma): wird im Rahmen von AQUANES(#aquanes) weiter genutzt
 
 ## Projekt:OPTIWELLS {#optiwells}
 
@@ -129,9 +128,7 @@ Entstandene R Pakete:
 
 ## Projekt: RWE {#rwe}
 
-(Semi)automatisierte Erstellung eines komplexen MODFLOW Modells (mehre Layer, 
-mehrere hunderte Entnahmenbrunnen mit zeitlicher UND räumlicher ) in Phyton 
-mittels [flopy](http://modflowpy.github.io/flopydoc/) sowie Entwicklung der Modellszenarien auf Github (siehe hier: [Maxflow](https://github.com/chmenz/Maxflow)).
+(Semi)automatisierte Erstellung eines komplexen MODFLOW Modells (mehrere Layer, mehrere hunderte Entnahmebrunnen mit zeitlich variierender Entnahmemenge sowie Hinzufügen/Entfernen von Brunnen innerhalb des Simulationszeitraums) in Phyton mittels [flopy](http://modflowpy.github.io/flopydoc/) sowie Entwicklung der Modellszenarien auf Github (siehe hier: [Maxflow](https://github.com/chmenz/Maxflow)).
 
 Input Christian !?!
 
@@ -143,23 +140,13 @@ Entstandenes R Paket:
 
 - [aquanes.report](https://github.com/kwb-r/aquanes.report): Datenimport, zeitliche Aggregierung und interaktive Visualiserung von Betriebsdaten von Pilotanlagen
 (u.a. [Berlin-Tiefwerder](http://aquanes-h2020.eu/Default.aspx?t=1576), [Berlin-Schönerlinde](http://aquanes-h2020.eu/Default.aspx?t=1666), [Basel Lange-Erlen](http://aquanes-h2020.eu/Default.aspx?t=1663), 
-[Haridwar](http://aquanes-h2020.eu/Default.aspx?t=1668)) sowie deren Verknüpfung mit Labordaten
+[Haridwar](http://aquanes-h2020.eu/Default.aspx?t=1668)) sowie deren Verknüpfung mit Labordaten.
 
-    + Herausforderungen: zeitlich hoch aufgelöste Betriebsdaten (~ 10 Mio. Daten-
-    punkte pro Monat) erforderten massive Performance Optimierung um auch 
-    Visualisierung der Rohdaten im Tool über den Testbetriebszeitraum auf Rechnern 
-    mit limitierten RAM Ressourcen (~ 8 GB) zu ermöglichen
+    + Herausforderungen: zeitlich hoch aufgelöste Betriebsdaten (~ 10 Mio. Datenpunkte pro Monat) erforderten massive Performance Optimierung um die Visualisierung der Rohdaten im Tool über den Testbetriebszeitraum (18 Monate) auf Rechnern mit limitierten RAM Ressourcen (~ 8 GB) zu ermöglichen.
     
-    + Nutzung: wird von den Projektpartnern zum struktiereten Datenimport genutzt 
-    um dann darauf ggf. eigene weitere Analysen darauf aufzusetzen. Für die beiden 
-    Berliner Standorte wird zudem die Visualiserung der Betriebsdaten routinenmäßig
-    von genutzt, um von dem Normbetrieb abweichende Zustände leichter indentifizieren 
-    zu können.
+    + Nutzung: wird von den Projektpartnern zum strukturierten Datenimport genutzt um dann darauf ggf. eigene weitere Analysen darauf aufzusetzen. Für die beiden Berliner Standorte wird zudem die Visualiserung der Betriebsdaten routinenäßig genutzt, um vom Regelbetrieb abweichende Zustände besser indentifizieren zu können.
     
   
-
-
-
 # Projektbausteine
 
 Wir können "Projektbausteine" definieren, die in verschiedenen Projekten
@@ -167,8 +154,7 @@ vorkommen. Diese werden im Folgenden einzeln betrachtet.
 
 ## Monitoring
 
-In vielen Projekten führen wir eigene Messungen durch. Dazu verwenden wir 
-eigene Messgeräte.
+In vielen Projekten führen wir eigene Messungen durch. Dazu verwenden wir eigene Messgeräte.
 
 In Monitoringprojekten spielen [Metadaten](#metadaten) eine besonders wichtige 
 Rolle. Wir betreiben viele Messgeräte mit Akkus. Der Zeitpunkt des Austauschs
@@ -257,7 +243,7 @@ Siehe
 * [Erzeugen einer Ereignisliste](#ereignisliste)
 * [InfoWorks: Erzeugen von Regen-Inputdateien](#input-infoworks-regen)
 
-Beispielprojekte: [MIACSO](#miacso), [KURAS](kuras), [Flusshygiene](flusshygiene)
+Beispielprojekte: [MIACSO](#miacso), [KURAS](#kuras), [Flusshygiene](#flusshygiene)
 
 ## Datenaustausch {#datenaustausch}
 
