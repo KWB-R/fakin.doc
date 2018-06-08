@@ -22,10 +22,10 @@
   <meta name="twitter:description" content="FAKIN Projektdokumentation" />
   
 
-<meta name="author" content="Hauke Sonnenberg">
+<meta name="author" content="Hauke Sonnenberg &amp; Michael Rustler">
 
 
-<meta name="date" content="2018-06-04">
+<meta name="date" content="2018-06-08">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -50,41 +50,69 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -111,20 +139,26 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.3" data-path="projektbeschreibungen.html"><a href="projektbeschreibungen.html#miacso"><i class="fa fa-check"></i><b>2.3</b> Projekt: MIACSO</a></li>
 <li class="chapter" data-level="2.4" data-path="projektbeschreibungen.html"><a href="projektbeschreibungen.html#kuras"><i class="fa fa-check"></i><b>2.4</b> Projekt: KURAS</a></li>
 <li class="chapter" data-level="2.5" data-path="projektbeschreibungen.html"><a href="projektbeschreibungen.html#flusshygiene"><i class="fa fa-check"></i><b>2.5</b> Projekt: Flusshygiene</a></li>
+<li class="chapter" data-level="2.6" data-path="projektbeschreibungen.html"><a href="projektbeschreibungen.html#demoware"><i class="fa fa-check"></i><b>2.6</b> Projekt: DEMOWARE</a></li>
+<li class="chapter" data-level="2.7" data-path="projektbeschreibungen.html"><a href="projektbeschreibungen.html#optiwells"><i class="fa fa-check"></i><b>2.7</b> Projekt:OPTIWELLS</a></li>
+<li class="chapter" data-level="2.8" data-path="projektbeschreibungen.html"><a href="projektbeschreibungen.html#rwe"><i class="fa fa-check"></i><b>2.8</b> Projekt: RWE</a></li>
+<li class="chapter" data-level="2.9" data-path="projektbeschreibungen.html"><a href="projektbeschreibungen.html#aquanes"><i class="fa fa-check"></i><b>2.9</b> Projekt: AQUANES</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="projektbausteine.html"><a href="projektbausteine.html"><i class="fa fa-check"></i><b>3</b> Projektbausteine</a><ul>
 <li class="chapter" data-level="3.1" data-path="projektbausteine.html"><a href="projektbausteine.html#monitoring"><i class="fa fa-check"></i><b>3.1</b> Monitoring</a></li>
-<li class="chapter" data-level="3.2" data-path="projektbausteine.html"><a href="projektbausteine.html#kanalnetzsimulation"><i class="fa fa-check"></i><b>3.2</b> Kanalnetzsimulation</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="projektbausteine.html"><a href="projektbausteine.html#datenaustausch-mit-bwb"><i class="fa fa-check"></i><b>3.2.1</b> Datenaustausch mit BWB</a></li>
-<li class="chapter" data-level="3.2.2" data-path="projektbausteine.html"><a href="projektbausteine.html#modellkalibrierung"><i class="fa fa-check"></i><b>3.2.2</b> Modellkalibrierung</a></li>
+<li class="chapter" data-level="3.2" data-path="projektbausteine.html"><a href="projektbausteine.html#grundwassersimulation"><i class="fa fa-check"></i><b>3.2</b> Grundwassersimulation</a></li>
+<li class="chapter" data-level="3.3" data-path="projektbausteine.html"><a href="projektbausteine.html#kanalnetzsimulation"><i class="fa fa-check"></i><b>3.3</b> Kanalnetzsimulation</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="projektbausteine.html"><a href="projektbausteine.html#datenaustausch-mit-bwb"><i class="fa fa-check"></i><b>3.3.1</b> Datenaustausch mit BWB</a></li>
+<li class="chapter" data-level="3.3.2" data-path="projektbausteine.html"><a href="projektbausteine.html#modellkalibrierung"><i class="fa fa-check"></i><b>3.3.2</b> Modellkalibrierung</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="projektbausteine.html"><a href="projektbausteine.html#datenaustausch"><i class="fa fa-check"></i><b>3.3</b> Datenaustausch</a></li>
-<li class="chapter" data-level="3.4" data-path="projektbausteine.html"><a href="projektbausteine.html#datenimport"><i class="fa fa-check"></i><b>3.4</b> Datenimport</a></li>
-<li class="chapter" data-level="3.5" data-path="projektbausteine.html"><a href="projektbausteine.html#lca"><i class="fa fa-check"></i><b>3.5</b> LCA</a></li>
+<li class="chapter" data-level="3.4" data-path="projektbausteine.html"><a href="projektbausteine.html#lca"><i class="fa fa-check"></i><b>3.4</b> LCA</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="problembereiche.html"><a href="problembereiche.html"><i class="fa fa-check"></i><b>4</b> Problembereiche</a><ul>
-<li class="chapter" data-level="4.1" data-path="problembereiche.html"><a href="problembereiche.html#metadaten"><i class="fa fa-check"></i><b>4.1</b> Metadaten</a></li>
-<li class="chapter" data-level="4.2" data-path="problembereiche.html"><a href="problembereiche.html#zeitstempel"><i class="fa fa-check"></i><b>4.2</b> Zeitstempel</a></li>
+<li class="chapter" data-level="4.1" data-path="problembereiche.html"><a href="problembereiche.html#datenaustausch"><i class="fa fa-check"></i><b>4.1</b> Datenaustausch</a></li>
+<li class="chapter" data-level="4.2" data-path="problembereiche.html"><a href="problembereiche.html#datenablage"><i class="fa fa-check"></i><b>4.2</b> Datenablage</a></li>
+<li class="chapter" data-level="4.3" data-path="problembereiche.html"><a href="problembereiche.html#datenimport"><i class="fa fa-check"></i><b>4.3</b> Datenimport</a></li>
+<li class="chapter" data-level="4.4" data-path="problembereiche.html"><a href="problembereiche.html#metadaten"><i class="fa fa-check"></i><b>4.4</b> Metadaten</a></li>
+<li class="chapter" data-level="4.5" data-path="problembereiche.html"><a href="problembereiche.html#zeitstempel"><i class="fa fa-check"></i><b>4.5</b> Zeitstempel</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="allgemeine-methoden.html"><a href="allgemeine-methoden.html"><i class="fa fa-check"></i><b>5</b> Allgemeine Methoden</a><ul>
 <li class="chapter" data-level="5.1" data-path="allgemeine-methoden.html"><a href="allgemeine-methoden.html#excel"><i class="fa fa-check"></i><b>5.1</b> Excel</a></li>
@@ -133,6 +167,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.3.1" data-path="allgemeine-methoden.html"><a href="allgemeine-methoden.html#subversion"><i class="fa fa-check"></i><b>5.3.1</b> Subversion</a></li>
 <li class="chapter" data-level="5.3.2" data-path="allgemeine-methoden.html"><a href="allgemeine-methoden.html#git"><i class="fa fa-check"></i><b>5.3.2</b> Git</a></li>
 </ul></li>
+<li class="chapter" data-level="5.4" data-path="allgemeine-methoden.html"><a href="allgemeine-methoden.html#kollaboratives-schreiben"><i class="fa fa-check"></i><b>5.4</b> Kollaboratives Schreiben</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="loesungen.html"><a href="loesungen.html"><i class="fa fa-check"></i><b>6</b> Konkrete Aufgaben und Lösungen</a><ul>
 <li class="chapter" data-level="6.1" data-path="loesungen.html"><a href="loesungen.html#monitoring-erfassen-von-metadaten"><i class="fa fa-check"></i><b>6.1</b> Monitoring: Erfassen von Metadaten</a></li>
@@ -164,17 +199,28 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h1><span class="header-section-number">Kapitel 2</span> Projektbeschreibungen</h1>
 <div id="projektgruppen" class="section level2">
 <h2><span class="header-section-number">2.1</span> Projektgruppen</h2>
-<p>Nach welchen Kriterien können wir unsere Projekte gruppieren, wie können wir sie grob klassifizieren?</p>
+<p>Nach welchen Kriterien können wir unsere Projekte gruppieren, wie können wir
+sie grob klassifizieren?</p>
 <p>Was folgt daraus in Bezug auf das Datenmanagement?</p>
-<p>Wenn wir Ähnlichkeiten finden, können wir in Zukunft gezielt auf die Lösungen, die in ähnlichen Projekten erzielt (und beschrieben!) wurden, zurückgreifen.</p>
+<p>Wenn wir Ähnlichkeiten finden, können wir in Zukunft gezielt auf die Lösungen,
+die in ähnlichen Projekten erzielt (und beschrieben!) wurden, zurückgreifen.</p>
 <p>Mögliche Gruppierung nach:</p>
 <ul>
 <li>Abteilung: Grundwasser, Oberflächengewässer und Kanal, Abwasser</li>
 <li>Finanzierung: Sponsoring, EU-Projekt, BMBF-Projekt, Auftrag</li>
-<li>Anzahl Partnern: große Projekte mit vielen Partnern, kleine Projekte mit wenigen Partnern</li>
+<li>Anzahl Partnern: große Projekte mit vielen Partnern, kleine Projekte mit
+wenigen Partnern</li>
 </ul>
-<p>Im folgenden fangen wir einfach mal an und versuchen, die Projekte, an denen wir mitgearbeitet haben, kurz zu beschreiben und zu charakterisieren. Wenn wir im Rahmen der Projekte bestimmte Lösungen erarbeitet haben, beschreiben wir diese kurz unter <a href="problembereiche">Problembereiche</a> oder <a href="loesungen">Konkrete Aufgaben und Lösungen</a>.</p>
-<p>Aufbauend auf dieser ersten Aufstellung von Projekten, Aufgabenbereichen und Lösungen wollen wir dann mit Euch zusammen weitere Projekte in die Betrachtung mit einbeziehen. Wir wollen gemeinsam die Charakterisierung und Gruppierung und natürlich insbesondere die Aufgabenbeschreibungen und Lösungen erweitern und verbessern.</p>
+<p>Im folgenden fangen wir einfach mal an und versuchen, die Projekte, an denen
+wir mitgearbeitet haben, kurz zu beschreiben und zu charakterisieren. Wenn
+wir im Rahmen der Projekte bestimmte Lösungen erarbeitet haben, beschreiben wir
+diese kurz unter <a href="problembereiche">Problembereiche</a> oder
+<a href="loesungen">Konkrete Aufgaben und Lösungen</a>.</p>
+<p>Aufbauend auf dieser ersten Aufstellung von Projekten, Aufgabenbereichen und
+Lösungen wollen wir dann mit Euch zusammen weitere Projekte in die Betrachtung
+mit einbeziehen. Wir wollen gemeinsam die Charakterisierung und Gruppierung
+und natürlich insbesondere die Aufgabenbeschreibungen und Lösungen erweitern und
+verbessern.</p>
 </div>
 <div id="projekt-spree2011-2007" class="section level2">
 <h2><span class="header-section-number">2.2</span> Projekt: Spree2011 (2007)</h2>
@@ -204,7 +250,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ul>
 <li>Wo werden Präsentationen abgelegt?</li>
 <li>Wo werden die Rohdaten abgelegt? Z.B. Persönlicher Ordner “Diplomarbeit”</li>
-<li>Worauf beziehen sich die InfoWorks-Zeitstempel? -&gt; Themenbereich <a href="#metadata">Metadaten</a></li>
+<li>Worauf beziehen sich die InfoWorks-Zeitstempel? -&gt;
+Themenbereich <a href="#metadata">Metadaten</a></li>
 </ul>
 <p>Best of aus meiner persönlichen Logdatei:</p>
 <blockquote>
@@ -219,6 +266,54 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="flusshygiene" class="section level2">
 <h2><span class="header-section-number">2.5</span> Projekt: Flusshygiene</h2>
+</div>
+<div id="demoware" class="section level2">
+<h2><span class="header-section-number">2.6</span> Projekt: DEMOWARE</h2>
+<p>Entstandene R Pakete:</p>
+<ul>
+<li><p>Grundwassermodellierung</p>
+<ul>
+<li><p><a href="https://github.com/kwb-r/kwb.hantush">kwb.hantush</a></p></li>
+<li><p>kwb.vs2dh</p></li>
+<li><p>kwb.demoware</p></li>
+</ul></li>
+<li><p>Quantitatives mikrobiologisches Risikomanagement</p>
+<ul>
+<li><a href="https://github.com/kwb-r/kwb.qrma">kwb.qmra</a>: wird im Rahmen von AQUANES(#aquanes) weiter genutzt</li>
+</ul></li>
+</ul>
+</div>
+<div id="optiwells" class="section level2">
+<h2><span class="header-section-number">2.7</span> Projekt:OPTIWELLS</h2>
+<p>Entstandene R Pakete:</p>
+<ul>
+<li><p>Grundwassermodellierung</p>
+<ul>
+<li><a href="https://github.com/kwb-r/kwb.wtaq">kwb.wtaq</a></li>
+</ul></li>
+<li><p>(Druck)Rohrleitungsnetzsimulation (EPANET)</p>
+<ul>
+<li>kwb.epanet</li>
+</ul></li>
+</ul>
+</div>
+<div id="rwe" class="section level2">
+<h2><span class="header-section-number">2.8</span> Projekt: RWE</h2>
+<p>(Semi)automatisierte Erstellung eines komplexen MODFLOW Modells (mehrere Layer, mehrere hunderte Entnahmebrunnen mit zeitlich variierender Entnahmemenge sowie Hinzufügen/Entfernen von Brunnen innerhalb des Simulationszeitraums) in Phyton mittels <a href="http://modflowpy.github.io/flopydoc/">flopy</a> sowie Entwicklung der Modellszenarien auf Github (siehe hier: <a href="https://github.com/chmenz/Maxflow">Maxflow</a>).</p>
+<p>Input Christian !?!</p>
+</div>
+<div id="aquanes" class="section level2">
+<h2><span class="header-section-number">2.9</span> Projekt: AQUANES</h2>
+<p>Entstandenes R Paket:</p>
+<ul>
+<li><p><a href="https://github.com/kwb-r/aquanes.report">aquanes.report</a>: Datenimport, zeitliche Aggregierung und interaktive Visualiserung von Betriebsdaten von Pilotanlagen
+(u.a. <a href="http://aquanes-h2020.eu/Default.aspx?t=1576">Berlin-Tiefwerder</a>, <a href="http://aquanes-h2020.eu/Default.aspx?t=1666">Berlin-Schönerlinde</a>, <a href="http://aquanes-h2020.eu/Default.aspx?t=1663">Basel Lange-Erlen</a>,
+<a href="http://aquanes-h2020.eu/Default.aspx?t=1668">Haridwar</a>) sowie deren Verknüpfung mit Labordaten.</p>
+<ul>
+<li><p>Herausforderungen: zeitlich hoch aufgelöste Betriebsdaten (~ 10 Mio. Datenpunkte pro Monat) erforderten massive Performance Optimierung um die Visualisierung der Rohdaten im Tool über den Testbetriebszeitraum (18 Monate) auf Rechnern mit limitierten RAM Ressourcen (~ 8 GB) zu ermöglichen.</p></li>
+<li><p>Nutzung: wird von den Projektpartnern zum strukturierten Datenimport genutzt um dann darauf ggf. eigene weitere Analysen darauf aufzusetzen. Für die beiden Berliner Standorte wird zudem die Visualiserung der Betriebsdaten routinenäßig genutzt, um vom Regelbetrieb abweichende Zustände besser indentifizieren zu können.</p></li>
+</ul></li>
+</ul>
 </div>
 </div>
             </section>

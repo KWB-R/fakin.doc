@@ -3,3 +3,10 @@ chapter_name: "Kapitel "
 repo: https://github.com/kwb-r/fakin.doc
 output_dir: docs
 rmd_files: ["index.Rmd"]
+delete_merged_file: true
+language:
+  label:
+    fig: "Abbildung "
+    tab: "Tabelle "
+  ui:
+    edit: "Bearbeiten"
