@@ -1,7 +1,7 @@
 ---
 title: "FAKIN Projektdokumentation"
-author: "Hauke Sonnenberg"
-date: "2018-06-04"
+author: "Hauke Sonnenberg & Michael Rustler"
+date: "2018-06-08"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
@@ -98,6 +98,68 @@ Best of aus meiner persönlichen Logdatei:
 
 ## Projekt: Flusshygiene {#flusshygiene}
 
+## Projekt: DEMOWARE {#demoware}
+
+Entstandene R Pakete: 
+
+- Grundwassermodellierung
+
+    + [kwb.hantush](https://github.com/kwb-r/kwb.hantush)
+    
+    + kwb.vs2dh
+    
+    + kwb.demoware
+
+- Quantitatives mikrobiologisches Risikomanagement
+
+    + [kwb.qmra](https://github.com/kwb-r/kwb.qrma): wird im Rahmen von AQUANES(#aquanes)
+    weiter genutzt
+
+## Projekt:OPTIWELLS {#optiwells}
+
+Entstandene R Pakete: 
+
+- Grundwassermodellierung
+
+    + [kwb.wtaq](https://github.com/kwb-r/kwb.wtaq)
+
+- (Druck)Rohrleitungsnetzsimulation (EPANET)
+
+    + kwb.epanet
+
+## Projekt: RWE {#rwe}
+
+(Semi)automatisierte Erstellung eines komplexen MODFLOW Modells (mehre Layer, 
+mehrere hunderte Entnahmenbrunnen mit zeitlicher UND räumlicher ) in Phyton 
+mittels [flopy](http://modflowpy.github.io/flopydoc/) sowie Entwicklung der Modellszenarien auf Github (siehe hier: [Maxflow](https://github.com/chmenz/Maxflow)).
+
+Input Christian !?!
+
+
+## Projekt: AQUANES {#aquanes}
+
+
+Entstandenes R Paket: 
+
+- [aquanes.report](https://github.com/kwb-r/aquanes.report): Datenimport, zeitliche Aggregierung und interaktive Visualiserung von Betriebsdaten von Pilotanlagen
+(u.a. [Berlin-Tiefwerder](http://aquanes-h2020.eu/Default.aspx?t=1576), [Berlin-Schönerlinde](http://aquanes-h2020.eu/Default.aspx?t=1666), [Basel Lange-Erlen](http://aquanes-h2020.eu/Default.aspx?t=1663), 
+[Haridwar](http://aquanes-h2020.eu/Default.aspx?t=1668)) sowie deren Verknüpfung mit Labordaten
+
+    + Herausforderungen: zeitlich hoch aufgelöste Betriebsdaten (~ 10 Mio. Daten-
+    punkte pro Monat) erforderten massive Performance Optimierung um auch 
+    Visualisierung der Rohdaten im Tool über den Testbetriebszeitraum auf Rechnern 
+    mit limitierten RAM Ressourcen (~ 8 GB) zu ermöglichen
+    
+    + Nutzung: wird von den Projektpartnern zum struktiereten Datenimport genutzt 
+    um dann darauf ggf. eigene weitere Analysen darauf aufzusetzen. Für die beiden 
+    Berliner Standorte wird zudem die Visualiserung der Betriebsdaten routinenmäßig
+    von genutzt, um von dem Normbetrieb abweichende Zustände leichter indentifizieren 
+    zu können.
+    
+  
+
+
+
 # Projektbausteine
 
 Wir können "Projektbausteine" definieren, die in verschiedenen Projekten
@@ -132,7 +194,15 @@ Problemstellungen:
     -> [Problembereich Zeitstempel](#zeitstempel)
     + Geht die interne Uhr immer richtig? Wie gewährleiste ich das?
 
-Beispielprojekte: [MIACSO](#miacso), [KURAS](kuras), [Flusshygiene](flusshygiene)
+Beispielprojekte: [MIACSO](#miacso), [KURAS](#kuras), [Flusshygiene](#flusshygiene)
+
+
+## Grundwassersimulation
+
+
+
+Beispielprojekte: [OPTIWELLS](#optiwells), [DEMOWARE](#demoware), [RWE](#rwe)
+
 
 ## Kanalnetzsimulation
 
