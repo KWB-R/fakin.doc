@@ -50,69 +50,41 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; position: absolute; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; }
-pre.numberSource a.sourceLine:empty
-  { position: absolute; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
-    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -199,28 +171,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Kapitel 2</span> Projektbeschreibungen</h1>
 <div id="projektgruppen" class="section level2">
 <h2><span class="header-section-number">2.1</span> Projektgruppen</h2>
-<p>Nach welchen Kriterien können wir unsere Projekte gruppieren, wie können wir
-sie grob klassifizieren?</p>
+<p>Nach welchen Kriterien können wir unsere Projekte gruppieren, wie können wir sie grob klassifizieren?</p>
 <p>Was folgt daraus in Bezug auf das Datenmanagement?</p>
-<p>Wenn wir Ähnlichkeiten finden, können wir in Zukunft gezielt auf die Lösungen,
-die in ähnlichen Projekten erzielt (und beschrieben!) wurden, zurückgreifen.</p>
+<p>Wenn wir Ähnlichkeiten finden, können wir in Zukunft gezielt auf die Lösungen, die in ähnlichen Projekten erzielt (und beschrieben!) wurden, zurückgreifen.</p>
 <p>Mögliche Gruppierung nach:</p>
 <ul>
 <li>Abteilung: Grundwasser, Oberflächengewässer und Kanal, Abwasser</li>
 <li>Finanzierung: Sponsoring, EU-Projekt, BMBF-Projekt, Auftrag</li>
-<li>Anzahl Partnern: große Projekte mit vielen Partnern, kleine Projekte mit
-wenigen Partnern</li>
+<li>Anzahl Partnern: große Projekte mit vielen Partnern, kleine Projekte mit wenigen Partnern</li>
 </ul>
-<p>Im folgenden fangen wir einfach mal an und versuchen, die Projekte, an denen
-wir mitgearbeitet haben, kurz zu beschreiben und zu charakterisieren. Wenn
-wir im Rahmen der Projekte bestimmte Lösungen erarbeitet haben, beschreiben wir
-diese kurz unter <a href="problembereiche">Problembereiche</a> oder
-<a href="loesungen">Konkrete Aufgaben und Lösungen</a>.</p>
-<p>Aufbauend auf dieser ersten Aufstellung von Projekten, Aufgabenbereichen und
-Lösungen wollen wir dann mit Euch zusammen weitere Projekte in die Betrachtung
-mit einbeziehen. Wir wollen gemeinsam die Charakterisierung und Gruppierung
-und natürlich insbesondere die Aufgabenbeschreibungen und Lösungen erweitern und
-verbessern.</p>
+<p>Im folgenden fangen wir einfach mal an und versuchen, die Projekte, an denen wir mitgearbeitet haben, kurz zu beschreiben und zu charakterisieren. Wenn wir im Rahmen der Projekte bestimmte Lösungen erarbeitet haben, beschreiben wir diese kurz unter <a href="problembereiche">Problembereiche</a> oder <a href="loesungen">Konkrete Aufgaben und Lösungen</a>.</p>
+<p>Aufbauend auf dieser ersten Aufstellung von Projekten, Aufgabenbereichen und Lösungen wollen wir dann mit Euch zusammen weitere Projekte in die Betrachtung mit einbeziehen. Wir wollen gemeinsam die Charakterisierung und Gruppierung und natürlich insbesondere die Aufgabenbeschreibungen und Lösungen erweitern und verbessern.</p>
 </div>
 <div id="projekt-spree2011-2007" class="section level2">
 <h2><span class="header-section-number">2.2</span> Projekt: Spree2011 (2007)</h2>
@@ -250,8 +211,7 @@ verbessern.</p>
 <ul>
 <li>Wo werden Präsentationen abgelegt?</li>
 <li>Wo werden die Rohdaten abgelegt? Z.B. Persönlicher Ordner “Diplomarbeit”</li>
-<li>Worauf beziehen sich die InfoWorks-Zeitstempel? -&gt;
-Themenbereich <a href="#metadata">Metadaten</a></li>
+<li>Worauf beziehen sich die InfoWorks-Zeitstempel? -&gt; Themenbereich <a href="#metadata">Metadaten</a></li>
 </ul>
 <p>Best of aus meiner persönlichen Logdatei:</p>
 <blockquote>
@@ -306,9 +266,7 @@ Themenbereich <a href="#metadata">Metadaten</a></li>
 <h2><span class="header-section-number">2.9</span> Projekt: AQUANES</h2>
 <p>Entstandenes R Paket:</p>
 <ul>
-<li><p><a href="https://github.com/kwb-r/aquanes.report">aquanes.report</a>: Datenimport, zeitliche Aggregierung und interaktive Visualiserung von Betriebsdaten von Pilotanlagen
-(u.a. <a href="http://aquanes-h2020.eu/Default.aspx?t=1576">Berlin-Tiefwerder</a>, <a href="http://aquanes-h2020.eu/Default.aspx?t=1666">Berlin-Schönerlinde</a>, <a href="http://aquanes-h2020.eu/Default.aspx?t=1663">Basel Lange-Erlen</a>,
-<a href="http://aquanes-h2020.eu/Default.aspx?t=1668">Haridwar</a>) sowie deren Verknüpfung mit Labordaten.</p>
+<li><p><a href="https://github.com/kwb-r/aquanes.report">aquanes.report</a>: Datenimport, zeitliche Aggregierung und interaktive Visualiserung von Betriebsdaten von Pilotanlagen (u.a. <a href="http://aquanes-h2020.eu/Default.aspx?t=1576">Berlin-Tiefwerder</a>, <a href="http://aquanes-h2020.eu/Default.aspx?t=1666">Berlin-Schönerlinde</a>, <a href="http://aquanes-h2020.eu/Default.aspx?t=1663">Basel Lange-Erlen</a>, <a href="http://aquanes-h2020.eu/Default.aspx?t=1668">Haridwar</a>) sowie deren Verknüpfung mit Labordaten.</p>
 <ul>
 <li><p>Herausforderungen: zeitlich hoch aufgelöste Betriebsdaten (~ 10 Mio. Datenpunkte pro Monat) erforderten massive Performance Optimierung um die Visualisierung der Rohdaten im Tool über den Testbetriebszeitraum (18 Monate) auf Rechnern mit limitierten RAM Ressourcen (~ 8 GB) zu ermöglichen.</p></li>
 <li><p>Nutzung: wird von den Projektpartnern zum strukturierten Datenimport genutzt um dann darauf ggf. eigene weitere Analysen darauf aufzusetzen. Für die beiden Berliner Standorte wird zudem die Visualiserung der Betriebsdaten routinenäßig genutzt, um vom Regelbetrieb abweichende Zustände besser indentifizieren zu können.</p></li>
