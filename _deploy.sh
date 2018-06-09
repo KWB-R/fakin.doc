@@ -8,9 +8,12 @@ set -e
 git config --global user.email "michael.rustler@kompetenz-wasser.de"
 git config --global user.name "Michael Rustler"
 
-git clone https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git docs
-cd docs
+git clone -b gh-pages \
+  https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git \
+  book-output
+cd book-output
+git rm -rf *
 cp -r ../docs/* ./
 git add --all *
 git commit -m "Update the book" || true
-git push -q origin HEAD
+git push -q origin gh-pages
