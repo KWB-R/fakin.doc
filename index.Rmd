@@ -13,7 +13,7 @@ url: 'https\://kwb-r.github.io/fakin.doc'
 description: "FAKIN Best Practices"
 ---
 
-# Introduction {-}
+# Introduction {#index}
 
 This document describes best practices in research data managment.
 
