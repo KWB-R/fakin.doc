@@ -9,7 +9,8 @@ rmd_files: [
   "03_folder_structures.Rmd",
   "04_rawdata.Rmd",
   "05_metadata.Rmd",
-  "06_data_processing.Rmd"
+  "06_data_processing.Rmd",
+  "07_projects.Rmd"
 ]
 delete_merged_file: true
 language:
