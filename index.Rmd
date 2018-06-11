@@ -1,7 +1,7 @@
 ---
 title: "Best Practices in Research Data Management"
 author: "Hauke Sonnenberg & Michael Rustler"
-date: "2018-06-08"
+date: "`r Sys.time()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -11,12 +11,29 @@ link-citations: yes
 github-repo: kwb-r/fakin.doc
 url: 'https\://kwb-r.github.io/fakin.doc'
 description: "FAKIN Best Practices"
+cover: images/cover.png
 ---
 
-# Introduction {#index}
+# Introduction {-#index}
 
-This document is the outcome of the KWB project FAKIN (Forschungsdatenmanagement 
-an kleinen Instituten = research data management at small institutes).
+> "These days, data trails are often a morass of separate data and results and 
+code files in which no one knows which results were derived from which raw data 
+using which code files."
+>
+> --- [Professor Charles Randy Gallistel, Rutgers University](https://elifesciences.org/labs/7dbeb390/reproducible-document-stack-supporting-the-next-generation-research-article)
+
+
+
+
+```{r fig.align='center', out.width = "400px", echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), fig.link='http://www.kompetenz-wasser.de/en/project/fakin-research-data-management/'}
+knitr::include_graphics('images/cover.png', dpi = NA)
+```
+
+
+
+
+This document is the outcome of the KWB project [FAKIN](http://www.kompetenz-wasser.de/en/project/fakin-research-data-management) 
+(Forschungsdatenmanagement an kleinen Instituten = research data management at small institutes).
 
 It defines best practices for research data management. It is mainly based on
 the personal experiences of the authors having worked in many different 
@@ -28,7 +45,7 @@ The document is outlined as follows:
 * [Chapter 3](#projects) gives overviews about KWB projects and lists how different data related tasks have been solved within these projects.
 
 This document is assumed to be a "living" document. We highly appreciate any
-comments and suggestions for improvements. What are your experieces with
+comments and suggestions for improvements. What are your experiences with
 research data managment tasks? Can you provide solutions for specific tasks?
 
 # (PART) Best Practices {-}
