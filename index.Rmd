@@ -1,0 +1,16 @@
+---
+title: "FAKIN Projektdokumentation"
+author: "Hauke Sonnenberg & Michael Rustler"
+date: "2018-06-08"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: kwb-r/fakin.doc
+url: 'https\://kwb-r.github.io/fakin.doc'
+description: "FAKIN Projektdokumentation"
+---
+
+# (PART) New Chapters (English) {-}
