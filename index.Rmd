@@ -15,10 +15,20 @@ description: "FAKIN Best Practices"
 
 # Introduction {#index}
 
-This document describes best practices in research data managment.
+This document is the outcome of the KWB project FAKIN (Forschungsdatenmanagement 
+an kleinen Instituten = research data management at small institutes).
 
-It is the outcome of the FAKIN project.
+It defines best practices for research data management. It is mainly based on
+the personal experiences of the authors having worked in many different 
+research projects at KWB.
 
-It is mainly based on the experiences of the authors.
+The document is outlined as follows:
+
+* [Chapter 2](#best-practices) defines Best Practices for different topics.
+* [Chapter 3](#projects) gives overviews about KWB projects and lists how different data related tasks have been solved within these projects.
+
+This document is assumed to be a "living" document. We highly appreciate any
+comments and suggestions for improvements. What are your experieces with
+research data managment tasks? Can you provide solutions for specific tasks?
 
 # (PART) Best Practices {-}
