@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="naming-conventions.html">
-<link rel="next" href="raw-data.html">
+<link rel="prev" href="optiwells.html">
+<link rel="next" href="aquanes.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -122,57 +122,18 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="folder-structures" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Folder Structures</h1>
-<div id="project-folder-structure" class="section level2">
-<h2><span class="header-section-number">3.1</span> Project Folder Structure</h2>
-<p>We said that we want to concentrate on the folder structures within the project folders. Nevertheless, we would like to give a recommendation on how the project folders could be organised within its top level folder. In this structure, there are no subfolders for the different departments any more.</p>
-<pre><code>//server/projects$
-- PROJECTS.txt
-- project-1/
-- project-2/
-- project-3/</code></pre>
-<p>In the <code>projects$</code> folder</p>
-<ul>
-<li>each subfolder name should appear in the file <a href="metadata.html#file-projects"><code>PROJECTS.txt</code></a></li>
-<li>there should not be any folder on the top level that does not represent a project.</li>
-<li>there should be no other files on the top level as the files that are described in this documentation.</li>
-<li>there are no subfolders representing departments any more. The mapping of projects to departments is done in the file <a href="metadata.html#file-projects"><code>PROJECTS.txt</code></a></li>
-</ul>
-</div>
-<div id="rawdata-folder-structure" class="section level2">
-<h2><span class="header-section-number">3.2</span> Rawdata Folder Structure</h2>
-<p>We will create a network folder <code>//server/rawdata$</code> in which all files have set the read-only property. We suggest to store raw data by project first and by the organisation that owns (i.e. generated, provided) the data second. This could look like this:</p>
-<pre><code>//server/rawdata$
-- ORGANISATIONS.txt
-- PROJECTS.lnk [Symbolic Link to PROJECTS.txt in //server/projects$]
-- flusshygiene
-  - bwb
-  - kwb
-  - uba
-  - ...
-- ogre
-  - kwb
-  - bwb
-  - uba
-  - ...
-- ...</code></pre>
-<p>Restrictions/Conventions:</p>
-<ul>
-<li>Each top-level folder should represent a project, i.e. should be defined in the top level file <a href="metadata.html#file-projects"><code>PROJECTS.txt</code></a>.</li>
-<li>Each possible owner should be defined in the top level file <a href="metadata.html#file-organisations"><code>ORGANISATIONS.txt</code></a>.</li>
-<li>The naming convention for the organisations is the same as for projects.</li>
-</ul>
-
-</div>
+<div id="rwe" class="section level1">
+<h1><span class="header-section-number">Chapter 14</span> RWE</h1>
+<p>(Semi)automatisierte Erstellung eines komplexen MODFLOW Modells (mehrere Layer, mehrere hunderte Entnahmebrunnen mit zeitlich variierender Entnahmemenge sowie Hinzufügen/Entfernen von Brunnen innerhalb des Simulationszeitraums) in Phyton mittels <a href="http://modflowpy.github.io/flopydoc/">flopy</a> sowie Entwicklung der Modellszenarien auf Github (siehe hier: <a href="https://github.com/chmenz/Maxflow">Maxflow</a>).</p>
+<p>Input Christian !?!</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="naming-conventions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="raw-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="optiwells.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="aquanes.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -202,7 +163,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/KWB-R/fakin.doc/blob/master/03_folder_structures.Rmd",
+"link": "https://github.com/KWB-R/fakin.doc/blob/master/07_projects.Rmd",
 "text": "Edit"
 },
 "download": ["fakin_documentation.docx", "fakin_documentation.pdf", "fakin_documentation.epub"],

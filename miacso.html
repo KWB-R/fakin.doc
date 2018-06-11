@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="naming-conventions.html">
-<link rel="next" href="raw-data.html">
+<link rel="prev" href="spree2011-2007.html">
+<link rel="next" href="kuras.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -122,57 +122,72 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="folder-structures" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Folder Structures</h1>
-<div id="project-folder-structure" class="section level2">
-<h2><span class="header-section-number">3.1</span> Project Folder Structure</h2>
-<p>We said that we want to concentrate on the folder structures within the project folders. Nevertheless, we would like to give a recommendation on how the project folders could be organised within its top level folder. In this structure, there are no subfolders for the different departments any more.</p>
-<pre><code>//server/projects$
-- PROJECTS.txt
-- project-1/
-- project-2/
-- project-3/</code></pre>
-<p>In the <code>projects$</code> folder</p>
+<div id="miacso" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> MIACSO (2009)</h1>
+<p>Monitoring</p>
 <ul>
-<li>each subfolder name should appear in the file <a href="metadata.html#file-projects"><code>PROJECTS.txt</code></a></li>
-<li>there should not be any folder on the top level that does not represent a project.</li>
-<li>there should be no other files on the top level as the files that are described in this documentation.</li>
-<li>there are no subfolders representing departments any more. The mapping of projects to departments is done in the file <a href="metadata.html#file-projects"><code>PROJECTS.txt</code></a></li>
+<li>sites: one site in the sewer (monitoring container), more sites in the river</li>
+<li>variables: water quantity and quality</li>
+<li>devices: online sensors</li>
 </ul>
-</div>
-<div id="rawdata-folder-structure" class="section level2">
-<h2><span class="header-section-number">3.2</span> Rawdata Folder Structure</h2>
-<p>We will create a network folder <code>//server/rawdata$</code> in which all files have set the read-only property. We suggest to store raw data by project first and by the organisation that owns (i.e. generated, provided) the data second. This could look like this:</p>
-<pre><code>//server/rawdata$
-- ORGANISATIONS.txt
-- PROJECTS.lnk [Symbolic Link to PROJECTS.txt in //server/projects$]
-- flusshygiene
-  - bwb
-  - kwb
-  - uba
-  - ...
-- ogre
-  - kwb
-  - bwb
-  - uba
-  - ...
-- ...</code></pre>
-<p>Restrictions/Conventions:</p>
+<p>Modelling</p>
 <ul>
-<li>Each top-level folder should represent a project, i.e. should be defined in the top level file <a href="metadata.html#file-projects"><code>PROJECTS.txt</code></a>.</li>
-<li>Each possible owner should be defined in the top level file <a href="metadata.html#file-organisations"><code>ORGANISATIONS.txt</code></a>.</li>
-<li>The naming convention for the organisations is the same as for projects.</li>
+<li>Sewerage: Infoworks</li>
+<li>River hydraulics: Hydrax</li>
+<li>River quality: QSim</li>
 </ul>
-
-</div>
+<p>Data storage</p>
+<ul>
+<li>High amount of data -&gt; extra server: <code>moby</code></li>
+<li>We put some effort in planning good folder structures for the data. Nevertheless the structure at the end of the project is not as clean as it was planned.</li>
+<li>Data that we received from project partners was stored in <code>Daten/EXTERN</code>.</li>
+<li>Raw data was stored in a folder <code>Daten/RAW</code> which was write-protected and required a special user-account for storing new data.</li>
+</ul>
+<pre><code>Daten/
+  ACCESS/ # MS Access databases, containing raw data
+  EXTERN/ # External data (by organisation)
+  META/   # MS Access databases, containing metadata 
+          # (about calibration, maintenane, sites, variables)
+  RAW/    # Text files containing raw data, from KWB-own devices only, by site</code></pre>
+<p>Metadata</p>
+<ul>
+<li>many devices in the container -&gt; meta data about device cleaning and maintenance important -&gt; tool: <code>META_Maintenance.mdb</code></li>
+</ul>
+<p>Methods and Tools</p>
+<ul>
+<li>We imported most of the data from text files into MS Access databases in -&gt; tool: <code>MiaCsoRawImport.mdb</code></li>
+<li>We calibrated the sensors offline by using SQL queries to provide calibrated data from raw data -&gt; tool: <code>MiaCsoMetaCalibControl.mdb</code></li>
+<li>We used SQL queries to perform data processing -&gt; tool: <code>MiaCsoStatAnalysis.mdb</code></li>
+<li>Data validation (outlier detection) was done in a two step procedure:
+<ol style="list-style-type: decimal">
+<li>Automatic preselection using MS Access tool <code>MiaCsoStatAnalysis.mdb</code></li>
+<li>Manual selection using self-developed graphical tool in Origin</li>
+</ol></li>
+</ul>
+<p>Developed Tools:</p>
+<ul>
+<li>MS Access Applications
+<ul>
+<li><code>MetaMaint.mdb</code>: Monitoring Metadata Management</li>
+<li><code>MiaCsoRawImport.mdb</code>: Text File Import to MS Access</li>
+<li><code>MiaCsoStatAnalysis.mdb</code> (project deliverable): Definition and automatic execution of sequences of SQL queries</li>
+</ul></li>
+<li>Origin extension to interactively select and store outliers graphically</li>
+<li>R packages
+<ul>
+<li><code>kwb.mia.evalCritO2</code> (project deliverable): graphical evaluation of critical oxygen conditions in the river</li>
+<li><code>kwb.mia.iw</code>: Calculation of file sizes of InfoWorks result csv-files exported from InfoWorks.</li>
+<li><code>kwb.miacso</code>: functions used in MIA-CSO, for example for plotting data availabilities.</li>
+</ul></li>
+</ul>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="naming-conventions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="raw-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="spree2011-2007.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="kuras.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -202,7 +217,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/KWB-R/fakin.doc/blob/master/03_folder_structures.Rmd",
+"link": "https://github.com/KWB-R/fakin.doc/blob/master/07_projects.Rmd",
 "text": "Edit"
 },
 "download": ["fakin_documentation.docx", "fakin_documentation.pdf", "fakin_documentation.epub"],
