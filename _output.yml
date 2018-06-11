@@ -5,12 +5,15 @@ bookdown::gitbook:
     toc:
       collapse: subsection      
       before: |
-        <li><a href="./">FAKIN Projekt-Dokumentation</a></li>
+        <li><a href="./">FAKIN project documentation</a></li>
       after: |
         <li><a href="http://www.kompetenz-wasser.de" target="blank">Published by KWB</a></li>
     download: ["docx", "pdf", "epub"]
     edit:
       link: https://github.com/KWB-R/fakin.doc/blob/master/%s
+    sharing:
+      github: yes
+      facebook: no
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
