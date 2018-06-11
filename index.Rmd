@@ -1,5 +1,5 @@
 ---
-title: "FAKIN Projektdokumentation"
+title: "Best Practices in Research Data Management"
 author: "Hauke Sonnenberg & Michael Rustler"
 date: "2018-06-08"
 site: bookdown::bookdown_site
@@ -10,7 +10,13 @@ biblio-style: apalike
 link-citations: yes
 github-repo: kwb-r/fakin.doc
 url: 'https\://kwb-r.github.io/fakin.doc'
-description: "FAKIN Projektdokumentation"
+description: "FAKIN Best Practices"
 ---
 
-# (PART) New Chapters (English) {-}
+# Introduction {-}
+
+This document describes best practices in research data managment.
+
+It is the outcome of the FAKIN project.
+
+It is mainly based on the experiences of the authors.

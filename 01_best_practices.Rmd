@@ -1,0 +1,212 @@
+# (PART) Best Practices {-}
+
+# Data-Related Project Controlling
+
+At the start of a research project
+
+* Choose a [Project Acronym](#project-acronyms) and store it in 
+[`PROJECTS.txt`](#file-projects).
+* Check if the organisations that you expect to get data from are listed in
+[`ORGANISATIONS.txt`](#file-organisations) and extend the list in the file if
+necessary.
+* Create a subfolder for your project and subfolders for the organisations
+in the [Rawdata Folder Structure](#rawdata-folder-structure).
+
+At the start of a project or if an employee or trainee enters the project
+
+* Give an introduction to our research data management as described in this 
+document.
+
+Regularly during the project 
+
+* Check if the folder structure within your project's rawdata subfolder still 
+complies with the [Rawdata Folder Structure](#rawdata-folder-structure) and 
+clean the structure, if not.
+
+# Naming Conventions
+
+## Acronyms
+
+Acronyms are unique, clear names for objects. They should 
+
+* be short but meaningful and easy to remember, 
+* be all lowercase,
+* consist of only alphanumeric letters (`a-z`, `0-9`) or the hyphen (`-`). 
+
+### Acronyms for Projects {#project-acronyms}
+
+At the start of a project we define a project acronym. This acronym is
+intended to be used in file and folder names. 
+
+Whenever we want to indicate the relation to a certain project in a file or 
+folder name, we use the project acronym in exactly the typing that was defined.
+This is important as we want to distinguish between raw data, processed data and 
+project results in our [Folder Structures](#folder-structures).
+
+The project acronyms are defined in a simple text 
+file [`PROJECTS.txt`](#file-projects) in the `//server/projects$` folder, see 
+[Project Folder Structure](#project-folder-structure).
+
+### Acronyms for Organisations
+
+It is very important to know the owners of data. Therefore we define unique
+acronyms for the owners of data that we use. The acronyms are defined in a
+special file [`ORGANISATIONS.txt`](#file-organisations) 
+
+# Folder Structures {#folder-structures}
+
+## Project Folder Structure {#project-folder-structure}
+
+We said that we want to concentrate on the folder structures within the project 
+folders. Nevertheless, we would like to give a recommendation on how the project
+folders could be organised within its top level folder. In this structure, there
+are no subfolders for the different departments any more. 
+
+```
+//server/projects$
+- PROJECTS.txt
+- project-1/
+- project-2/
+- project-3/
+```
+
+In the `projects$` folder
+
+- each subfolder name should appear in the file [`PROJECTS.txt`](#file-projects)
+- there should not be any folder on the top level that does not represent a 
+project. 
+- there should be no other files on the top level as the files that are
+described in this documentation.
+- there are no subfolders representing departments any more. The mapping of
+projects to departments is done in the file [`PROJECTS.txt`](#file-projects)
+
+## Rawdata Folder Structure {#rawdata-folder-structure}
+
+We will create a network folder `//server/rawdata$` in which all files
+have set the read-only property. We suggest to store raw data by project first
+and by the organisation that owns (i.e. generated, provided) the data second. 
+This could look like this:
+
+```
+//server/rawdata$
+- ORGANISATIONS.txt
+- PROJECTS.lnk [Symbolic Link to PROJECTS.txt in //server/projects$]
+- flusshygiene
+  - bwb
+  - kwb
+  - uba
+  - ...
+- ogre
+  - kwb
+  - bwb
+  - uba
+  - ...
+- ...
+```
+
+Restrictions/Conventions:
+
+* Each top-level folder should represent a project, i.e. should be defined in
+the top level file [`PROJECTS.txt`](#file-projects). 
+* Each possible owner should be defined in the top level file
+[`ORGANISATIONS.txt`](#file-organisations).
+* The naming convention for the organisations is the same as for projects.
+
+# Metadata
+
+## Special Files
+
+We propose to define some special files that contain metadata related to 
+files and folders. To indicate that these files have a special meaning, the
+file names are all uppercase.
+
+### File PROJECTS.txt {#file-projects}
+
+This file contains the [project acronyms](#project-acronyms) as we want to use 
+them e.g. as top-level folder names in our 
+[project folder structure](#project-folder-structure).
+The projects are grouped by department.
+
+Possible content of `PROJECTS.txt`:
+
+```
+# Department SUW (Surface Water)
+dswt: DSWT
+flusshygiene: Flusshygiene
+kuras: KURAS
+mia-cso: MIACSO
+monitor: MONITOR
+ogre: OGRE
+reliable-sewer: RELIABLE_SEWER
+sema: SEMA
+sema-berlin: SEMA Berlin
+sema-berlin-2: SEMA Berlin 2
+spree-2011: SPREE2011
+spree-2011-2: SPREE2011 "reloaded"
+
+# Department GRW (Groundwater)
+optiwells: OPTIWELLS
+optiwells-2: OPTIWELLS 2
+wellma: WELLMA
+
+# Department WWT (Wastewater Treatment)
+...
+```
+
+In the file `PROJECTS.txt` the project acronyms appear in alphabetical
+order. They map the acronym to a project name or a project title and the year
+of the start of the project. 
+
+**Question:**
+Do we already have a place where "official"
+metadata about projects are stored? If yes, the acronym could be included there. But then, everybody should know about it!
+
+### File ORGANISATIONS.txt {#file-organisations}
+
+Possible content of `ORGANISATIONS.txt`
+
+```
+bwb: Berliner Wasserbetriebe
+kwb: Kompetenzzentrum Wasser Berlin
+uba: Umweltbundesamt
+```
+
+# Raw Data
+
+As raw data we define data that we receive from a device or from a project
+partner. 
+
+Most of our research results are based on data. We acknowledge the importance
+of raw data by
+
+* storing then in a special place where it is specially secured
+* describing them with metadata
+
+Rawdata are stored in the [rawdata folder structure](#rawdata-folder-structure)
+
+# Data Processing
+
+## Automatic Data Import into R
+
+In the following we describe how data can be imported into the R-Programming
+Environment
+
+### Import Data From One Excel File
+
+* Save the original file in the rawdata zone. 
+
+
+### Import Data From Many Excel Files
+
+#### Files Are In the Same Format
+
+Import Excel files of the same format by 
+
+* defining a function that is able to read the data from that file
+* calling this function in a loop for each file to import.
+
+#### Files Are In Different Formats
+
+We developed a general approach of importing data from many Excel files in which 
+the formats (e.g. more than one table area within one sheet, differing numbers
+of header rows) differ from file to file.
