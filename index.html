@@ -62,10 +62,12 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">FAKIN Projekt-Dokumentation</a></li>
+<li><a href="./">FAKIN project documentation</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#example-blocks"><i class="fa fa-check"></i>Example blocks</a></li>
+</ul></li>
 <li class="part"><span><b>I Best Practices</b></span></li>
 <li class="chapter" data-level="1" data-path="data-related-project-controlling.html"><a href="data-related-project-controlling.html"><i class="fa fa-check"></i><b>1</b> Data-Related Project Controlling</a></li>
 <li class="chapter" data-level="2" data-path="naming-conventions.html"><a href="naming-conventions.html"><i class="fa fa-check"></i><b>2</b> Naming Conventions</a><ul>
@@ -124,7 +126,7 @@
 <div id="header">
 <h1 class="title">Best Practices in Research Data Management</h1>
 <p class="author"><em>Hauke Sonnenberg &amp; Michael Rustler</em></p>
-<p class="date"><em>2018-06-11 20:11:59</em></p>
+<p class="date"><em>2018-06-11 23:05:07</em></p>
 </div>
 <div id="index" class="section level1 unnumbered">
 <h1>Introduction</h1>
@@ -141,6 +143,36 @@
 <li><a href="#projects">Chapter 3</a> gives overviews about KWB projects and lists how different data related tasks have been solved within these projects.</li>
 </ul>
 <p>This document is assumed to be a “living” document. We highly appreciate any comments and suggestions for improvements. What are your experiences with research data managment tasks? Can you provide solutions for specific tasks?</p>
+<p><img src="images/by-nc-sa.png" alt="Creative Commons License" /><br />
+The online version of this report is licensed under the <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+<div id="example-blocks" class="section level3 unnumbered">
+<h3>Example blocks</h3>
+<div class="rmdtip">
+<p>
+TIP
+</p>
+</div>
+<div class="rmdnote">
+<p>
+NOTE
+</p>
+</div>
+<div class="rmdwarning">
+<p>
+WARNING
+</p>
+</div>
+<div class="rmdcaution">
+<p>
+CAUTION
+</p>
+</div>
+<div class="rmdimportant">
+<p>
+IMPORTANT
+</p>
+</div>
+</div>
 </div>
 
 
@@ -166,8 +198,8 @@
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "google": false,
 "linkedin": false,
