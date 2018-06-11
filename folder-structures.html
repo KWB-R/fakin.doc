@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="projektbeschreibungen.html">
-<link rel="next" href="problembereiche.html">
+<link rel="prev" href="naming-conventions.html">
+<link rel="next" href="metadata.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -193,59 +193,47 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="projektbausteine" class="section level1">
-<h1><span class="header-section-number">Chapter 9</span> Projektbausteine</h1>
-<p>Wir können “Projektbausteine” definieren, die in verschiedenen Projekten vorkommen. Diese werden im Folgenden einzeln betrachtet.</p>
-<div id="monitoring" class="section level2">
-<h2><span class="header-section-number">9.1</span> Monitoring</h2>
-<p>In vielen Projekten führen wir eigene Messungen durch. Dazu verwenden wir eigene Messgeräte.</p>
-<p>In Monitoringprojekten spielen <a href="problembereiche.html#metadaten">Metadaten</a> eine besonders wichtige Rolle. Wir betreiben viele Messgeräte mit Akkus. Der Zeitpunkt des Austauschs des Akkus ist eine wichtige Metainformation. Wenn Akkus zu spät gewechselt werden können wichtige Daten verloren gehen bzw. verpasst werden! Auch die Reinigung von Messgeräten ist wichtig, z.B. von Sonden mit optischen Messfenstern. Diese muss einerseits regelmäßig erfolgen. Andererseits ist es wichtig zu wissen, wann Reinigungen erfolgten, damit Messwerte entsprechend interpretiert werden können.</p>
-<p>Im Projekt <a href="projektbeschreibungen.html#miacso">MIA-CSO</a> haben wir erst angefangen, diese Informationen in einer Exceldatei zu erfassen. Angesichts der vielen Messgeräte, Pumpen, Kompressoren und anderer Geräte wurde das aber bald unübersichtlich. Später habe ich eine <a href="#metadatenbank">MS Access Anwendung</a> dafür entwickelt, die seither in einigen Projekten zum Einsatz kam.</p>
-<p>Problemstellungen:</p>
+<div id="folder-structures" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Folder Structures</h1>
+<div id="project-folder-structure" class="section level2">
+<h2><span class="header-section-number">3.1</span> Project Folder Structure</h2>
+<p>We said that we want to concentrate on the folder structures within the project folders. Nevertheless, we would like to give a recommendation on how the project folders could be organised within its top level folder. In this structure, there are no subfolders for the different departments any more.</p>
+<pre><code>//server/projects$
+- PROJECTS.txt
+- project-1/
+- project-2/
+- project-3/</code></pre>
+<p>In the <code>projects$</code> folder</p>
 <ul>
-<li>verschiedene Geräte verschiedener Hersteller -&gt; verschiedene, meist nicht standardisierte Dateiformate</li>
-<li>Zeitstempel der Messung
-<ul>
-<li>Stellt das Gerät auf Sommerzeit um? -&gt; <a href="problembereiche.html#zeitstempel">Problembereich Zeitstempel</a></li>
-<li>Geht die interne Uhr immer richtig? Wie gewährleiste ich das?</li>
-</ul></li>
-</ul>
-<p>Beispielprojekte: <a href="projektbeschreibungen.html#miacso">MIACSO</a>, <a href="projektbeschreibungen.html#kuras">KURAS</a>, <a href="projektbeschreibungen.html#flusshygiene">Flusshygiene</a></p>
-</div>
-<div id="grundwassersimulation" class="section level2">
-<h2><span class="header-section-number">9.2</span> Grundwassersimulation</h2>
-<p>Beispielprojekte: <a href="projektbeschreibungen.html#optiwells">OPTIWELLS</a>, <a href="projektbeschreibungen.html#demoware">DEMOWARE</a>, <a href="projektbeschreibungen.html#rwe">RWE</a></p>
-</div>
-<div id="kanalnetzsimulation" class="section level2">
-<h2><span class="header-section-number">9.3</span> Kanalnetzsimulation</h2>
-<div id="datenaustausch-mit-bwb" class="section level3">
-<h3><span class="header-section-number">9.3.1</span> Datenaustausch mit BWB</h3>
-<p>Bei der Kanalnetzsimulation arbeiten wir eng mit den Berliner Wasserbetrieben zusammen. Diese haben und pflegen die Modellnetze.</p>
-<p>Eine Schwierigkeit besteht im Austausch von Netzen und in der Versionsverwaltung. In welcher Version wurde ein Netz geschickt?</p>
-<p>Gibt es dafür ein halbwegs vernünftiges Vorgehen? Wie ich es sehe, besteht eine große Gefahr, dass beim Hin- und Herschicken von Modellnetzen zwecks Abstimmung versehentlich wieder auf eine ältere Version zurückgegriffen wird und neueste Änderungen auf einer alten Version aufsetzen anstatt auf der aktuellen.</p>
-<p>Neben Modellnetzen werden auch andere Bausteien, z.B. Regenreihen oder RTC-Bausteine ausgetauscht.</p>
-<p>Fragen:</p>
-<ul>
-<li>Wie wird der Datenaustausch dokumentiert?</li>
-<li>Wie werden die ausgetauschten Objekte versioniert? Das müsste einheitlich auf beiden Seiten des Austauschs geschehen.</li>
+<li>each subfolder name should appear in the file <a href="metadata.html#file-projects"><code>PROJECTS.txt</code></a></li>
+<li>there should not be any folder on the top level that does not represent a project.</li>
+<li>there should be no other files on the top level as the files that are described in this documentation.</li>
+<li>there are no subfolders representing departments any more. The mapping of projects to departments is done in the file <a href="metadata.html#file-projects"><code>PROJECTS.txt</code></a></li>
 </ul>
 </div>
-<div id="modellkalibrierung" class="section level3">
-<h3><span class="header-section-number">9.3.2</span> Modellkalibrierung</h3>
-<p>Trockenwetterkalibrierung</p>
-<p>Die Kalibrierung der Abflüsse bei Trockenwetter wird anhand einer mittleren Trockenwetterganglinie gemacht. Dafür müssen Trockenwettertage aus den Messdaten ausgewählt werden. Wie wird das gemacht? Ist nachvollziehbar, nach welchen Kriterien die Auswahl erfolgte? Wie wird der Mittelwert über die Ganglinien berechnet? Was geschieht mit Ausreißern, was mit fehlenden Werten? Ist die Auswahl und Berechnung reproduzierbar und lässt sie sich leicht auf neue Daten anwenden? Das wäre eine typische Problemstellung, die sich mit <a href="allgemeine-methoden.html#programmierung">Programmierung</a> lösen lässt. Ggf. gibt es aber auch funktionierende Excellösungen dafür. Wie macht ihr das?</p>
-<p>Bei der Modellkalibrierung wird versucht, die Modellparameter, die die Abflussbildung auf der Oberfläche beschreiben, so einzustellen, dass die simulierten Abflüsse und Wasserstände den gemessenen Abflüssen und Wasserständen entspricht. Dazu müssen die gemessenen Regenmengen so aufbereitet werden, dass sie in das Modell importiert werden können. Die erste Aufgabe besteht darin, die vollständige Regenmessreihe in Ereignisse zu zerlegen. Das ist wichtig, da InfoWorks ereignisbezoge z.B. die Evaporation berechnet. Nach der Zerlegung in Ereignisse müssen die Ereignisdaten noch in das richtige Format gebracht werden.</p>
-<p>Siehe</p>
+<div id="rawdata-folder-structure" class="section level2">
+<h2><span class="header-section-number">3.2</span> Rawdata Folder Structure</h2>
+<p>We will create a network folder <code>//server/rawdata$</code> in which all files have set the read-only property. We suggest to store raw data by project first and by the organisation that owns (i.e. generated, provided) the data second. This could look like this:</p>
+<pre><code>//server/rawdata$
+- ORGANISATIONS.txt
+- PROJECTS.lnk [Symbolic Link to PROJECTS.txt in //server/projects$]
+- flusshygiene
+  - bwb
+  - kwb
+  - uba
+  - ...
+- ogre
+  - kwb
+  - bwb
+  - uba
+  - ...
+- ...</code></pre>
+<p>Restrictions/Conventions:</p>
 <ul>
-<li><a href="#ereignisliste">Erzeugen einer Ereignisliste</a></li>
-<li><a href="loesungen.html#input-infoworks-regen">InfoWorks: Erzeugen von Regen-Inputdateien</a></li>
+<li>Each top-level folder should represent a project, i.e. should be defined in the top level file <a href="metadata.html#file-projects"><code>PROJECTS.txt</code></a>.</li>
+<li>Each possible owner should be defined in the top level file <a href="metadata.html#file-organisations"><code>ORGANISATIONS.txt</code></a>.</li>
+<li>The naming convention for the organisations is the same as for projects.</li>
 </ul>
-<p>Beispielprojekte: <a href="projektbeschreibungen.html#miacso">MIACSO</a>, <a href="projektbeschreibungen.html#kuras">KURAS</a>, <a href="projektbeschreibungen.html#flusshygiene">Flusshygiene</a></p>
-</div>
-</div>
-<div id="lca" class="section level2">
-<h2><span class="header-section-number">9.4</span> LCA</h2>
-<p>LCA steht für Life Cycle Assessment, bedeutet also soviel wie Lebenszyklusbewertung.</p>
 </div>
 </div>
             </section>
@@ -253,8 +241,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="projektbeschreibungen.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="problembereiche.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="naming-conventions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="metadata.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -284,7 +272,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/KWB-R/fakin.doc/blob/master/10_old_german_chapters.Rmd",
+"link": "https://github.com/KWB-R/fakin.doc/blob/master/01_best_practices.Rmd",
 "text": "Edit"
 },
 "download": ["fakin_documentation.docx", "fakin_documentation.pdf", "fakin_documentation.epub"],

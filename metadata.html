@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="projektbeschreibungen.html">
-<link rel="next" href="problembereiche.html">
+<link rel="prev" href="folder-structures.html">
+<link rel="next" href="raw-data.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -193,59 +193,46 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="projektbausteine" class="section level1">
-<h1><span class="header-section-number">Chapter 9</span> Projektbausteine</h1>
-<p>Wir können “Projektbausteine” definieren, die in verschiedenen Projekten vorkommen. Diese werden im Folgenden einzeln betrachtet.</p>
-<div id="monitoring" class="section level2">
-<h2><span class="header-section-number">9.1</span> Monitoring</h2>
-<p>In vielen Projekten führen wir eigene Messungen durch. Dazu verwenden wir eigene Messgeräte.</p>
-<p>In Monitoringprojekten spielen <a href="problembereiche.html#metadaten">Metadaten</a> eine besonders wichtige Rolle. Wir betreiben viele Messgeräte mit Akkus. Der Zeitpunkt des Austauschs des Akkus ist eine wichtige Metainformation. Wenn Akkus zu spät gewechselt werden können wichtige Daten verloren gehen bzw. verpasst werden! Auch die Reinigung von Messgeräten ist wichtig, z.B. von Sonden mit optischen Messfenstern. Diese muss einerseits regelmäßig erfolgen. Andererseits ist es wichtig zu wissen, wann Reinigungen erfolgten, damit Messwerte entsprechend interpretiert werden können.</p>
-<p>Im Projekt <a href="projektbeschreibungen.html#miacso">MIA-CSO</a> haben wir erst angefangen, diese Informationen in einer Exceldatei zu erfassen. Angesichts der vielen Messgeräte, Pumpen, Kompressoren und anderer Geräte wurde das aber bald unübersichtlich. Später habe ich eine <a href="#metadatenbank">MS Access Anwendung</a> dafür entwickelt, die seither in einigen Projekten zum Einsatz kam.</p>
-<p>Problemstellungen:</p>
-<ul>
-<li>verschiedene Geräte verschiedener Hersteller -&gt; verschiedene, meist nicht standardisierte Dateiformate</li>
-<li>Zeitstempel der Messung
-<ul>
-<li>Stellt das Gerät auf Sommerzeit um? -&gt; <a href="problembereiche.html#zeitstempel">Problembereich Zeitstempel</a></li>
-<li>Geht die interne Uhr immer richtig? Wie gewährleiste ich das?</li>
-</ul></li>
-</ul>
-<p>Beispielprojekte: <a href="projektbeschreibungen.html#miacso">MIACSO</a>, <a href="projektbeschreibungen.html#kuras">KURAS</a>, <a href="projektbeschreibungen.html#flusshygiene">Flusshygiene</a></p>
+<div id="metadata" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Metadata</h1>
+<div id="special-files" class="section level2">
+<h2><span class="header-section-number">4.1</span> Special Files</h2>
+<p>We propose to define some special files that contain metadata related to files and folders. To indicate that these files have a special meaning, the file names are all uppercase.</p>
+<div id="file-projects" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> File PROJECTS.txt</h3>
+<p>This file contains the <a href="naming-conventions.html#project-acronyms">project acronyms</a> as we want to use them e.g. as top-level folder names in our <a href="folder-structures.html#project-folder-structure">project folder structure</a>. The projects are grouped by department.</p>
+<p>Possible content of <code>PROJECTS.txt</code>:</p>
+<pre><code># Department SUW (Surface Water)
+dswt: DSWT
+flusshygiene: Flusshygiene
+kuras: KURAS
+mia-cso: MIACSO
+monitor: MONITOR
+ogre: OGRE
+reliable-sewer: RELIABLE_SEWER
+sema: SEMA
+sema-berlin: SEMA Berlin
+sema-berlin-2: SEMA Berlin 2
+spree-2011: SPREE2011
+spree-2011-2: SPREE2011 &quot;reloaded&quot;
+
+# Department GRW (Groundwater)
+optiwells: OPTIWELLS
+optiwells-2: OPTIWELLS 2
+wellma: WELLMA
+
+# Department WWT (Wastewater Treatment)
+...</code></pre>
+<p>In the file <code>PROJECTS.txt</code> the project acronyms appear in alphabetical order. They map the acronym to a project name or a project title and the year of the start of the project.</p>
+<p><strong>Question:</strong> Do we already have a place where “official” metadata about projects are stored? If yes, the acronym could be included there. But then, everybody should know about it!</p>
 </div>
-<div id="grundwassersimulation" class="section level2">
-<h2><span class="header-section-number">9.2</span> Grundwassersimulation</h2>
-<p>Beispielprojekte: <a href="projektbeschreibungen.html#optiwells">OPTIWELLS</a>, <a href="projektbeschreibungen.html#demoware">DEMOWARE</a>, <a href="projektbeschreibungen.html#rwe">RWE</a></p>
+<div id="file-organisations" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> File ORGANISATIONS.txt</h3>
+<p>Possible content of <code>ORGANISATIONS.txt</code></p>
+<pre><code>bwb: Berliner Wasserbetriebe
+kwb: Kompetenzzentrum Wasser Berlin
+uba: Umweltbundesamt</code></pre>
 </div>
-<div id="kanalnetzsimulation" class="section level2">
-<h2><span class="header-section-number">9.3</span> Kanalnetzsimulation</h2>
-<div id="datenaustausch-mit-bwb" class="section level3">
-<h3><span class="header-section-number">9.3.1</span> Datenaustausch mit BWB</h3>
-<p>Bei der Kanalnetzsimulation arbeiten wir eng mit den Berliner Wasserbetrieben zusammen. Diese haben und pflegen die Modellnetze.</p>
-<p>Eine Schwierigkeit besteht im Austausch von Netzen und in der Versionsverwaltung. In welcher Version wurde ein Netz geschickt?</p>
-<p>Gibt es dafür ein halbwegs vernünftiges Vorgehen? Wie ich es sehe, besteht eine große Gefahr, dass beim Hin- und Herschicken von Modellnetzen zwecks Abstimmung versehentlich wieder auf eine ältere Version zurückgegriffen wird und neueste Änderungen auf einer alten Version aufsetzen anstatt auf der aktuellen.</p>
-<p>Neben Modellnetzen werden auch andere Bausteien, z.B. Regenreihen oder RTC-Bausteine ausgetauscht.</p>
-<p>Fragen:</p>
-<ul>
-<li>Wie wird der Datenaustausch dokumentiert?</li>
-<li>Wie werden die ausgetauschten Objekte versioniert? Das müsste einheitlich auf beiden Seiten des Austauschs geschehen.</li>
-</ul>
-</div>
-<div id="modellkalibrierung" class="section level3">
-<h3><span class="header-section-number">9.3.2</span> Modellkalibrierung</h3>
-<p>Trockenwetterkalibrierung</p>
-<p>Die Kalibrierung der Abflüsse bei Trockenwetter wird anhand einer mittleren Trockenwetterganglinie gemacht. Dafür müssen Trockenwettertage aus den Messdaten ausgewählt werden. Wie wird das gemacht? Ist nachvollziehbar, nach welchen Kriterien die Auswahl erfolgte? Wie wird der Mittelwert über die Ganglinien berechnet? Was geschieht mit Ausreißern, was mit fehlenden Werten? Ist die Auswahl und Berechnung reproduzierbar und lässt sie sich leicht auf neue Daten anwenden? Das wäre eine typische Problemstellung, die sich mit <a href="allgemeine-methoden.html#programmierung">Programmierung</a> lösen lässt. Ggf. gibt es aber auch funktionierende Excellösungen dafür. Wie macht ihr das?</p>
-<p>Bei der Modellkalibrierung wird versucht, die Modellparameter, die die Abflussbildung auf der Oberfläche beschreiben, so einzustellen, dass die simulierten Abflüsse und Wasserstände den gemessenen Abflüssen und Wasserständen entspricht. Dazu müssen die gemessenen Regenmengen so aufbereitet werden, dass sie in das Modell importiert werden können. Die erste Aufgabe besteht darin, die vollständige Regenmessreihe in Ereignisse zu zerlegen. Das ist wichtig, da InfoWorks ereignisbezoge z.B. die Evaporation berechnet. Nach der Zerlegung in Ereignisse müssen die Ereignisdaten noch in das richtige Format gebracht werden.</p>
-<p>Siehe</p>
-<ul>
-<li><a href="#ereignisliste">Erzeugen einer Ereignisliste</a></li>
-<li><a href="loesungen.html#input-infoworks-regen">InfoWorks: Erzeugen von Regen-Inputdateien</a></li>
-</ul>
-<p>Beispielprojekte: <a href="projektbeschreibungen.html#miacso">MIACSO</a>, <a href="projektbeschreibungen.html#kuras">KURAS</a>, <a href="projektbeschreibungen.html#flusshygiene">Flusshygiene</a></p>
-</div>
-</div>
-<div id="lca" class="section level2">
-<h2><span class="header-section-number">9.4</span> LCA</h2>
-<p>LCA steht für Life Cycle Assessment, bedeutet also soviel wie Lebenszyklusbewertung.</p>
 </div>
 </div>
             </section>
@@ -253,8 +240,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="projektbeschreibungen.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="problembereiche.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="folder-structures.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="raw-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -284,7 +271,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/KWB-R/fakin.doc/blob/master/10_old_german_chapters.Rmd",
+"link": "https://github.com/KWB-R/fakin.doc/blob/master/01_best_practices.Rmd",
 "text": "Edit"
 },
 "download": ["fakin_documentation.docx", "fakin_documentation.pdf", "fakin_documentation.epub"],
