@@ -2,7 +2,15 @@ book_filename: "fakin_documentation"
 chapter_name: "Chapter "
 repo: https://github.com/kwb-r/fakin.doc
 output_dir: docs
-rmd_files: ["index.Rmd", "01_best_practices.Rmd", "10_old_german_chapters.Rmd"]
+rmd_files: [
+  "index.Rmd", 
+  "01_project_controlling.Rmd", 
+  "02_naming_conventions.Rmd",
+  "03_folder_structures.Rmd",
+  "04_rawdata.Rmd",
+  "05_metadata.Rmd",
+  "06_data_processing.Rmd"
+]
 delete_merged_file: true
 language:
   label:

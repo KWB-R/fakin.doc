@@ -20,3 +20,5 @@ This document describes best practices in research data managment.
 It is the outcome of the FAKIN project.
 
 It is mainly based on the experiences of the authors.
+
+# (PART) Best Practices {-}

@@ -1,0 +1,29 @@
+# Naming Conventions
+
+## Acronyms
+
+Acronyms are unique, clear names for objects. They should 
+
+* be short but meaningful and easy to remember, 
+* be all lowercase,
+* consist of only alphanumeric letters (`a-z`, `0-9`) or the hyphen (`-`). 
+
+### Acronyms for Projects {#project-acronyms}
+
+At the start of a project we define a project acronym. This acronym is
+intended to be used in file and folder names. 
+
+Whenever we want to indicate the relation to a certain project in a file or 
+folder name, we use the project acronym in exactly the typing that was defined.
+This is important as we want to distinguish between raw data, processed data and 
+project results in our [Folder Structures](#folder-structures).
+
+The project acronyms are defined in a simple text 
+file [`PROJECTS.txt`](#file-projects) in the `//server/projects$` folder, see 
+[Project Folder Structure](#project-folder-structure).
+
+### Acronyms for Organisations
+
+It is very important to know the owners of data. Therefore we define unique
+acronyms for the owners of data that we use. The acronyms are defined in a
+special file [`ORGANISATIONS.txt`](#file-organisations) 

@@ -1,0 +1,21 @@
+# Data-Related Project Controlling
+
+At the start of a research project
+
+* Choose a [project acronym](#project-acronyms) and store it in 
+[`PROJECTS.txt`](#file-projects).
+* Check if the organisations that you expect to get data from are listed in
+[`ORGANISATIONS.txt`](#file-organisations) and extend this file if necessary.
+* Create a subfolder for your project and subfolders for the organisations
+in the [rawdata folder structure](#rawdata-folder-structure).
+
+At the start of a project or if an employee or trainee enters the project
+
+* Give an introduction to our research data management as described in this 
+document.
+
+Regularly during the project 
+
+* Check if the folder structure within your project's rawdata subfolder still 
+complies with the [rawdata folder structure](#rawdata-folder-structure) and 
+clean the structure, if not.

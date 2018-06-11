@@ -1,0 +1,26 @@
+# Data Processing
+
+## Automatic Data Import into R
+
+In the following we describe how data can be imported into the R-Programming
+Environment
+
+### Import Data From One Excel File
+
+* Save the original file in the rawdata zone. 
+
+
+### Import Data From Many Excel Files
+
+#### Files Are In the Same Format
+
+Import Excel files of the same format by 
+
+* defining a function that is able to read the data from that file
+* calling this function in a loop for each file to import.
+
+#### Files Are In Different Formats
+
+We developed a general approach of importing data from many Excel files in which 
+the formats (e.g. more than one table area within one sheet, differing numbers
+of header rows) differ from file to file.

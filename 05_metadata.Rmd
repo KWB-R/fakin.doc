@@ -1,0 +1,58 @@
+# Metadata
+
+## Special Files
+
+We propose to define some special files that contain metadata related to 
+files and folders. To indicate that these files have a special meaning, the
+file names are all uppercase.
+
+### File PROJECTS.txt {#file-projects}
+
+This file contains the [project acronyms](#project-acronyms) as we want to use 
+them e.g. as top-level folder names in our 
+[project folder structure](#project-folder-structure).
+The projects are grouped by department.
+
+Possible content of `PROJECTS.txt`:
+
+```
+# Department SUW (Surface Water)
+dswt: DSWT
+flusshygiene: Flusshygiene
+kuras: KURAS
+mia-cso: MIACSO
+monitor: MONITOR
+ogre: OGRE
+reliable-sewer: RELIABLE_SEWER
+sema: SEMA
+sema-berlin: SEMA Berlin
+sema-berlin-2: SEMA Berlin 2
+spree-2011: SPREE2011
+spree-2011-2: SPREE2011 "reloaded"
+
+# Department GRW (Groundwater)
+optiwells: OPTIWELLS
+optiwells-2: OPTIWELLS 2
+wellma: WELLMA
+
+# Department WWT (Wastewater Treatment)
+...
+```
+
+In the file `PROJECTS.txt` the project acronyms appear in alphabetical
+order. They map the acronym to a project name or a project title and the year
+of the start of the project. 
+
+**Question:**
+Do we already have a place where "official"
+metadata about projects are stored? If yes, the acronym could be included there. But then, everybody should know about it!
+
+### File ORGANISATIONS.txt {#file-organisations}
+
+Possible content of `ORGANISATIONS.txt`
+
+```
+bwb: Berliner Wasserbetriebe
+kwb: Kompetenzzentrum Wasser Berlin
+uba: Umweltbundesamt
+```
