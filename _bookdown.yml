@@ -1,12 +1,12 @@
 book_filename: "fakin_documentation"
-chapter_name: "Kapitel "
+chapter_name: "Chapter"
 repo: https://github.com/kwb-r/fakin.doc
 output_dir: docs
-rmd_files: ["index.Rmd"]
+rmd_files: ["index.Rmd", "10_old_german_chapters.Rmd"]
 delete_merged_file: true
 language:
   label:
-    fig: "Abbildung "
-    tab: "Tabelle "
+    fig: "Figure"
+    tab: "Table"
   ui:
-    edit: "Bearbeiten"
+    edit: "Edit"
