@@ -1,12 +1,12 @@
-# Metadata
+## Metadata
 
-## Special Files
+### Special Files
 
 We propose to define some special files that contain metadata related to 
 files and folders. To indicate that these files have a special meaning, the
 file names are all uppercase.
 
-### File PROJECTS.txt {#file-projects}
+#### File PROJECTS.txt {#file-projects}
 
 This file contains the [project acronyms](#project-acronyms) as we want to use 
 them e.g. as top-level folder names in our 
@@ -47,7 +47,7 @@ of the start of the project.
 Do we already have a place where "official"
 metadata about projects are stored? If yes, the acronym could be included there. But then, everybody should know about it!
 
-### File ORGANISATIONS.txt {#file-organisations}
+#### File ORGANISATIONS.txt {#file-organisations}
 
 Possible content of `ORGANISATIONS.txt`
 

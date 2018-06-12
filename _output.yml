@@ -3,7 +3,7 @@ bookdown::gitbook:
   split_by: chapter  
   config:
     toc:
-      collapse: subsection      
+      collapse: section     
       before: |
         <li><a href="./">FAKIN project documentation</a></li>
       after: |
@@ -21,3 +21,5 @@ bookdown::pdf_book:
   citation_package: natbib
 bookdown::epub_book:
   stylesheet: style.css
+bookdown::word_document2:
+  toc: true

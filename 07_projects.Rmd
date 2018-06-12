@@ -1,6 +1,6 @@
-# (PART) Projects {-}
+# Projects {#projects}
 
-# Spree2011 (2007)
+## Spree2011 (2007)
 
 Used data by source (data formats in parentheses)
 
@@ -26,7 +26,7 @@ Questions that arose:
 * How does Infoworks interpret timestamps, how do BWB provide timestamps? 
 -> [metadata](#metadata)
 
-# MIACSO (2009) {#miacso}
+## MIACSO (2009) {#miacso}
 
 Monitoring
 
@@ -92,7 +92,7 @@ critical oxygen conditions in the river
     + `kwb.miacso`: functions used in MIA-CSO, for example for plotting data 
 availabilities.
 
-# KURAS {#kuras}
+## KURAS {#kuras}
 
 Developed Tools:
 
@@ -100,7 +100,7 @@ Developed Tools:
 `KURAS_DB_Acc2003_hs.mdb`
 * R package `kwb.kuras`: Interface to KURAS database
 
-# OGRE {#ogre}
+## OGRE {#ogre}
 
 * Decision to use [CUAHSI Community Observations Data Model (ODM)](https://www.cuahsi.org/uploads/pages/img/ODM1.1DesignSpecifications_.pdf)
 * R script to import lab data from Excel to MS Access database implementing ODM
@@ -113,12 +113,12 @@ Developed Tools:
     + `kwb.odm`
     + `kwb.odmx`
 
-# Flusshygiene {#flusshygiene}
+## Flusshygiene {#flusshygiene}
 
 * Adaptation of free online monitoring data visualisation [HydroServerLite](https://github.com/KWB-R/HydroServerLite)
 * Reusage of lab data import script developed in [OGRE](#ogre)
 
-# DEMOWARE {#demoware}
+## DEMOWARE {#demoware}
 
 Entstandene R Pakete: 
 
@@ -134,20 +134,20 @@ Entstandene R Pakete:
 
     + [kwb.qmra](https://github.com/kwb-r/kwb.qrma): wird im Rahmen von AQUANES(#aquanes) weiter genutzt
 
-# OPTIWELLS {#optiwells}
+## OPTIWELLS {#optiwells}
 
 Created R packages: 
 
 * [kwb.wtaq](https://github.com/kwb-r/kwb.wtaq): Groundwater Modelling
 * kwb.epanet: (Pressure)Pipe Network Simulation (EPANET)
 
-# RWE {#rwe}
+## RWE {#rwe}
 
 (Semi)automatisierte Erstellung eines komplexen MODFLOW Modells (mehrere Layer, mehrere hunderte Entnahmebrunnen mit zeitlich variierender Entnahmemenge sowie Hinzufügen/Entfernen von Brunnen innerhalb des Simulationszeitraums) in Phyton mittels [flopy](http://modflowpy.github.io/flopydoc/) sowie Entwicklung der Modellszenarien auf Github (siehe hier: [Maxflow](https://github.com/chmenz/Maxflow)).
 
 Input Christian !?!
 
-# Projekt: AQUANES {#aquanes}
+## AQUANES {#aquanes}
 
 Created R package: 
 

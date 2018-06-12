@@ -1,4 +1,4 @@
-# Raw Data
+## Raw Data
 
 As raw data we define data that we receive from a device or from a project
 partner. 

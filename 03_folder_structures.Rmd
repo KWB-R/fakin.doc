@@ -1,6 +1,6 @@
-# Folder Structures {#folder-structures}
+## Folder Structures {#folder-structures}
 
-## Project Folder Structure {#project-folder-structure}
+### Project Folder Structure {#project-folder-structure}
 
 We said that we want to concentrate on the folder structures within the project 
 folders. Nevertheless, we would like to give a recommendation on how the project
@@ -25,7 +25,7 @@ described in this documentation.
 - there are no subfolders representing departments any more. The mapping of
 projects to departments is done in the file [`PROJECTS.txt`](#file-projects)
 
-## Rawdata Folder Structure {#rawdata-folder-structure}
+### Rawdata Folder Structure {#rawdata-folder-structure}
 
 We will create a network folder `//server/rawdata$` in which all files
 have set the read-only property. We suggest to store raw data by project first

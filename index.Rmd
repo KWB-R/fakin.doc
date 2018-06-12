@@ -13,7 +13,7 @@ url: 'https\://kwb-r.github.io/fakin.doc'
 description: "FAKIN Best Practices"
 ---
 
-# Introduction {-#index}
+# Introduction {#index}
 
 > "These days, data trails are often a morass of separate data and results and 
 code files in which no one knows which results were derived from which raw data 
@@ -23,8 +23,11 @@ using which code files."
 
 
 
+```{r fig.align='center', out.width = "400px", echo=FALSE, include=grepl('html', knitr:::pandoc_to()), fig.link='http://www.kompetenz-wasser.de/en/project/fakin-research-data-management/'}
+knitr::include_graphics('images/cover.png', dpi = NA)
+```
 
-```{r fig.align='center', out.width = "400px", echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), fig.link='http://www.kompetenz-wasser.de/en/project/fakin-research-data-management/'}
+```{r fig.align='center', echo=FALSE, include=grepl('latex|docx', knitr:::pandoc_to()), fig.link='http://www.kompetenz-wasser.de/en/project/fakin-research-data-management/'}
 knitr::include_graphics('images/cover.png', dpi = NA)
 ```
 
@@ -46,32 +49,31 @@ comments and suggestions for improvements. What are your experiences with
 research data managment tasks? Can you provide solutions for specific tasks?
 
 
-![Creative Commons License](images/by-nc-sa.png)  
 The online version of this report is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-### Example blocks {-}
+[![Creative Commons License](images/by-nc-sa.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-```{block,  type='rmdtip'}
+Example blocks:
+
+```{block2,  type='rmdtip'}
 TIP
 ```
 
 
-```{block,  type='rmdnote'}
+```{block2,  type='rmdnote'}
 NOTE
 ```
 
-```{block,  type='rmdwarning'}
+```{block2,  type='rmdwarning'}
 WARNING
 ```
 
-```{block,  type='rmdcaution'}
+```{block2,  type='rmdcaution'}
 CAUTION
 ```
 
 
-```{block,  type='rmdimportant'}
+```{block2,  type='rmdimportant'}
 IMPORTANT
 ```
 
-
-# (PART) Best Practices {-}
