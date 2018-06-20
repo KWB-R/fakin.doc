@@ -1,0 +1,12 @@
+##	Data publishing and sharing
+
+Make data freely available via repositories
+Metadata, file formats, licence, persistent identifiers: DOI, ORCID
+
+###	Repositories 
+
+General repositories e.g. Figshare, Zenodo (a joint project between OpenAIRE 
+and CERN), Mandeley data, Dryad
+
+Repositories at KWB:
+  

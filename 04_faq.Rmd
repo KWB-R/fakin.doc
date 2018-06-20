@@ -1,0 +1,6 @@
+# FAQs {#faq}
+
+## What is digital curation?
+
+Digital curation is the selection, preservation, maintenance, collection and 
+archiving of digital assets.

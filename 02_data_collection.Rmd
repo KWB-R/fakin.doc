@@ -1,0 +1,10 @@
+##	Data collection
+Data are often inconsistent, incomplete, incorrect, or misspelled
+Data cleaning is essential
+You may also use OpenRefine [http://openrefine.org/](http://openrefine.org/) to 
+clean your messy data Or use the following tools 
+
+###	Logger devices
+
+
+###	Spreadsheets

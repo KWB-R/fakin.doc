@@ -1,0 +1,42 @@
+# Best Practices {#best-practices}
+
+## Plan and fund a new project
+
+### Data management plan
+
+Action 1: Look through a data management planning checklist 
+[DMP checklist](http://www.dcc.ac.uk/resources/data-management-plans/checklist)?
+  
+Action 2: Create a data management plan. You can use [DMP Online](https://dmponline.dcc.ac.uk/) 
+as it has a template or if required, use a funder's format.
+
+RDM checklist before starting with a new project
+Brauchen wir eine Data Management Plan? 
+See e.g. https://dmponline.dcc.ac.uk/
+
+
+### Electronic Lab Notebooks
+
+Electronic Lab Notebooks (ELNs) https://www.labfolder.com/research-data-management/
+ELNs are an essential asset for researchers to fulfil any requirements for data 
+management, and they create direct bridges between scientists and stakeholders. 
+By adopting an ELN, the data lifecycle can proceed smoothly and easily: from 
+creating and collecting data digitally in one place to one-click data archiving, 
+ELNs empower researchers by allowing them to implement their RDM plan without 
+effort and time investment.
+
+An ELN to make your data FAIR? Welches ist das?
+
+#### Project acronyms {#project-acronyms}
+
+At the start of a project we define a project acronym. This acronym is
+intended to be used in file and folder names. 
+
+Whenever we want to indicate the relation to a certain project in a file or 
+folder name, we use the project acronym in exactly the typing that was defined.
+This is important as we want to distinguish between raw data, processed data and 
+project results in our [Folder Structures](#folder-structures).
+
+The project acronyms are defined in a simple text 
+file [`PROJECTS.txt`](#file-projects) in the `//server/projects$` folder, see 
+[Project Folder Structure](#project-folder-structure).

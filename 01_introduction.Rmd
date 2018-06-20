@@ -1,0 +1,25 @@
+# Introduction {#introduction}
+
+## Why RDM ? 
+
+Doing research data management (RDM) is useful according to [Labfolder.com (2018)](https://www.labfolder.com/research-data-management/) as it:
+
+- Saves time for research
+
+- Avoids risk of data loss
+
+- Ensures transparency and reproducibility
+
+- Increases data visibility and number of citations
+
+- Fulfill funders’ requirements and receive more grants
+
+- Produce new knowledge and make more discoveries just by re-using data
+
+- Archive, retrieve and re-use own data
+
+
+
+## For whom ? 
+
+Info on the document – create links between projects and thematic groups

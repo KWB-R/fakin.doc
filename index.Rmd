@@ -13,7 +13,7 @@ url: 'https\://kwb-r.github.io/fakin.doc'
 description: "FAKIN Best Practices"
 ---
 
-# Introduction {#index}
+# Preface {-#index}
 
 > "These days, data trails are often a morass of separate data and results and 
 code files in which no one knows which results were derived from which raw data 
@@ -41,8 +41,11 @@ research projects at KWB.
 
 The document is outlined as follows:
 
+* [Chapter 1](#introduction) 
 * [Chapter 2](#best-practices) defines Best Practices for different topics.
-* [Chapter 3](#projects) gives overviews about KWB projects and lists how different data related tasks have been solved within these projects.
+* [Chapter 3](#projects) gives overviews about KWB projects and lists how 
+different data related tasks have been solved within these projects and
+* [Chapter 4](#faq) provides FAQs.
 
 This document is assumed to be a "living" document. We highly appreciate any
 comments and suggestions for improvements. What are your experiences with

@@ -1,4 +1,3 @@
-# Best Practices {#best-practices}
 ## Data-Related Project Controlling
 
 At the start of a research project
