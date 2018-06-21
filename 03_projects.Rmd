@@ -2,30 +2,53 @@
 
 In general the projects can be divided into two groups:
 
-- [Case studies](#case-studies): tested in detail within FAKIN (i.e. proposed 
+- [Use cases](#use-cases): tested in detail within FAKIN (i.e. proposed 
 best-practices will be applied for this case studies and cross-checked whether 
 their application is useful
 
-- [Others](#other-projects): just suming up the data workflows and created tools for enlarging the 
-KWB internal knowledge what has already been done.  
+- [Others](#other-projects): just suming up the data workflows and created tools 
+for enlarging the KWB internal knowledge what has already been done.  
 
-## Case studies {#case-studies}
+## Use cases {#use-cases}
 
 
 ### Geogenic salination
 
-### Modelling LCA modelling 
-
-Umberto
+### LCA modelling 
 
 
-### Pilot plants (AQUANES) (#aquanes)
+**Challenge:**
 
-Created R package: 
+The LCA modelling software [Umberto](https://www.ifu.com/umberto/) can produce
+large raw data output files (> 300 MB csv files) that are sometimes are even 
+to big for EXCEL 2010 (> 1 millions) and but need to be aggregated (e.g. grouped 
+by specific criteria). This was usually performed manually within EXCEL.
 
-* [aquanes.report](https://github.com/kwb-r/aquanes.report): data import, 
-temporal aggregation, interactive visualisation of operational data of
-pilot facilities and joining with lab data
+**Workflow improvement developed within FAKIN:**
+
+An open source R package [kwb.umberto](https://kwb-r.github.io/kwb.umberto) was 
+programmed for automating: 
+
+ - data import the Umberto model results,
+ 
+ - performing data aggregating to the user needs and finally
+ 
+ - exporting the aggregated results in an `results.xlsx` EXCEL spreadsheet. 
+ 
+
+This `results.xlsx` EXCEL spreadsheet is referenced by another EXCEL 
+spreatsheet `figues.xlsx` (which contains the figure templates and just links 
+to the `results.xlsx` in order to update the predefined figures).
+
+This workflow now reduces the time consuming and error-prone formerly manually 
+performed data aggregation in EXCEL, whilst still enabling the users to adapt 
+the figures to their needs without coding knowledge. 
+
+ 
+
+### Pilot plants {#aquanes}
+
+Challenges: 
 
 Sites (among others):
 
@@ -34,7 +57,6 @@ Sites (among others):
 * [Basel Lange-Erlen](http://aquanes-h2020.eu/Default.aspx?t=1663)
 * [Haridwar](http://aquanes-h2020.eu/Default.aspx?t=1668)
 
-Challenges: 
 
 * zeitlich hoch aufgelöste Betriebsdaten (~ 10 Mio. Datenpunkte pro Monat) 
 erforderten massive Performance Optimierung um die Visualisierung der Rohdaten
@@ -45,6 +67,23 @@ RAM Ressourcen (~ 8 GB) zu ermöglichen.
 um dann darauf ggf. eigene weitere Analysen darauf aufzusetzen. Für die beiden 
 Berliner Standorte wird zudem die Visualiserung der Betriebsdaten routinenäßig 
 genutzt, um vom Regelbetrieb abweichende Zustände besser indentifizieren zu können.
+
+
+An open source R package [aquanes.report](https://kwb-r.github.io/aquanes.report) 
+`r citep(manual["Rustler_2018"])` was programmed, which is able to: 
+
+ - import operational and lab data for each pilot site,
+ 
+ - performs temporal aggregation (e.g. 5 min, 1 h, 24h median values), 
+ 
+ - visualises raw or aggregated data either interactively in a web browser or
+ by 
+ 
+ - creating a standardised report (e.g. monthly) in html, pdf or docx
+ 
+
+
+
 
 
 ## Others {#other-projects}

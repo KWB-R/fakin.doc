@@ -5,13 +5,28 @@ date: "`r Sys.time()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
-bibliography: [book.bib]
+bibliography: [references.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: kwb-r/fakin.doc
 url: 'https\://kwb-r.github.io/fakin.doc'
 description: "FAKIN Best Practices"
+cover-image: images/cover.png
 ---
+
+```{r include=FALSE}
+
+if (! require("knitcitations")) {
+  install.packages("knitcitations")
+}
+
+# add manual bibtex for non DOI sources
+manual <- knitcitations::read.bibtex(file = "manual.bib", .Encoding = "UTF-8")
+
+library(knitcitations)
+knitcitations::cleanbib()
+options("citation_format" = "pandoc")
+```
 
 # Preface {-#index}
 
@@ -41,11 +56,18 @@ research projects at KWB.
 
 The document is outlined as follows:
 
-* [Chapter 1](#introduction) 
+* [Chapter 1](#introduction) explains why and for whom research data management 
+is important
+
 * [Chapter 2](#best-practices) defines Best Practices for different topics.
-* [Chapter 3](#projects) gives overviews about KWB projects and lists how 
-different data related tasks have been solved within these projects and
-* [Chapter 4](#faq) provides FAQs.
+
+* [Chapter 3](#projects) gives an overview on three [use cases](#use-cases) with 
+different data related tasks that have been solved within the FAKIN project as 
+well as [other projects](#other-projects) for listing what data challenges occured 
+in the past and how they were solved in order to increase our awareness at KWB
+and finally
+  
+* [Chapter 4](#faq) provides FAQs
 
 This document is assumed to be a "living" document. We highly appreciate any
 comments and suggestions for improvements. What are your experiences with
@@ -55,28 +77,4 @@ research data managment tasks? Can you provide solutions for specific tasks?
 The online version of this report is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 [![Creative Commons License](images/by-nc-sa.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
-
-Example blocks:
-
-```{block2,  type='rmdtip'}
-TIP
-```
-
-
-```{block2,  type='rmdnote'}
-NOTE
-```
-
-```{block2,  type='rmdwarning'}
-WARNING
-```
-
-```{block2,  type='rmdcaution'}
-CAUTION
-```
-
-
-```{block2,  type='rmdimportant'}
-IMPORTANT
-```
 

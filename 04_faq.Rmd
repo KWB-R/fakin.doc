@@ -1,6 +1,219 @@
 # FAQs {#faq}
 
-## What is digital curation?
+## Excel
 
-Digital curation is the selection, preservation, maintenance, collection and 
-archiving of digital assets.
+***Beispiel:***
+```{block2, type = 'rmdcaution'} 
+Excel often crashes in case: 
+
+- a formula is applied for a whole column (i.e. 1 million rows)
+
+- a lot of data is processed
+
+```
+
+```{block2, type = 'rmdtip'} 
+-> Abhilfe: Daten in eigene Datei
+ 
+Haukes "Best Practices" für Excel (ungeprüft, zu diskutieren!)
+
+ 
+- Trennung zwischen Eingabe, Verarbeitung und Ausgabe zumindest auf 
+Tabellenblattebene, d.h. ein Tabellenblattt (oder mehrere) für Eingabe, eines 
+(oder mehrere) für Verarbeitung, eines (oder mehrere) für formatierte Ausgabe 
+und / oder Diagramme
+ 
+- ggf. Aufteilen auf mehrere Dateien. Das hätte den Nachteil, dass nicht mehr 
+alles in einer Datei ist und nicht so leicht übergeben werden kann. In jedem 
+Fall müsste eine Namenskonvention getroffen werden, z.B. <Dateiname>_input.xls, 
+<Dateiname>_calc.xls, <Dateiname>_output.xls
+ 
+- Verwenden der relativ neuen Excel-Features "Als Tabelle" formatieren.
+Vorteil: Formeln können auf ganze Tabellenspalten angewendet werden; Spaltennamen 
+anstatt Zellbezüge mit (unsprechenden) Buchstaben und Zahlen. z.B. Formel für 
+Spalte "Volumen_L": "= Durchfluss[@[Q_L_s]] * 60 * 5"
+ 
+- Ein Tabellenblatt pro Tabelle
+ 
+- Genau eine Headerzeile pro Tabelle mit eindeutigen Spaltennamen
+ 
+- Ein Tabellenblatt, das die Bedeutung der Spaltennamen erläutert mit Spalten
+"Tabellenblatt; Spalte; Bedeutung; Einheit; Formel"
+Vorteil: Dieses Tabellenblatt sollte ausreichen, um die wesentlichen Berechnungen 
+zu verstehen.
+
+-> Nachteil: Das muss immer aktuell gehalten werden!
+ 
+- Hilfsspalten mit (dadurch benannten) Zwischenberechnungen anstatt Wiederholung 
+von langen Ausdrücken in Formeln
+```
+
+```{block2, type = 'rmdtip'}
+A general online workshop on the topic [Data Organisation in Spreadsheets](http://www.datacarpentry.org/spreadsheet-ecology-lesson/)
+is provided for free by the [DataCarpentry](https://datacarpentry.org) organisation.
+
+```
+
+## Heterogenous software versions on KWB computers
+
+```{block2, type = 'rmdcaution'}
+Unterschiedliche Softwareversionen (z.B. R) können dazu führen, dass Skripte 
+auf verschiedenen Rechnern nicht das gleiche Verhalten zeigen. 
+```
+
+```{block2, type = 'rmdtip'}
+Die IT-Abteilung ist in der Lage an bestimmte Nutzergruppen die gleiche Software 
+(z.B. RStudio / R / Miktex) auszurollen. Dies sollte in Zukunft konsequent genutzt
+werden, indem auf alle Computer an denen potentiell programmiert wird zu dieser 
+Nutzergruppe hinzugefügt werden und somit alle die gleichen Softwareversionen 
+installiert haben. 
+```
+
+## R package/version dependency of R scripts
+
+Lösungsvorschlag:
+
+Es ist eine **Mindestdokumentation** der verwendeten R Version und sämtlicher 
+R-Pakete (inklusive ihrer Versionen) zu fordern. Dazu kann in R die Funktion 
+`sessionInfo()` genutzt werden. Die Ausgabe dieser Funktion kann entweder in 
+eine Metadaten-Textdatei `session_info.txt` geschrieben werden oder im Falle
+der Erzeugung von R-Markdown-Dokumenten direkt am Anfang der Analyse im 
+`R-Markdown` Dokument ausgegeben werden. 
+
+Das Schreiben der Metadaten-Datei `session_info.txt` sollte standardisert über 
+eine Funktion in einem KWB R-Paket (z.B. `kwb.utils`) implementiert werden.
+
+Direktausgabe in R Console / RMarkddown:
+```{r}
+sessionInfo()
+```
+
+Schreiben in standardisierte Metadatei:
+```{r eval = FALSE}
+sink("session_info.txt")
+sessionInfo()
+sink()
+```
+
+Hierzu ist auch noch ein Tutorial zu erstellen!
+
+Komplexere, technische Möglichkeiten zum Paketmanagement werden im gerade vom 
+DFG gefördertem Projekt [O2R](http://o2r.info/) in der Entwicklung befindlichen 
+[CRAN task view for computational environments and reproducibility](https://github.com/o2r-project/ctv-computational-environments) 
+genannt. 
+
+```{block2, type = 'rmdtip'}
+
+Mit dem R Paket [packrat](https://rstudio.github.io/packrat/) lässt sich das Paketmanagement ggf. verbessern. 
+  
+```
+
+Als Beispielanwendung dient die Datenanalyse zur Feinstaubbelastung mit 
+Sensebox-Daten, die komplett reproduzierbar sind 
+(mittels der Plattform [mybinder](https://mybinder.org/)) und ohne Installation 
+von Interessierten im Webbrowser ausgeführt werden kann 
+([siehe hier](http://o2r.info/2018/01/12/sensebox-binder/)).
+
+
+## Complex R script dependencies
+
+```{block2, type = 'rmdcaution'}
+Dieses Problem tritt insbesondere auf, wenn mehrere verschiedene Nutzer 
+gemeinsam mit den gleichen Skripten arbeiten (wie z.B. im abgeschlossenen 
+Projekt OGRE).
+```
+
+```{block2, type = 'rmdtip'}
+**Proposed solution:**:
+
+- Bewusstmachen der Skriptabhängigkeiten
+- Identifizieren von Optimierungspotentialen -> möglicherweise 
+  Elimination von Abhängigkeiten
+- Workflow dokumentieren und Tutorial -- am besten als R-Markdown Dokument -- 
+  erstellen. Das ist insbesondere wichtig, wenn Skripte häufig verwendet werden.
+```
+
+
+## Heterogenous (R-)coding styles
+
+
+```{block2, type = 'rmdcaution'}
+
+Currently there is no established coding style at KWB for in case of programming 
+e.g. R scripts
+```
+
+```{block2, type = 'rmdtip'}
+(R) programmers at KWB will use the tidyverse coding style (http://style.tidyverse.org), 
+as default. This will help increasing both, the readibility and reusability of 
+the developed (R-)scripts at KWB (currently: ~ 1000 Rscripts).
+```
+
+## Collaborative version control 
+
+```{block2, type = 'rmdcaution'}
+
+```
+
+
+```{block2, type = 'rmdtip'}
+
+Lösungsvorschlag:
+
+* Miteinander sprechen, 
+* Regelmäßige Updates/Commits
+* Bei Verwendung/Weiterbearbeitung von Code aus einem Projekt (z.B. OGRE) in 
+  einem weiteren (z.B. FLUSSHYGIENE) ist vom Orginalcode eine Kopie mittels 
+  `SVN copy` zu erstellen und diese weiterzubearbeiten, da sonst bestehende 
+  Prozeduren im Ausgangsprojekt überschrieben werden
+* Bestehendes Subversion [Tutorial](file:///Y:/Z-Exchange/_Tutorials/using_subversion.html) 
+  ist um die fehlenden der oben genannten Aspekte zu ergänzen
+  
+Eine Präsentation mit verschiedenen Tools zur Versionsverwaltung findet sich hier:
+[https://www.fosteropenscience.eu/node/597](https://www.fosteropenscience.eu/node/597)
+```
+
+## Encoding 
+
+
+```{block2, type = 'rmdcaution'}
+
+Umlaute und Sonderzeichen werden falsch angezeigt, wenn R-Skripte in 
+unterschiedlichen Encodings abgespeichert und eingelesen werden.
+```
+
+```{block2, type = 'rmdtip'}
+
+- Vorgabe einer Default Encoding Einstellung in RStudio (z.B. UTF-8)
+
+- Alternativ könnten auch alle [Umlaute](http://javawiki.sowas.com/doku.php?id=java:unicode) 
+  in [Unicode](https://de.wikipedia.org/wiki/Unicode) dokumentiert werden 
+  (siehe folgendes Beispiel). Allerdings ist dies wohl nicht praktikabel, 
+  da die Lesbarkeit der Texte erschwert wird und es sollte daher von uns der 
+  erste Ansatz (Vorgabe von UTF-8 als Default Encoding) angestrebt werden.
+
+  
+``` 
+
+A great blogpost for the topic (How do I write UTF-8 encoded content to a file?) 
+is provided by [Ushey (2018()](https://kevinushey.github.io/blog/2018/02/21/string-encoding-and-r/), including background information on how encoding in R works.
+
+For increasing the portability of R script he recommands the for example the 
+following:
+
+> "Portable R scripts should use unicode code points, to avoid accidental 
+mis-encoding of string literals."*
+> --- [Ushey, 2018](https://kevinushey.github.io/blog/2018/02/21/string-encoding-and-r/)
+
+
+**Encoding example in R:**
+
+```{r}
+### Richtiges Skript Encoding WICHTIG (richtiges Einlesen des Skripts nur wenn 
+### mit gleichem Encoding eingelesen  wie es auch abgespeichert wurde)
+print("Ü")
+
+### Skript Encoding EGAL (da Umlaut in Unicode codiert wurde)
+print("\u00dc")
+```
+

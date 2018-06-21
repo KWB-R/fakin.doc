@@ -1,14 +1,48 @@
 ## Data storage
 
+
+
+
+
 ###	Folder structure
 
 \@Michael: Regeln für die Verbesserung der Ordnerstruktur
+
+#### Regeln dafür, was wohin gehört
+
+Was gehört in den Projektordner, was nicht?
+
+**Software sollte nicht innerhalb der Projekte gespeichert werden**
+
+Vorteil:
+
+- Software wird ggf. projektübergreifend verwendet
+- Software besteht oft aus vielen und großen Binärdateien und bläht den 
+  Projektordner auf
+- Software hat oft viele Unterverzeichnisse und erzeugt eine hohe 
+  Verschachtelungstiefe im Projektordner
+
+Nachteil:
+
+- Es ist ggf. nicht klar, in welchem Projekt eine Software verwendet wurde
+
 \@Michael: Vorschlag für verbesserte Ordnerstrukturen
+
+
+### Regeln zur Vermeidung langer Dateipfade
+
+Lange Dateipfade können im Windows-Betriebssystem ein Problem darstellen.
+Das äußert sich beim Kopieren von Dateien, wenn der Pfad des Zielorts, der sich
+durch die Kopie ergeben würde, eine bestimmte Länge überschreitet. Die 
+zugehörige Fehlermeldung lautet dann: *Die Dateinamen wären zu lang für den 
+Zielordner. Kürzen Sie die Dateinamen und wiederholen Sie den Vorgang, oder
+verwenden Sie einen anderen Ort, der einen kürzeren Pfad hat.
+
 
 ###	Naming
 
 \@Michael: Konventionen für Ordner- und Dateinamen, Vorschlag einer Nomenklatur
-\@Michael: Regeln zur Vermeidung langer Dateipfade
+
 
 Useful file names are: 
 
@@ -126,26 +160,34 @@ The versioning is done automatically in case a version control software,
 like [Git](https://en.wikipedia.org/wiki/Git) or [Subversion](https://en.wikipedia.org/wiki/Apache_Subversion) 
 are used. 
 
-At KWB we currently use the following version controll software: 
+At KWB we currently use the following version control software: 
 
-- Subversion: for KWB r. Requires connection to the KWB intranet
+- [Subversion](https://subversion.apache.org): for internally storing programm 
+code (e.g. R-scripts/packages) we have an Subversion server, which is accessible 
+from the KWB intranet. However, this requires: 
 
-- Git: for publishing programm code external on our KWB organisation group on 
-[Github](https://github.com/KWB-R). Currently all repositories are public (i.e. 
+    + the installation of the client software [TortoiseSVN](https://tortoisesvn.net/index.de.html)        and a
+    
+    + valid user account (for accessing the server) which is currently provided by the 
+    IT department on request
+
+
+- [Git](https://git-scm.com/): for publishing programm code external on our KWB organisation group on [Github](https://github.com/KWB-R). Currently all repositories are public (i.e. 
 are visible for everyone), but also use of private repositories is possible for 
 free as KWB is recognised as non-for-profit company by Github, offering [additional
 benefits for free](https://help.github.com/articles/discounted-organization-accounts/#discounts-for-nonprofits-and-libraries)
 
+```{block2 rmdcaution}
 Use of version control software is required in case of programming (e.g. in R, 
 Python, and so on) and can be useful in case of tracking changes in small text 
 files (e.g. configuration files that run a specific R script with different 
 parameters for scenario analysis). 
-
+```
 
 **Drawbacks:**
 
-* Special software (TortoiseSVN), login data for each user on KWB-Server and 
-some basic training are required
+* Special software ([TortoiseSVN](https://tortoisesvn.net/index.de.html)), login 
+data for each user on KWB-Server and some basic training are required
 
 * In case of collaborate coding: sticking to 'best-practices' for using version 
 control is mandatory, e.g.: 
@@ -171,7 +213,7 @@ changes were made and build-in diff-tools for tracking changes improve the
 reproducibility
 
 ```{block2,  type='rmdwarning'}
-Attention: version contral software is not designed for versioning of raw data 
+Attention: version control software is not designed for versioning of raw data 
 and thus should not be used for it. General thoughts on the topic of 'data 
 versioning' are available here: [https://github.com/leeper/data-versioning](https://github.com/leeper/data-versioning) 
 ```
@@ -179,20 +221,22 @@ versioning' are available here: [https://github.com/leeper/data-versioning](http
 
 ###	Organising your e-mail account
 
-From: [https://www.data.cam.ac.uk/data-management-guide/organising-your-data#Refernces](https://www.data.cam.ac.uk/data-management-guide/organising-your-data#Refernces)
-Most people now routinely send and receive lots of messages every day and as a 
-esult, their inbox can get very quickly overloaded with hundreds of personal and
+> "Most people now routinely send and receive lots of messages every day and as a 
+Yesult, their inbox can get very quickly overloaded with hundreds of personal and
 work-related email. Setting aside some time to organise your emails will ensure 
 information can be found quickly and easily, and is stored securely.
 Why should I organise my email?
 Apart from the obvious frustration and time wasted looking for that email you 
 remember sending to someone last month, email is increasingly used to store 
 important documents and data, often with information related to the attachments 
-within the email itself.
-How can I ensure my emails remain organised?
+within the email itself." "
+>
+> --- [University of Cambridge (2018)](https://www.data.cam.ac.uk/data-management-guide/organising-your-data#Refernces)
+
+**How can I ensure my emails remain organised?**
 
 Here are some general tips to ensure your email remains organised in the long 
-term:
+term [University of Cambridge, 2018](https://www.data.cam.ac.uk/data-management-guide/organising-your-data#Refernces):
 
 - Delete emails you do not need. Remove any trivial or old messages from your 
 inbox and sent items on a regular (ideally daily) basis.
@@ -211,7 +255,10 @@ places, such as a network drive.
 
 ### Managing references 
 
-Refer to KWB Endnote guidelines….
+Refer to KWB Endnote guidelines:
+
+[KWB-EndNote-Guideline-v02.pdf](file://Y:/R&D Templates/Charts Guidelines Checklists/KWB-EndNote-Guideline-v02.pdf) (link only accessible within KWB 
+intranet)
 
 ###	Metadata
 What information would someone need to find/re-use your data?

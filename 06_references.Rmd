@@ -1,0 +1,6 @@
+`r if (grepl('html|epub', knitr:::pandoc_to())) '# References{-#references}'`
+`r if (grepl('doc', knitr:::pandoc_to())) '# References'`
+
+```{r setup, echo = FALSE, message = FALSE}
+knitcitations::write.bibtex(file = "references.bib")
+```
