@@ -12,7 +12,7 @@
   <meta property="og:title" content="Best Practices in Research Data Management" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://kwb-r.github.io/fakin.doc" />
-  
+  <meta property="og:image" content="https://kwb-r.github.io/fakin.docimages/cover.png" />
   <meta property="og:description" content="FAKIN Best Practices" />
   <meta name="github-repo" content="kwb-r/fakin.doc" />
 
@@ -20,7 +20,7 @@
   <meta name="twitter:title" content="Best Practices in Research Data Management" />
   
   <meta name="twitter:description" content="FAKIN Best Practices" />
-  
+  <meta name="twitter:image" content="https://kwb-r.github.io/fakin.docimages/cover.png" />
 
 <meta name="author" content="Hauke Sonnenberg &amp; Michael Rustler">
 
@@ -48,6 +48,43 @@
 
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -77,13 +114,14 @@
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="best-practices.html"><a href="best-practices.html#data-storage"><i class="fa fa-check"></i><b>2.2</b> Data storage</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="best-practices.html"><a href="best-practices.html#folder-structure"><i class="fa fa-check"></i><b>2.2.1</b> Folder structure</a></li>
-<li class="chapter" data-level="2.2.2" data-path="best-practices.html"><a href="best-practices.html#naming"><i class="fa fa-check"></i><b>2.2.2</b> Naming</a></li>
-<li class="chapter" data-level="2.2.3" data-path="best-practices.html"><a href="best-practices.html#raw-data"><i class="fa fa-check"></i><b>2.2.3</b> Raw data</a></li>
-<li class="chapter" data-level="2.2.4" data-path="best-practices.html"><a href="best-practices.html#versioning"><i class="fa fa-check"></i><b>2.2.4</b> Versioning</a></li>
-<li class="chapter" data-level="2.2.5" data-path="best-practices.html"><a href="best-practices.html#organising-your-e-mail-account"><i class="fa fa-check"></i><b>2.2.5</b> Organising your e-mail account</a></li>
-<li class="chapter" data-level="2.2.6" data-path="best-practices.html"><a href="best-practices.html#managing-references"><i class="fa fa-check"></i><b>2.2.6</b> Managing references</a></li>
-<li class="chapter" data-level="2.2.7" data-path="best-practices.html"><a href="best-practices.html#metadata"><i class="fa fa-check"></i><b>2.2.7</b> Metadata</a></li>
-<li class="chapter" data-level="2.2.8" data-path="best-practices.html"><a href="best-practices.html#data-preservation"><i class="fa fa-check"></i><b>2.2.8</b> Data preservation</a></li>
+<li class="chapter" data-level="2.2.2" data-path="best-practices.html"><a href="best-practices.html#regeln-zur-vermeidung-langer-dateipfade"><i class="fa fa-check"></i><b>2.2.2</b> Regeln zur Vermeidung langer Dateipfade</a></li>
+<li class="chapter" data-level="2.2.3" data-path="best-practices.html"><a href="best-practices.html#naming"><i class="fa fa-check"></i><b>2.2.3</b> Naming</a></li>
+<li class="chapter" data-level="2.2.4" data-path="best-practices.html"><a href="best-practices.html#raw-data"><i class="fa fa-check"></i><b>2.2.4</b> Raw data</a></li>
+<li class="chapter" data-level="2.2.5" data-path="best-practices.html"><a href="best-practices.html#versioning"><i class="fa fa-check"></i><b>2.2.5</b> Versioning</a></li>
+<li class="chapter" data-level="2.2.6" data-path="best-practices.html"><a href="best-practices.html#organising-your-e-mail-account"><i class="fa fa-check"></i><b>2.2.6</b> Organising your e-mail account</a></li>
+<li class="chapter" data-level="2.2.7" data-path="best-practices.html"><a href="best-practices.html#managing-references"><i class="fa fa-check"></i><b>2.2.7</b> Managing references</a></li>
+<li class="chapter" data-level="2.2.8" data-path="best-practices.html"><a href="best-practices.html#metadata"><i class="fa fa-check"></i><b>2.2.8</b> Metadata</a></li>
+<li class="chapter" data-level="2.2.9" data-path="best-practices.html"><a href="best-practices.html#data-preservation"><i class="fa fa-check"></i><b>2.2.9</b> Data preservation</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="best-practices.html"><a href="best-practices.html#data-collection"><i class="fa fa-check"></i><b>2.3</b> Data collection</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="best-practices.html"><a href="best-practices.html#logger-devices"><i class="fa fa-check"></i><b>2.3.1</b> Logger devices</a></li>
@@ -91,10 +129,10 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="projects.html"><a href="projects.html"><i class="fa fa-check"></i><b>3</b> Projects</a><ul>
-<li class="chapter" data-level="3.1" data-path="projects.html"><a href="projects.html#case-studies"><i class="fa fa-check"></i><b>3.1</b> Case studies</a><ul>
+<li class="chapter" data-level="3.1" data-path="projects.html"><a href="projects.html#use-cases"><i class="fa fa-check"></i><b>3.1</b> Use cases</a><ul>
 <li class="chapter" data-level="3.1.1" data-path="projects.html"><a href="projects.html#geogenic-salination"><i class="fa fa-check"></i><b>3.1.1</b> Geogenic salination</a></li>
-<li class="chapter" data-level="3.1.2" data-path="projects.html"><a href="projects.html#modelling-lca-modelling"><i class="fa fa-check"></i><b>3.1.2</b> Modelling LCA modelling</a></li>
-<li class="chapter" data-level="3.1.3" data-path="projects.html"><a href="projects.html#pilot-plants-aquanes-aquanes"><i class="fa fa-check"></i><b>3.1.3</b> Pilot plants (AQUANES) (#aquanes)</a></li>
+<li class="chapter" data-level="3.1.2" data-path="projects.html"><a href="projects.html#lca-modelling"><i class="fa fa-check"></i><b>3.1.2</b> LCA modelling</a></li>
+<li class="chapter" data-level="3.1.3" data-path="projects.html"><a href="projects.html#aquanes"><i class="fa fa-check"></i><b>3.1.3</b> Pilot plants</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="projects.html"><a href="projects.html#other-projects"><i class="fa fa-check"></i><b>3.2</b> Others</a><ul>
 <li class="chapter" data-level="3.2.1" data-path="projects.html"><a href="projects.html#spree2011-2007"><i class="fa fa-check"></i><b>3.2.1</b> Spree2011 (2007)</a></li>
@@ -108,8 +146,18 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>4</b> FAQs</a><ul>
-<li class="chapter" data-level="4.1" data-path="faq.html"><a href="faq.html#what-is-digital-curation"><i class="fa fa-check"></i><b>4.1</b> What is digital curation?</a></li>
+<li class="chapter" data-level="4.1" data-path="faq.html"><a href="faq.html#excel"><i class="fa fa-check"></i><b>4.1</b> Excel</a></li>
+<li class="chapter" data-level="4.2" data-path="faq.html"><a href="faq.html#heterogenous-software-versions-on-kwb-computers"><i class="fa fa-check"></i><b>4.2</b> Heterogenous software versions on KWB computers</a></li>
+<li class="chapter" data-level="4.3" data-path="faq.html"><a href="faq.html#r-packageversion-dependency-of-r-scripts"><i class="fa fa-check"></i><b>4.3</b> R package/version dependency of R scripts</a></li>
+<li class="chapter" data-level="4.4" data-path="faq.html"><a href="faq.html#complex-r-script-dependencies"><i class="fa fa-check"></i><b>4.4</b> Complex R script dependencies</a></li>
+<li class="chapter" data-level="4.5" data-path="faq.html"><a href="faq.html#heterogenous-r-coding-styles"><i class="fa fa-check"></i><b>4.5</b> Heterogenous (R-)coding styles</a></li>
+<li class="chapter" data-level="4.6" data-path="faq.html"><a href="faq.html#collaborative-version-control"><i class="fa fa-check"></i><b>4.6</b> Collaborative version control</a></li>
+<li class="chapter" data-level="4.7" data-path="faq.html"><a href="faq.html#encoding"><i class="fa fa-check"></i><b>4.7</b> Encoding</a></li>
 </ul></li>
+<li class="chapter" data-level="5" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>5</b> Glossary</a><ul>
+<li class="chapter" data-level="5.1" data-path="glossary.html"><a href="glossary.html#what-is-digital-curation"><i class="fa fa-check"></i><b>5.1</b> What is digital curation?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="http://www.kompetenz-wasser.de" target="blank">Published by KWB</a></li>
 
@@ -157,11 +205,31 @@
 <h2><span class="header-section-number">2.2</span> Data storage</h2>
 <div id="folder-structure" class="section level3">
 <h3><span class="header-section-number">2.2.1</span> Folder structure</h3>
-<p>@Michael: Regeln für die Verbesserung der Ordnerstruktur @Michael: Vorschlag für verbesserte Ordnerstrukturen</p>
+<p>@Michael: Regeln für die Verbesserung der Ordnerstruktur</p>
+<div id="regeln-dafur-was-wohin-gehort" class="section level4">
+<h4><span class="header-section-number">2.2.1.1</span> Regeln dafür, was wohin gehört</h4>
+<p>Was gehört in den Projektordner, was nicht?</p>
+<p><strong>Software sollte nicht innerhalb der Projekte gespeichert werden</strong></p>
+<p>Vorteil:</p>
+<ul>
+<li>Software wird ggf. projektübergreifend verwendet</li>
+<li>Software besteht oft aus vielen und großen Binärdateien und bläht den Projektordner auf</li>
+<li>Software hat oft viele Unterverzeichnisse und erzeugt eine hohe Verschachtelungstiefe im Projektordner</li>
+</ul>
+<p>Nachteil:</p>
+<ul>
+<li>Es ist ggf. nicht klar, in welchem Projekt eine Software verwendet wurde</li>
+</ul>
+<p>@Michael: Vorschlag für verbesserte Ordnerstrukturen</p>
+</div>
+</div>
+<div id="regeln-zur-vermeidung-langer-dateipfade" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Regeln zur Vermeidung langer Dateipfade</h3>
+<p>Lange Dateipfade können im Windows-Betriebssystem ein Problem darstellen. Das äußert sich beim Kopieren von Dateien, wenn der Pfad des Zielorts, der sich durch die Kopie ergeben würde, eine bestimmte Länge überschreitet. Die zugehörige Fehlermeldung lautet dann: *Die Dateinamen wären zu lang für den Zielordner. Kürzen Sie die Dateinamen und wiederholen Sie den Vorgang, oder verwenden Sie einen anderen Ort, der einen kürzeren Pfad hat.</p>
 </div>
 <div id="naming" class="section level3">
-<h3><span class="header-section-number">2.2.2</span> Naming</h3>
-<p>@Michael: Konventionen für Ordner- und Dateinamen, Vorschlag einer Nomenklatur @Michael: Regeln zur Vermeidung langer Dateipfade</p>
+<h3><span class="header-section-number">2.2.3</span> Naming</h3>
+<p>@Michael: Konventionen für Ordner- und Dateinamen, Vorschlag einer Nomenklatur</p>
 <p>Useful file names are:</p>
 <ul>
 <li><p>consistent</p></li>
@@ -179,7 +247,7 @@
 <p>!!!!! Good practice: Remove spaces from file names or use punctuation such as underscores and hyphens to separate words e.g. “AHRC_TechnicalApp_Response20120925.docx” or “AHRC-TechnicalApp-Response20120925.docx” rather than “what we got back from funders about the data stuff.docx !!!!</p>
 </div>
 <div id="raw-data" class="section level3">
-<h3><span class="header-section-number">2.2.3</span> Raw data</h3>
+<h3><span class="header-section-number">2.2.4</span> Raw data</h3>
 <p>Especially in environmental sciences, raw data often cannot be reproduced (e.g. rainfall, river discharge measurements) and are therefore of high value.</p>
 <ul>
 <li><p>dürfen umbenannt werden, dies muss in den Metadaten dokumentiert werden</p></li>
@@ -189,10 +257,10 @@
 </ul>
 </div>
 <div id="versioning" class="section level3">
-<h3><span class="header-section-number">2.2.4</span> Versioning</h3>
+<h3><span class="header-section-number">2.2.5</span> Versioning</h3>
 <p>Versioning or version control is the way by which different versions and drafts of a document (or file or record or dataset or software code) are managed. Versioning involves the process of naming and distinguishing between a series of draft documents that leads to a final or approved version in the end. Versioning allows you to disclose an audit trail for the revision and update of drafts and final versions.</p>
 <div id="manual" class="section level4">
-<h4><span class="header-section-number">2.2.4.1</span> Manual</h4>
+<h4><span class="header-section-number">2.2.5.1</span> Manual</h4>
 <p>We propose the following workflow:</p>
 <ul>
 <li><p>It is only allowed to modify the current file (e.g. <code>filename.pptx</code>), which contains no version name as postfix</p></li>
@@ -226,17 +294,21 @@ VERSIONS/
 - v1.0: first final version, after review by Pascale Rouault</code></pre>
 </div>
 <div id="automatically" class="section level4">
-<h4><span class="header-section-number">2.2.4.2</span> Automatically</h4>
+<h4><span class="header-section-number">2.2.5.2</span> Automatically</h4>
 <p>The versioning is done automatically in case a version control software, like <a href="https://en.wikipedia.org/wiki/Git">Git</a> or <a href="https://en.wikipedia.org/wiki/Apache_Subversion">Subversion</a> are used.</p>
-<p>At KWB we currently use the following version controll software:</p>
+<p>At KWB we currently use the following version control software:</p>
 <ul>
-<li><p>Subversion: for KWB r. Requires connection to the KWB intranet</p></li>
-<li><p>Git: for publishing programm code external on our KWB organisation group on <a href="https://github.com/KWB-R">Github</a>. Currently all repositories are public (i.e. are visible for everyone), but also use of private repositories is possible for free as KWB is recognised as non-for-profit company by Github, offering <a href="https://help.github.com/articles/discounted-organization-accounts/#discounts-for-nonprofits-and-libraries">additional benefits for free</a></p></li>
+<li><p><a href="https://subversion.apache.org">Subversion</a>: for internally storing programm code (e.g. R-scripts/packages) we have an Subversion server, which is accessible from the KWB intranet. However, this requires:</p>
+<ul>
+<li><p>the installation of the client software <a href="https://tortoisesvn.net/index.de.html">TortoiseSVN</a> and a</p></li>
+<li><p>valid user account (for accessing the server) which is currently provided by the IT department on request</p></li>
+</ul></li>
+<li><p><a href="https://git-scm.com/">Git</a>: for publishing programm code external on our KWB organisation group on <a href="https://github.com/KWB-R">Github</a>. Currently all repositories are public (i.e. are visible for everyone), but also use of private repositories is possible for free as KWB is recognised as non-for-profit company by Github, offering <a href="https://help.github.com/articles/discounted-organization-accounts/#discounts-for-nonprofits-and-libraries">additional benefits for free</a></p></li>
 </ul>
 <p>Use of version control software is required in case of programming (e.g. in R, Python, and so on) and can be useful in case of tracking changes in small text files (e.g. configuration files that run a specific R script with different parameters for scenario analysis).</p>
 <p><strong>Drawbacks:</strong></p>
 <ul>
-<li><p>Special software (TortoiseSVN), login data for each user on KWB-Server and some basic training are required</p></li>
+<li><p>Special software (<a href="https://tortoisesvn.net/index.de.html">TortoiseSVN</a>), login data for each user on KWB-Server and some basic training are required</p></li>
 <li><p>In case of collaborate coding: sticking to ‘best-practices’ for using version control is mandatory, e.g.:</p>
 <ul>
 <li><p>timely check in of code changes to the central server,</p></li>
@@ -251,15 +323,19 @@ VERSIONS/
 </ul>
 
 <div class="rmdwarning">
-Attention: version contral software is not designed for versioning of raw data and thus should not be used for it. General thoughts on the topic of ‘data versioning’ are available here: <a href="https://github.com/leeper/data-versioning" class="uri">https://github.com/leeper/data-versioning</a>
+Attention: version control software is not designed for versioning of raw data and thus should not be used for it. General thoughts on the topic of ‘data versioning’ are available here: <a href="https://github.com/leeper/data-versioning" class="uri">https://github.com/leeper/data-versioning</a>
 </div>
 
 </div>
 </div>
 <div id="organising-your-e-mail-account" class="section level3">
-<h3><span class="header-section-number">2.2.5</span> Organising your e-mail account</h3>
-<p>From: <a href="https://www.data.cam.ac.uk/data-management-guide/organising-your-data#Refernces" class="uri">https://www.data.cam.ac.uk/data-management-guide/organising-your-data#Refernces</a> Most people now routinely send and receive lots of messages every day and as a esult, their inbox can get very quickly overloaded with hundreds of personal and work-related email. Setting aside some time to organise your emails will ensure information can be found quickly and easily, and is stored securely. Why should I organise my email? Apart from the obvious frustration and time wasted looking for that email you remember sending to someone last month, email is increasingly used to store important documents and data, often with information related to the attachments within the email itself. How can I ensure my emails remain organised?</p>
-<p>Here are some general tips to ensure your email remains organised in the long term:</p>
+<h3><span class="header-section-number">2.2.6</span> Organising your e-mail account</h3>
+<blockquote>
+<p>“Most people now routinely send and receive lots of messages every day and as a Yesult, their inbox can get very quickly overloaded with hundreds of personal and work-related email. Setting aside some time to organise your emails will ensure information can be found quickly and easily, and is stored securely. Why should I organise my email? Apart from the obvious frustration and time wasted looking for that email you remember sending to someone last month, email is increasingly used to store important documents and data, often with information related to the attachments within the email itself.” &quot;</p>
+<p>— <a href="https://www.data.cam.ac.uk/data-management-guide/organising-your-data#Refernces">University of Cambridge (2018)</a></p>
+</blockquote>
+<p><strong>How can I ensure my emails remain organised?</strong></p>
+<p>Here are some general tips to ensure your email remains organised in the long term <a href="https://www.data.cam.ac.uk/data-management-guide/organising-your-data#Refernces">University of Cambridge, 2018</a>:</p>
 <ul>
 <li><p>Delete emails you do not need. Remove any trivial or old messages from your inbox and sent items on a regular (ideally daily) basis.</p></li>
 <li><p>Use folders to store messages. Establish a structured file directory by subject, activity or project.</p></li>
@@ -268,11 +344,12 @@ Attention: version contral software is not designed for versioning of raw data a
 </ul>
 </div>
 <div id="managing-references" class="section level3">
-<h3><span class="header-section-number">2.2.6</span> Managing references</h3>
-<p>Refer to KWB Endnote guidelines….</p>
+<h3><span class="header-section-number">2.2.7</span> Managing references</h3>
+<p>Refer to KWB Endnote guidelines:</p>
+<p><a href="file://Y:/R&amp;D%20Templates/Charts%20Guidelines%20Checklists/KWB-EndNote-Guideline-v02.pdf">KWB-EndNote-Guideline-v02.pdf</a> (link only accessible within KWB intranet)</p>
 </div>
 <div id="metadata" class="section level3">
-<h3><span class="header-section-number">2.2.7</span> Metadata</h3>
+<h3><span class="header-section-number">2.2.8</span> Metadata</h3>
 <p>What information would someone need to find/re-use your data? Location, title, creator name, description, date collected</p>
 <ul>
 <li>keep metadata in plain text file “readme.txt”</li>
@@ -283,7 +360,7 @@ Attention: version contral software is not designed for versioning of raw data a
 </ul>
 </div>
 <div id="data-preservation" class="section level3">
-<h3><span class="header-section-number">2.2.8</span> Data preservation</h3>
+<h3><span class="header-section-number">2.2.9</span> Data preservation</h3>
 <p>Data must be retained to support your research findings</p>
 <p>Standards: ?5 years?</p>
 
