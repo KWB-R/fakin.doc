@@ -59,19 +59,122 @@ rainfall, river discharge measurements) and are therefore of high value.
 
 
 ### Versioning
-Versioning or version control is the way by which different versions and drafts of a document (or file or record or dataset or software code) are managed. Versioning involves the process of naming and distinguishing between a series of draft documents that leads to a final or approved version in the end. Versioning allows you to disclose an audit trail for the revision and update of drafts and final versions.
 
-#### Manual
+Versioning or version control is the way by which different versions and drafts 
+of a document (or file or record or dataset or software code) are managed. 
+Versioning involves the process of naming and distinguishing between a series 
+of draft documents that leads to a final or approved version in the end. 
+Versioning allows you to disclose an audit trail for the revision and update of 
+drafts and final versions.
 
 
-!!!!      Keep older version in one place (i.e. folder) !!!!!
+#### Manual 
+
+We propose the following workflow:
+
+- It is only allowed to modify the current file (e.g. `filename.pptx`), which 
+contains no version name as postfix
+
+- A version is created by copying the current file. This copy gets a not already 
+defined version name as file name ending (e.g. `filename_v0.1.pptx`) 
+
+- The versioned file is moved to a folder `VERSIONS" and set as read-only.
+
+- In the folder `VERSIONS` is a file `VERSIONS.txt`, which contrains addtional 
+information on the available version within that folder
+
+**Drawbacks:**
+
+* possibly more time demanding, 
+
+* needs time getting used to it and
+
+* requires high level of discipline
 
 
-#### 	R scripts 
+**Advantages:**
 
-•	Verpflichtend für Programmcode und ggf. kleinerer Textdateien
-•	Aber: nicht geeignet für Rohdatenversionsverwaltung
+* Simple and safe method, which requires not version control software
 
+* Cleaner workspace as old versions are stored in a separate folder
+
+* Sorting by name equals the chronology
+
+**Example:**
+
+```
+BestPractices_Workshop.ppt
+VERSIONS/
+  + VERSIONS.txt
+  + BestPractices_Workshop_v0.1.ppt
+  + BestPractices_Workshop_v0.2.ppt
+  + BestPractices_Workshop_v1.0.ppt
+```
+
+Content of file `VERSIONS.txt`:
+
+```
+BestPractices_Workshop.ppt
+- v0.1: first draft version, written by Michael Rustler
+- v0.2: after additions by Hauke Sonnenberg
+- v1.0: first final version, after review by Pascale Rouault
+```
+
+#### Automatically
+
+The versioning is done automatically in case a version control software, 
+like [Git](https://en.wikipedia.org/wiki/Git) or [Subversion](https://en.wikipedia.org/wiki/Apache_Subversion) 
+are used. 
+
+At KWB we currently use the following version controll software: 
+
+- Subversion: for KWB r. Requires connection to the KWB intranet
+
+- Git: for publishing programm code external on our KWB organisation group on 
+[Github](https://github.com/KWB-R). Currently all repositories are public (i.e. 
+are visible for everyone), but also use of private repositories is possible for 
+free as KWB is recognised as non-for-profit company by Github, offering [additional
+benefits for free](https://help.github.com/articles/discounted-organization-accounts/#discounts-for-nonprofits-and-libraries)
+
+Use of version control software is required in case of programming (e.g. in R, 
+Python, and so on) and can be useful in case of tracking changes in small text 
+files (e.g. configuration files that run a specific R script with different 
+parameters for scenario analysis). 
+
+
+**Drawbacks:**
+
+* Special software (TortoiseSVN), login data for each user on KWB-Server and 
+some basic training are required
+
+* In case of collaborate coding: sticking to 'best-practices' for using version 
+control is mandatory, e.g.: 
+ 
+    + timely check in of code changes to the central server, 
+    
+    + Speaking to each other: so that not two people work at the same time at the 
+    same program code in one script as this leads to conflicts that need to be 
+    resolved manually, which can be quite time demanding. You are much better off 
+    if you avoid this in the upfront by talking to each other
+
+**Advantages:**
+
+* Only one filename per script (file history and code changes are managed either 
+internally on a KWB server in case of using TortoiseSVN or externally for code 
+hosted on Github) 
+
+* Old versions of scripts can be restored easily 
+
+* Additional comments during `commit` (i.e. at the time of transfering the code 
+from the local computer to the central version control system about `why` code 
+changes were made and build-in diff-tools for tracking changes improve the 
+reproducibility
+
+```{block2,  type='rmdwarning'}
+Attention: version contral software is not designed for versioning of raw data 
+and thus should not be used for it. General thoughts on the topic of 'data 
+versioning' are available here: [https://github.com/leeper/data-versioning](https://github.com/leeper/data-versioning) 
+```
 
 
 ###	Organising your e-mail account
