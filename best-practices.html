@@ -193,11 +193,67 @@
 <p>Versioning or version control is the way by which different versions and drafts of a document (or file or record or dataset or software code) are managed. Versioning involves the process of naming and distinguishing between a series of draft documents that leads to a final or approved version in the end. Versioning allows you to disclose an audit trail for the revision and update of drafts and final versions.</p>
 <div id="manual" class="section level4">
 <h4><span class="header-section-number">2.2.4.1</span> Manual</h4>
-<p>!!!! Keep older version in one place (i.e. folder) !!!!!</p>
+<p>We propose the following workflow:</p>
+<ul>
+<li><p>It is only allowed to modify the current file (e.g. <code>filename.pptx</code>), which contains no version name as postfix</p></li>
+<li><p>A version is created by copying the current file. This copy gets a not already defined version name as file name ending (e.g. <code>filename_v0.1.pptx</code>)</p></li>
+<li><p>The versioned file is moved to a folder `VERSIONS&quot; and set as read-only.</p></li>
+<li><p>In the folder <code>VERSIONS</code> is a file <code>VERSIONS.txt</code>, which contrains addtional information on the available version within that folder</p></li>
+</ul>
+<p><strong>Drawbacks:</strong></p>
+<ul>
+<li><p>possibly more time demanding,</p></li>
+<li><p>needs time getting used to it and</p></li>
+<li><p>requires high level of discipline</p></li>
+</ul>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li><p>Simple and safe method, which requires not version control software</p></li>
+<li><p>Cleaner workspace as old versions are stored in a separate folder</p></li>
+<li><p>Sorting by name equals the chronology</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code>BestPractices_Workshop.ppt
+VERSIONS/
+  + VERSIONS.txt
+  + BestPractices_Workshop_v0.1.ppt
+  + BestPractices_Workshop_v0.2.ppt
+  + BestPractices_Workshop_v1.0.ppt</code></pre>
+<p>Content of file <code>VERSIONS.txt</code>:</p>
+<pre><code>BestPractices_Workshop.ppt
+- v0.1: first draft version, written by Michael Rustler
+- v0.2: after additions by Hauke Sonnenberg
+- v1.0: first final version, after review by Pascale Rouault</code></pre>
 </div>
-<div id="r-scripts" class="section level4">
-<h4><span class="header-section-number">2.2.4.2</span> R scripts</h4>
-<p>• Verpflichtend für Programmcode und ggf. kleinerer Textdateien • Aber: nicht geeignet für Rohdatenversionsverwaltung</p>
+<div id="automatically" class="section level4">
+<h4><span class="header-section-number">2.2.4.2</span> Automatically</h4>
+<p>The versioning is done automatically in case a version control software, like <a href="https://en.wikipedia.org/wiki/Git">Git</a> or <a href="https://en.wikipedia.org/wiki/Apache_Subversion">Subversion</a> are used.</p>
+<p>At KWB we currently use the following version controll software:</p>
+<ul>
+<li><p>Subversion: for KWB r. Requires connection to the KWB intranet</p></li>
+<li><p>Git: for publishing programm code external on our KWB organisation group on <a href="https://github.com/KWB-R">Github</a>. Currently all repositories are public (i.e. are visible for everyone), but also use of private repositories is possible for free as KWB is recognised as non-for-profit company by Github, offering <a href="https://help.github.com/articles/discounted-organization-accounts/#discounts-for-nonprofits-and-libraries">additional benefits for free</a></p></li>
+</ul>
+<p>Use of version control software is required in case of programming (e.g. in R, Python, and so on) and can be useful in case of tracking changes in small text files (e.g. configuration files that run a specific R script with different parameters for scenario analysis).</p>
+<p><strong>Drawbacks:</strong></p>
+<ul>
+<li><p>Special software (TortoiseSVN), login data for each user on KWB-Server and some basic training are required</p></li>
+<li><p>In case of collaborate coding: sticking to ‘best-practices’ for using version control is mandatory, e.g.:</p>
+<ul>
+<li><p>timely check in of code changes to the central server,</p></li>
+<li><p>Speaking to each other: so that not two people work at the same time at the same program code in one script as this leads to conflicts that need to be resolved manually, which can be quite time demanding. You are much better off if you avoid this in the upfront by talking to each other</p></li>
+</ul></li>
+</ul>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li><p>Only one filename per script (file history and code changes are managed either internally on a KWB server in case of using TortoiseSVN or externally for code hosted on Github)</p></li>
+<li><p>Old versions of scripts can be restored easily</p></li>
+<li><p>Additional comments during <code>commit</code> (i.e. at the time of transfering the code from the local computer to the central version control system about <code>why</code> code changes were made and build-in diff-tools for tracking changes improve the reproducibility</p></li>
+</ul>
+
+<div class="rmdwarning">
+Attention: version contral software is not designed for versioning of raw data and thus should not be used for it. General thoughts on the topic of ‘data versioning’ are available here: <a href="https://github.com/leeper/data-versioning" class="uri">https://github.com/leeper/data-versioning</a>
+</div>
+
 </div>
 </div>
 <div id="organising-your-e-mail-account" class="section level3">
