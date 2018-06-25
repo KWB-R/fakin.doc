@@ -61,13 +61,17 @@ is important
 
 * [Chapter 2](#best-practices) defines Best Practices for different topics.
 
-* [Chapter 3](#projects) gives an overview on three [case studies](#case-studies) 
-with different data related tasks that have been solved within the FAKIN project as 
-well as [other projects](#other-projects) for listing what data challenges occured 
-in the past and how they were solved in order to increase our awareness at KWB
-and finally
+* [Chapter 3](#case-studies) gives an overview on three [case studies](#case-studies) 
+with different data related tasks that have been solved within the FAKIN project, 
+while 
+
+* [Chapter 4](#other-projects) what data challenges occured in the past in other 
+KWB projects and how they were solved in order to increase our awareness at KWB, 
   
-* [Chapter 4](#faq) provides FAQs
+* [Chapter 5](#faq) provides FAQs and finally 
+
+* [Chapter 6](#glossary) is a [glossary](#glossary) for explaining commonly used 
+terms within this document.
 
 This document is assumed to be a "living" document. We highly appreciate any
 comments and suggestions for improvements. What are your experiences with

@@ -8,10 +8,11 @@ rmd_files: [
   "02_new_project.Rmd",
   "02_data_storage.Rmd", 
   "02_data_collection.Rmd",
-  "03_projects.Rmd",
-  "04_faq.Rmd",
-  "05_glossary.Rmd",
-  "06_references.Rmd"
+  "03_case_studies.Rmd",
+  "04_other_projects.Rmd",
+  "05_faq.Rmd",
+  "06_glossary.Rmd",
+  "07_references.Rmd"
 ]
 delete_merged_file: true
 language:

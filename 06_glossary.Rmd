@@ -1,4 +1,4 @@
-# Glossary 
+# Glossary {#glossary}
 
 A detailed glossary covering the following topics is provided by  
 `r citet(manual["Rokem_2018"])`. 
