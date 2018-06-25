@@ -61,8 +61,8 @@ is important
 
 * [Chapter 2](#best-practices) defines Best Practices for different topics.
 
-* [Chapter 3](#projects) gives an overview on three [use cases](#use-cases) with 
-different data related tasks that have been solved within the FAKIN project as 
+* [Chapter 3](#projects) gives an overview on three [case studies](#case-studies) 
+with different data related tasks that have been solved within the FAKIN project as 
 well as [other projects](#other-projects) for listing what data challenges occured 
 in the past and how they were solved in order to increase our awareness at KWB
 and finally

@@ -9,4 +9,8 @@ General repositories e.g. Figshare, Zenodo (a joint project between OpenAIRE
 and CERN), Mandeley data, Dryad
 
 Repositories at KWB:
+
+  - Github
+  
+  - Zenodo
   

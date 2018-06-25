@@ -2,7 +2,7 @@
 
 ## Excel
 
-***Beispiel:***
+
 ```{block2, type = 'rmdcaution'} 
 Excel often crashes in case: 
 
@@ -12,7 +12,6 @@ Excel often crashes in case:
 
 ```
 
-```{block2, type = 'rmdtip'} 
 -> Abhilfe: Daten in eigene Datei
  
 Haukes "Best Practices" für Excel (ungeprüft, zu diskutieren!)
@@ -46,7 +45,7 @@ zu verstehen.
  
 - Hilfsspalten mit (dadurch benannten) Zwischenberechnungen anstatt Wiederholung 
 von langen Ausdrücken in Formeln
-```
+
 
 ```{block2, type = 'rmdtip'}
 A general online workshop on the topic [Data Organisation in Spreadsheets](http://www.datacarpentry.org/spreadsheet-ecology-lesson/)
@@ -97,14 +96,18 @@ sink()
 
 Hierzu ist auch noch ein Tutorial zu erstellen!
 
+```{block2, type = 'rmdnote'}
 Komplexere, technische Möglichkeiten zum Paketmanagement werden im gerade vom 
 DFG gefördertem Projekt [O2R](http://o2r.info/) in der Entwicklung befindlichen 
 [CRAN task view for computational environments and reproducibility](https://github.com/o2r-project/ctv-computational-environments) 
 genannt. 
 
+```
+
 ```{block2, type = 'rmdtip'}
 
-Mit dem R Paket [packrat](https://rstudio.github.io/packrat/) lässt sich das Paketmanagement ggf. verbessern. 
+Mit dem R Paket [packrat](https://rstudio.github.io/packrat/) lässt sich das 
+Paketmanagement ggf. verbessern. 
   
 ```
 
@@ -124,13 +127,15 @@ Projekt OGRE).
 ```
 
 ```{block2, type = 'rmdtip'}
-**Proposed solution:**:
+Proposed solution:
 
-- Bewusstmachen der Skriptabhängigkeiten
-- Identifizieren von Optimierungspotentialen -> möglicherweise 
-  Elimination von Abhängigkeiten
-- Workflow dokumentieren und Tutorial -- am besten als R-Markdown Dokument -- 
-  erstellen. Das ist insbesondere wichtig, wenn Skripte häufig verwendet werden.
+Bewusstmachen der Skriptabhängigkeiten
+
+Identifizieren von Optimierungspotentialen -> möglicherweise 
+Elimination von Abhängigkeiten
+
+Workflow dokumentieren und Tutorial, am besten als R-Markdown Dokument,
+erstellen. Das ist insbesondere wichtig, wenn Skripte häufig verwendet werden.
 ```
 
 
@@ -143,34 +148,48 @@ Currently there is no established coding style at KWB for in case of programming
 e.g. R scripts
 ```
 
-```{block2, type = 'rmdtip'}
-(R) programmers at KWB will use the tidyverse coding style (http://style.tidyverse.org), 
-as default. This will help increasing both, the readibility and reusability of 
-the developed (R-)scripts at KWB (currently: ~ 1000 Rscripts).
-```
+
+(R) programmers at KWB will use the tidyverse coding style 
+[http://style.tidyverse.org](http://style.tidyverse.org) as default. 
+This will help increasing both, the readibility and reusability of 
+the developed (R-)scripts at KWB (currently: approximately 1000 Rscripts).
+
 
 ## Collaborative version control 
 
 ```{block2, type = 'rmdcaution'}
-
+Multiple people developing code together.
 ```
 
 
 ```{block2, type = 'rmdtip'}
 
-Lösungsvorschlag:
+Proposed solution:
 
-* Miteinander sprechen, 
-* Regelmäßige Updates/Commits
-* Bei Verwendung/Weiterbearbeitung von Code aus einem Projekt (z.B. OGRE) in 
-  einem weiteren (z.B. FLUSSHYGIENE) ist vom Orginalcode eine Kopie mittels 
-  `SVN copy` zu erstellen und diese weiterzubearbeiten, da sonst bestehende 
-  Prozeduren im Ausgangsprojekt überschrieben werden
-* Bestehendes Subversion [Tutorial](file:///Y:/Z-Exchange/_Tutorials/using_subversion.html) 
-  ist um die fehlenden der oben genannten Aspekte zu ergänzen
-  
+1. Miteinander sprechen, 
+
+2. Regelmäßige Updates/Commits,
+
+3. Bei Verwendung/Weiterbearbeitung von Code aus einem Projekt (z.B. OGRE) in 
+einem weiteren (z.B. FLUSSHYGIENE) ist vom Orginalcode eine Kopie mittels 
+`SVN copy` zu erstellen und diese weiterzubearbeiten, da sonst bestehende 
+Prozeduren im Ausgangsprojekt überschrieben werden
+
+```
+
+```{block2, type = 'rmdnote'}
+
+Bestehendes Subversion [Tutorial](file:///Y:/Z-Exchange/_Tutorials/using_subversion.html) 
+(link only accessible from KWB intranet) ist um die fehlenden der oben 
+genannten Aspekte zu ergänzen.
+
+```
+
+```{block2, type = 'rmdnote'}
+
 Eine Präsentation mit verschiedenen Tools zur Versionsverwaltung findet sich hier:
 [https://www.fosteropenscience.eu/node/597](https://www.fosteropenscience.eu/node/597)
+
 ```
 
 ## Encoding 
@@ -184,19 +203,19 @@ unterschiedlichen Encodings abgespeichert und eingelesen werden.
 
 ```{block2, type = 'rmdtip'}
 
-- Vorgabe einer Default Encoding Einstellung in RStudio (z.B. UTF-8)
+Vorgabe einer Default Encoding Einstellung in RStudio (z.B. UTF-8)
 
-- Alternativ könnten auch alle [Umlaute](http://javawiki.sowas.com/doku.php?id=java:unicode) 
-  in [Unicode](https://de.wikipedia.org/wiki/Unicode) dokumentiert werden 
-  (siehe folgendes Beispiel). Allerdings ist dies wohl nicht praktikabel, 
-  da die Lesbarkeit der Texte erschwert wird und es sollte daher von uns der 
-  erste Ansatz (Vorgabe von UTF-8 als Default Encoding) angestrebt werden.
+Alternativ könnten auch alle [Umlaute](http://javawiki.sowas.com/doku.php?id=java:unicode) 
+in [Unicode](https://de.wikipedia.org/wiki/Unicode) dokumentiert werden 
+(siehe folgendes Beispiel). Allerdings ist dies wohl nicht praktikabel, 
+da die Lesbarkeit der Texte erschwert wird und es sollte daher von uns der 
+erste Ansatz (Vorgabe von UTF-8 als Default Encoding) angestrebt werden.
 
   
 ``` 
 
 A great blogpost for the topic (How do I write UTF-8 encoded content to a file?) 
-is provided by [Ushey (2018()](https://kevinushey.github.io/blog/2018/02/21/string-encoding-and-r/), including background information on how encoding in R works.
+is provided by [Ushey (2018)](https://kevinushey.github.io/blog/2018/02/21/string-encoding-and-r/), including background information on how encoding in R works.
 
 For increasing the portability of R script he recommands the for example the 
 following:

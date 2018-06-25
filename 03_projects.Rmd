@@ -2,14 +2,14 @@
 
 In general the projects can be divided into two groups:
 
-- [Use cases](#use-cases): tested in detail within FAKIN (i.e. proposed 
+- [Case studies](#case-studies): tested in detail within FAKIN (i.e. proposed 
 best-practices will be applied for this case studies and cross-checked whether 
 their application is useful
 
 - [Others](#other-projects): just suming up the data workflows and created tools 
 for enlarging the KWB internal knowledge what has already been done.  
 
-## Use cases {#use-cases}
+## Case studies {#case-studies}
 
 
 ### Geogenic salination

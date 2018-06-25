@@ -1,6 +1,84 @@
 # Glossary 
 
-## What is digital curation?
+A detailed glossary covering the following topics is provided by  
+`r citet(manual["Rokem_2018"])`. 
 
-Digital curation is the selection, preservation, maintenance, collection and 
-archiving of digital assets.
+## Reproducibility
+
+> "... is a cornerstone of science. Definitions vary greatly across 
+scientific disciplines, but the meaning that we find most prevalent is the 
+'calculation of quantitative scientific results by independent scientists using 
+the original datasets and methods' (Stodden, Leisch, & Peng, 2014). The goals of 
+reproducibility go beyond duplicating someone else’s investigation: it also 
+entails having reproducibility for yourself, defeating self-deception in 
+scientific results (Ioannidis, 2005; Nuzzo, 2015), and extending another 
+researcher’s methods to build your own work. Reproducibility is a matter of 
+degree, not of kind. We say that research is reproducible if reproducibility 
+applies to the results to some extent. That is, some of the corresponding 
+experiments and scientific methods are deemed to be reproducible.
+>
+> --- `r citep(manual["Rokem_2018"])`
+
+For more details see: `r citet(manual["Rokem_2018"])`
+
+## Provenance: 
+
+> "As the volume of digital data increases and the complexity of computational 
+processes that manipulate these data grows, it is becoming increasingly 
+important to manage their provenance. The Oxford English Dictionary defines 
+provenance as the source or origin of an object; its history and pedigree; 
+a record of the ultimate derivation and passage of an item through its various 
+owners. Provenance helps determine the value, accuracy, and authorship of an object."
+>
+> --- `r citep(manual["Rokem_2018"])`
+
+For more details see: `r citet(manual["Rokem_2018"])`
+
+## Techniques
+
+- Version control 
+    
+- Literate Programming
+    
+- Data Publication
+    
+- Munging (i.e. data cleaning)
+    
+- Software Testing
+    
+- Continuous Integration
+    
+- Workflow Management
+    
+- File Format Standards
+    
+- Licensing
+    
+- Virtualization and Environment Isolation
+
+For details see: `r citet(manual["Rokem_2018"])`
+    
+## Tools
+
+- Programming Language and Related Tools
+    
+- Documentation Generators
+    
+- Version Control
+    
+- Data Munging and Analysis
+    
+- Data Visualization
+    
+- Software Testing and Continuous Integration
+    
+- Virtualization and Environment Isolation
+    
+- Data Sharing and Repositories
+    
+- Document Authoring
+    
+- File Formats
+
+For details see: `r citet(manual["Rokem_2018"])`
+

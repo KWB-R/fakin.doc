@@ -229,7 +229,7 @@ Why should I organise my email?
 Apart from the obvious frustration and time wasted looking for that email you 
 remember sending to someone last month, email is increasingly used to store 
 important documents and data, often with information related to the attachments 
-within the email itself." "
+within the email itself." 
 >
 > --- [University of Cambridge (2018)](https://www.data.cam.ac.uk/data-management-guide/organising-your-data#Refernces)
 
@@ -255,10 +255,12 @@ places, such as a network drive.
 
 ### Managing references 
 
-Refer to KWB Endnote guidelines:
+For managing reference there are plenty of tools available. A detailed overview 
+is provided by `r citep(manual["Fenner_2014"])` in the Chapter [Reference Management](http://book.openingscience.org.s3-website-eu-west-1.amazonaws.com/tools/reference_management.html) 
 
-[KWB-EndNote-Guideline-v02.pdf](file://Y:/R&D Templates/Charts Guidelines Checklists/KWB-EndNote-Guideline-v02.pdf) (link only accessible within KWB 
-intranet)
+
+At KWB we use Endnote, for which an internal guideline document ([KWB-EndNote-Guideline-v02.pdf](file://Y:/R&D Templates/Charts Guidelines Checklists/KWB-EndNote-Guideline-v02.pdf, link only 
+accessible within KWB intranet)) was developed.
 
 ###	Metadata
 What information would someone need to find/re-use your data?
