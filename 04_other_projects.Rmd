@@ -1,16 +1,12 @@
 # Other Projects {#other-projects}
 
 Here we are just suming up the data workflows and created tools in (old) KWB 
-projects, but -- in contrast to the case studies(#case-studies) -- the workflows 
+projects, but -- in contrast to the [case studies](#case-studies) -- the workflows 
 and tools were not tested explicitly within the FAKIN project. 
 
 The goal of this chapter is to enlarge the internal knowledge base at KWB about 
 what and how data challenges have already been successfully solved in the past. 
 
-```{block2,  type = 'rmdcaution'}
-However, in contrast to the case studies(#case-studies) the workflows and tools 
-were not tested 
-```
 
 ## Spree2011 (2007)
 

@@ -12,9 +12,10 @@ their application is useful.
 **Challenge:**
 
 The LCA modelling software [Umberto](https://www.ifu.com/umberto/) can produce
-large raw data output files (> 300 MB csv files) that are sometimes are even 
-to big for EXCEL 2010 (> 1 millions) and but need to be aggregated (e.g. grouped 
-by specific criteria). This was usually performed manually within EXCEL.
+large raw data output files (> 300 MB csv files) that sometimes are even to big 
+for EXCEL 2010 (> 1 millions) but need to be aggregated (e.g. grouped 
+by specific criteria). This was usually performed manually within EXCEL in case 
+that model output data was below EXCEL`s 1 million row limit. 
 
 **Workflow improvement developed within FAKIN:**
 
