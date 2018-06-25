@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="other-projects.html">
-<link rel="next" href="glossary.html">
+<link rel="prev" href="best-practices.html">
+<link rel="next" href="other-projects.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -179,188 +179,52 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="faq" class="section level1">
-<h1><span class="header-section-number">Chapter 5</span> FAQs</h1>
-<div id="excel" class="section level2">
-<h2><span class="header-section-number">5.1</span> Excel</h2>
-
-<div class="rmdcaution">
-<p>Excel often crashes in case:</p>
+<div id="case-studies" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Case studies</h1>
+<p>The three following case-studies are tested in detail within FAKIN (i.e. proposed best-practices will be applied for this case studies and cross-checked whether their application is useful.</p>
+<div id="geogenic-salination" class="section level2">
+<h2><span class="header-section-number">3.1</span> Geogenic salination</h2>
+</div>
+<div id="lca-modelling" class="section level2">
+<h2><span class="header-section-number">3.2</span> LCA modelling</h2>
+<p><strong>Challenge:</strong></p>
+<p>The LCA modelling software <a href="https://www.ifu.com/umberto/">Umberto</a> can produce large raw data output files (&gt; 300 MB csv files) that are sometimes are even to big for EXCEL 2010 (&gt; 1 millions) and but need to be aggregated (e.g. grouped by specific criteria). This was usually performed manually within EXCEL.</p>
+<p><strong>Workflow improvement developed within FAKIN:</strong></p>
+<p>An open source R package <a href="https://kwb-r.github.io/kwb.umberto/dev">kwb.umberto</a> was programmed for automating:</p>
 <ul>
-<li><p>a formula is applied for a whole column (i.e. 1 million rows)</p></li>
-<li>a lot of data is processed</li>
+<li><p>data import the Umberto model results,</p></li>
+<li><p>performing data aggregating to the user needs and finally</p></li>
+<li><p>exporting the aggregated results in an <code>results.xlsx</code> EXCEL spreadsheet.</p></li>
 </ul>
+<p>This <code>results.xlsx</code> EXCEL spreadsheet is referenced by another EXCEL spreatsheet <code>figues.xlsx</code> (which contains the figure templates and just links to the <code>results.xlsx</code> in order to update the predefined figures).</p>
+<p>This workflow now reduces the time consuming and error-prone formerly manually performed data aggregation in EXCEL, whilst still enabling the users to adapt the figures to their needs without coding knowledge.</p>
 </div>
-
-<p>-&gt; Abhilfe: Daten in eigene Datei</p>
-<p>Haukes “Best Practices” für Excel (ungeprüft, zu diskutieren!)</p>
+<div id="aquanes" class="section level2">
+<h2><span class="header-section-number">3.3</span> Pilot plants</h2>
+<p>Challenges:</p>
+<p>Sites (among others):</p>
 <ul>
-<li><p>Trennung zwischen Eingabe, Verarbeitung und Ausgabe zumindest auf Tabellenblattebene, d.h. ein Tabellenblattt (oder mehrere) für Eingabe, eines (oder mehrere) für Verarbeitung, eines (oder mehrere) für formatierte Ausgabe und / oder Diagramme</p></li>
-<li><p>ggf. Aufteilen auf mehrere Dateien. Das hätte den Nachteil, dass nicht mehr alles in einer Datei ist und nicht so leicht übergeben werden kann. In jedem Fall müsste eine Namenskonvention getroffen werden, z.B. <Dateiname>_input.xls, <Dateiname>_calc.xls, <Dateiname>_output.xls</p></li>
-<li><p>Verwenden der relativ neuen Excel-Features “Als Tabelle” formatieren. Vorteil: Formeln können auf ganze Tabellenspalten angewendet werden; Spaltennamen anstatt Zellbezüge mit (unsprechenden) Buchstaben und Zahlen. z.B. Formel für Spalte “Volumen_L”: “= Durchfluss[@[Q_L_s]] * 60 * 5”</p></li>
-<li><p>Ein Tabellenblatt pro Tabelle</p></li>
-<li><p>Genau eine Headerzeile pro Tabelle mit eindeutigen Spaltennamen</p></li>
-<li><p>Ein Tabellenblatt, das die Bedeutung der Spaltennamen erläutert mit Spalten “Tabellenblatt; Spalte; Bedeutung; Einheit; Formel” Vorteil: Dieses Tabellenblatt sollte ausreichen, um die wesentlichen Berechnungen zu verstehen.</p></li>
+<li><a href="http://aquanes-h2020.eu/Default.aspx?t=1576">Berlin-Tiefwerder</a></li>
+<li><a href="http://aquanes-h2020.eu/Default.aspx?t=1666">Berlin-Schönerlinde</a></li>
+<li><a href="http://aquanes-h2020.eu/Default.aspx?t=1663">Basel Lange-Erlen</a></li>
+<li><p><a href="http://aquanes-h2020.eu/Default.aspx?t=1668">Haridwar</a></p></li>
+<li><p>zeitlich hoch aufgelöste Betriebsdaten (~ 10 Mio. Datenpunkte pro Monat) erforderten massive Performance Optimierung um die Visualisierung der Rohdaten im Tool über den Testbetriebszeitraum (18 Monate) auf Rechnern mit limitierten RAM Ressourcen (~ 8 GB) zu ermöglichen.</p></li>
+<li><p>Nutzung: wird von den Projektpartnern zum strukturierten Datenimport genutzt um dann darauf ggf. eigene weitere Analysen darauf aufzusetzen. Für die beiden Berliner Standorte wird zudem die Visualiserung der Betriebsdaten routinenäßig genutzt, um vom Regelbetrieb abweichende Zustände besser indentifizieren zu können.</p></li>
 </ul>
-<p>-&gt; Nachteil: Das muss immer aktuell gehalten werden!</p>
+<p>An open source R package <a href="https://kwb-r.github.io/aquanes.report">aquanes.report</a> <span class="citation">(Rustler <a href="#ref-Rustler_2018">2018</a>)</span> was programmed, which is able to:</p>
 <ul>
-<li>Hilfsspalten mit (dadurch benannten) Zwischenberechnungen anstatt Wiederholung von langen Ausdrücken in Formeln</li>
+<li><p>import operational and lab data for each pilot site,</p></li>
+<li><p>performs temporal aggregation (e.g. 5 min, 1 h, 24h median values),</p></li>
+<li><p>visualises raw or aggregated data either interactively in a web browser or by</p></li>
+<li><p>creating a standardised report (e.g. monthly) in html, pdf or docx</p></li>
 </ul>
 
-<div class="rmdtip">
-<p>A general online workshop on the topic <a href="http://www.datacarpentry.org/spreadsheet-ecology-lesson/">Data Organisation in Spreadsheets</a> is provided for free by the <a href="https://datacarpentry.org">DataCarpentry</a> organisation.</p>
 </div>
-
 </div>
-<div id="heterogenous-software-versions-on-kwb-computers" class="section level2">
-<h2><span class="header-section-number">5.2</span> Heterogenous software versions on KWB computers</h2>
-
-<div class="rmdcaution">
-Unterschiedliche Softwareversionen (z.B. R) können dazu führen, dass Skripte auf verschiedenen Rechnern nicht das gleiche Verhalten zeigen.
-</div>
-
-
-<div class="rmdtip">
-Die IT-Abteilung ist in der Lage an bestimmte Nutzergruppen die gleiche Software (z.B. RStudio / R / Miktex) auszurollen. Dies sollte in Zukunft konsequent genutzt werden, indem auf alle Computer an denen potentiell programmiert wird zu dieser Nutzergruppe hinzugefügt werden und somit alle die gleichen Softwareversionen installiert haben.
-</div>
-
-</div>
-<div id="r-packageversion-dependency-of-r-scripts" class="section level2">
-<h2><span class="header-section-number">5.3</span> R package/version dependency of R scripts</h2>
-<p>Lösungsvorschlag:</p>
-<p>Es ist eine <strong>Mindestdokumentation</strong> der verwendeten R Version und sämtlicher R-Pakete (inklusive ihrer Versionen) zu fordern. Dazu kann in R die Funktion <code>sessionInfo()</code> genutzt werden. Die Ausgabe dieser Funktion kann entweder in eine Metadaten-Textdatei <code>session_info.txt</code> geschrieben werden oder im Falle der Erzeugung von R-Markdown-Dokumenten direkt am Anfang der Analyse im <code>R-Markdown</code> Dokument ausgegeben werden.</p>
-<p>Das Schreiben der Metadaten-Datei <code>session_info.txt</code> sollte standardisert über eine Funktion in einem KWB R-Paket (z.B. <code>kwb.utils</code>) implementiert werden.</p>
-<p>Direktausgabe in R Console / RMarkddown:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sessionInfo</span>()</code></pre></div>
-<pre><code>## R version 3.5.0 (2017-01-27)
-## Platform: x86_64-pc-linux-gnu (64-bit)
-## Running under: Ubuntu 14.04.5 LTS
-## 
-## Matrix products: default
-## BLAS: /home/travis/R-bin/lib/R/lib/libRblas.so
-## LAPACK: /home/travis/R-bin/lib/R/lib/libRlapack.so
-## 
-## locale:
-##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
-##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
-##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
-##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
-##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
-## 
-## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  methods   base     
-## 
-## other attached packages:
-## [1] knitcitations_1.0.8
-## 
-## loaded via a namespace (and not attached):
-##  [1] Rcpp_0.12.17     bookdown_0.7.13  lubridate_1.7.4  digest_0.6.15   
-##  [5] rprojroot_1.3-2  plyr_1.8.4       R6_2.2.2         jsonlite_1.5    
-##  [9] backports_1.1.2  magrittr_1.5     evaluate_0.10.1  httr_1.3.1      
-## [13] bibtex_0.4.2     stringi_1.2.2    rstudioapi_0.7   xml2_1.2.0      
-## [17] rmarkdown_1.10   tools_3.5.0      RefManageR_1.2.0 stringr_1.3.1   
-## [21] xfun_0.2         yaml_2.1.19      compiler_3.5.0   htmltools_0.3.6 
-## [25] knitr_1.20</code></pre>
-<p>Schreiben in standardisierte Metadatei:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sink</span>(<span class="st">&quot;session_info.txt&quot;</span>)
-<span class="kw">sessionInfo</span>()
-<span class="kw">sink</span>()</code></pre></div>
-<p>Hierzu ist auch noch ein Tutorial zu erstellen!</p>
-
-<div class="rmdnote">
-<p>Komplexere, technische Möglichkeiten zum Paketmanagement werden im gerade vom DFG gefördertem Projekt <a href="http://o2r.info/">O2R</a> in der Entwicklung befindlichen <a href="https://github.com/o2r-project/ctv-computational-environments">CRAN task view for computational environments and reproducibility</a> genannt.</p>
-</div>
-
-
-<div class="rmdtip">
-Mit dem R Paket <a href="https://rstudio.github.io/packrat/">packrat</a> lässt sich das Paketmanagement ggf. verbessern.
-</div>
-
-<p>Als Beispielanwendung dient die Datenanalyse zur Feinstaubbelastung mit Sensebox-Daten, die komplett reproduzierbar sind (mittels der Plattform <a href="https://mybinder.org/">mybinder</a>) und ohne Installation von Interessierten im Webbrowser ausgeführt werden kann (<a href="http://o2r.info/2018/01/12/sensebox-binder/">siehe hier</a>).</p>
-</div>
-<div id="complex-r-script-dependencies" class="section level2">
-<h2><span class="header-section-number">5.4</span> Complex R script dependencies</h2>
-
-<div class="rmdcaution">
-Dieses Problem tritt insbesondere auf, wenn mehrere verschiedene Nutzer gemeinsam mit den gleichen Skripten arbeiten (wie z.B. im abgeschlossenen Projekt OGRE).
-</div>
-
-
-<div class="rmdtip">
-<p>Proposed solution:</p>
-<p>Bewusstmachen der Skriptabhängigkeiten</p>
-<p>Identifizieren von Optimierungspotentialen -&gt; möglicherweise Elimination von Abhängigkeiten</p>
-Workflow dokumentieren und Tutorial, am besten als R-Markdown Dokument, erstellen. Das ist insbesondere wichtig, wenn Skripte häufig verwendet werden.
-</div>
-
-</div>
-<div id="heterogenous-r-coding-styles" class="section level2">
-<h2><span class="header-section-number">5.5</span> Heterogenous (R-)coding styles</h2>
-
-<div class="rmdcaution">
-Currently there is no established coding style at KWB for in case of programming e.g. R scripts
-</div>
-
-<ol start="18" style="list-style-type: upper-alpha">
-<li>programmers at KWB will use the tidyverse coding style <a href="http://style.tidyverse.org" class="uri">http://style.tidyverse.org</a> as default. This will help increasing both, the readibility and reusability of the developed (R-)scripts at KWB (currently: approximately 1000 Rscripts).</li>
-</ol>
-</div>
-<div id="collaborative-version-control" class="section level2">
-<h2><span class="header-section-number">5.6</span> Collaborative version control</h2>
-
-<div class="rmdcaution">
-Multiple people developing code together.
-</div>
-
-
-<div class="rmdtip">
-<p>Proposed solution:</p>
-<ol style="list-style-type: decimal">
-<li><p>Miteinander sprechen,</p></li>
-<li><p>Regelmäßige Updates/Commits,</p></li>
-<li>Bei Verwendung/Weiterbearbeitung von Code aus einem Projekt (z.B. OGRE) in einem weiteren (z.B. FLUSSHYGIENE) ist vom Orginalcode eine Kopie mittels <code>SVN copy</code> zu erstellen und diese weiterzubearbeiten, da sonst bestehende Prozeduren im Ausgangsprojekt überschrieben werden</li>
-</ol>
-</div>
-
-
-<div class="rmdnote">
-<p>Bestehendes Subversion <a href="file:///Y:/Z-Exchange/_Tutorials/using_subversion.html">Tutorial</a> (link only accessible from KWB intranet) ist um die fehlenden der oben genannten Aspekte zu ergänzen.</p>
-</div>
-
-
-<div class="rmdnote">
-<p>Eine Präsentation mit verschiedenen Tools zur Versionsverwaltung findet sich hier: <a href="https://www.fosteropenscience.eu/node/597" class="uri">https://www.fosteropenscience.eu/node/597</a></p>
-</div>
-
-</div>
-<div id="encoding" class="section level2">
-<h2><span class="header-section-number">5.7</span> Encoding</h2>
-
-<div class="rmdcaution">
-Umlaute und Sonderzeichen werden falsch angezeigt, wenn R-Skripte in unterschiedlichen Encodings abgespeichert und eingelesen werden.
-</div>
-
-
-<div class="rmdtip">
-<p>Vorgabe einer Default Encoding Einstellung in RStudio (z.B. UTF-8)</p>
-<p>Alternativ könnten auch alle <a href="http://javawiki.sowas.com/doku.php?id=java:unicode">Umlaute</a> in <a href="https://de.wikipedia.org/wiki/Unicode">Unicode</a> dokumentiert werden (siehe folgendes Beispiel). Allerdings ist dies wohl nicht praktikabel, da die Lesbarkeit der Texte erschwert wird und es sollte daher von uns der erste Ansatz (Vorgabe von UTF-8 als Default Encoding) angestrebt werden.</p>
-</div>
-
-<p>A great blogpost for the topic (How do I write UTF-8 encoded content to a file?) is provided by <a href="https://kevinushey.github.io/blog/2018/02/21/string-encoding-and-r/">Ushey (2018)</a>, including background information on how encoding in R works.</p>
-<p>For increasing the portability of R script he recommands the for example the following:</p>
-<blockquote>
-<p>“Portable R scripts should use unicode code points, to avoid accidental mis-encoding of string literals.”* — <a href="https://kevinushey.github.io/blog/2018/02/21/string-encoding-and-r/">Ushey, 2018</a></p>
-</blockquote>
-<p><strong>Encoding example in R:</strong></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">### Richtiges Skript Encoding WICHTIG (richtiges Einlesen des Skripts nur wenn 
-### mit gleichem Encoding eingelesen  wie es auch abgespeichert wurde)
-<span class="kw">print</span>(<span class="st">&quot;Ü&quot;</span>)</code></pre></div>
-<pre><code>## [1] &quot;Ü&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">### Skript Encoding EGAL (da Umlaut in Unicode codiert wurde)
-<span class="kw">print</span>(<span class="st">&quot;\u00dc&quot;</span>)</code></pre></div>
-<pre><code>## [1] &quot;Ü&quot;</code></pre>
-
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Rustler_2018">
+<p>Rustler, Michael. 2018. “Aquanes.report (V.0.5.0).” doi:<a href="https://doi.org/10.5281/zenodo.1244103">10.5281/zenodo.1244103</a>.</p>
 </div>
 </div>
             </section>
@@ -368,8 +232,8 @@ Umlaute und Sonderzeichen werden falsch angezeigt, wenn R-Skripte in unterschied
           </div>
         </div>
       </div>
-<a href="other-projects.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="glossary.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="best-practices.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="other-projects.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -399,7 +263,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/KWB-R/fakin.doc/blob/master/05_faq.Rmd",
+"link": "https://github.com/KWB-R/fakin.doc/blob/master/03_case_studies.Rmd",
 "text": "Edit"
 },
 "download": ["fakin_documentation.docx", "fakin_documentation.pdf", "fakin_documentation.epub"],
