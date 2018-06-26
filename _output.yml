@@ -1,4 +1,6 @@
 bookdown::gitbook:
+  includes:
+    after_body: hypothesis.html
   css: style.css
   split_by: chapter  
   config:
