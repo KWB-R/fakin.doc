@@ -118,12 +118,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.2.2" data-path="best-practices.html"><a href="best-practices.html#metadata"><i class="fa fa-check"></i><b>2.2.2</b> Metadata</a></li>
 <li class="chapter" data-level="2.2.3" data-path="best-practices.html"><a href="best-practices.html#raw-data"><i class="fa fa-check"></i><b>2.2.3</b> Raw data</a></li>
 <li class="chapter" data-level="2.2.4" data-path="best-practices.html"><a href="best-practices.html#data-workflow"><i class="fa fa-check"></i><b>2.2.4</b> Data workflow</a></li>
-<li class="chapter" data-level="2.2.5" data-path="best-practices.html"><a href="best-practices.html#data-workflow-1"><i class="fa fa-check"></i><b>2.2.5</b> Data workflow</a></li>
-<li class="chapter" data-level="2.2.6" data-path="best-practices.html"><a href="best-practices.html#folder-structures"><i class="fa fa-check"></i><b>2.2.6</b> Folder Structures</a></li>
-<li class="chapter" data-level="2.2.7" data-path="best-practices.html"><a href="best-practices.html#versioning"><i class="fa fa-check"></i><b>2.2.7</b> Versioning</a></li>
-<li class="chapter" data-level="2.2.8" data-path="best-practices.html"><a href="best-practices.html#organising-your-e-mail-account"><i class="fa fa-check"></i><b>2.2.8</b> Organising your e-mail account</a></li>
-<li class="chapter" data-level="2.2.9" data-path="best-practices.html"><a href="best-practices.html#managing-references"><i class="fa fa-check"></i><b>2.2.9</b> Managing references</a></li>
-<li class="chapter" data-level="2.2.10" data-path="best-practices.html"><a href="best-practices.html#data-preservation"><i class="fa fa-check"></i><b>2.2.10</b> Data preservation</a></li>
+<li class="chapter" data-level="2.2.5" data-path="best-practices.html"><a href="best-practices.html#folder-structures"><i class="fa fa-check"></i><b>2.2.5</b> Folder Structures</a></li>
+<li class="chapter" data-level="2.2.6" data-path="best-practices.html"><a href="best-practices.html#versioning"><i class="fa fa-check"></i><b>2.2.6</b> Versioning</a></li>
+<li class="chapter" data-level="2.2.7" data-path="best-practices.html"><a href="best-practices.html#organising-your-e-mail-account"><i class="fa fa-check"></i><b>2.2.7</b> Organising your e-mail account</a></li>
+<li class="chapter" data-level="2.2.8" data-path="best-practices.html"><a href="best-practices.html#managing-references"><i class="fa fa-check"></i><b>2.2.8</b> Managing references</a></li>
+<li class="chapter" data-level="2.2.9" data-path="best-practices.html"><a href="best-practices.html#data-preservation"><i class="fa fa-check"></i><b>2.2.9</b> Data preservation</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="best-practices.html"><a href="best-practices.html#data-collection"><i class="fa fa-check"></i><b>2.3</b> Data collection</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="best-practices.html"><a href="best-practices.html#logger-devices"><i class="fa fa-check"></i><b>2.3.1</b> Logger devices</a></li>
@@ -479,60 +478,8 @@ uba: Umweltbundesamt</code></pre>
       sommer.lnk
       winter.lnk</code></pre>
 </div>
-<div id="data-workflow-1" class="section level3">
-<h3><span class="header-section-number">2.2.5</span> Data workflow</h3>
-<p>For each project separation of:</p>
-<ul>
-<li><p><a href="best-practices.html#raw-data">raw data</a> (i.e. <code>\\server\\rawdata</code>)</p></li>
-<li><p>data processing (i.e. <code>\\server\\processing</code>)</p></li>
-<li><p>results (i.e. <code>\\server\\projekte$</code>)</p></li>
-</ul>
-<p>Raw data are highly valuable because they if necessary cannot or only with high costs be reproduced. Thus raw data will be compiled on the highest level (i.e. <code>\\server\\rawdata</code>) for each <code>project</code> and <code>origin</code> (e.g. KWB, BWB) as shown below:</p>
-<p><strong>Raw data folder structure:</strong></p>
-<pre><code>TestProjekt
-  BWB
-    Regen
-      METADATEN
-      regen.xls
-    Labor
-      METADATEN
-      labor.xls
-
-  KWB
-    Durchfluss
-      METADATEN
-      q01.csv
-      q02.csv
-      q03.csv</code></pre>
-<p>The data processing is a “playground”, where different approaches or scenarios can be tested and where possibly different versions for a specific approach or scenario are available. The files will be stored here according to the corresponding <code>project</code> and <code>topic</code> and the data processing step, respectively.</p>
-<p><strong>Data processing folder structure:</strong></p>
-<pre><code>TestProjekt
-  01_Bereinigung
-    METADATEN
-    regen_roh.csv
-    regen.csv
-    qualitaet.csv      
-    durchfluss.csv
-  02_Modellierung
-    sommer
-    winter
-    VERSIONEN
-      v0.1
-      v1.0
-        sommer
-        winter
-  Software</code></pre>
-<p>In the results folder only the “reporting relevant” results should be saved. Relevant results files (e.g. plots) should be added according to <code>project</code> and <code>project structure</code> (i.e. per <code>working package</code>) in form of links from the <code>data processing</code> folder structure (see above).</p>
-<p><strong>Results folder structure:</strong></p>
-<pre><code>TestProjekt
-  Data-Work Packages
-    WP1_Monitoring
-    WP2_Modellierung
-      sommer.lnk
-      winter.lnk</code></pre>
-</div>
 <div id="folder-structures" class="section level3">
-<h3><span class="header-section-number">2.2.6</span> Folder Structures</h3>
+<h3><span class="header-section-number">2.2.5</span> Folder Structures</h3>
 <p>Restrictions/Conventions:</p>
 <ul>
 <li>Each top-level folder should represent a project, i.e. should be defined in the top level file <a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a>.</li>
@@ -543,7 +490,7 @@ uba: Umweltbundesamt</code></pre>
 <li></li>
 </ol>
 <div id="project-folder-structure" class="section level4">
-<h4><span class="header-section-number">2.2.6.1</span> Project Folder Structure</h4>
+<h4><span class="header-section-number">2.2.5.1</span> Project Folder Structure</h4>
 <p>We said that we want to concentrate on the folder structures within the project folders. Nevertheless, we would like to give a recommendation on how the project folders could be organised within its top level folder. In this structure, there are no subfolders for the different departments any more.</p>
 <pre><code>//server/projects$
 - PROJECTS.txt
@@ -559,7 +506,7 @@ uba: Umweltbundesamt</code></pre>
 </ul>
 </div>
 <div id="rawdata-folder-structure" class="section level4">
-<h4><span class="header-section-number">2.2.6.2</span> Rawdata Folder Structure</h4>
+<h4><span class="header-section-number">2.2.5.2</span> Rawdata Folder Structure</h4>
 <p>We will create a network folder <code>//server/rawdata$</code> in which all files have set the read-only property. We suggest to store raw data by project first and by the organisation that owns (i.e. generated, provided) the data second. This could look like this:</p>
 <pre><code>//server/rawdata$
 - ORGANISATIONS.txt
@@ -578,10 +525,10 @@ uba: Umweltbundesamt</code></pre>
 </div>
 </div>
 <div id="versioning" class="section level3">
-<h3><span class="header-section-number">2.2.7</span> Versioning</h3>
+<h3><span class="header-section-number">2.2.6</span> Versioning</h3>
 <p>Versioning or version control is the way by which different versions and drafts of a document (or file or record or dataset or software code) are managed. Versioning involves the process of naming and distinguishing between a series of draft documents that leads to a final or approved version in the end. Versioning allows you to disclose an audit trail for the revision and update of drafts and final versions.</p>
 <div id="manual" class="section level4">
-<h4><span class="header-section-number">2.2.7.1</span> Manual</h4>
+<h4><span class="header-section-number">2.2.6.1</span> Manual</h4>
 <p>We propose the following workflow:</p>
 <ul>
 <li><p>It is only allowed to modify the current file (e.g. <code>filename.pptx</code>), which contains no version name as postfix</p></li>
@@ -615,7 +562,7 @@ VERSIONS/
 - v1.0: first final version, after review by Pascale Rouault</code></pre>
 </div>
 <div id="automatically" class="section level4">
-<h4><span class="header-section-number">2.2.7.2</span> Automatically</h4>
+<h4><span class="header-section-number">2.2.6.2</span> Automatically</h4>
 <p>The versioning is done automatically in case a version control software, like <a href="https://en.wikipedia.org/wiki/Git">Git</a> or <a href="https://en.wikipedia.org/wiki/Apache_Subversion">Subversion</a> are used.</p>
 <p>At KWB we currently use the following version control software:</p>
 <ul>
@@ -650,7 +597,7 @@ Attention: version control software is not designed for versioning of raw data a
 </div>
 </div>
 <div id="organising-your-e-mail-account" class="section level3">
-<h3><span class="header-section-number">2.2.8</span> Organising your e-mail account</h3>
+<h3><span class="header-section-number">2.2.7</span> Organising your e-mail account</h3>
 <blockquote>
 <p>“Most people now routinely send and receive lots of messages every day and as a Yesult, their inbox can get very quickly overloaded with hundreds of personal and work-related email. Setting aside some time to organise your emails will ensure information can be found quickly and easily, and is stored securely. Why should I organise my email? Apart from the obvious frustration and time wasted looking for that email you remember sending to someone last month, email is increasingly used to store important documents and data, often with information related to the attachments within the email itself.”</p>
 <p>— <a href="https://www.data.cam.ac.uk/data-management-guide/organising-your-data#Refernces">University of Cambridge (2018)</a></p>
@@ -665,11 +612,11 @@ Attention: version control software is not designed for versioning of raw data a
 </ul>
 </div>
 <div id="managing-references" class="section level3">
-<h3><span class="header-section-number">2.2.9</span> Managing references</h3>
+<h3><span class="header-section-number">2.2.8</span> Managing references</h3>
 <p>For managing reference there are plenty of tools available. A detailed overview is provided by <span class="citation">(Fenner, Scheliga, and Bartling <a href="#ref-Fenner_2014">2014</a>)</span> in the Chapter <a href="http://book.openingscience.org.s3-website-eu-west-1.amazonaws.com/tools/reference_management.html">Reference Management</a> At KWB we use Endnote, for which an internal guideline document (<a href="file://Y:/R&amp;D%20Templates/Charts%20Guidelines%20Checklists/KWB-EndNote-Guideline-v02.pdf">KWB-EndNote-Guideline-v02.pdf</a>, link only accessible within KWB intranet)) was developed.</p>
 </div>
 <div id="data-preservation" class="section level3">
-<h3><span class="header-section-number">2.2.10</span> Data preservation</h3>
+<h3><span class="header-section-number">2.2.9</span> Data preservation</h3>
 <p>Data must be retained to support your research findings</p>
 <p>Standards: ?5 years?</p>
 
