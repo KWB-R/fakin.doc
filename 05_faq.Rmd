@@ -1,9 +1,13 @@
 # FAQs {#faq}
 
 
-## Tools 
+## What tools are available?
 
-[![tools](images/compliance-tools-workflow_cropped.png)](https://101innovations.wordpress.com/workflows/)
+A very exhaustive overview of tools used in the researcher`s workflow are 
+provided by `r citet(manual["Bosman_2018"])`, which are grouped according to 
+different research phases as shown below. 
+
+[![compliance-tools-workflow](images/compliance-tools-workflow_cropped.png)](https://101innovations.wordpress.com/workflows/)
 
 ## Excel
 
