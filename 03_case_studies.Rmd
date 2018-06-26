@@ -6,6 +6,17 @@ their application is useful.
 
 ## Geogenic salination
 
+Adapt and test with new folder drive workflow as proposed
+
+- `rawdata`
+
+- `processing`
+
+- `processing`
+
+
+
+
 ## LCA modelling 
 
 
@@ -43,26 +54,30 @@ the figures to their needs without coding knowledge.
 
 Challenges: 
 
-Sites (among others):
+The output of (on-line) monitoring technologies is often difficult to interpret 
+and also inconvenient to handle as the output formats of different devices 
+(in one water treatment scheme) can vary strongly. Furthermore, frequent 
+reporting and documentation of the treatment performance via (on-line) 
+monitoring can be time consuming for the personnel and requires advanced 
+software solutions. An alternative to commercial (and often expensive) software 
+solutions are tools which are based on the open software R. The free software 
+approach allows any R programmer to produce customized tools for each individual 
+end-user `to be added in manual.bib: (Gibert et al., 2015; Sonnenberg et al., 2014)`.
 
-* [Berlin-Tiefwerder](http://aquanes-h2020.eu/Default.aspx?t=1576)
-* [Berlin-Schönerlinde](http://aquanes-h2020.eu/Default.aspx?t=1666)
-* [Basel Lange-Erlen](http://aquanes-h2020.eu/Default.aspx?t=1663)
-* [Haridwar](http://aquanes-h2020.eu/Default.aspx?t=1668)
+Thus an automated reporting tool is developed within the [AQUANES](http://aquanes-h2020.eu/Default.aspx?t=1593) project for enabling an 
+integrative assessment of the different monitoring devices and integration with 
+water quality data obtained from analysis in the laboratory for four different 
+pilot plant sites in order to: 
+
+- Increase the reliability and reproducibility of handling large amounts of data 
+by reducing the likeliness in human error in complex systems and by increasing 
+the transparency of the data processing. 
+
+- Promote the use of customized R tools for different end-user such as utilities, 
+consultants and other research teams.     
 
 
-* zeitlich hoch aufgelöste Betriebsdaten (~ 10 Mio. Datenpunkte pro Monat) 
-erforderten massive Performance Optimierung um die Visualisierung der Rohdaten
-im Tool über den Testbetriebszeitraum (18 Monate) auf Rechnern mit limitierten 
-RAM Ressourcen (~ 8 GB) zu ermöglichen.
-    
-* Nutzung: wird von den Projektpartnern zum strukturierten Datenimport genutzt 
-um dann darauf ggf. eigene weitere Analysen darauf aufzusetzen. Für die beiden 
-Berliner Standorte wird zudem die Visualiserung der Betriebsdaten routinenäßig 
-genutzt, um vom Regelbetrieb abweichende Zustände besser indentifizieren zu können.
-
-
-An open source R package [aquanes.report](https://kwb-r.github.io/aquanes.report) 
+Therefore the open source R package [aquanes.report](https://kwb-r.github.io/aquanes.report) 
 `r citep(manual["Rustler_2018"])` was programmed, which is able to: 
 
  - import operational and lab data for each pilot site,
@@ -75,16 +90,59 @@ An open source R package [aquanes.report](https://kwb-r.github.io/aquanes.report
  - creating a standardised report (e.g. monthly) in html, pdf or docx
  
  
- Depending on the site especially the operation data for being imported into 
- the R tool came from various sources and different temporal resolutions:
+For the four different pilot plant sites the data (operational and lab data) for 
+being imported into the R tool came from various sources at different temporal 
+resolutions, which are detailed below:
 
-- Haridwar: mySQL database (temporal resolution: ~ minutes)
+- [Haridwar](http://aquanes-h2020.eu/Default.aspx?t=1668): operational data 
+stored by [Autarcon](http://www.autarcon.com/) in mySQL database (temporal 
+resolution: ~ 2-3 minutes, i.e. ~ 0.7 million data points per month), which is 
+accessible from the web and thus could be easily imported into R. Lab data was 
+provided by Autarcon initially in a unstructured format, which was impossible to 
+be automatically imported into R. However, after agreeing on a standardised EXCEL 
+spreadsheet format (e.g. one spreadsheet per site, one sheet per parameter and 
+additional sheets providing metadata for parameters and sites) it was possible 
+to integrate the lab data into the R tool.
 
-- Basel Lange-Erlen: EXCEL export from water supplier (temporal resolution: 10 
-minutes)
+- [Basel Lange-Erlen](http://aquanes-h2020.eu/Default.aspx?t=1663): operational 
+data is provided by the water supplier in  EXCEL spreadsheets on a weekly basis 
+for each site (i.e. "Rein" and "Wiese") with a temporal resolution of 5 minutes 
+(i.e. ~ 0.5 million data points per month). Lab data are provided by the water 
+supplier in a single comma separated csv file, which is exported from a database. 
+Thus the structure of the lab data was standardised and could be easily imported 
+into the R tool.
 
-- Berlin-Schönerlinde: operational data is collected from WEDECO (~ temporal 
-resolution: seconds, ~ 10 million data points per month)
+- [Berlin-Schönerlinde](http://aquanes-h2020.eu/Default.aspx?t=1666): operational 
+data from the WEDECO pilot plant are collected using a SCADA system 
+(~ temporal resolution: seconds, i.e. ~ 10 million data points per month). Lab data 
+are provided by BWB in a single EXCEL spreadsheet. However, its structure often 
+changes in case it is updated by BWB, making an automated importing using R impossible 
+without adapting the import functions. Thus lab data were not integrated in the
+R tool for this site.
 
-- Berlin-Tiefwerder: operational data is collected from PENTAIR (~ temporal 
-resolution: seconds, ~ 10 million data points per month)
+- [Berlin-Tiefwerder](http://aquanes-h2020.eu/Default.aspx?t=1576): operational 
+data from the PENTAIR pilot plant are collected using a SCADA system 
+(~ temporal resolution: ~ seconds, i.e. ~ 10 million data points per month). 
+Lab data are provided by BWB in a single EXCEL spreadsheet. However, its structure 
+often changes in case it is updated by BWB, making an automated importing using 
+R impossible without adapting the import functions. Thus lab data were not 
+integrated in the R tool for this site.
+
+```{block2 type="rmdwarning"}
+The high temporal high resolution (~ seconds) of the operational data for both 
+Berlin pilot plants resulted in large data amounts (~ 10 million data points 
+per month), which required an large effort to optimise the performance of the 
+R reporting tool in oorder to enable the visualisation of the pilot plant`s raw 
+data for its test operation period (~ 18 months) on computers with limited RAM
+ressources (~ 8-12 GB). 
+```
+
+The R tool is used by KWB (for the sites [Berlin-Schönerlinde](http://aquanes-h2020.eu/Default.aspx?t=1666)
+and [Berlin-Tiefwerder](http://aquanes-h2020.eu/Default.aspx?t=1576)) regulary 
+for assessing the pilot plants` operational performance interactively. In addition
+for an advanced assessment only the data importing and aggregation routines and 
+combined with R scripts developed by KWB students.  
+
+For the other two pilot plant sites [Haridwar](http://aquanes-h2020.eu/Default.aspx?t=1668) 
+and [Basel Lange-Erlen](http://aquanes-h2020.eu/Default.aspx?t=1663) the AQUANES 
+project partners use the automated R reporting tool in a similar way. 
