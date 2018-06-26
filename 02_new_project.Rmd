@@ -27,16 +27,24 @@ effort and time investment.
 
 An ELN to make your data FAIR? Welches ist das?
 
-#### Project acronyms {#project-acronyms}
+### Define acronyms
 
-At the start of a project we define a project acronym. This acronym is
-intended to be used in file and folder names. 
+At the start of a research project
 
-Whenever we want to indicate the relation to a certain project in a file or 
-folder name, we use the project acronym in exactly the typing that was defined.
-This is important as we want to distinguish between raw data, processed data and 
-project results in our [Folder Structures](#folder-structures).
+* Choose a [project acronym](#project-acronyms) and store it in 
+[`PROJECTS.txt`](#file-projects).
+* Check if the organisations that you expect to get data from are listed in
+[`ORGANISATIONS.txt`](#file-organisations) and extend this file if necessary.
+* Create a subfolder for your project and subfolders for the organisations
+in the [rawdata folder structure](#rawdata-folder-structure).
 
-The project acronyms are defined in a simple text 
-file [`PROJECTS.txt`](#file-projects) in the `//server/projects$` folder, see 
-[Project Folder Structure](#project-folder-structure).
+At the start of a project or if an employee or trainee enters the project
+
+* Give an introduction to our research data management as described in this 
+document.
+
+Regularly during the project 
+
+* Check if the folder structure within your project's rawdata subfolder still 
+complies with the [rawdata folder structure](#rawdata-folder-structure) and 
+clean the structure, if not.

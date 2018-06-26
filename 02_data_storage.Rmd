@@ -1,48 +1,8 @@
 ## Data storage
 
+### Naming
 
-
-
-
-###	Folder structure
-
-\@Michael: Regeln für die Verbesserung der Ordnerstruktur
-
-#### Regeln dafür, was wohin gehört
-
-Was gehört in den Projektordner, was nicht?
-
-**Software sollte nicht innerhalb der Projekte gespeichert werden**
-
-Vorteil:
-
-- Software wird ggf. projektübergreifend verwendet
-- Software besteht oft aus vielen und großen Binärdateien und bläht den 
-  Projektordner auf
-- Software hat oft viele Unterverzeichnisse und erzeugt eine hohe 
-  Verschachtelungstiefe im Projektordner
-
-Nachteil:
-
-- Es ist ggf. nicht klar, in welchem Projekt eine Software verwendet wurde
-
-\@Michael: Vorschlag für verbesserte Ordnerstrukturen
-
-
-### Regeln zur Vermeidung langer Dateipfade
-
-Lange Dateipfade können im Windows-Betriebssystem ein Problem darstellen.
-Das äußert sich beim Kopieren von Dateien, wenn der Pfad des Zielorts, der sich
-durch die Kopie ergeben würde, eine bestimmte Länge überschreitet. Die 
-zugehörige Fehlermeldung lautet dann: *Die Dateinamen wären zu lang für den 
-Zielordner. Kürzen Sie die Dateinamen und wiederholen Sie den Vorgang, oder
-verwenden Sie einen anderen Ort, der einen kürzeren Pfad hat.
-
-
-###	Naming
-
-\@Michael: Konventionen für Ordner- und Dateinamen, Vorschlag einer Nomenklatur
-
+#### Folder and file names
 
 Useful file names are: 
 
@@ -75,21 +35,375 @@ files are listed numerically e.g. 01, 002, etc.
 underscores and hyphens to separate words e.g. “AHRC_TechnicalApp_Response20120925.docx” 
 or “AHRC-TechnicalApp-Response20120925.docx” rather than “what we got back from 
 funders about the data stuff.docx !!!!
+
+**Keine Sonderzeichen, keine Umlaute, keine Leerzeichen**
+
+Umlaute `ä`, `ö`, `ü` werden durch `ae`, `oe`, `ue` bzw. `Ae`, `Oe`, `Ue`
+und der Buchstabe `ß` durch `ss` ersetzt.
+
+* Vermeidung von Fehlern bei der automatischen Verarbeitung
+* Keine Probleme beim internationalen Austausch von Dateien
+
+Keine Leerzeichen, stattdessen _Unterstrich oder –Bindestrich
+
+* Vermeidung von Fehlern bei der automatischen Verarbeitung
+* doppelte Leerzeichen lassen sich besser erkennen
+
+**Datum in der Form yyyy-mm-dd (2017-06-30)**
+
+* Alphanumerische Sortierung führt automatisch zu Sortierung nach Datum
+* Bei Zerlegung des Dateinamens bei Unterstrich bleibt das Datum als Einheit
+  erhalten
+
+**Zusammengesetzte Wörter (z.B. Projektnamen) in "CamelCase"**
+
+Zusammengesetzte Wörter (z.B. Projektnamen) ohne Unterstrich in CamelCase (`ReliableSewer` vs. `Reliable_Sewer`)
+
+* Bei Zerlegung des Dateinamen bei Unterstrich bleibt Projektname erhalten
+
+**Einheitliche Schreibweise von Projektnamen**
+
+**Einheitliche Sprache: englisch oder deutsch?**
+
+**Verwendung eines Vokabulars für wichtige Begriffe**
+
+z.B. "validiert", "kalibriert"
+
+```{block2 type="rmdwarning"}
+Regeln zur Vermeidung langer Dateipfade
+
+Lange Dateipfade können im Windows-Betriebssystem ein Problem darstellen.
+Das äußert sich beim Kopieren von Dateien, wenn der Pfad des Zielorts, der sich
+durch die Kopie ergeben würde, eine bestimmte Länge überschreitet. Die 
+zugehörige Fehlermeldung lautet dann: *Die Dateinamen wären zu lang für den 
+Zielordner. Kürzen Sie die Dateinamen und wiederholen Sie den Vorgang, oder
+verwenden Sie einen anderen Ort, der einen kürzeren Pfad hat.
+```
+
+#### Acronyms
+
+Acronyms are unique, clear names for objects. They should 
+
+* be short but meaningful and easy to remember, 
+* be all lowercase,
+* consist of only alphanumeric letters (`a-z`, `0-9`) or the hyphen (`-`). 
+
+##### Projects {#project-acronyms}
+
+* Haben wir eine Regel für die Benennung, Schreibweise von Projektnamen?
+* Wir sollten einheitliche, offizielle Schreibweisen definieren
+* Sollen wir Acronyme (z.B. drei Zeichen) definieren, um diese z.B. in 
+  Dateinamen oder in Übersichten zu verwenden?
+
+
+At the start of a project we define a project acronym. This acronym is
+intended to be used in file and folder names. 
+
+Whenever we want to indicate the relation to a certain project in a file or 
+folder name, we use the project acronym in exactly the typing that was defined.
+This is important as we want to distinguish between raw data, processed data and 
+project results in our [data workflow](#data-workflow).
+
+The project acronyms are defined in a simple text 
+file [`PROJECTS.txt`](#file-projects) in the `//server/projects$` folder, see 
+[Project Folder Structure](#project-folder-structure).
+
+##### Organisations
+
+It is very important to know the owners of data. Therefore we define unique
+acronyms for the owners of data that we use. The acronyms are defined in a
+special file [`ORGANISATIONS.txt`](#file-organisations) 
+
+
+###	Metadata
+
+What information would someone need to find/re-use your data?
+Location, title, creator name, description, date collected
+
+Why? Metadata are required for interpreting raw data and gaining an overview 
+about the available data.
+
+
+```{block2, type = 'rmdtip'}
+**Important metadata for raw data**
   
-###	Raw data
+von wem, wann, über wen und welches Medium erhalten, z.B. "E-Mail von A an B 
+am 25.01.2018" oder "USB-Stick von C an D persönlich am 26.01.2018"
+
+Nutzungseinschränkung, z.B. "nur für Projekt x", "nur innerhalb des KWB", 
+"darf auf keinen Fall veröffentlicht werden"
+
+Erläuterungen zum Inhalt und zum Format (Bedeutung von Spalten, Einheiten, 
+Messgeräte, Methoden...)
+```
+
+
+```{block2, type = 'rmdtip'}
+**Important metadata for processed data**
+
+von wem (Person), wann, mit welchen Methoden (z.B. Skript) unter welchen 
+Randbedingungen (z.B. Versionen von Software, Paketen) erstellt?
+
+Welche Rohdaten wurden verwendet?
+
+keep metadata in plain text file “readme.txt”
+```
+
+Tools for metadata tracking and data standards are:
+
+* metadata editor, e.g. online editor of GFZ Potsdam
+
+
+**Best Practices:**
+
+* Mindestanforderungen definieren (unterschieden nach Roh- und verarbeiteten
+  Daten)
+
+* Metadatenstandards prüfen, z. B. DataCite (siehe u.a. ZALF, GFZ Potsdam)
+
+* Werden wir am konkreten Anwendungsfall in den Testprojekten entwickeln
+
+* Metadaten zu Rohdaten sind immer abzulegen. Metadaten zu verarbeiteten Daten
+  sind ebenso wichtig. Sie können bei automatisierter Datenverarbeitung aber 
+  aus den Skripten geschlossen werden.
+
+**Metadatenstandards**:
+
+Wir wollen einen Metadatenstandard verwenden. 
+Beispiele für Metadatenstandards sind (in Klammern stehen Institutionen, die 
+unter anderem Daten mit Metadtaen in diesem Standard veröffentlichen):
+
+* DataCite Metadata Schema
+
+    + Leibniz-Zentrum für Agrarlandschaftsforschung e. V. (ZALF)
+    
+    + Deutsches GeoForschungsZentrum Potsdam (GFZ) (+ ISO + DIF + Dublin Core)
+
+* ISO 19115-2
+
+    + Bundesanstalt für Gewässerkunde (BfG)
+    
+    + Alfred-Wegener-Institut Helmholtz-Zentrum für Polar- und Meeresforschung
+      (AWI)
+
+Die Auswahl erfolgt gemäß einer guten Übertragbarkeit auf die Anforderungen des 
+KWB und gemäß der Verfügbarkeit von Tools.
+
+**Tools:**
+
+* Metadaten-Editor, z.B. Online-Editor vom GFZ Potsdam
+
+
+We propose to define some special files that contain metadata related to 
+files and folders. To indicate that these files have a special meaning, the
+file names are all uppercase.
+
+#### File PROJECTS.txt {#file-projects}
+
+This file contains the [project acronyms](#project-acronyms) as we want to use 
+them e.g. as top-level folder names in our 
+[project folder structure](#project-folder-structure).
+The projects are grouped by department.
+
+Possible content of `PROJECTS.txt`:
+
+```
+# Department SUW (Surface Water)
+dswt: DSWT
+flusshygiene: Flusshygiene
+kuras: KURAS
+mia-cso: MIACSO
+monitor: MONITOR
+ogre: OGRE
+reliable-sewer: RELIABLE_SEWER
+sema: SEMA
+sema-berlin: SEMA Berlin
+sema-berlin-2: SEMA Berlin 2
+spree-2011: SPREE2011
+spree-2011-2: SPREE2011 "reloaded"
+
+# Department GRW (Groundwater)
+optiwells: OPTIWELLS
+optiwells-2: OPTIWELLS 2
+wellma: WELLMA
+
+# Department WWT (Wastewater Treatment)
+...
+```
+
+In the file `PROJECTS.txt` the project acronyms appear in alphabetical
+order. They map the acronym to a project name or a project title and the year
+of the start of the project. 
+
+**Question:**
+Do we already have a place where "official"
+metadata about projects are stored? If yes, the acronym could be included there. But then, everybody should know about it!
+
+#### File ORGANISATIONS.txt {#file-organisations}
+
+Possible content of `ORGANISATIONS.txt`
+
+```
+bwb: Berliner Wasserbetriebe
+kwb: Kompetenzzentrum Wasser Berlin
+uba: Umweltbundesamt
+```
+
+
+### Raw data 
 
 Especially in environmental sciences, raw data often cannot be reproduced (e.g. 
-rainfall, river discharge measurements) and are therefore of high value.
+rainfall, river discharge measurements) and are therefore of high value. Thus 
+the following rules apply in case of raw data: 
 
--	dürfen umbenannt werden, dies muss in den Metadaten dokumentiert werden
+-	can be renamed (in case this is documented in a [metadata](#metadata) file)
 
--	dürfen inhaltlich nicht verändert werden
+-	the content must not be changed
 
--	werden schreibgeschützt abgelegt
+-	will be stored as read-only in an secure area (i.e. one folder contains all 
+raw data)
 
--	werden in einem eigenen Bereich abgelegt (ein Ordner enthält alle Rohdaten)
+
+###	Data workflow
+
+For each project separation of:
+
+* [raw data](#raw-data) (i.e. `\\server\\rawdata`)
+
+* data processing (i.e. `\\server\\processing`)
+
+* results (i.e. `\\server\\projekte$`)
 
 
+Raw data are highly valuable because they if necessary cannot or only with high 
+costs be reproduced. Thus raw data will be compiled on the highest level (i.e. 
+`\\server\\rawdata`) for each `project` and `origin` (e.g. KWB, BWB) as shown 
+below:
+
+**Raw data folder structure:**
+
+```
+TestProjekt
+  BWB
+    Regen
+      METADATEN
+      regen.xls
+    Labor
+      METADATEN
+      labor.xls
+
+  KWB
+    Durchfluss
+      METADATEN
+      q01.csv
+      q02.csv
+      q03.csv
+```
+
+The data processing is a "playground", where different approaches or scenarios
+can be tested and where possibly different versions for a specific approach
+or scenario are available. The files will be stored here according to the 
+corresponding `project` and `topic` and the data processing step, respectively.
+
+
+**Data processing folder structure:**
+
+```
+TestProjekt
+  01_Bereinigung
+    METADATEN
+    regen_roh.csv
+    regen.csv
+    qualitaet.csv      
+    durchfluss.csv
+  02_Modellierung
+    sommer
+    winter
+    VERSIONEN
+      v0.1
+      v1.0
+        sommer
+        winter
+  Software
+```
+
+In the results folder only the "reporting relevant" results should be saved. 
+Relevant results files (e.g. plots) should be added according to  `project` and 
+`project structure` (i.e. per `working package`) in form of links from the 
+`data processing` folder structure (see above).
+
+
+**Results folder structure:**
+
+```
+TestProjekt
+  Data-Work Packages
+    WP1_Monitoring
+    WP2_Modellierung
+      sommer.lnk
+      winter.lnk
+```
+
+### Folder Structures {#folder-structures}
+
+Restrictions/Conventions:
+
+* Each top-level folder should represent a project, i.e. should be defined in
+the top level file [`PROJECTS.txt`](#file-projects). 
+* Each possible owner should be defined in the top level file
+[`ORGANISATIONS.txt`](#file-organisations).
+* The naming convention for the organisations is the same as for projects.
+s)
+
+
+#### Project Folder Structure {#project-folder-structure}
+
+We said that we want to concentrate on the folder structures within the project 
+folders. Nevertheless, we would like to give a recommendation on how the project
+folders could be organised within its top level folder. In this structure, there
+are no subfolders for the different departments any more. 
+
+```
+//server/projects$
+- PROJECTS.txt
+- project-1/
+- project-2/
+- project-3/
+```
+
+In the `projects$` folder
+
+- each subfolder name should appear in the file [`PROJECTS.txt`](#file-projects)
+- there should not be any folder on the top level that does not represent a 
+project. 
+- there should be no other files on the top level as the files that are
+described in this documentation.
+- there are no subfolders representing departments any more. The mapping of
+projects to departments is done in the file [`PROJECTS.txt`](#file-projects)
+
+#### Rawdata Folder Structure {#rawdata-folder-structure}
+
+We will create a network folder `//server/rawdata$` in which all files
+have set the read-only property. We suggest to store raw data by project first
+and by the organisation that owns (i.e. generated, provided) the data second. 
+This could look like this:
+
+```
+//server/rawdata$
+- ORGANISATIONS.txt
+- PROJECTS.lnk [Symbolic Link to PROJECTS.txt in //server/projects$]
+- flusshygiene
+  - bwb
+  - kwb
+  - uba
+  - ...
+- ogre
+  - kwb
+  - bwb
+  - uba
+  - ...
+- ...
+```
 
 
 ### Versioning
@@ -166,7 +480,8 @@ At KWB we currently use the following version control software:
 code (e.g. R-scripts/packages) we have an Subversion server, which is accessible 
 from the KWB intranet. However, this requires: 
 
-    + the installation of the client software [TortoiseSVN](https://tortoisesvn.net/index.de.html)        and a
+    + the installation of the client software [TortoiseSVN](https://tortoisesvn.net/index.de.html) 
+    and a
     
     + valid user account (for accessing the server) which is currently provided by the 
     IT department on request
@@ -257,20 +572,8 @@ places, such as a network drive.
 
 For managing reference there are plenty of tools available. A detailed overview 
 is provided by `r citep(manual["Fenner_2014"])` in the Chapter [Reference Management](http://book.openingscience.org.s3-website-eu-west-1.amazonaws.com/tools/reference_management.html) 
-
-
-At KWB we use Endnote, for which an internal guideline document ([KWB-EndNote-Guideline-v02.pdf](file://Y:/R&D Templates/Charts Guidelines Checklists/KWB-EndNote-Guideline-v02.pdf, link only 
+At KWB we use Endnote, for which an internal guideline document ([KWB-EndNote-Guideline-v02.pdf](file://Y:/R&D Templates/Charts Guidelines Checklists/KWB-EndNote-Guideline-v02.pdf), link only 
 accessible within KWB intranet)) was developed.
-
-###	Metadata
-What information would someone need to find/re-use your data?
-Location, title, creator name, description, date collected
-
--	keep metadata in plain text file “readme.txt”
-
-Tools for metadata tracking and data standards are:
-
--	Metadatenstandards prüfen, z. B. DataCite (siehe u.a. ZALF, GFZ Potsdam)
 
 
 ###	Data preservation
