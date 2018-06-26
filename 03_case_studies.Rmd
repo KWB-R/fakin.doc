@@ -74,3 +74,17 @@ An open source R package [aquanes.report](https://kwb-r.github.io/aquanes.report
  
  - creating a standardised report (e.g. monthly) in html, pdf or docx
  
+ 
+ Depending on the site especially the operation data for being imported into 
+ the R tool came from various sources and different temporal resolutions:
+
+- Haridwar: mySQL database (temporal resolution: ~ minutes)
+
+- Basel Lange-Erlen: EXCEL export from water supplier (temporal resolution: 10 
+minutes)
+
+- Berlin-Schönerlinde: operational data is collected from WEDECO (~ temporal 
+resolution: seconds, ~ 10 million data points per month)
+
+- Berlin-Tiefwerder: operational data is collected from PENTAIR (~ temporal 
+resolution: seconds, ~ 10 million data points per month)
