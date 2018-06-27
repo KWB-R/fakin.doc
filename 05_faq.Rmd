@@ -1,7 +1,6 @@
 # FAQs {#faq}
 
-
-## What tools are available?
+## Tools for researchers
 
 A very exhaustive overview of tools used in the researcher`s workflow are 
 provided by `r citet(manual["Bosman_2018"])`, which are grouped according to 
@@ -9,7 +8,36 @@ different research phases as shown below.
 
 [![compliance-tools-workflow](images/compliance-tools-workflow_cropped.png)](https://101innovations.wordpress.com/workflows/)
 
-## Excel
+## Writing more robust R scripts
+
+For details on making R scripts more robust to work on different computers
+please read the following [tutorial](file:///Y:/Z-Exchange/_Tutorials/HomeDirectory.html).
+<!-- Only adds more details in case of html output as 
+defined in "R/add_text.R" -->
+`r add_text_links()`
+
+## Using Subversion at KWB
+
+For details on how to use Subversion at KWB please read the following [tutorial](file:///Y:/Z-Exchange/_Tutorials/using_subversion.html) 
+<!-- Only adds more details in case of html output as 
+defined in "R/add_text.R" -->
+`r add_text_links()`
+
+## How to install KWB R packages?
+
+For details please read the following [tutorial](file:///Y:/Z-Exchange/_Tutorials/installing_kwb_packages.html) 
+<!-- Only adds more details in case of html output as 
+defined in "R/add_text.R" -->
+`r add_text_links()`
+
+
+<!-- Only adds chapter firefox local files in case of html output as 
+defined in "R/add_text.R" -->
+`r add_chapter_firefox_local_files()`
+
+
+
+## Working with EXCEL
 
 
 ```{block2, type = 'rmdcaution'} 
@@ -21,9 +49,9 @@ Excel often crashes in case:
 
 ```
 
--> Abhilfe: Daten in eigene Datei
+**Solution: data in own spreadsheet file**
  
-Haukes "Best Practices" für Excel (ungeprüft, zu diskutieren!)
+Hauke`s "best Practices" for EXCEL (unvalidated, to be discussed!)
 
  
 - Trennung zwischen Eingabe, Verarbeitung und Ausgabe zumindest auf 
@@ -33,24 +61,25 @@ und / oder Diagramme
  
 - ggf. Aufteilen auf mehrere Dateien. Das hätte den Nachteil, dass nicht mehr 
 alles in einer Datei ist und nicht so leicht übergeben werden kann. In jedem 
-Fall müsste eine Namenskonvention getroffen werden, z.B. <Dateiname>_input.xls, 
-<Dateiname>_calc.xls, <Dateiname>_output.xls
+Fall müsste eine Namenskonvention getroffen werden, z.B.`<file_name>`_input.xlsx, 
+`<file_name>`_calc.xlsx, `<file_name>`_output.xlsx
  
-- Verwenden der relativ neuen Excel-Features "Als Tabelle" formatieren.
+- Verwenden der relativ neuen EXCEL-Features `Als Tabelle` formatieren.
+
 Vorteil: Formeln können auf ganze Tabellenspalten angewendet werden; Spaltennamen 
 anstatt Zellbezüge mit (unsprechenden) Buchstaben und Zahlen. z.B. Formel für 
-Spalte "Volumen_L": "= Durchfluss[@[Q_L_s]] * 60 * 5"
+Spalte `Volumen_L`: `= Durchfluss[@[Q_L_s]] * 60 * 5`
  
 - Ein Tabellenblatt pro Tabelle
  
 - Genau eine Headerzeile pro Tabelle mit eindeutigen Spaltennamen
  
 - Ein Tabellenblatt, das die Bedeutung der Spaltennamen erläutert mit Spalten
-"Tabellenblatt; Spalte; Bedeutung; Einheit; Formel"
+`Tabellenblatt; Spalte; Bedeutung; Einheit; Formel`
 Vorteil: Dieses Tabellenblatt sollte ausreichen, um die wesentlichen Berechnungen 
 zu verstehen.
 
--> Nachteil: Das muss immer aktuell gehalten werden!
+Drawback: needs to be permanently kept up-to-date!
  
 - Hilfsspalten mit (dadurch benannten) Zwischenberechnungen anstatt Wiederholung 
 von langen Ausdrücken in Formeln
@@ -175,24 +204,17 @@ Multiple people developing code together.
 
 Proposed solution:
 
-1. Miteinander sprechen, 
+Miteinander sprechen, 
 
-2. Regelmäßige Updates/Commits,
+Regelmäßige Updates/Commits,
 
-3. Bei Verwendung/Weiterbearbeitung von Code aus einem Projekt (z.B. OGRE) in 
+Bei Verwendung/Weiterbearbeitung von Code aus einem Projekt (z.B. OGRE) in 
 einem weiteren (z.B. FLUSSHYGIENE) ist vom Orginalcode eine Kopie mittels 
 `SVN copy` zu erstellen und diese weiterzubearbeiten, da sonst bestehende 
 Prozeduren im Ausgangsprojekt überschrieben werden
 
 ```
 
-```{block2, type = 'rmdnote'}
-
-Bestehendes Subversion [Tutorial](file:///Y:/Z-Exchange/_Tutorials/using_subversion.html) 
-(link only accessible from KWB intranet) ist um die fehlenden der oben 
-genannten Aspekte zu ergänzen.
-
-```
 
 ```{block2, type = 'rmdnote'}
 
@@ -244,4 +266,3 @@ print("Ü")
 ### Skript Encoding EGAL (da Umlaut in Unicode codiert wurde)
 print("\u00dc")
 ```
-

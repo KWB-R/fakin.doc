@@ -632,9 +632,9 @@ places, such as a network drive.
 
 For managing reference there are plenty of tools available. A detailed overview 
 is provided by `r citep(manual["Fenner_2014"])` in the Chapter [Reference Management](http://book.openingscience.org.s3-website-eu-west-1.amazonaws.com/tools/reference_management.html) 
-At KWB we use Endnote, for which an internal guideline document ([KWB-EndNote-Guideline-v02.pdf](file://Y:/R&D Templates/Charts Guidelines Checklists/KWB-EndNote-Guideline-v02.pdf), link only 
-accessible within KWB intranet)) was developed.
-
+At KWB we use Endnote, for which an internal guideline document ([KWB-EndNote-Guideline-v02.pdf](file://Y:/R&D Templates/Charts Guidelines Checklists/KWB-EndNote-Guideline-v02.pdf), `r add_text_links()`) was developed.
+<!-- add_text_links() only adds more details in case of html output as 
+defined in "R/add_text.R" -->
 
 ###	Data preservation
 Data must be retained to support your research findings

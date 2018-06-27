@@ -16,6 +16,8 @@ cover-image: images/cover.png
 
 ```{r include=FALSE}
 
+source("R/add_text.R")
+
 if (! require("knitcitations")) {
   install.packages("knitcitations")
 }
