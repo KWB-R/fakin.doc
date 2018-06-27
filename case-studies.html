@@ -128,6 +128,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.3.1" data-path="best-practices.html"><a href="best-practices.html#logger-devices"><i class="fa fa-check"></i><b>2.3.1</b> Logger devices</a></li>
 <li class="chapter" data-level="2.3.2" data-path="best-practices.html"><a href="best-practices.html#spreadsheets"><i class="fa fa-check"></i><b>2.3.2</b> Spreadsheets</a></li>
 </ul></li>
+<li class="chapter" data-level="2.4" data-path="best-practices.html"><a href="best-practices.html#data-publishing-and-sharing"><i class="fa fa-check"></i><b>2.4</b> Data publishing and sharing</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="best-practices.html"><a href="best-practices.html#repositories"><i class="fa fa-check"></i><b>2.4.1</b> Repositories</a></li>
+<li class="chapter" data-level="2.4.2" data-path="best-practices.html"><a href="best-practices.html#orcid"><i class="fa fa-check"></i><b>2.4.2</b> ORCID</a></li>
+<li class="chapter" data-level="2.4.3" data-path="best-practices.html"><a href="best-practices.html#licenses"><i class="fa fa-check"></i><b>2.4.3</b> Licenses</a></li>
+<li class="chapter" data-level="2.4.4" data-path="best-practices.html"><a href="best-practices.html#file-formats"><i class="fa fa-check"></i><b>2.4.4</b> File formats</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="case-studies.html"><a href="case-studies.html"><i class="fa fa-check"></i><b>3</b> Case studies</a><ul>
 <li class="chapter" data-level="3.1" data-path="case-studies.html"><a href="case-studies.html#geogenic-salination"><i class="fa fa-check"></i><b>3.1</b> Geogenic salination</a></li>
@@ -156,7 +162,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.9" data-path="faq.html"><a href="faq.html#complex-r-script-dependencies"><i class="fa fa-check"></i><b>5.9</b> Complex R script dependencies</a></li>
 <li class="chapter" data-level="5.10" data-path="faq.html"><a href="faq.html#heterogenous-r-coding-styles"><i class="fa fa-check"></i><b>5.10</b> Heterogenous (R-)coding styles</a></li>
 <li class="chapter" data-level="5.11" data-path="faq.html"><a href="faq.html#collaborative-version-control"><i class="fa fa-check"></i><b>5.11</b> Collaborative version control</a></li>
-<li class="chapter" data-level="5.12" data-path="faq.html"><a href="faq.html#encoding"><i class="fa fa-check"></i><b>5.12</b> Encoding</a></li>
+<li class="chapter" data-level="5.12" data-path="faq.html"><a href="faq.html#workflow-automation"><i class="fa fa-check"></i><b>5.12</b> Workflow automation</a></li>
+<li class="chapter" data-level="5.13" data-path="faq.html"><a href="faq.html#encoding"><i class="fa fa-check"></i><b>5.13</b> Encoding</a></li>
+<li class="chapter" data-level="5.14" data-path="faq.html"><a href="faq.html#more-ressources-to-be-put-in-the-relevant-chapters"><i class="fa fa-check"></i><b>5.14</b> More ressources (to be put in the relevant chapters)</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>6</b> Glossary</a><ul>
 <li class="chapter" data-level="6.1" data-path="glossary.html"><a href="glossary.html#reproducibility"><i class="fa fa-check"></i><b>6.1</b> Reproducibility</a></li>
@@ -214,7 +222,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="aquanes" class="section level2">
 <h2><span class="header-section-number">3.3</span> Pilot plants</h2>
 <p>Challenges:</p>
-<p>The output of (on-line) monitoring technologies is often difficult to interpret and also inconvenient to handle as the output formats of different devices (in one water treatment scheme) can vary strongly. Furthermore, frequent reporting and documentation of the treatment performance via (on-line) monitoring can be time consuming for the personnel and requires advanced software solutions. An alternative to commercial (and often expensive) software solutions are tools which are based on the open software R. The free software approach allows any R programmer to produce customized tools for each individual end-user <code>to be added in manual.bib: (Gibert et al., 2015; Sonnenberg et al., 2014)</code>.</p>
+<p>The output of (on-line) monitoring technologies is often difficult to interpret and also inconvenient to handle as the output formats of different devices (in one water treatment scheme) can vary strongly. Furthermore, frequent reporting and documentation of the treatment performance via (on-line) monitoring can be time consuming for the personnel and requires advanced software solutions. An alternative to commercial (and often expensive) software solutions are tools which are based on the open software <a href="https://www.r-project.org/">R</a> <span class="citation">(R Core Team <a href="#ref-R_Core_Team_2017">2017</a>)</span>. The free software approach allows any <a href="https://www.r-project.org/">R</a> programmer to produce customized tools for each individual end-user.</p>
 <p>Thus an automated reporting tool is developed within the <a href="http://aquanes-h2020.eu/Default.aspx?t=1593">AQUANES</a> project for enabling an integrative assessment of the different monitoring devices and integration with water quality data obtained from analysis in the laboratory for four different pilot plant sites in order to:</p>
 <ul>
 <li><p>Increase the reliability and reproducibility of handling large amounts of data by reducing the likeliness in human error in complex systems and by increasing the transparency of the data processing.</p></li>
@@ -246,6 +254,9 @@ The high temporal high resolution (~ seconds) of the operational data for both B
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
+<div id="ref-R_Core_Team_2017">
+<p>R Core Team. 2017. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</p>
+</div>
 <div id="ref-Rustler_2018">
 <p>Rustler, Michael. 2018. “Aquanes.report (V.0.5.0).” doi:<a href="https://doi.org/10.5281/zenodo.1244103">10.5281/zenodo.1244103</a>.</p>
 </div>

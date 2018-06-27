@@ -128,6 +128,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.3.1" data-path="best-practices.html"><a href="best-practices.html#logger-devices"><i class="fa fa-check"></i><b>2.3.1</b> Logger devices</a></li>
 <li class="chapter" data-level="2.3.2" data-path="best-practices.html"><a href="best-practices.html#spreadsheets"><i class="fa fa-check"></i><b>2.3.2</b> Spreadsheets</a></li>
 </ul></li>
+<li class="chapter" data-level="2.4" data-path="best-practices.html"><a href="best-practices.html#data-publishing-and-sharing"><i class="fa fa-check"></i><b>2.4</b> Data publishing and sharing</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="best-practices.html"><a href="best-practices.html#repositories"><i class="fa fa-check"></i><b>2.4.1</b> Repositories</a></li>
+<li class="chapter" data-level="2.4.2" data-path="best-practices.html"><a href="best-practices.html#orcid"><i class="fa fa-check"></i><b>2.4.2</b> ORCID</a></li>
+<li class="chapter" data-level="2.4.3" data-path="best-practices.html"><a href="best-practices.html#licenses"><i class="fa fa-check"></i><b>2.4.3</b> Licenses</a></li>
+<li class="chapter" data-level="2.4.4" data-path="best-practices.html"><a href="best-practices.html#file-formats"><i class="fa fa-check"></i><b>2.4.4</b> File formats</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="case-studies.html"><a href="case-studies.html"><i class="fa fa-check"></i><b>3</b> Case studies</a><ul>
 <li class="chapter" data-level="3.1" data-path="case-studies.html"><a href="case-studies.html#geogenic-salination"><i class="fa fa-check"></i><b>3.1</b> Geogenic salination</a></li>
@@ -156,7 +162,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.9" data-path="faq.html"><a href="faq.html#complex-r-script-dependencies"><i class="fa fa-check"></i><b>5.9</b> Complex R script dependencies</a></li>
 <li class="chapter" data-level="5.10" data-path="faq.html"><a href="faq.html#heterogenous-r-coding-styles"><i class="fa fa-check"></i><b>5.10</b> Heterogenous (R-)coding styles</a></li>
 <li class="chapter" data-level="5.11" data-path="faq.html"><a href="faq.html#collaborative-version-control"><i class="fa fa-check"></i><b>5.11</b> Collaborative version control</a></li>
-<li class="chapter" data-level="5.12" data-path="faq.html"><a href="faq.html#encoding"><i class="fa fa-check"></i><b>5.12</b> Encoding</a></li>
+<li class="chapter" data-level="5.12" data-path="faq.html"><a href="faq.html#workflow-automation"><i class="fa fa-check"></i><b>5.12</b> Workflow automation</a></li>
+<li class="chapter" data-level="5.13" data-path="faq.html"><a href="faq.html#encoding"><i class="fa fa-check"></i><b>5.13</b> Encoding</a></li>
+<li class="chapter" data-level="5.14" data-path="faq.html"><a href="faq.html#more-ressources-to-be-put-in-the-relevant-chapters"><i class="fa fa-check"></i><b>5.14</b> More ressources (to be put in the relevant chapters)</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>6</b> Glossary</a><ul>
 <li class="chapter" data-level="6.1" data-path="glossary.html"><a href="glossary.html#reproducibility"><i class="fa fa-check"></i><b>6.1</b> Reproducibility</a></li>
@@ -639,11 +647,100 @@ defined in "R/add_text.R" --></p>
 
 </div>
 </div>
+<div id="data-publishing-and-sharing" class="section level2">
+<h2><span class="header-section-number">2.4</span> Data publishing and sharing</h2>
+<p>Make data freely available via repositories Metadata, file formats, licence, persistent identifiers: DOI, ORCID</p>
+<div id="repositories" class="section level3">
+<h3><span class="header-section-number">2.4.1</span> Repositories</h3>
+<p>Repositories for permanently deposing data are for example:</p>
+<ul>
+<li><p>General</p>
+<ul>
+<li><p><a href="https://figshare.com">Figshare</a>,</p></li>
+<li><p><a href="https://zenodo.org/">Zenodo</a>: a joint project between <a href="https://www.openaire.eu/">OpenAIRE</a> and <a href="https://home.cern/">CERN</a>,</p></li>
+<li><p><a href="https://data.mendeley.com/">Mendeley data</a>,</p></li>
+<li><p><a href="https://dataverse.org/">Dataverse</a>,</p></li>
+<li><p><a href="https://datadryad.org/">Dryad</a></p></li>
+</ul></li>
+<li><p>Focus on environmental and earth sciences</p>
+<ul>
+<li><p><a href="https://www.pangaea.de/">Pangea</a></p></li>
+<li><p><a href="http://dataservices.gfz-potsdam.de/portal/">GFZ Potsdam data services</a></p></li>
+</ul></li>
+</ul>
+<p>In addition repositories for publishing program code are for example <a href="https://github.com">Github</a> or <a href="https://gitlab.com">Gitlab</a>, however these do not offer build-in long term preservation by default.</p>
+<p>We are currently using the following repositories and can recommend them for similar usage to others:</p>
+<ul>
+<li><p><a href="https://github.com">Github</a>: for developing/publishing program code, because it offers the opportunity to automatically get a</p></li>
+<li><p><a href="https://zenodo.org/">Zenodo</a> <a href="https://www.doi.org/">DOI</a> for each software released publicly on Github (for details see: <a href="https://guides.github.com/activities/citable-code/" class="uri">https://guides.github.com/activities/citable-code/</a>)</p></li>
+</ul>
+
+<div class="rmdtip">
+<p>A <a href="https://101innovations.wordpress.com/2016/10/09/github-and-more-sharing-data-code/">blog post</a> <span class="citation">Bosman and Kramer (<a href="#ref-Bosman_2016">2016</a>)</span> provide results of a large survey carried out in 2015 among more than 15000 researchers. Insights can be gained on:</p>
+<ul>
+<li><p>Which scholary communications tools are used and</p></li>
+<li><p>Are there disciplinary differences in usage?</p></li>
+</ul>
+They finally summarise: “Another surprising finding is the overall low use of Zenodo – a CERN-hosted repository that is the recommended archiving and sharing solution for data from EU-projects and -institutions. The fact that Zenodo is a data-sharing platform that is available to anyone (thus not just for EU project data) might not be widely known yet.”
+</div>
+
+</div>
+<div id="orcid" class="section level3">
+<h3><span class="header-section-number">2.4.2</span> ORCID</h3>
+<p>Problem:</p>
+<blockquote>
+<p>“Two large challenges that researchers face today are discovery and evaluation. We are overwhelmed by the volume of new research works, and traditional discovery tools are no longer sufficient. We are spending considerable amounts of time optimizing the impact—and discoverability—of our research work so as to support grant applications and promotions, and the traditional measures for this are not enough. — <span class="citation">(Fenner and Haak <a href="#ref-Fenner2014">2014</a>)</span></p>
+</blockquote>
+<p>Solution:</p>
+<blockquote>
+<p>“Open Researcher &amp; Contributor ID (<a href="http://orcid.org/">ORCID</a>) is an international, interdisciplinary, open and not-for-profit organization created to solve the researcher name ambiguity problem for the benefit of all stakeholders. <a href="http://orcid.org/">ORCID</a>was built with the goal of becoming the universally accepted unique identifier for researchers:</p>
+<ol style="list-style-type: decimal">
+<li><p>ORCID is a community-driven organization</p></li>
+<li><p>ORCID is not limited by discipline, institution, or geography</p></li>
+<li><p>ORCID is an inclusive and transparently governed not-for profit organization</p></li>
+<li><p>ORCID data and source code are available under recognized open licenses</p></li>
+<li><p>the ORCID iD is part of institutional, publisher, and funding agency infrastructures.</p></li>
+</ol>
+<p>Furthermore, <a href="http://orcid.org/">ORCID</a> recognizes that existing researcher and identifier schemes serve specific communities, and is working to link with, rather than replace, existing infrastructures.&quot;</p>
+<p>— <span class="citation">(Fenner and Haak <a href="#ref-Fenner2014">2014</a>)</span></p>
+</blockquote>
+</div>
+<div id="licenses" class="section level3">
+<h3><span class="header-section-number">2.4.3</span> Licenses</h3>
+<p>Recommended literature:</p>
+<ul>
+<li><p><a href="https://link.springer.com/chapter/10.1007/978-3-319-00026-8_19">Intellectual Property and Computational Science</a> <code>citep(manual[&quot;Stodden2014&quot;])</code></p></li>
+<li><p><a href="https://link.springer.com/chapter/10.1007/978-3-319-00026-8_19">Creative Commons Licences</a> <code>citep(manual[&quot;Friesike2014&quot;])</code></p></li>
+<li><p><a href="https://choosealicense.com/" class="uri">https://choosealicense.com/</a></p></li>
+</ul>
+</div>
+<div id="file-formats" class="section level3">
+<h3><span class="header-section-number">2.4.4</span> File formats</h3>
+<p>Resources:</p>
+<ul>
+<li><a href="http://www.waterml2.org/">WaterML2</a>:</li>
+</ul>
+<blockquote>
+<p>“…is a new data exchange standard in Hydrology which can basically be used to exchange many kinds of hydro-meteorological observations and measurements. WaterML2 has been initiated and designed over a period of several years by a group of major national and international organizations from public and private sector, such as CSIRO, CUAHSI, USGS, BOM, NOAA, KISTERS and others. WaterML2 has been developed within the OGC Hydrology Domain Working group which has a mandate by the WMO, too.”</p>
+<p>— <a href="http://www.waterml2.org/">WaterML2</a></p>
+</blockquote>
+<ul>
+<li><a href="http://www.odm2.org/">ODM2</a>: is an information model and supporting software ecosystem for feature-based earth observations</li>
+</ul>
+
+</div>
+</div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
 <div id="ref-Fenner_2014">
 <p>Fenner, Martin, Kaja Scheliga, and Sönke Bartling. 2014. “Reference Management.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 125–37. Cham: Springer International Publishing. doi:<a href="https://doi.org/10.1007/978-3-319-00026-8_8">10.1007/978-3-319-00026-8_8</a>.</p>
+</div>
+<div id="ref-Bosman_2016">
+<p>Bosman, Jeroen, and Bianca Kramer. 2016. “GitHub and More: Sharing Data &amp; Code.” Blog. <em>Innovations in Scholarly Communication - Changing Research Workflows</em>. <a href="https://101innovations.wordpress.com/2016/10/09/github-and-more-sharing-data-code/" class="uri">https://101innovations.wordpress.com/2016/10/09/github-and-more-sharing-data-code/</a>.</p>
+</div>
+<div id="ref-Fenner2014">
+<p>Fenner, Martin, and Laure Haak. 2014. “Unique Identifiers for Researchers.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 293–96. Cham: Springer International Publishing. doi:<a href="https://doi.org/10.1007/978-3-319-00026-8_21">10.1007/978-3-319-00026-8_21</a>.</p>
 </div>
 </div>
 <script async defer src="https://hypothes.is/embed.js"></script>

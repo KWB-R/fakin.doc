@@ -128,6 +128,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.3.1" data-path="best-practices.html"><a href="best-practices.html#logger-devices"><i class="fa fa-check"></i><b>2.3.1</b> Logger devices</a></li>
 <li class="chapter" data-level="2.3.2" data-path="best-practices.html"><a href="best-practices.html#spreadsheets"><i class="fa fa-check"></i><b>2.3.2</b> Spreadsheets</a></li>
 </ul></li>
+<li class="chapter" data-level="2.4" data-path="best-practices.html"><a href="best-practices.html#data-publishing-and-sharing"><i class="fa fa-check"></i><b>2.4</b> Data publishing and sharing</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="best-practices.html"><a href="best-practices.html#repositories"><i class="fa fa-check"></i><b>2.4.1</b> Repositories</a></li>
+<li class="chapter" data-level="2.4.2" data-path="best-practices.html"><a href="best-practices.html#orcid"><i class="fa fa-check"></i><b>2.4.2</b> ORCID</a></li>
+<li class="chapter" data-level="2.4.3" data-path="best-practices.html"><a href="best-practices.html#licenses"><i class="fa fa-check"></i><b>2.4.3</b> Licenses</a></li>
+<li class="chapter" data-level="2.4.4" data-path="best-practices.html"><a href="best-practices.html#file-formats"><i class="fa fa-check"></i><b>2.4.4</b> File formats</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="case-studies.html"><a href="case-studies.html"><i class="fa fa-check"></i><b>3</b> Case studies</a><ul>
 <li class="chapter" data-level="3.1" data-path="case-studies.html"><a href="case-studies.html#geogenic-salination"><i class="fa fa-check"></i><b>3.1</b> Geogenic salination</a></li>
@@ -156,7 +162,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.9" data-path="faq.html"><a href="faq.html#complex-r-script-dependencies"><i class="fa fa-check"></i><b>5.9</b> Complex R script dependencies</a></li>
 <li class="chapter" data-level="5.10" data-path="faq.html"><a href="faq.html#heterogenous-r-coding-styles"><i class="fa fa-check"></i><b>5.10</b> Heterogenous (R-)coding styles</a></li>
 <li class="chapter" data-level="5.11" data-path="faq.html"><a href="faq.html#collaborative-version-control"><i class="fa fa-check"></i><b>5.11</b> Collaborative version control</a></li>
-<li class="chapter" data-level="5.12" data-path="faq.html"><a href="faq.html#encoding"><i class="fa fa-check"></i><b>5.12</b> Encoding</a></li>
+<li class="chapter" data-level="5.12" data-path="faq.html"><a href="faq.html#workflow-automation"><i class="fa fa-check"></i><b>5.12</b> Workflow automation</a></li>
+<li class="chapter" data-level="5.13" data-path="faq.html"><a href="faq.html#encoding"><i class="fa fa-check"></i><b>5.13</b> Encoding</a></li>
+<li class="chapter" data-level="5.14" data-path="faq.html"><a href="faq.html#more-ressources-to-be-put-in-the-relevant-chapters"><i class="fa fa-check"></i><b>5.14</b> More ressources (to be put in the relevant chapters)</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>6</b> Glossary</a><ul>
 <li class="chapter" data-level="6.1" data-path="glossary.html"><a href="glossary.html#reproducibility"><i class="fa fa-check"></i><b>6.1</b> Reproducibility</a></li>
@@ -366,8 +374,29 @@ Multiple people developing code together.
 </div>
 
 </div>
+<div id="workflow-automation" class="section level2">
+<h2><span class="header-section-number">5.12</span> Workflow automation</h2>
+<p><strong>Ressources:</strong></p>
+<ul>
+<li><p><a href="http://www.datacarpentry.org/rr-automation/">Reproducible Research Automation</a>: This lesson shows how to use automation in R to improve the reproducibility of research by automating tasks.</p></li>
+<li><p>useR!2017 Video: Data Carpentry: Open and Reproducible Research (Tutorial)</p>
+<ul>
+<li><p><a href="https://channel9.msdn.com/Events/useR-international-R-User-conferences/useR-International-R-User-2017-Conference/Data-Carpentry-Open-and-Reproducible-Research-with-R">Part1</a></p></li>
+<li><p><a href="https://channel9.msdn.com/Events/useR-international-R-User-conferences/useR-International-R-User-2017-Conference/Data-Carpentry-Open-and-Reproducible-Research-with-R-II">Part2</a></p></li>
+</ul></li>
+<li><p>Use of an R package to facilitate reproducible research, e.g.:</p>
+<ul>
+<li><p><a href="https://github.com/ropensci/rrrpkg">rprrkg</a> by <a href="https://ropensci.org/">rOpenSci</a></p></li>
+<li><p><a href="https://github.com/benmarwick/rrtools">rrtools</a> by <a href="http://faculty.washington.edu/bmarwick/">Ben Marwick</a></p></li>
+</ul></li>
+</ul>
+<p>Recommended literature:</p>
+<ul>
+<li><span class="citation">Kitzes, Turek, and Deniz (<a href="#ref-Kitzesetal_2018">2018</a>)</span></li>
+</ul>
+</div>
 <div id="encoding" class="section level2">
-<h2><span class="header-section-number">5.12</span> Encoding</h2>
+<h2><span class="header-section-number">5.13</span> Encoding</h2>
 
 <div class="rmdcaution">
 Umlaute und Sonderzeichen werden falsch angezeigt, wenn R-Skripte in unterschiedlichen Encodings abgespeichert und eingelesen werden.
@@ -392,6 +421,21 @@ Umlaute und Sonderzeichen werden falsch angezeigt, wenn R-Skripte in unterschied
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">### Skript Encoding EGAL (da Umlaut in Unicode codiert wurde)
 <span class="kw">print</span>(<span class="st">&quot;\u00dc&quot;</span>)</code></pre></div>
 <pre><code>## [1] &quot;Ü&quot;</code></pre>
+</div>
+<div id="more-ressources-to-be-put-in-the-relevant-chapters" class="section level2">
+<h2><span class="header-section-number">5.14</span> More ressources (to be put in the relevant chapters)</h2>
+<ul>
+<li><p><a href="http://doi.org/10.2312/lis.14.01">Einstieg ins Forschungsdatenmanagement in den Geowissenschaften</a></p></li>
+<li><p><a href="https://doi.org/10.1371/journal.pcbi.1005510">Good enough practices in scientific computing</a> <span class="citation">(Wilson et al. <a href="#ref-Wilson_2017">2017</a>)</span></p></li>
+<li><p><strong>Ten simple rules</strong></p>
+<ul>
+<li><p><a href="https://doi.org/10.1371/journal.pcbi.1005097">for digital data storage</a> <span class="citation">(Hart et al. <a href="#ref-Hart_2016">2016</a>)</span></p></li>
+<li><p><a href="https://doi.org/10.1371/journal.pcbi.1005412">for making research software more<br />
+robust</a> <span class="citation">(Taschuk and Wilson <a href="#ref-Taschuk_2017">2017</a>)</span></p></li>
+<li><p><a href="https://doi.org/10.1371/journal.pcbi.1005278">to enable multi-site collaborations through data sharing</a> <span class="citation">(Boland, Karczewski, and Tatonetti <a href="#ref-Boland_2017">2017</a>)</span></p></li>
+</ul></li>
+<li><p><a href="http://www.forschungsdatenmanagement.de/">Handbuch Forschungsdatenmanagement</a> <span class="citation">(Buettner, Hobohm, and Mueller <a href="#ref-Buettner_2011">2011</a>)</span></p></li>
+</ul>
 
 </div>
 </div>
@@ -399,6 +443,24 @@ Umlaute und Sonderzeichen werden falsch angezeigt, wenn R-Skripte in unterschied
 <div id="refs" class="references">
 <div id="ref-Bosman_2018">
 <p>Bosman, Jeroen, and Bianca Kramer. 2018. “Workflows.” Blog. <em>Innovations in Scholarly Communication - Changing Research Workflows</em>. <a href="https://101innovations.wordpress.com/workflows" class="uri">https://101innovations.wordpress.com/workflows</a>.</p>
+</div>
+<div id="ref-Kitzesetal_2018">
+<p>Kitzes, Justin, Daniel Turek, and Fatma Deniz, eds. 2018. <em>The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences</em>. Oakland, CA: University of California Press. <a href="https://www.practicereproducibleresearch.org/" class="uri">https://www.practicereproducibleresearch.org/</a>.</p>
+</div>
+<div id="ref-Wilson_2017">
+<p>Wilson, Greg, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, and Tracy K. Teal. 2017. “Good Enough Practices in Scientific Computing.” Edited by Francis Ouellette. <em>PLOS Computational Biology</em> 13 (6). Public Library of Science (PLoS): e1005510. doi:<a href="https://doi.org/10.1371/journal.pcbi.1005510">10.1371/journal.pcbi.1005510</a>.</p>
+</div>
+<div id="ref-Hart_2016">
+<p>Hart, Edmund M., Pauline Barmby, David LeBauer, François Michonneau, Sarah Mount, Patrick Mulrooney, Timoth’ee Poisot, Kara H. Woo, Naupaka B. Zimmerman, and Jeffrey W. Hollister. 2016. “Ten Simple Rules for Digital Data Storage.” Edited by Scott Markel. <em>PLOS Computational Biology</em> 12 (10). Public Library of Science (PLoS): e1005097. doi:<a href="https://doi.org/10.1371/journal.pcbi.1005097">10.1371/journal.pcbi.1005097</a>.</p>
+</div>
+<div id="ref-Taschuk_2017">
+<p>Taschuk, Morgan, and Greg Wilson. 2017. “Ten Simple Rules for Making Research Software More Robust.” <em>PLOS Computational Biology</em> 13 (4). Public Library of Science (PLoS): e1005412. doi:<a href="https://doi.org/10.1371/journal.pcbi.1005412">10.1371/journal.pcbi.1005412</a>.</p>
+</div>
+<div id="ref-Boland_2017">
+<p>Boland, Mary Regina, Konrad J. Karczewski, and Nicholas P. Tatonetti. 2017. “Ten Simple Rules to Enable Multi-Site Collaborations Through Data Sharing.” <em>PLOS Computational Biology</em> 13 (1). Public Library of Science (PLoS): e1005278. doi:<a href="https://doi.org/10.1371/journal.pcbi.1005278">10.1371/journal.pcbi.1005278</a>.</p>
+</div>
+<div id="ref-Buettner_2011">
+<p>Buettner, Stephan, Hans-Christoph Hobohm, and Lars Mueller. 2011. <em>Handbuch Forschungsdatenmanagement</em>. Bad Honnef: Bock u. Herchen.</p>
 </div>
 </div>
 <script async defer src="https://hypothes.is/embed.js"></script>
