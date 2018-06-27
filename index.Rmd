@@ -44,7 +44,7 @@ using which code files."
 knitr::include_graphics('images/cover.png', dpi = NA)
 ```
 
-```{r fig.align='center', echo=FALSE, include=grepl('latex|docx', knitr:::pandoc_to()), fig.link='http://www.kompetenz-wasser.de/en/project/fakin-research-data-management/'}
+```{r fig.align='center', echo=FALSE, fig.width = 5, fig.height = 5, include=grepl('latex|docx', knitr:::pandoc_to()), fig.link='http://www.kompetenz-wasser.de/en/project/fakin-research-data-management/'}
 knitr::include_graphics('images/cover.png', dpi = NA)
 ```
 

@@ -1,8 +1,18 @@
 ##	Data publishing and sharing
 
-```{r fig.align='center', echo=FALSE, fig.link='https://doi.org/10.1371/journal.pcbi.1005278', fig.cap= 'Modern life context for the ten simple rules [@Boland_2017]'}
-knitr::include_graphics('images/tensimplerules_datasharing.png')
+
+```{r fig.align='center', echo=FALSE, include=grepl('html', knitr:::pandoc_to()), fig.cap= 'Modern life context for the ten simple rules [@Boland_2017]', fig.link='https://doi.org/10.1371/journal.pcbi.1005278/'}
+knitr::include_graphics('images/tensimplerules_datasharing.png', dpi = NA)
 ```
+
+```{r fig.align='center', echo=FALSE, fig.width = 5, fig.height = 5, include=grepl('latex', knitr:::pandoc_to()), fig.cap= 'Modern life context for the ten simple rules \\citep{Boland_2017}', fig.link='https://doi.org/10.1371/journal.pcbi.1005278/'}
+knitr::include_graphics('images/tensimplerules_datasharing.png', dpi = NA)
+```
+
+```{r fig.align='center', echo=FALSE, fig.width = 5, fig.height = 5, include=grepl('docx|epub', knitr:::pandoc_to()), fig.cap= 'Modern life context for the ten simple rules [@Boland_2017]', fig.link='https://doi.org/10.1371/journal.pcbi.1005278/'}
+knitr::include_graphics('images/tensimplerules_datasharing.png', dpi = NA)
+```
+
 
 >"This figure provides a framework for understanding how the “Ten Simple Rules to
 Enable Multi-site Collaborations through Data Sharing” `r citep("10.1371/journal.pcbi.1005278")`
