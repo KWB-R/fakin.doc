@@ -1,9 +1,28 @@
 ## Data storage
 
-Recommended literature: 
+The [ten simple rules for digital data storage](https://doi.org/10.1371/journal.pcbi.1005097) by `r citet("10.1371/journal.pcbi.1005097")` should serve us as a guideline:
 
-[Ten simple rules for digital data storage](https://doi.org/10.1371/journal.pcbi.1005097) 
-`r citep("10.1371/journal.pcbi.1005097")`
+>Rule 1: Anticipate How Your Data Will Be Used
+>
+Rule 2: Know Your Use Case
+>
+Rule 3: Keep Raw Data Raw
+>
+Rule 4: Store Data in Open Formats
+>
+Rule 5: Data Should Be Structured for Analysis
+>
+Rule 6: Data Should Be Uniquely Identifiable
+>
+Rule 7: Link Relevant Metadata
+>
+Rule 8: Adopt the Proper Privacy Protocols
+>
+Rule 9: Have a Systematic Backup Scheme
+>
+Rule 10: The Location and Method of Data Storage Depend on How Much Data You Have
+>
+> --- `r citep("10.1371/journal.pcbi.1005097")`
 
 ### Naming
 

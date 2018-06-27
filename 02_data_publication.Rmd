@@ -1,7 +1,61 @@
 ##	Data publishing and sharing
 
-Make data freely available via repositories
-Metadata, file formats, licence, persistent identifiers: DOI, ORCID
+```{r fig.align='center', echo=FALSE, fig.link='https://doi.org/10.1371/journal.pcbi.1005278', fig.cap= 'Modern life context for the ten simple rules [@Boland_2017]'}
+knitr::include_graphics('images/tensimplerules_datasharing.png')
+```
+
+>"This figure provides a framework for understanding how the “Ten Simple Rules to
+Enable Multi-site Collaborations through Data Sharing” `r citep("10.1371/journal.pcbi.1005278")`
+can be translated into easily understood modern life concepts.
+>
+**Rule 1** is Open-Source Software. The openness is signified by a window to a room 
+>filled with algorithms that are represented by gears. 
+>
+**Rule 2** involves making the source data available whenever possible. Source data 
+>can be very useful for researchers. However, data are often housed in 
+>institutions and are not publicly accessible. These files are often stored 
+>externally; therefore, we depict this as a shed or storehouse of data, which, 
+>if possible, should be provided to research collaborators. 
+>
+**Rule 3** is to “use multiple platforms to share research products.” This 
+>increases thechances that other researchers will find and be able to utilize your 
+>research product—this is represented by multiple locations (i.e., shed and house). 
+>
+**Rule 4** involves the need to secure all necessary permissions a priori. Many 
+>datasets have data use agreements that restrict usage. These restrictions can 
+>sometimes prevent researchers from performing certain types of analyses or 
+>publishing in certain journals (e.g., journals that require all data to be 
+>openly accessible); therefore, we represent this rule as a key that can lock or 
+>unlock the door of your research. 
+>
+**Rule 5** discusses the privacy issues that surround source data. Researchers 
+>need to understand what they can and cannot do (i.e., the privacy rules) with 
+>their data. Privacy often requires allowing certain users to have access to 
+>sections of data while restricting access to other sections of data. Researchers 
+>need to understand what can and cannot be revealed about their data (i.e., when 
+>to open and close the curtains). 
+>
+**Rule 6** is to facilitate reproducibility whenever possible. Since 
+communication is the forte of reproducibility, we depicted it as two 
+researchers sharing a giant scroll, because data documentation is required and 
+is often substantial. 
+>
+**Rule 7** is to “think global.” We conceptualize this as a cloud. This cloud 
+allows the research property (i.e., the house and shed) to be accessed across 
+large distances. 
+>
+>**Rule 8** is to publicize your work. Think of it as “shouting from the rooftops.”
+Publicizing is critical for enabling other researchers to access your research
+product. 
+>
+>**Rule 9** is to “stay realistic.” It is important for researchers to “stay
+grounded” and resist the urge to overstate the claims made by their research.
+>
+**Rule 10** is to be engaged, and this is depicted as a person waving an “I heart
+research” sign. It is vitally important to stay engaged and enthusiastic about
+one’s research. This enables you to draw others to care about your research."
+>
+> ---- `r citep("10.1371/journal.pcbi.1005278")` 
 
 Recommended literature: 
 
@@ -109,9 +163,9 @@ rather than replace, existing infrastructures."
 
 Recommended literature: 
 
-- [Intellectual Property and Computational Science](https://link.springer.com/chapter/10.1007/978-3-319-00026-8_19) `citep(manual["Stodden2014"])`
+- [Intellectual Property and Computational Science](https://link.springer.com/chapter/10.1007/978-3-319-00026-8_19) `r citep(manual["Stodden2014"])`
 
-- [Creative Commons Licences](https://link.springer.com/chapter/10.1007/978-3-319-00026-8_19) `citep(manual["Friesike2014"])`
+- [Creative Commons Licences](https://link.springer.com/chapter/10.1007/978-3-319-00026-8_19) `r citep(manual["Friesike2014"])`
 
 - [https://choosealicense.com/](https://choosealicense.com/)
 
