@@ -2,5 +2,9 @@
 `r if (grepl('doc', knitr:::pandoc_to())) '# References'`
 
 ```{r setup, echo = FALSE, message = FALSE}
-knitcitations::write.bibtex(file = "references.bib")
+### Needed to incldue Bosman_2016 here because only used in block2 where 
+### execution of R code, i.e. calling: knitcitations::citep() is not possible!
+all_citations <- c(knitcitations:::get_bib(), manual["Bosman_2016"])
+knitcitations::write.bibtex(entry = all_citations, 
+                            file = "references.bib")
 ```

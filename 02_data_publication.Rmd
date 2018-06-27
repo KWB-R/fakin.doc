@@ -5,12 +5,123 @@ Metadata, file formats, licence, persistent identifiers: DOI, ORCID
 
 ###	Repositories 
 
-General repositories e.g. Figshare, Zenodo (a joint project between OpenAIRE 
-and CERN), Mandeley data, Dryad
+Repositories for permanently deposing data are for example:
 
-Repositories at KWB:
+- General
 
-  - Github
+    + [Figshare](https://figshare.com), 
+
+    + [Zenodo](https://zenodo.org/): a joint project between 
+    [OpenAIRE](https://www.openaire.eu/) and [CERN](https://home.cern/),
+
+    + [Mendeley data](https://data.mendeley.com/), 
+
+    + [Dataverse](https://dataverse.org/),
+
+    + [Dryad](https://datadryad.org/)
+    
+- Focus on environmental and earth sciences
+
+    + [Pangea](https://www.pangaea.de/)
+    
+    + [GFZ Potsdam data services](http://dataservices.gfz-potsdam.de/portal/)
   
-  - Zenodo
-  
+
+In addition repositories for publishing program code are for example 
+[Github](https://github.com) or [Gitlab](https://gitlab.com), however these do 
+not offer build-in long term preservation by default.
+
+
+We are currently using the following repositories and can recommend them for 
+similar usage to others: 
+
+- [Github](https://github.com): for developing/publishing program code, because it offers the opportunity to automatically get a
+
+
+- [Zenodo](https://zenodo.org/) [DOI](https://www.doi.org/) for each software 
+released publicly on Github (for details see: https://guides.github.com/activities/citable-code/)
+
+
+
+```{block2 type = "rmdtip"}
+A [blog post](https://101innovations.wordpress.com/2016/10/09/github-and-more-sharing-data-code/)  @Bosman_2016 provide results of a large survey carried out in 
+2015 among more than 15000 researchers. Insights can be gained on:   
+
+- Which scholary communications tools are used and
+
+- Are there disciplinary differences in usage?
+
+They finally summarise:
+"Another surprising finding is the overall low use of Zenodo – a CERN-hosted 
+repository that is the recommended archiving and sharing solution for data from 
+EU-projects and -institutions. The fact that Zenodo is a data-sharing platform 
+that is available to anyone (thus not just for EU project data) might not be 
+widely known yet."
+```
+
+### ORCID
+
+Problem:
+
+>"Two large challenges that researchers face today are discovery and evaluation. 
+We are overwhelmed by the volume of new research works, and traditional discovery 
+tools are no longer sufficient. We are spending considerable amounts of time 
+optimizing the impact—and discoverability—of our research work so as to support 
+grant applications and promotions, and the traditional measures for this are not 
+enough. 
+> --- `r citep(manual["Fenner2014"])`
+
+Solution:
+
+>"Open Researcher & Contributor ID ([ORCID](http://orcid.org/)) is an international, interdisciplinary, open and not-for-profit organization created to solve the 
+researcher name ambiguity problem for the benefit of all stakeholders. 
+[ORCID](http://orcid.org/)was built with the goal of becoming the universally 
+accepted unique identifier for researchers: 
+>
+>1. ORCID is a community-driven organization
+>
+>2. ORCID is not limited by discipline, institution, or geography
+>
+>3. ORCID is an inclusive and transparently governed not-for profit organization
+>
+>4. ORCID data and source code are available under recognized open licenses
+>
+>5. the ORCID iD is part of institutional, publisher, and funding agency 
+infrastructures.
+>
+>Furthermore, [ORCID](http://orcid.org/) recognizes that existing researcher and 
+identifier schemes serve specific communities, and is working to link with, 
+rather than replace, existing infrastructures."
+>
+> --- `r citep(manual["Fenner2014"])`
+
+
+### Licenses
+
+Recommended literature: 
+
+- [Intellectual Property and Computational Science](https://link.springer.com/chapter/10.1007/978-3-319-00026-8_19) `citep(manual["Stodden2014"])`
+
+- [Creative Commons Licences](https://link.springer.com/chapter/10.1007/978-3-319-00026-8_19) `citep(manual["Friesike2014"])`
+
+- [https://choosealicense.com/](https://choosealicense.com/)
+
+
+### File formats
+
+Resources: 
+
+- [WaterML2](http://www.waterml2.org/): 
+
+>"...is a new data exchange standard in Hydrology which can basically be used to 
+exchange many kinds of hydro-meteorological observations and measurements. 
+WaterML2 has been initiated and designed over a period of several years by a 
+group of major national and international organizations from public and private 
+sector, such as CSIRO, CUAHSI, USGS, BOM, NOAA, KISTERS and others. WaterML2 has 
+been developed within the OGC Hydrology Domain Working group which has a mandate 
+by the WMO, too."
+>
+> --- [WaterML2](http://www.waterml2.org/)
+
+- [ODM2](http://www.odm2.org/): is an information model and supporting software 
+ecosystem for feature-based earth observations

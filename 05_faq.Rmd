@@ -223,6 +223,32 @@ Eine Präsentation mit verschiedenen Tools zur Versionsverwaltung findet sich hi
 
 ```
 
+## Workflow automation
+
+**Ressources:**
+
+- [Reproducible Research Automation](http://www.datacarpentry.org/rr-automation/): 
+This lesson shows how to use automation in R to improve the reproducibility of 
+research by automating tasks.
+
+- useR!2017 Video: Data Carpentry: Open and Reproducible Research (Tutorial) 
+
+    + [Part1](https://channel9.msdn.com/Events/useR-international-R-User-conferences/useR-International-R-User-2017-Conference/Data-Carpentry-Open-and-Reproducible-Research-with-R)
+
+    + [Part2](https://channel9.msdn.com/Events/useR-international-R-User-conferences/useR-International-R-User-2017-Conference/Data-Carpentry-Open-and-Reproducible-Research-with-R-II)
+
+- Use of an R package to facilitate reproducible research, e.g.:
+
+    + [rprrkg](https://github.com/ropensci/rrrpkg) by 
+    [rOpenSci](https://ropensci.org/)
+    
+    + [rrtools](https://github.com/benmarwick/rrtools) by [Ben Marwick](http://faculty.washington.edu/bmarwick/)
+    
+
+Recommended literature:
+
+- `r citet(manual["Kitzesetal_2018"])`
+
 ## Encoding 
 
 
@@ -266,3 +292,25 @@ print("Ü")
 ### Skript Encoding EGAL (da Umlaut in Unicode codiert wurde)
 print("\u00dc")
 ```
+
+## More ressources (to be put in the relevant chapters)
+
+- [Einstieg ins Forschungsdatenmanagement in den Geowissenschaften](http://doi.org/10.2312/lis.14.01) 
+  
+- [Good enough practices in scientific computing](https://doi.org/10.1371/journal.pcbi.1005510) `r citep("10.1371/journal.pcbi.1005510")`
+  
+- **Ten simple rules**
+  
+    + [for digital data storage](https://doi.org/10.1371/journal.pcbi.1005097) `r  
+    citep("10.1371/journal.pcbi.1005097")`
+  
+    + [for making research software more   
+    robust](https://doi.org/10.1371/journal.pcbi.1005412) `r 
+    citep("10.1371/journal.pcbi.1005412")`
+  
+    + [to enable multi-site collaborations through data 
+    sharing](https://doi.org/10.1371/journal.pcbi.1005278) `r 
+    citep("10.1371/journal.pcbi.1005278")`
+      
+- [Handbuch Forschungsdatenmanagement](http://www.forschungsdatenmanagement.de/) 
+`r citep(manual["Buettner_2011"])`

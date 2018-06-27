@@ -8,6 +8,7 @@ rmd_files: [
   "02_new_project.Rmd",
   "02_data_storage.Rmd", 
   "02_data_collection.Rmd",
+  "02_data_publication.Rmd",
   "03_case_studies.Rmd",
   "04_other_projects.Rmd",
   "05_faq.Rmd",

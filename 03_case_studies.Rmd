@@ -60,9 +60,7 @@ and also inconvenient to handle as the output formats of different devices
 reporting and documentation of the treatment performance via (on-line) 
 monitoring can be time consuming for the personnel and requires advanced 
 software solutions. An alternative to commercial (and often expensive) software 
-solutions are tools which are based on the open software R. The free software 
-approach allows any R programmer to produce customized tools for each individual 
-end-user `to be added in manual.bib: (Gibert et al., 2015; Sonnenberg et al., 2014)`.
+solutions are tools which are based on the open software [R](https://www.r-project.org/) `r citep(citation())`. The free software approach allows any [R](https://www.r-project.org/) programmer to produce customized tools for each individual end-user.
 
 Thus an automated reporting tool is developed within the [AQUANES](http://aquanes-h2020.eu/Default.aspx?t=1593) project for enabling an 
 integrative assessment of the different monitoring devices and integration with 
