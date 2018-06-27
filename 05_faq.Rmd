@@ -8,13 +8,30 @@ different research phases as shown below.
 
 [![compliance-tools-workflow](images/compliance-tools-workflow_cropped.png)](https://101innovations.wordpress.com/workflows/)
 
-## Writing more robust R scripts
+## Writing more robust R code
 
-For details on making R scripts more robust to work on different computers
+For details on making R code more robust to work on different computers
 please read the following [tutorial](file:///Y:/Z-Exchange/_Tutorials/HomeDirectory.html).
 <!-- Only adds more details in case of html output as 
 defined in "R/add_text.R" -->
 `r add_text_links()`
+
+Recommended literature: 
+
+- [Good enough practices in scientific computing](https://doi.org/10.1371/journal.pcbi.1005510) `r citep("10.1371/journal.pcbi.1005510")`
+  
+- [Ten simple rules for making research software more robust](https://doi.org/10.1371/journal.pcbi.1005412) 
+`r citep("10.1371/journal.pcbi.1005412")`
+
+- R programming books (freely available online!)
+
+    + [R for data science](http://r4ds.had.co.nz/) `r citep(manual["Grolemund_2017"])`
+
+    + [Advanced R](http://adv-r.had.co.nz/) `r citep(manual[c("Wickham_2014","Wickham2018")])`
+    
+    + [R packages](http://r-pkgs.had.co.nz/) `r citep(manual["Wickham_2015"])`
+
+  
 
 ## Using Subversion at KWB
 
@@ -35,6 +52,21 @@ defined in "R/add_text.R" -->
 defined in "R/add_text.R" -->
 `r add_chapter_firefox_local_files()`
 
+
+## How to build your own KWB styled R package?
+
+For building your own R package from scratch we developed a helper R package 
+[kwb.pkgbuild](https://github.com/kwb-r/kwb.pkgbuild) (available on Github), 
+which builds a KWB styled skeleton for your future R package. 
+
+For more details checkout the [tutorial](https://kwb-r.github.io/kwb.pkgbuild/dev/articles/tutorial.html) 
+at the package documentation website.
+
+Recommended literature: 
+
+- [R packages](http://r-pkgs.had.co.nz/) `r citep(manual["Wickham_2015"])`
+
+- [Advanced R](http://adv-r.had.co.nz/) `r citep(manual[c("Wickham_2014","Wickham2018")])`
 
 
 ## Working with EXCEL
@@ -189,9 +221,13 @@ e.g. R scripts
 
 (R) programmers at KWB will use the tidyverse coding style 
 [http://style.tidyverse.org](http://style.tidyverse.org) as default. 
-This will help increasing both, the readibility and reusability of 
+This will help increasing both, the readability and reusability of 
 the developed (R-)scripts at KWB (currently: approximately 1000 Rscripts).
 
+
+Recommended literature:
+
+Clean code `r citep(manual["martin2009"])`
 
 ## Collaborative version control 
 
@@ -272,14 +308,16 @@ erste Ansatz (Vorgabe von UTF-8 als Default Encoding) angestrebt werden.
 ``` 
 
 A great blogpost for the topic (How do I write UTF-8 encoded content to a file?) 
-is provided by [Ushey (2018)](https://kevinushey.github.io/blog/2018/02/21/string-encoding-and-r/), including background information on how encoding in R works.
+is provided by `citet(manual["Ushey_2018"])`, including background information 
+on how encoding in R works.
 
 For increasing the portability of R script he recommands the for example the 
 following:
 
 > "Portable R scripts should use unicode code points, to avoid accidental 
-mis-encoding of string literals."*
-> --- [Ushey, 2018](https://kevinushey.github.io/blog/2018/02/21/string-encoding-and-r/)
+mis-encoding of string literals."
+>
+> --- `citep(manual["Ushey_2018"])`
 
 
 **Encoding example in R:**
@@ -293,24 +331,3 @@ print("Ü")
 print("\u00dc")
 ```
 
-## More ressources (to be put in the relevant chapters)
-
-- [Einstieg ins Forschungsdatenmanagement in den Geowissenschaften](http://doi.org/10.2312/lis.14.01) 
-  
-- [Good enough practices in scientific computing](https://doi.org/10.1371/journal.pcbi.1005510) `r citep("10.1371/journal.pcbi.1005510")`
-  
-- **Ten simple rules**
-  
-    + [for digital data storage](https://doi.org/10.1371/journal.pcbi.1005097) `r  
-    citep("10.1371/journal.pcbi.1005097")`
-  
-    + [for making research software more   
-    robust](https://doi.org/10.1371/journal.pcbi.1005412) `r 
-    citep("10.1371/journal.pcbi.1005412")`
-  
-    + [to enable multi-site collaborations through data 
-    sharing](https://doi.org/10.1371/journal.pcbi.1005278) `r 
-    citep("10.1371/journal.pcbi.1005278")`
-      
-- [Handbuch Forschungsdatenmanagement](http://www.forschungsdatenmanagement.de/) 
-`r citep(manual["Buettner_2011"])`

@@ -1,5 +1,10 @@
 ## Data storage
 
+Recommended literature: 
+
+[Ten simple rules for digital data storage](https://doi.org/10.1371/journal.pcbi.1005097) 
+`r citep("10.1371/journal.pcbi.1005097")`
+
 ### Naming
 
 #### Folder and file names

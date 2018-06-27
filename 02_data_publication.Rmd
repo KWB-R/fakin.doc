@@ -3,6 +3,13 @@
 Make data freely available via repositories
 Metadata, file formats, licence, persistent identifiers: DOI, ORCID
 
+Recommended literature: 
+
+- [Ten simple rules to enable multi-site collaborations through data sharing](https://doi.org/10.1371/journal.pcbi.1005278) 
+`r citep("10.1371/journal.pcbi.1005278")`
+
+- Guidelines for publishing (PhD) research data `r citep(manual["Kaden_2018"])`
+
 ###	Repositories 
 
 Repositories for permanently deposing data are for example:
@@ -11,8 +18,8 @@ Repositories for permanently deposing data are for example:
 
     + [Figshare](https://figshare.com), 
 
-    + [Zenodo](https://zenodo.org/): a joint project between 
-    [OpenAIRE](https://www.openaire.eu/) and [CERN](https://home.cern/),
+    + [Zenodo](https://zenodo.org/) (a joint project between 
+    [OpenAIRE](https://www.openaire.eu/) and [CERN](https://home.cern/)),
 
     + [Mendeley data](https://data.mendeley.com/), 
 
@@ -35,7 +42,8 @@ not offer build-in long term preservation by default.
 We are currently using the following repositories and can recommend them for 
 similar usage to others: 
 
-- [Github](https://github.com): for developing/publishing program code, because it offers the opportunity to automatically get a
+- [Github](https://github.com): for developing/publishing program code, because 
+it offers the opportunity to automatically get a
 
 
 - [Zenodo](https://zenodo.org/) [DOI](https://www.doi.org/) for each software 
@@ -44,8 +52,9 @@ released publicly on Github (for details see: https://guides.github.com/activiti
 
 
 ```{block2 type = "rmdtip"}
-A [blog post](https://101innovations.wordpress.com/2016/10/09/github-and-more-sharing-data-code/)  @Bosman_2016 provide results of a large survey carried out in 
-2015 among more than 15000 researchers. Insights can be gained on:   
+A [blog post](https://101innovations.wordpress.com/2016/10/09/github-and-more-sharing-data-code/)  
+@Bosman_2016 provide results of a large survey carried out in 2015 among more 
+than 15000 researchers. Insights can be gained on:   
 
 - Which scholary communications tools are used and
 
@@ -109,9 +118,7 @@ Recommended literature:
 
 ### File formats
 
-Resources: 
-
-- [WaterML2](http://www.waterml2.org/): 
+[WaterML2](http://www.waterml2.org/): 
 
 >"...is a new data exchange standard in Hydrology which can basically be used to 
 exchange many kinds of hydro-meteorological observations and measurements. 
@@ -123,5 +130,6 @@ by the WMO, too."
 >
 > --- [WaterML2](http://www.waterml2.org/)
 
-- [ODM2](http://www.odm2.org/): is an information model and supporting software 
+
+[ODM2](http://www.odm2.org/): is an information model and supporting software 
 ecosystem for feature-based earth observations

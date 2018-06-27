@@ -23,6 +23,14 @@ Doing research data management (RDM) is useful according to [Labfolder.com (2018
 - Archive, retrieve and re-use own data
 
 
+Recommended literature: 
+
+- [Introduction to research data management in the geosciences](http://doi.org/10.2312/lis.14.01) 
+(in German!)
+  
+- [Handbook research data management](http://www.forschungsdatenmanagement.de/)
+(in German!) `r citep(manual["Buettner_2011"])`
+
 
 ## For whom ? 
 
