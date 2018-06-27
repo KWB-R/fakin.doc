@@ -49,41 +49,69 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -197,17 +225,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h1><span class="header-section-number">Chapter 5</span> FAQs</h1>
 <div id="tools-for-researchers" class="section level2">
 <h2><span class="header-section-number">5.1</span> Tools for researchers</h2>
-<p>A very exhaustive overview of tools used in the researcher`s workflow are provided by <span class="citation">Bosman and Kramer (<a href="#ref-Bosman_2018">2018</a>)</span>, which are grouped according to different research phases as shown below.</p>
+<p>A very exhaustive overview of tools used in the researcher`s workflow are
+provided by <span class="citation">Bosman and Kramer (<a href="#ref-Bosman_2018">2018</a>)</span>, which are grouped according to
+different research phases as shown below.</p>
 <p><a href="https://101innovations.wordpress.com/workflows/"><img src="images/compliance-tools-workflow_cropped.png" alt="compliance-tools-workflow" /></a></p>
 </div>
 <div id="writing-more-robust-r-code" class="section level2">
 <h2><span class="header-section-number">5.2</span> Writing more robust R code</h2>
-<p>For details on making R code more robust to work on different computers please read the following <a href="file:///Y:/Z-Exchange/_Tutorials/HomeDirectory.html">tutorial</a>. <!-- Only adds more details in case of html output as 
-defined in "R/add_text.R" --> (link only accessible from KWB intranet with Firefox in case workflow defined <a href="faq.html#firefox-local-files">here</a> is followed!).</p>
+<p>For details on making R code more robust to work on different computers
+please read the following <a href="file:///Y:/Z-Exchange/_Tutorials/HomeDirectory.html">tutorial</a>.
+<!-- Only adds more details in case of html output as 
+defined in "R/add_text.R" -->
+(link only accessible from KWB intranet with Firefox in case workflow defined <a href="faq.html#firefox-local-files">here</a> is followed!).</p>
 <p>Recommended literature:</p>
 <ul>
 <li><p><a href="https://doi.org/10.1371/journal.pcbi.1005510">Good enough practices in scientific computing</a> <span class="citation">(Wilson et al. <a href="#ref-Wilson_2017">2017</a>)</span></p></li>
-<li><p><a href="https://doi.org/10.1371/journal.pcbi.1005412">Ten simple rules for making research software more robust</a> <span class="citation">(Taschuk and Wilson <a href="#ref-Taschuk_2017">2017</a>)</span></p></li>
+<li><p><a href="https://doi.org/10.1371/journal.pcbi.1005412">Ten simple rules for making research software more robust</a>
+<span class="citation">(Taschuk and Wilson <a href="#ref-Taschuk_2017">2017</a>)</span></p></li>
 <li><p>R programming books (freely available online!)</p>
 <ul>
 <li><p><a href="http://r4ds.had.co.nz/">R for data science</a> <span class="citation">(Grolemund and Wickham <a href="#ref-Grolemund_2017">2017</a>)</span></p></li>
@@ -218,13 +252,17 @@ defined in "R/add_text.R" --> (link only accessible from KWB intranet with Firef
 </div>
 <div id="using-subversion-at-kwb" class="section level2">
 <h2><span class="header-section-number">5.3</span> Using Subversion at KWB</h2>
-<p>For details on how to use Subversion at KWB please read the following <a href="file:///Y:/Z-Exchange/_Tutorials/using_subversion.html">tutorial</a> <!-- Only adds more details in case of html output as 
-defined in "R/add_text.R" --> (link only accessible from KWB intranet with Firefox in case workflow defined <a href="faq.html#firefox-local-files">here</a> is followed!).</p>
+<p>For details on how to use Subversion at KWB please read the following <a href="file:///Y:/Z-Exchange/_Tutorials/using_subversion.html">tutorial</a>
+<!-- Only adds more details in case of html output as 
+defined in "R/add_text.R" -->
+(link only accessible from KWB intranet with Firefox in case workflow defined <a href="faq.html#firefox-local-files">here</a> is followed!).</p>
 </div>
 <div id="how-to-install-kwb-r-packages" class="section level2">
 <h2><span class="header-section-number">5.4</span> How to install KWB R packages?</h2>
-<p>For details please read the following <a href="file:///Y:/Z-Exchange/_Tutorials/installing_kwb_packages.html">tutorial</a> <!-- Only adds more details in case of html output as 
-defined in "R/add_text.R" --> (link only accessible from KWB intranet with Firefox in case workflow defined <a href="faq.html#firefox-local-files">here</a> is followed!).</p>
+<p>For details please read the following <a href="file:///Y:/Z-Exchange/_Tutorials/installing_kwb_packages.html">tutorial</a>
+<!-- Only adds more details in case of html output as 
+defined in "R/add_text.R" -->
+(link only accessible from KWB intranet with Firefox in case workflow defined <a href="faq.html#firefox-local-files">here</a> is followed!).</p>
 <!-- Only adds chapter firefox local files in case of html output as 
 defined in "R/add_text.R" -->
 </div>
@@ -238,8 +276,11 @@ defined in "R/add_text.R" -->
 </div>
 <div id="how-to-build-your-own-kwb-styled-r-package" class="section level2">
 <h2><span class="header-section-number">5.6</span> How to build your own KWB styled R package?</h2>
-<p>For building your own R package from scratch we developed a helper R package <a href="https://github.com/kwb-r/kwb.pkgbuild">kwb.pkgbuild</a> (available on Github), which builds a KWB styled skeleton for your future R package.</p>
-<p>For more details checkout the <a href="https://kwb-r.github.io/kwb.pkgbuild/dev/articles/tutorial.html">tutorial</a> at the package documentation website.</p>
+<p>For building your own R package from scratch we developed a helper R package
+<a href="https://github.com/kwb-r/kwb.pkgbuild">kwb.pkgbuild</a> (available on Github),
+which builds a KWB styled skeleton for your future R package.</p>
+<p>For more details checkout the <a href="https://kwb-r.github.io/kwb.pkgbuild/dev/articles/tutorial.html">tutorial</a>
+at the package documentation website.</p>
 <p>Recommended literature:</p>
 <ul>
 <li><p><a href="http://r-pkgs.had.co.nz/">R packages</a> <span class="citation">(Wickham <a href="#ref-Wickham_2015">2015</a><a href="#ref-Wickham_2015">b</a>)</span></p></li>
@@ -260,23 +301,36 @@ defined in "R/add_text.R" -->
 <p><strong>Solution: data in own spreadsheet file</strong></p>
 <p>Hauke`s “best Practices” for EXCEL (unvalidated, to be discussed!)</p>
 <ul>
-<li><p>Trennung zwischen Eingabe, Verarbeitung und Ausgabe zumindest auf Tabellenblattebene, d.h. ein Tabellenblattt (oder mehrere) für Eingabe, eines (oder mehrere) für Verarbeitung, eines (oder mehrere) für formatierte Ausgabe und / oder Diagramme</p></li>
-<li><p>ggf. Aufteilen auf mehrere Dateien. Das hätte den Nachteil, dass nicht mehr alles in einer Datei ist und nicht so leicht übergeben werden kann. In jedem Fall müsste eine Namenskonvention getroffen werden, z.B.<code>&lt;file_name&gt;</code>_input.xlsx, <code>&lt;file_name&gt;</code>_calc.xlsx, <code>&lt;file_name&gt;</code>_output.xlsx</p></li>
+<li><p>Trennung zwischen Eingabe, Verarbeitung und Ausgabe zumindest auf
+Tabellenblattebene, d.h. ein Tabellenblattt (oder mehrere) für Eingabe, eines
+(oder mehrere) für Verarbeitung, eines (oder mehrere) für formatierte Ausgabe
+und / oder Diagramme</p></li>
+<li><p>ggf. Aufteilen auf mehrere Dateien. Das hätte den Nachteil, dass nicht mehr
+alles in einer Datei ist und nicht so leicht übergeben werden kann. In jedem
+Fall müsste eine Namenskonvention getroffen werden, z.B.<code>&lt;file_name&gt;</code>_input.xlsx,
+<code>&lt;file_name&gt;</code>_calc.xlsx, <code>&lt;file_name&gt;</code>_output.xlsx</p></li>
 <li><p>Verwenden der relativ neuen EXCEL-Features <code>Als Tabelle</code> formatieren.</p></li>
 </ul>
-<p>Vorteil: Formeln können auf ganze Tabellenspalten angewendet werden; Spaltennamen anstatt Zellbezüge mit (unsprechenden) Buchstaben und Zahlen. z.B. Formel für Spalte <code>Volumen_L</code>: <code>= Durchfluss[@[Q_L_s]] * 60 * 5</code></p>
+<p>Vorteil: Formeln können auf ganze Tabellenspalten angewendet werden; Spaltennamen
+anstatt Zellbezüge mit (unsprechenden) Buchstaben und Zahlen. z.B. Formel für
+Spalte <code>Volumen_L</code>: <code>= Durchfluss[@[Q_L_s]] * 60 * 5</code></p>
 <ul>
 <li><p>Ein Tabellenblatt pro Tabelle</p></li>
 <li><p>Genau eine Headerzeile pro Tabelle mit eindeutigen Spaltennamen</p></li>
-<li><p>Ein Tabellenblatt, das die Bedeutung der Spaltennamen erläutert mit Spalten <code>Tabellenblatt; Spalte; Bedeutung; Einheit; Formel</code> Vorteil: Dieses Tabellenblatt sollte ausreichen, um die wesentlichen Berechnungen zu verstehen.</p></li>
+<li><p>Ein Tabellenblatt, das die Bedeutung der Spaltennamen erläutert mit Spalten
+<code>Tabellenblatt; Spalte; Bedeutung; Einheit; Formel</code>
+Vorteil: Dieses Tabellenblatt sollte ausreichen, um die wesentlichen Berechnungen
+zu verstehen.</p></li>
 </ul>
 <p>Drawback: needs to be permanently kept up-to-date!</p>
 <ul>
-<li>Hilfsspalten mit (dadurch benannten) Zwischenberechnungen anstatt Wiederholung von langen Ausdrücken in Formeln</li>
+<li>Hilfsspalten mit (dadurch benannten) Zwischenberechnungen anstatt Wiederholung
+von langen Ausdrücken in Formeln</li>
 </ul>
 
 <div class="rmdtip">
-<p>A general online workshop on the topic <a href="http://www.datacarpentry.org/spreadsheet-ecology-lesson/">Data Organisation in Spreadsheets</a> is provided for free by the <a href="https://datacarpentry.org">DataCarpentry</a> organisation.</p>
+<p>A general online workshop on the topic <a href="http://www.datacarpentry.org/spreadsheet-ecology-lesson/">Data Organisation in Spreadsheets</a>
+is provided for free by the <a href="https://datacarpentry.org">DataCarpentry</a> organisation.</p>
 </div>
 
 </div>
@@ -284,22 +338,33 @@ defined in "R/add_text.R" -->
 <h2><span class="header-section-number">5.8</span> Heterogenous software versions on KWB computers</h2>
 
 <div class="rmdcaution">
-Unterschiedliche Softwareversionen (z.B. R) können dazu führen, dass Skripte auf verschiedenen Rechnern nicht das gleiche Verhalten zeigen.
+Unterschiedliche Softwareversionen (z.B. R) können dazu führen, dass Skripte
+auf verschiedenen Rechnern nicht das gleiche Verhalten zeigen.
 </div>
 
 
 <div class="rmdtip">
-Die IT-Abteilung ist in der Lage an bestimmte Nutzergruppen die gleiche Software (z.B. RStudio / R / Miktex) auszurollen. Dies sollte in Zukunft konsequent genutzt werden, indem auf alle Computer an denen potentiell programmiert wird zu dieser Nutzergruppe hinzugefügt werden und somit alle die gleichen Softwareversionen installiert haben.
+Die IT-Abteilung ist in der Lage an bestimmte Nutzergruppen die gleiche Software
+(z.B. RStudio / R / Miktex) auszurollen. Dies sollte in Zukunft konsequent genutzt
+werden, indem auf alle Computer an denen potentiell programmiert wird zu dieser
+Nutzergruppe hinzugefügt werden und somit alle die gleichen Softwareversionen
+installiert haben.
 </div>
 
 </div>
 <div id="r-packageversion-dependency-of-r-scripts" class="section level2">
 <h2><span class="header-section-number">5.9</span> R package/version dependency of R scripts</h2>
 <p>Lösungsvorschlag:</p>
-<p>Es ist eine <strong>Mindestdokumentation</strong> der verwendeten R Version und sämtlicher R-Pakete (inklusive ihrer Versionen) zu fordern. Dazu kann in R die Funktion <code>sessionInfo()</code> genutzt werden. Die Ausgabe dieser Funktion kann entweder in eine Metadaten-Textdatei <code>session_info.txt</code> geschrieben werden oder im Falle der Erzeugung von R-Markdown-Dokumenten direkt am Anfang der Analyse im <code>R-Markdown</code> Dokument ausgegeben werden.</p>
-<p>Das Schreiben der Metadaten-Datei <code>session_info.txt</code> sollte standardisert über eine Funktion in einem KWB R-Paket (z.B. <code>kwb.utils</code>) implementiert werden.</p>
+<p>Es ist eine <strong>Mindestdokumentation</strong> der verwendeten R Version und sämtlicher
+R-Pakete (inklusive ihrer Versionen) zu fordern. Dazu kann in R die Funktion
+<code>sessionInfo()</code> genutzt werden. Die Ausgabe dieser Funktion kann entweder in
+eine Metadaten-Textdatei <code>session_info.txt</code> geschrieben werden oder im Falle
+der Erzeugung von R-Markdown-Dokumenten direkt am Anfang der Analyse im
+<code>R-Markdown</code> Dokument ausgegeben werden.</p>
+<p>Das Schreiben der Metadaten-Datei <code>session_info.txt</code> sollte standardisert über
+eine Funktion in einem KWB R-Paket (z.B. <code>kwb.utils</code>) implementiert werden.</p>
 <p>Direktausgabe in R Console / RMarkddown:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sessionInfo</span>()</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sessionInfo</span>()</code></pre>
 <pre><code>## R version 3.5.0 (2017-01-27)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
 ## Running under: Ubuntu 14.04.5 LTS
@@ -331,35 +396,47 @@ Die IT-Abteilung ist in der Lage an bestimmte Nutzergruppen die gleiche Software
 ## [21] RefManageR_1.2.0 stringr_1.3.1    xfun_0.2         yaml_2.1.19     
 ## [25] compiler_3.5.0   htmltools_0.3.6  knitr_1.20</code></pre>
 <p>Schreiben in standardisierte Metadatei:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sink</span>(<span class="st">&quot;session_info.txt&quot;</span>)
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sink</span>(<span class="st">&quot;session_info.txt&quot;</span>)
 <span class="kw">sessionInfo</span>()
-<span class="kw">sink</span>()</code></pre></div>
+<span class="kw">sink</span>()</code></pre>
 <p>Hierzu ist auch noch ein Tutorial zu erstellen!</p>
 
 <div class="rmdnote">
-<p>Komplexere, technische Möglichkeiten zum Paketmanagement werden im gerade vom DFG gefördertem Projekt <a href="http://o2r.info/">O2R</a> in der Entwicklung befindlichen <a href="https://github.com/o2r-project/ctv-computational-environments">CRAN task view for computational environments and reproducibility</a> genannt.</p>
+<p>Komplexere, technische Möglichkeiten zum Paketmanagement werden im gerade vom
+DFG gefördertem Projekt <a href="http://o2r.info/">O2R</a> in der Entwicklung befindlichen
+<a href="https://github.com/o2r-project/ctv-computational-environments">CRAN task view for computational environments and reproducibility</a>
+genannt.</p>
 </div>
 
 
 <div class="rmdtip">
-Mit dem R Paket <a href="https://rstudio.github.io/packrat/">packrat</a> lässt sich das Paketmanagement ggf. verbessern.
+Mit dem R Paket <a href="https://rstudio.github.io/packrat/">packrat</a> lässt sich das
+Paketmanagement ggf. verbessern.
 </div>
 
-<p>Als Beispielanwendung dient die Datenanalyse zur Feinstaubbelastung mit Sensebox-Daten, die komplett reproduzierbar sind (mittels der Plattform <a href="https://mybinder.org/">mybinder</a>) und ohne Installation von Interessierten im Webbrowser ausgeführt werden kann (<a href="http://o2r.info/2018/01/12/sensebox-binder/">siehe hier</a>).</p>
+<p>Als Beispielanwendung dient die Datenanalyse zur Feinstaubbelastung mit
+Sensebox-Daten, die komplett reproduzierbar sind
+(mittels der Plattform <a href="https://mybinder.org/">mybinder</a>) und ohne Installation
+von Interessierten im Webbrowser ausgeführt werden kann
+(<a href="http://o2r.info/2018/01/12/sensebox-binder/">siehe hier</a>).</p>
 </div>
 <div id="complex-r-script-dependencies" class="section level2">
 <h2><span class="header-section-number">5.10</span> Complex R script dependencies</h2>
 
 <div class="rmdcaution">
-Dieses Problem tritt insbesondere auf, wenn mehrere verschiedene Nutzer gemeinsam mit den gleichen Skripten arbeiten (wie z.B. im abgeschlossenen Projekt OGRE).
+Dieses Problem tritt insbesondere auf, wenn mehrere verschiedene Nutzer
+gemeinsam mit den gleichen Skripten arbeiten (wie z.B. im abgeschlossenen
+Projekt OGRE).
 </div>
 
 
 <div class="rmdtip">
 <p>Proposed solution:</p>
 <p>Bewusstmachen der Skriptabhängigkeiten</p>
-<p>Identifizieren von Optimierungspotentialen -&gt; möglicherweise Elimination von Abhängigkeiten</p>
-Workflow dokumentieren und Tutorial, am besten als R-Markdown Dokument, erstellen. Das ist insbesondere wichtig, wenn Skripte häufig verwendet werden.
+<p>Identifizieren von Optimierungspotentialen -&gt; möglicherweise
+Elimination von Abhängigkeiten</p>
+Workflow dokumentieren und Tutorial, am besten als R-Markdown Dokument,
+erstellen. Das ist insbesondere wichtig, wenn Skripte häufig verwendet werden.
 </div>
 
 </div>
@@ -367,11 +444,15 @@ Workflow dokumentieren und Tutorial, am besten als R-Markdown Dokument, erstelle
 <h2><span class="header-section-number">5.11</span> Heterogenous (R-)coding styles</h2>
 
 <div class="rmdcaution">
-Currently there is no established coding style at KWB for in case of programming e.g. R scripts
+Currently there is no established coding style at KWB for in case of programming
+e.g. R scripts
 </div>
 
 <ol start="18" style="list-style-type: upper-alpha">
-<li>programmers at KWB will use the tidyverse coding style <a href="http://style.tidyverse.org" class="uri">http://style.tidyverse.org</a> as default. This will help increasing both, the readability and reusability of the developed (R-)scripts at KWB (currently: approximately 1000 Rscripts).</li>
+<li>programmers at KWB will use the tidyverse coding style
+<a href="http://style.tidyverse.org" class="uri">http://style.tidyverse.org</a> as default.
+This will help increasing both, the readability and reusability of
+the developed (R-)scripts at KWB (currently: approximately 1000 Rscripts).</li>
 </ol>
 <p>Recommended literature:</p>
 <p>Clean code <span class="citation">(Martin <a href="#ref-martin2009">2009</a>)</span></p>
@@ -388,12 +469,16 @@ Multiple people developing code together.
 <p>Proposed solution:</p>
 <p>Miteinander sprechen,</p>
 <p>Regelmäßige Updates/Commits,</p>
-<p>Bei Verwendung/Weiterbearbeitung von Code aus einem Projekt (z.B. OGRE) in einem weiteren (z.B. FLUSSHYGIENE) ist vom Orginalcode eine Kopie mittels <code>SVN copy</code> zu erstellen und diese weiterzubearbeiten, da sonst bestehende Prozeduren im Ausgangsprojekt überschrieben werden</p>
+<p>Bei Verwendung/Weiterbearbeitung von Code aus einem Projekt (z.B. OGRE) in
+einem weiteren (z.B. FLUSSHYGIENE) ist vom Orginalcode eine Kopie mittels
+<code>SVN copy</code> zu erstellen und diese weiterzubearbeiten, da sonst bestehende
+Prozeduren im Ausgangsprojekt überschrieben werden</p>
 </div>
 
 
 <div class="rmdnote">
-<p>Eine Präsentation mit verschiedenen Tools zur Versionsverwaltung findet sich hier: <a href="https://www.fosteropenscience.eu/node/597" class="uri">https://www.fosteropenscience.eu/node/597</a></p>
+<p>Eine Präsentation mit verschiedenen Tools zur Versionsverwaltung findet sich hier:
+<a href="https://www.fosteropenscience.eu/node/597" class="uri">https://www.fosteropenscience.eu/node/597</a></p>
 </div>
 
 </div>
@@ -401,7 +486,9 @@ Multiple people developing code together.
 <h2><span class="header-section-number">5.13</span> Workflow automation</h2>
 <p><strong>Ressources:</strong></p>
 <ul>
-<li><p><a href="http://www.datacarpentry.org/rr-automation/">Reproducible Research Automation</a>: This lesson shows how to use automation in R to improve the reproducibility of research by automating tasks.</p></li>
+<li><p><a href="http://www.datacarpentry.org/rr-automation/">Reproducible Research Automation</a>:
+This lesson shows how to use automation in R to improve the reproducibility of
+research by automating tasks.</p></li>
 <li><p>useR!2017 Video: Data Carpentry: Open and Reproducible Research (Tutorial)</p>
 <ul>
 <li><p><a href="https://channel9.msdn.com/Events/useR-international-R-User-conferences/useR-International-R-User-2017-Conference/Data-Carpentry-Open-and-Reproducible-Research-with-R">Part1</a></p></li>
@@ -409,7 +496,8 @@ Multiple people developing code together.
 </ul></li>
 <li><p>Use of an R package to facilitate reproducible research, e.g.:</p>
 <ul>
-<li><p><a href="https://github.com/ropensci/rrrpkg">rprrkg</a> by <a href="https://ropensci.org/">rOpenSci</a></p></li>
+<li><p><a href="https://github.com/ropensci/rrrpkg">rprrkg</a> by
+<a href="https://ropensci.org/">rOpenSci</a></p></li>
 <li><p><a href="https://github.com/benmarwick/rrtools">rrtools</a> by <a href="http://faculty.washington.edu/bmarwick/">Ben Marwick</a></p></li>
 </ul></li>
 </ul>
@@ -422,28 +510,37 @@ Multiple people developing code together.
 <h2><span class="header-section-number">5.14</span> Encoding</h2>
 
 <div class="rmdcaution">
-Umlaute und Sonderzeichen werden falsch angezeigt, wenn R-Skripte in unterschiedlichen Encodings abgespeichert und eingelesen werden.
+Umlaute und Sonderzeichen werden falsch angezeigt, wenn R-Skripte in
+unterschiedlichen Encodings abgespeichert und eingelesen werden.
 </div>
 
 
 <div class="rmdtip">
 <p>Vorgabe einer Default Encoding Einstellung in RStudio (z.B. UTF-8)</p>
-<p>Alternativ könnten auch alle <a href="http://javawiki.sowas.com/doku.php?id=java:unicode">Umlaute</a> in <a href="https://de.wikipedia.org/wiki/Unicode">Unicode</a> dokumentiert werden (siehe folgendes Beispiel). Allerdings ist dies wohl nicht praktikabel, da die Lesbarkeit der Texte erschwert wird und es sollte daher von uns der erste Ansatz (Vorgabe von UTF-8 als Default Encoding) angestrebt werden.</p>
+<p>Alternativ könnten auch alle <a href="http://javawiki.sowas.com/doku.php?id=java:unicode">Umlaute</a>
+in <a href="https://de.wikipedia.org/wiki/Unicode">Unicode</a> dokumentiert werden
+(siehe folgendes Beispiel). Allerdings ist dies wohl nicht praktikabel,
+da die Lesbarkeit der Texte erschwert wird und es sollte daher von uns der
+erste Ansatz (Vorgabe von UTF-8 als Default Encoding) angestrebt werden.</p>
 </div>
 
-<p>A great blogpost for the topic (How do I write UTF-8 encoded content to a file?) is provided by <code>citet(manual[&quot;Ushey_2018&quot;])</code>, including background information on how encoding in R works.</p>
-<p>For increasing the portability of R script he recommands the for example the following:</p>
+<p>A great blogpost for the topic (How do I write UTF-8 encoded content to a file?)
+is provided by <code>citet(manual[&quot;Ushey_2018&quot;])</code>, including background information
+on how encoding in R works.</p>
+<p>For increasing the portability of R script he recommands the for example the
+following:</p>
 <blockquote>
-<p>“Portable R scripts should use unicode code points, to avoid accidental mis-encoding of string literals.”</p>
+<p>“Portable R scripts should use unicode code points, to avoid accidental
+mis-encoding of string literals.”</p>
 <p>— <code>citep(manual[&quot;Ushey_2018&quot;])</code></p>
 </blockquote>
 <p><strong>Encoding example in R:</strong></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">### Richtiges Skript Encoding WICHTIG (richtiges Einlesen des Skripts nur wenn 
+<pre class="sourceCode r"><code class="sourceCode r">### Richtiges Skript Encoding WICHTIG (richtiges Einlesen des Skripts nur wenn 
 ### mit gleichem Encoding eingelesen  wie es auch abgespeichert wurde)
-<span class="kw">print</span>(<span class="st">&quot;Ü&quot;</span>)</code></pre></div>
+<span class="kw">print</span>(<span class="st">&quot;Ü&quot;</span>)</code></pre>
 <pre><code>## [1] &quot;Ü&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">### Skript Encoding EGAL (da Umlaut in Unicode codiert wurde)
-<span class="kw">print</span>(<span class="st">&quot;\u00dc&quot;</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">### Skript Encoding EGAL (da Umlaut in Unicode codiert wurde)
+<span class="kw">print</span>(<span class="st">&quot;\u00dc&quot;</span>)</code></pre>
 <pre><code>## [1] &quot;Ü&quot;</code></pre>
 
 </div>
@@ -454,10 +551,10 @@ Umlaute und Sonderzeichen werden falsch angezeigt, wenn R-Skripte in unterschied
 <p>Bosman, Jeroen, and Bianca Kramer. 2018. “Workflows.” Blog. <em>Innovations in Scholarly Communication - Changing Research Workflows</em>. <a href="https://101innovations.wordpress.com/workflows" class="uri">https://101innovations.wordpress.com/workflows</a>.</p>
 </div>
 <div id="ref-Wilson_2017">
-<p>Wilson, Greg, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, and Tracy K. Teal. 2017. “Good Enough Practices in Scientific Computing.” Edited by Francis Ouellette. <em>PLOS Computational Biology</em> 13 (6). Public Library of Science (PLoS): e1005510. doi:<a href="https://doi.org/10.1371/journal.pcbi.1005510">10.1371/journal.pcbi.1005510</a>.</p>
+<p>Wilson, Greg, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, and Tracy K. Teal. 2017. “Good Enough Practices in Scientific Computing.” Edited by Francis Ouellette. <em>PLOS Computational Biology</em> 13 (6). Public Library of Science (PLoS): e1005510. <a href="https://doi.org/10.1371/journal.pcbi.1005510" class="uri">https://doi.org/10.1371/journal.pcbi.1005510</a>.</p>
 </div>
 <div id="ref-Taschuk_2017">
-<p>Taschuk, Morgan, and Greg Wilson. 2017. “Ten Simple Rules for Making Research Software More Robust.” <em>PLOS Computational Biology</em> 13 (4). Public Library of Science (PLoS): e1005412. doi:<a href="https://doi.org/10.1371/journal.pcbi.1005412">10.1371/journal.pcbi.1005412</a>.</p>
+<p>Taschuk, Morgan, and Greg Wilson. 2017. “Ten Simple Rules for Making Research Software More Robust.” <em>PLOS Computational Biology</em> 13 (4). Public Library of Science (PLoS): e1005412. <a href="https://doi.org/10.1371/journal.pcbi.1005412" class="uri">https://doi.org/10.1371/journal.pcbi.1005412</a>.</p>
 </div>
 <div id="ref-Grolemund_2017">
 <p>Grolemund, Garrett, and Hadley Wickham, eds. 2017. <em>R for Data Science</em>. 1st ed. Sebastopol, CA: O‘Reilly Media. <a href="https://r4ds.had.co.nz" class="uri">https://r4ds.had.co.nz</a>.</p>

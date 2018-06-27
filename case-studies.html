@@ -49,41 +49,69 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -195,7 +223,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="case-studies" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> Case studies</h1>
-<p>The three following case-studies are tested in detail within FAKIN (i.e. proposed best-practices will be applied for this case studies and cross-checked whether their application is useful.</p>
+<p>The three following case-studies are tested in detail within FAKIN (i.e. proposed
+best-practices will be applied for this case studies and cross-checked whether
+their application is useful.</p>
 <div id="geogenic-salination" class="section level2">
 <h2><span class="header-section-number">3.1</span> Geogenic salination</h2>
 <p>Adapt and test with new folder drive workflow as proposed</p>
@@ -208,47 +238,109 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="lca-modelling" class="section level2">
 <h2><span class="header-section-number">3.2</span> LCA modelling</h2>
 <p><strong>Challenge:</strong></p>
-<p>The LCA modelling software <a href="https://www.ifu.com/umberto/">Umberto</a> can produce large raw data output files (&gt; 300 MB csv files) that sometimes are even to big for EXCEL 2010 (&gt; 1 millions) but need to be aggregated (e.g. grouped by specific criteria). This was usually performed manually within EXCEL in case that model output data was below EXCEL`s 1 million row limit.</p>
+<p>The LCA modelling software <a href="https://www.ifu.com/umberto/">Umberto</a> can produce
+large raw data output files (&gt; 300 MB csv files) that sometimes are even to big
+for EXCEL 2010 (&gt; 1 millions) but need to be aggregated (e.g. grouped
+by specific criteria). This was usually performed manually within EXCEL in case
+that model output data was below EXCEL`s 1 million row limit.</p>
 <p><strong>Workflow improvement developed within FAKIN:</strong></p>
-<p>An open source R package <a href="https://kwb-r.github.io/kwb.umberto/dev">kwb.umberto</a> was programmed for automating:</p>
+<p>An open source R package <a href="https://kwb-r.github.io/kwb.umberto/dev">kwb.umberto</a>
+was programmed for automating:</p>
 <ul>
 <li><p>data import the Umberto model results,</p></li>
 <li><p>performing data aggregating to the user needs and finally</p></li>
 <li><p>exporting the aggregated results in an <code>results.xlsx</code> EXCEL spreadsheet.</p></li>
 </ul>
-<p>This <code>results.xlsx</code> EXCEL spreadsheet is referenced by another EXCEL spreatsheet <code>figues.xlsx</code> (which contains the figure templates and just links to the <code>results.xlsx</code> in order to update the predefined figures).</p>
-<p>This workflow now reduces the time consuming and error-prone formerly manually performed data aggregation in EXCEL, whilst still enabling the users to adapt the figures to their needs without coding knowledge.</p>
+<p>This <code>results.xlsx</code> EXCEL spreadsheet is referenced by another EXCEL
+spreatsheet <code>figues.xlsx</code> (which contains the figure templates and just links
+to the <code>results.xlsx</code> in order to update the predefined figures).</p>
+<p>This workflow now reduces the time consuming and error-prone formerly manually
+performed data aggregation in EXCEL, whilst still enabling the users to adapt
+the figures to their needs without coding knowledge.</p>
 </div>
 <div id="aquanes" class="section level2">
 <h2><span class="header-section-number">3.3</span> Pilot plants</h2>
 <p>Challenges:</p>
-<p>The output of (on-line) monitoring technologies is often difficult to interpret and also inconvenient to handle as the output formats of different devices (in one water treatment scheme) can vary strongly. Furthermore, frequent reporting and documentation of the treatment performance via (on-line) monitoring can be time consuming for the personnel and requires advanced software solutions. An alternative to commercial (and often expensive) software solutions are tools which are based on the open software <a href="https://www.r-project.org/">R</a> <span class="citation">(R Core Team <a href="#ref-R_Core_Team_2017">2017</a>)</span>. The free software approach allows any <a href="https://www.r-project.org/">R</a> programmer to produce customized tools for each individual end-user.</p>
-<p>Thus an automated reporting tool is developed within the <a href="http://aquanes-h2020.eu/Default.aspx?t=1593">AQUANES</a> project for enabling an integrative assessment of the different monitoring devices and integration with water quality data obtained from analysis in the laboratory for four different pilot plant sites in order to:</p>
+<p>The output of (on-line) monitoring technologies is often difficult to interpret
+and also inconvenient to handle as the output formats of different devices
+(in one water treatment scheme) can vary strongly. Furthermore, frequent
+reporting and documentation of the treatment performance via (on-line)
+monitoring can be time consuming for the personnel and requires advanced
+software solutions. An alternative to commercial (and often expensive) software
+solutions are tools which are based on the open software <a href="https://www.r-project.org/">R</a> <span class="citation">(R Core Team <a href="#ref-R_Core_Team_2017">2017</a>)</span>. The free software approach allows any <a href="https://www.r-project.org/">R</a> programmer to produce customized tools for each individual end-user.</p>
+<p>Thus an automated reporting tool is developed within the <a href="http://aquanes-h2020.eu/Default.aspx?t=1593">AQUANES</a> project for enabling an
+integrative assessment of the different monitoring devices and integration with
+water quality data obtained from analysis in the laboratory for four different
+pilot plant sites in order to:</p>
 <ul>
-<li><p>Increase the reliability and reproducibility of handling large amounts of data by reducing the likeliness in human error in complex systems and by increasing the transparency of the data processing.</p></li>
-<li><p>Promote the use of customized R tools for different end-user such as utilities, consultants and other research teams.</p></li>
+<li><p>Increase the reliability and reproducibility of handling large amounts of data
+by reducing the likeliness in human error in complex systems and by increasing
+the transparency of the data processing.</p></li>
+<li><p>Promote the use of customized R tools for different end-user such as utilities,
+consultants and other research teams.</p></li>
 </ul>
-<p>Therefore the open source R package <a href="https://kwb-r.github.io/aquanes.report">aquanes.report</a> <span class="citation">(Rustler <a href="#ref-Rustler_2018">2018</a>)</span> was programmed, which is able to:</p>
+<p>Therefore the open source R package <a href="https://kwb-r.github.io/aquanes.report">aquanes.report</a>
+<span class="citation">(Rustler <a href="#ref-Rustler_2018">2018</a>)</span> was programmed, which is able to:</p>
 <ul>
 <li><p>import operational and lab data for each pilot site,</p></li>
 <li><p>performs temporal aggregation (e.g. 5 min, 1 h, 24h median values),</p></li>
-<li><p>visualises raw or aggregated data either interactively in a web browser or by</p></li>
+<li><p>visualises raw or aggregated data either interactively in a web browser or
+by</p></li>
 <li><p>creating a standardised report (e.g. monthly) in html, pdf or docx</p></li>
 </ul>
-<p>For the four different pilot plant sites the data (operational and lab data) for being imported into the R tool came from various sources at different temporal resolutions, which are detailed below:</p>
+<p>For the four different pilot plant sites the data (operational and lab data) for
+being imported into the R tool came from various sources at different temporal
+resolutions, which are detailed below:</p>
 <ul>
-<li><p><a href="http://aquanes-h2020.eu/Default.aspx?t=1668">Haridwar</a>: operational data stored by <a href="http://www.autarcon.com/">Autarcon</a> in mySQL database (temporal resolution: ~ 2-3 minutes, i.e. ~ 0.7 million data points per month), which is accessible from the web and thus could be easily imported into R. Lab data was provided by Autarcon initially in a unstructured format, which was impossible to be automatically imported into R. However, after agreeing on a standardised EXCEL spreadsheet format (e.g. one spreadsheet per site, one sheet per parameter and additional sheets providing metadata for parameters and sites) it was possible to integrate the lab data into the R tool.</p></li>
-<li><p><a href="http://aquanes-h2020.eu/Default.aspx?t=1663">Basel Lange-Erlen</a>: operational data is provided by the water supplier in EXCEL spreadsheets on a weekly basis for each site (i.e. “Rein” and “Wiese”) with a temporal resolution of 5 minutes (i.e. ~ 0.5 million data points per month). Lab data are provided by the water supplier in a single comma separated csv file, which is exported from a database. Thus the structure of the lab data was standardised and could be easily imported into the R tool.</p></li>
-<li><p><a href="http://aquanes-h2020.eu/Default.aspx?t=1666">Berlin-Schönerlinde</a>: operational data from the WEDECO pilot plant are collected using a SCADA system (~ temporal resolution: seconds, i.e. ~ 10 million data points per month). Lab data are provided by BWB in a single EXCEL spreadsheet. However, its structure often changes in case it is updated by BWB, making an automated importing using R impossible without adapting the import functions. Thus lab data were not integrated in the R tool for this site.</p></li>
-<li><p><a href="http://aquanes-h2020.eu/Default.aspx?t=1576">Berlin-Tiefwerder</a>: operational data from the PENTAIR pilot plant are collected using a SCADA system (~ temporal resolution: ~ seconds, i.e. ~ 10 million data points per month). Lab data are provided by BWB in a single EXCEL spreadsheet. However, its structure often changes in case it is updated by BWB, making an automated importing using R impossible without adapting the import functions. Thus lab data were not integrated in the R tool for this site.</p></li>
+<li><p><a href="http://aquanes-h2020.eu/Default.aspx?t=1668">Haridwar</a>: operational data
+stored by <a href="http://www.autarcon.com/">Autarcon</a> in mySQL database (temporal
+resolution: ~ 2-3 minutes, i.e. ~ 0.7 million data points per month), which is
+accessible from the web and thus could be easily imported into R. Lab data was
+provided by Autarcon initially in a unstructured format, which was impossible to
+be automatically imported into R. However, after agreeing on a standardised EXCEL
+spreadsheet format (e.g. one spreadsheet per site, one sheet per parameter and
+additional sheets providing metadata for parameters and sites) it was possible
+to integrate the lab data into the R tool.</p></li>
+<li><p><a href="http://aquanes-h2020.eu/Default.aspx?t=1663">Basel Lange-Erlen</a>: operational
+data is provided by the water supplier in EXCEL spreadsheets on a weekly basis
+for each site (i.e. “Rein” and “Wiese”) with a temporal resolution of 5 minutes
+(i.e. ~ 0.5 million data points per month). Lab data are provided by the water
+supplier in a single comma separated csv file, which is exported from a database.
+Thus the structure of the lab data was standardised and could be easily imported
+into the R tool.</p></li>
+<li><p><a href="http://aquanes-h2020.eu/Default.aspx?t=1666">Berlin-Schönerlinde</a>: operational
+data from the WEDECO pilot plant are collected using a SCADA system
+(~ temporal resolution: seconds, i.e. ~ 10 million data points per month). Lab data
+are provided by BWB in a single EXCEL spreadsheet. However, its structure often
+changes in case it is updated by BWB, making an automated importing using R impossible
+without adapting the import functions. Thus lab data were not integrated in the
+R tool for this site.</p></li>
+<li><p><a href="http://aquanes-h2020.eu/Default.aspx?t=1576">Berlin-Tiefwerder</a>: operational
+data from the PENTAIR pilot plant are collected using a SCADA system
+(~ temporal resolution: ~ seconds, i.e. ~ 10 million data points per month).
+Lab data are provided by BWB in a single EXCEL spreadsheet. However, its structure
+often changes in case it is updated by BWB, making an automated importing using
+R impossible without adapting the import functions. Thus lab data were not
+integrated in the R tool for this site.</p></li>
 </ul>
 
 <div class="rmdwarning">
-The high temporal high resolution (~ seconds) of the operational data for both Berlin pilot plants resulted in large data amounts (~ 10 million data points per month), which required an large effort to optimise the performance of the R reporting tool in oorder to enable the visualisation of the pilot plant`s raw data for its test operation period (~ 18 months) on computers with limited RAM ressources (~ 8-12 GB).
+The high temporal high resolution (~ seconds) of the operational data for both
+Berlin pilot plants resulted in large data amounts (~ 10 million data points
+per month), which required an large effort to optimise the performance of the
+R reporting tool in oorder to enable the visualisation of the pilot plant`s raw
+data for its test operation period (~ 18 months) on computers with limited RAM
+ressources (~ 8-12 GB).
 </div>
 
-<p>The R tool is used by KWB (for the sites <a href="http://aquanes-h2020.eu/Default.aspx?t=1666">Berlin-Schönerlinde</a> and <a href="http://aquanes-h2020.eu/Default.aspx?t=1576">Berlin-Tiefwerder</a>) regulary for assessing the pilot plants` operational performance interactively. In addition for an advanced assessment only the data importing and aggregation routines and combined with R scripts developed by KWB students.</p>
-<p>For the other two pilot plant sites <a href="http://aquanes-h2020.eu/Default.aspx?t=1668">Haridwar</a> and <a href="http://aquanes-h2020.eu/Default.aspx?t=1663">Basel Lange-Erlen</a> the AQUANES project partners use the automated R reporting tool in a similar way.</p>
+<p>The R tool is used by KWB (for the sites <a href="http://aquanes-h2020.eu/Default.aspx?t=1666">Berlin-Schönerlinde</a>
+and <a href="http://aquanes-h2020.eu/Default.aspx?t=1576">Berlin-Tiefwerder</a>) regulary
+for assessing the pilot plants` operational performance interactively. In addition
+for an advanced assessment only the data importing and aggregation routines and
+combined with R scripts developed by KWB students.</p>
+<p>For the other two pilot plant sites <a href="http://aquanes-h2020.eu/Default.aspx?t=1668">Haridwar</a>
+and <a href="http://aquanes-h2020.eu/Default.aspx?t=1663">Basel Lange-Erlen</a> the AQUANES
+project partners use the automated R reporting tool in a similar way.</p>
 
 </div>
 </div>
@@ -258,7 +350,7 @@ The high temporal high resolution (~ seconds) of the operational data for both B
 <p>R Core Team. 2017. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</p>
 </div>
 <div id="ref-Rustler_2018">
-<p>Rustler, Michael. 2018. “Aquanes.report (V.0.5.0).” doi:<a href="https://doi.org/10.5281/zenodo.1244103">10.5281/zenodo.1244103</a>.</p>
+<p>Rustler, Michael. 2018. “Aquanes.report (V.0.5.0).” <a href="https://doi.org/10.5281/zenodo.1244103" class="uri">https://doi.org/10.5281/zenodo.1244103</a>.</p>
 </div>
 </div>
 <script async defer src="https://hypothes.is/embed.js"></script>

@@ -49,41 +49,69 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -199,30 +227,46 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2><span class="header-section-number">2.1</span> Plan and fund a new project</h2>
 <div id="data-management-plan" class="section level3">
 <h3><span class="header-section-number">2.1.1</span> Data management plan</h3>
-<p>Action 1: Look through a data management planning checklist <a href="http://www.dcc.ac.uk/resources/data-management-plans/checklist">DMP checklist</a>?</p>
-<p>Action 2: Create a data management plan. You can use <a href="https://dmponline.dcc.ac.uk/">DMP Online</a> as it has a template or if required, use a funder’s format.</p>
-<p>RDM checklist before starting with a new project Brauchen wir eine Data Management Plan? See e.g. <a href="https://dmponline.dcc.ac.uk/" class="uri">https://dmponline.dcc.ac.uk/</a></p>
+<p>Action 1: Look through a data management planning checklist
+<a href="http://www.dcc.ac.uk/resources/data-management-plans/checklist">DMP checklist</a>?</p>
+<p>Action 2: Create a data management plan. You can use <a href="https://dmponline.dcc.ac.uk/">DMP Online</a>
+as it has a template or if required, use a funder’s format.</p>
+<p>RDM checklist before starting with a new project
+Brauchen wir eine Data Management Plan?
+See e.g. <a href="https://dmponline.dcc.ac.uk/" class="uri">https://dmponline.dcc.ac.uk/</a></p>
 </div>
 <div id="electronic-lab-notebooks" class="section level3">
 <h3><span class="header-section-number">2.1.2</span> Electronic Lab Notebooks</h3>
-<p>Electronic Lab Notebooks (ELNs) <a href="https://www.labfolder.com/research-data-management/" class="uri">https://www.labfolder.com/research-data-management/</a> ELNs are an essential asset for researchers to fulfil any requirements for data management, and they create direct bridges between scientists and stakeholders. By adopting an ELN, the data lifecycle can proceed smoothly and easily: from creating and collecting data digitally in one place to one-click data archiving, ELNs empower researchers by allowing them to implement their RDM plan without effort and time investment.</p>
+<p>Electronic Lab Notebooks (ELNs) <a href="https://www.labfolder.com/research-data-management/" class="uri">https://www.labfolder.com/research-data-management/</a>
+ELNs are an essential asset for researchers to fulfil any requirements for data
+management, and they create direct bridges between scientists and stakeholders.
+By adopting an ELN, the data lifecycle can proceed smoothly and easily: from
+creating and collecting data digitally in one place to one-click data archiving,
+ELNs empower researchers by allowing them to implement their RDM plan without
+effort and time investment.</p>
 <p>An ELN to make your data FAIR? Welches ist das?</p>
 </div>
 <div id="define-acronyms" class="section level3">
 <h3><span class="header-section-number">2.1.3</span> Define acronyms</h3>
 <p>At the start of a research project</p>
 <ul>
-<li>Choose a <a href="best-practices.html#project-acronyms">project acronym</a> and store it in <a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a>.</li>
-<li>Check if the organisations that you expect to get data from are listed in <a href="best-practices.html#file-organisations"><code>ORGANISATIONS.txt</code></a> and extend this file if necessary.</li>
-<li>Create a subfolder for your project and subfolders for the organisations in the <a href="best-practices.html#rawdata-folder-structure">rawdata folder structure</a>.</li>
+<li>Choose a <a href="best-practices.html#project-acronyms">project acronym</a> and store it in
+<a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a>.</li>
+<li>Check if the organisations that you expect to get data from are listed in
+<a href="best-practices.html#file-organisations"><code>ORGANISATIONS.txt</code></a> and extend this file if necessary.</li>
+<li>Create a subfolder for your project and subfolders for the organisations
+in the <a href="best-practices.html#rawdata-folder-structure">rawdata folder structure</a>.</li>
 </ul>
 <p>At the start of a project or if an employee or trainee enters the project</p>
 <ul>
-<li>Give an introduction to our research data management as described in this document.</li>
+<li>Give an introduction to our research data management as described in this
+document.</li>
 </ul>
 <p>Regularly during the project</p>
 <ul>
-<li>Check if the folder structure within your project’s rawdata subfolder still complies with the <a href="best-practices.html#rawdata-folder-structure">rawdata folder structure</a> and clean the structure, if not.</li>
+<li>Check if the folder structure within your project’s rawdata subfolder still
+complies with the <a href="best-practices.html#rawdata-folder-structure">rawdata folder structure</a> and
+clean the structure, if not.</li>
 </ul>
 
 </div>
@@ -253,17 +297,27 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><p>meaningful to you and your colleagues</p></li>
 <li><p>allow you to find the file easily</p></li>
 </ul>
-<p>It is useful if your department/project agrees on the following elements of a file name:</p>
+<p>It is useful if your department/project agrees on the following elements of a
+file name:</p>
 <ul>
-<li><p>Vocabulary – choose a standard vocabulary for file names, so that everyone uses a common language</p></li>
-<li><p>Punctuation – decide on conventions for if and when to use punctuation symbols, capitals, hyphens and spaces</p></li>
-<li><p>Dates – agree on a logical use of dates so that they display chronologically i.e. YYYY-MM-DD</p></li>
-<li><p>Order - confirm which element should go first, so that files on the same theme are listed together and can therefore be found easily</p></li>
+<li><p>Vocabulary – choose a standard vocabulary for file names, so that everyone
+uses a common language</p></li>
+<li><p>Punctuation – decide on conventions for if and when to use punctuation symbols,
+capitals, hyphens and spaces</p></li>
+<li><p>Dates – agree on a logical use of dates so that they display chronologically
+i.e. YYYY-MM-DD</p></li>
+<li><p>Order - confirm which element should go first, so that files on the same
+theme are listed together and can therefore be found easily</p></li>
 </ul>
-<p>• Numbers – specify the amount of digits that will be used in numbering so that files are listed numerically e.g. 01, 002, etc.</p>
-<p>!!!!! Good practice: Remove spaces from file names or use punctuation such as underscores and hyphens to separate words e.g. “AHRC_TechnicalApp_Response20120925.docx” or “AHRC-TechnicalApp-Response20120925.docx” rather than “what we got back from funders about the data stuff.docx !!!!</p>
+<p>• Numbers – specify the amount of digits that will be used in numbering so that
+files are listed numerically e.g. 01, 002, etc.</p>
+<p>!!!!! Good practice: Remove spaces from file names or use punctuation such as
+underscores and hyphens to separate words e.g. “AHRC_TechnicalApp_Response20120925.docx”
+or “AHRC-TechnicalApp-Response20120925.docx” rather than “what we got back from
+funders about the data stuff.docx !!!!</p>
 <p><strong>Keine Sonderzeichen, keine Umlaute, keine Leerzeichen</strong></p>
-<p>Umlaute <code>ä</code>, <code>ö</code>, <code>ü</code> werden durch <code>ae</code>, <code>oe</code>, <code>ue</code> bzw. <code>Ae</code>, <code>Oe</code>, <code>Ue</code> und der Buchstabe <code>ß</code> durch <code>ss</code> ersetzt.</p>
+<p>Umlaute <code>ä</code>, <code>ö</code>, <code>ü</code> werden durch <code>ae</code>, <code>oe</code>, <code>ue</code> bzw. <code>Ae</code>, <code>Oe</code>, <code>Ue</code>
+und der Buchstabe <code>ß</code> durch <code>ss</code> ersetzt.</p>
 <ul>
 <li>Vermeidung von Fehlern bei der automatischen Verarbeitung</li>
 <li>Keine Probleme beim internationalen Austausch von Dateien</li>
@@ -276,7 +330,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p><strong>Datum in der Form yyyy-mm-dd (2017-06-30)</strong></p>
 <ul>
 <li>Alphanumerische Sortierung führt automatisch zu Sortierung nach Datum</li>
-<li>Bei Zerlegung des Dateinamens bei Unterstrich bleibt das Datum als Einheit erhalten</li>
+<li>Bei Zerlegung des Dateinamens bei Unterstrich bleibt das Datum als Einheit
+erhalten</li>
 </ul>
 <p><strong>Zusammengesetzte Wörter (z.B. Projektnamen) in “CamelCase”</strong></p>
 <p>Zusammengesetzte Wörter (z.B. Projektnamen) ohne Unterstrich in CamelCase (<code>ReliableSewer</code> vs. <code>Reliable_Sewer</code>)</p>
@@ -288,12 +343,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p><strong>Verwendung eines Vokabulars für wichtige Begriffe</strong></p>
 <p>z.B. “validiert”, “kalibriert”</p>
 <ul>
-<li>Order - confirm which element should go first, so that files on the same theme are listed together and can therefore be found easily</li>
+<li>Order - confirm which element should go first, so that files on the same
+theme are listed together and can therefore be found easily</li>
 </ul>
-<p>• Numbers – specify the amount of digits that will be used in numbering so that files are listed numerically e.g. 01, 002, etc.</p>
-<p>!!!!! Good practice: Remove spaces from file names or use punctuation such as underscores and hyphens to separate words e.g. “AHRC_TechnicalApp_Response20120925.docx” or “AHRC-TechnicalApp-Response20120925.docx” rather than “what we got back from funders about the data stuff.docx !!!!</p>
+<p>• Numbers – specify the amount of digits that will be used in numbering so that
+files are listed numerically e.g. 01, 002, etc.</p>
+<p>!!!!! Good practice: Remove spaces from file names or use punctuation such as
+underscores and hyphens to separate words e.g. “AHRC_TechnicalApp_Response20120925.docx”
+or “AHRC-TechnicalApp-Response20120925.docx” rather than “what we got back from
+funders about the data stuff.docx !!!!</p>
 <p><strong>Keine Sonderzeichen, keine Umlaute, keine Leerzeichen</strong></p>
-<p>Umlaute <code>ä</code>, <code>ö</code>, <code>ü</code> werden durch <code>ae</code>, <code>oe</code>, <code>ue</code> bzw. <code>Ae</code>, <code>Oe</code>, <code>Ue</code> und der Buchstabe <code>ß</code> durch <code>ss</code> ersetzt.</p>
+<p>Umlaute <code>ä</code>, <code>ö</code>, <code>ü</code> werden durch <code>ae</code>, <code>oe</code>, <code>ue</code> bzw. <code>Ae</code>, <code>Oe</code>, <code>Ue</code>
+und der Buchstabe <code>ß</code> durch <code>ss</code> ersetzt.</p>
 <ul>
 <li>Vermeidung von Fehlern bei der automatischen Verarbeitung</li>
 <li>Keine Probleme beim internationalen Austausch von Dateien</li>
@@ -306,7 +367,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p><strong>Datum in der Form yyyy-mm-dd (2017-06-30)</strong></p>
 <ul>
 <li>Alphanumerische Sortierung führt automatisch zu Sortierung nach Datum</li>
-<li>Bei Zerlegung des Dateinamens bei Unterstrich bleibt das Datum als Einheit erhalten</li>
+<li>Bei Zerlegung des Dateinamens bei Unterstrich bleibt das Datum als Einheit
+erhalten</li>
 </ul>
 <p><strong>Zusammengesetzte Wörter (z.B. Projektnamen) in “CamelCase”</strong></p>
 <p>Zusammengesetzte Wörter (z.B. Projektnamen) ohne Unterstrich in CamelCase (<code>ReliableSewer</code> vs. <code>Reliable_Sewer</code>)</p>
@@ -320,7 +382,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <div class="rmdwarning">
 <p>Regeln zur Vermeidung langer Dateipfade</p>
-Lange Dateipfade können im Windows-Betriebssystem ein Problem darstellen. Das äußert sich beim Kopieren von Dateien, wenn der Pfad des Zielorts, der sich durch die Kopie ergeben würde, eine bestimmte Länge überschreitet. Die zugehörige Fehlermeldung lautet dann: *Die Dateinamen wären zu lang für den Zielordner. Kürzen Sie die Dateinamen und wiederholen Sie den Vorgang, oder verwenden Sie einen anderen Ort, der einen kürzeren Pfad hat.
+Lange Dateipfade können im Windows-Betriebssystem ein Problem darstellen.
+Das äußert sich beim Kopieren von Dateien, wenn der Pfad des Zielorts, der sich
+durch die Kopie ergeben würde, eine bestimmte Länge überschreitet. Die
+zugehörige Fehlermeldung lautet dann: *Die Dateinamen wären zu lang für den
+Zielordner. Kürzen Sie die Dateinamen und wiederholen Sie den Vorgang, oder
+verwenden Sie einen anderen Ort, der einen kürzeren Pfad hat.
 </div>
 
 </div>
@@ -337,34 +404,49 @@ Lange Dateipfade können im Windows-Betriebssystem ein Problem darstellen. Das �
 <ul>
 <li>Haben wir eine Regel für die Benennung, Schreibweise von Projektnamen?</li>
 <li>Wir sollten einheitliche, offizielle Schreibweisen definieren</li>
-<li>Sollen wir Acronyme (z.B. drei Zeichen) definieren, um diese z.B. in Dateinamen oder in Übersichten zu verwenden?</li>
+<li>Sollen wir Acronyme (z.B. drei Zeichen) definieren, um diese z.B. in
+Dateinamen oder in Übersichten zu verwenden?</li>
 </ul>
-<p>At the start of a project we define a project acronym. This acronym is intended to be used in file and folder names.</p>
-<p>Whenever we want to indicate the relation to a certain project in a file or folder name, we use the project acronym in exactly the typing that was defined. This is important as we want to distinguish between raw data, processed data and project results in our <a href="best-practices.html#data-workflow">data workflow</a>.</p>
-<p>The project acronyms are defined in a simple text file <a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a> in the <code>//server/projects$</code> folder, see <a href="best-practices.html#project-folder-structure">Project Folder Structure</a>.</p>
+<p>At the start of a project we define a project acronym. This acronym is
+intended to be used in file and folder names.</p>
+<p>Whenever we want to indicate the relation to a certain project in a file or
+folder name, we use the project acronym in exactly the typing that was defined.
+This is important as we want to distinguish between raw data, processed data and
+project results in our <a href="best-practices.html#data-workflow">data workflow</a>.</p>
+<p>The project acronyms are defined in a simple text
+file <a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a> in the <code>//server/projects$</code> folder, see
+<a href="best-practices.html#project-folder-structure">Project Folder Structure</a>.</p>
 </div>
 <div id="organisations" class="section level5">
 <h5><span class="header-section-number">2.2.1.2.2</span> Organisations</h5>
-<p>It is very important to know the owners of data. Therefore we define unique acronyms for the owners of data that we use. The acronyms are defined in a special file <a href="best-practices.html#file-organisations"><code>ORGANISATIONS.txt</code></a></p>
+<p>It is very important to know the owners of data. Therefore we define unique
+acronyms for the owners of data that we use. The acronyms are defined in a
+special file <a href="best-practices.html#file-organisations"><code>ORGANISATIONS.txt</code></a></p>
 </div>
 </div>
 </div>
 <div id="metadata" class="section level3">
 <h3><span class="header-section-number">2.2.2</span> Metadata</h3>
-<p>What information would someone need to find/re-use your data? Location, title, creator name, description, date collected</p>
-<p>Why? Metadata are required for interpreting raw data and gaining an overview about the available data.</p>
+<p>What information would someone need to find/re-use your data?
+Location, title, creator name, description, date collected</p>
+<p>Why? Metadata are required for interpreting raw data and gaining an overview
+about the available data.</p>
 
 <div class="rmdtip">
 <p><strong>Important metadata for raw data</strong></p>
-<p>von wem, wann, über wen und welches Medium erhalten, z.B. “E-Mail von A an B am 25.01.2018” oder “USB-Stick von C an D persönlich am 26.01.2018”</p>
-<p>Nutzungseinschränkung, z.B. “nur für Projekt x”, “nur innerhalb des KWB”, “darf auf keinen Fall veröffentlicht werden”</p>
-Erläuterungen zum Inhalt und zum Format (Bedeutung von Spalten, Einheiten, Messgeräte, Methoden…)
+<p>von wem, wann, über wen und welches Medium erhalten, z.B. “E-Mail von A an B
+am 25.01.2018” oder “USB-Stick von C an D persönlich am 26.01.2018”</p>
+<p>Nutzungseinschränkung, z.B. “nur für Projekt x”, “nur innerhalb des KWB”,
+“darf auf keinen Fall veröffentlicht werden”</p>
+Erläuterungen zum Inhalt und zum Format (Bedeutung von Spalten, Einheiten,
+Messgeräte, Methoden…)
 </div>
 
 
 <div class="rmdtip">
 <p><strong>Important metadata for processed data</strong></p>
-<p>von wem (Person), wann, mit welchen Methoden (z.B. Skript) unter welchen Randbedingungen (z.B. Versionen von Software, Paketen) erstellt?</p>
+<p>von wem (Person), wann, mit welchen Methoden (z.B. Skript) unter welchen
+Randbedingungen (z.B. Versionen von Software, Paketen) erstellt?</p>
 <p>Welche Rohdaten wurden verwendet?</p>
 keep metadata in plain text file “readme.txt”
 </div>
@@ -375,13 +457,18 @@ keep metadata in plain text file “readme.txt”
 </ul>
 <p><strong>Best Practices:</strong></p>
 <ul>
-<li><p>Mindestanforderungen definieren (unterschieden nach Roh- und verarbeiteten Daten)</p></li>
+<li><p>Mindestanforderungen definieren (unterschieden nach Roh- und verarbeiteten
+Daten)</p></li>
 <li><p>Metadatenstandards prüfen, z. B. DataCite (siehe u.a. ZALF, GFZ Potsdam)</p></li>
 <li><p>Werden wir am konkreten Anwendungsfall in den Testprojekten entwickeln</p></li>
-<li><p>Metadaten zu Rohdaten sind immer abzulegen. Metadaten zu verarbeiteten Daten sind ebenso wichtig. Sie können bei automatisierter Datenverarbeitung aber aus den Skripten geschlossen werden.</p></li>
+<li><p>Metadaten zu Rohdaten sind immer abzulegen. Metadaten zu verarbeiteten Daten
+sind ebenso wichtig. Sie können bei automatisierter Datenverarbeitung aber
+aus den Skripten geschlossen werden.</p></li>
 </ul>
 <p><strong>Metadatenstandards</strong>:</p>
-<p>Wir wollen einen Metadatenstandard verwenden. Beispiele für Metadatenstandards sind (in Klammern stehen Institutionen, die unter anderem Daten mit Metadtaen in diesem Standard veröffentlichen):</p>
+<p>Wir wollen einen Metadatenstandard verwenden.
+Beispiele für Metadatenstandards sind (in Klammern stehen Institutionen, die
+unter anderem Daten mit Metadtaen in diesem Standard veröffentlichen):</p>
 <ul>
 <li><p>DataCite Metadata Schema</p>
 <ul>
@@ -391,18 +478,25 @@ keep metadata in plain text file “readme.txt”
 <li><p>ISO 19115-2</p>
 <ul>
 <li><p>Bundesanstalt für Gewässerkunde (BfG)</p></li>
-<li><p>Alfred-Wegener-Institut Helmholtz-Zentrum für Polar- und Meeresforschung (AWI)</p></li>
+<li><p>Alfred-Wegener-Institut Helmholtz-Zentrum für Polar- und Meeresforschung
+(AWI)</p></li>
 </ul></li>
 </ul>
-<p>Die Auswahl erfolgt gemäß einer guten Übertragbarkeit auf die Anforderungen des KWB und gemäß der Verfügbarkeit von Tools.</p>
+<p>Die Auswahl erfolgt gemäß einer guten Übertragbarkeit auf die Anforderungen des
+KWB und gemäß der Verfügbarkeit von Tools.</p>
 <p><strong>Tools:</strong></p>
 <ul>
 <li>Metadaten-Editor, z.B. Online-Editor vom GFZ Potsdam</li>
 </ul>
-<p>We propose to define some special files that contain metadata related to files and folders. To indicate that these files have a special meaning, the file names are all uppercase.</p>
+<p>We propose to define some special files that contain metadata related to
+files and folders. To indicate that these files have a special meaning, the
+file names are all uppercase.</p>
 <div id="file-projects" class="section level4">
 <h4><span class="header-section-number">2.2.2.1</span> File PROJECTS.txt</h4>
-<p>This file contains the <a href="best-practices.html#project-acronyms">project acronyms</a> as we want to use them e.g. as top-level folder names in our <a href="best-practices.html#project-folder-structure">project folder structure</a>. The projects are grouped by department.</p>
+<p>This file contains the <a href="best-practices.html#project-acronyms">project acronyms</a> as we want to use
+them e.g. as top-level folder names in our
+<a href="best-practices.html#project-folder-structure">project folder structure</a>.
+The projects are grouped by department.</p>
 <p>Possible content of <code>PROJECTS.txt</code>:</p>
 <pre><code># Department SUW (Surface Water)
 dswt: DSWT
@@ -425,8 +519,12 @@ wellma: WELLMA
 
 # Department WWT (Wastewater Treatment)
 ...</code></pre>
-<p>In the file <code>PROJECTS.txt</code> the project acronyms appear in alphabetical order. They map the acronym to a project name or a project title and the year of the start of the project.</p>
-<p><strong>Question:</strong> Do we already have a place where “official” metadata about projects are stored? If yes, the acronym could be included there. But then, everybody should know about it!</p>
+<p>In the file <code>PROJECTS.txt</code> the project acronyms appear in alphabetical
+order. They map the acronym to a project name or a project title and the year
+of the start of the project.</p>
+<p><strong>Question:</strong>
+Do we already have a place where “official”
+metadata about projects are stored? If yes, the acronym could be included there. But then, everybody should know about it!</p>
 </div>
 <div id="file-organisations" class="section level4">
 <h4><span class="header-section-number">2.2.2.2</span> File ORGANISATIONS.txt</h4>
@@ -438,15 +536,20 @@ uba: Umweltbundesamt</code></pre>
 </div>
 <div id="raw-data" class="section level3">
 <h3><span class="header-section-number">2.2.3</span> Raw data</h3>
-<p>Especially in environmental sciences, raw data often cannot be reproduced (e.g. rainfall, river discharge measurements) and are therefore of high value. Thus the following rules apply in case of raw data:</p>
+<p>Especially in environmental sciences, raw data often cannot be reproduced (e.g.
+rainfall, river discharge measurements) and are therefore of high value. Thus
+the following rules apply in case of raw data:</p>
 <ul>
 <li><p>can be renamed (in case this is documented in a <a href="best-practices.html#metadata">metadata</a> file)</p></li>
 <li><p>the content must not be changed</p></li>
-<li><p>will be stored as read-only in an secure area (i.e. one folder contains all raw data)</p></li>
+<li><p>will be stored as read-only in an secure area (i.e. one folder contains all
+raw data)</p></li>
 </ul>
 <p><strong><em>added from: 04_rawdata.Rmd</em></strong></p>
-<p>As raw data we define data that we receive from a device or from a project partner.</p>
-<p>Most of our research results are based on data. We acknowledge the importance of raw data by</p>
+<p>As raw data we define data that we receive from a device or from a project
+partner.</p>
+<p>Most of our research results are based on data. We acknowledge the importance
+of raw data by</p>
 <ul>
 <li><p>storing then in a special place where it is specially secured</p></li>
 <li><p>describing them with <a href="best-practices.html#metadata">metadata</a></p></li>
@@ -461,7 +564,10 @@ uba: Umweltbundesamt</code></pre>
 <li><p>data processing (i.e. <code>\\server\\processing</code>)</p></li>
 <li><p>results (i.e. <code>\\server\\projekte$</code>)</p></li>
 </ul>
-<p>Raw data are highly valuable because they if necessary cannot or only with high costs be reproduced. Thus raw data will be compiled on the highest level (i.e. <code>\\server\\rawdata</code>) for each <code>project</code> and <code>origin</code> (e.g. KWB, BWB) as shown below:</p>
+<p>Raw data are highly valuable because they if necessary cannot or only with high
+costs be reproduced. Thus raw data will be compiled on the highest level (i.e.
+<code>\\server\\rawdata</code>) for each <code>project</code> and <code>origin</code> (e.g. KWB, BWB) as shown
+below:</p>
 <p><strong>Raw data folder structure:</strong></p>
 <pre><code>TestProjekt
   BWB
@@ -478,7 +584,10 @@ uba: Umweltbundesamt</code></pre>
       q01.csv
       q02.csv
       q03.csv</code></pre>
-<p>The data processing is a “playground”, where different approaches or scenarios can be tested and where possibly different versions for a specific approach or scenario are available. The files will be stored here according to the corresponding <code>project</code> and <code>topic</code> and the data processing step, respectively.</p>
+<p>The data processing is a “playground”, where different approaches or scenarios
+can be tested and where possibly different versions for a specific approach
+or scenario are available. The files will be stored here according to the
+corresponding <code>project</code> and <code>topic</code> and the data processing step, respectively.</p>
 <p><strong>Data processing folder structure:</strong></p>
 <pre><code>TestProjekt
   01_Bereinigung
@@ -496,7 +605,10 @@ uba: Umweltbundesamt</code></pre>
         sommer
         winter
   Software</code></pre>
-<p>In the results folder only the “reporting relevant” results should be saved. Relevant results files (e.g. plots) should be added according to <code>project</code> and <code>project structure</code> (i.e. per <code>working package</code>) in form of links from the <code>data processing</code> folder structure (see above).</p>
+<p>In the results folder only the “reporting relevant” results should be saved.
+Relevant results files (e.g. plots) should be added according to <code>project</code> and
+<code>project structure</code> (i.e. per <code>working package</code>) in form of links from the
+<code>data processing</code> folder structure (see above).</p>
 <p><strong>Results folder structure:</strong></p>
 <pre><code>TestProjekt
   Data-Work Packages
@@ -509,8 +621,10 @@ uba: Umweltbundesamt</code></pre>
 <h3><span class="header-section-number">2.2.5</span> Folder Structures</h3>
 <p>Restrictions/Conventions:</p>
 <ul>
-<li>Each top-level folder should represent a project, i.e. should be defined in the top level file <a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a>.</li>
-<li>Each possible owner should be defined in the top level file <a href="best-practices.html#file-organisations"><code>ORGANISATIONS.txt</code></a>.</li>
+<li>Each top-level folder should represent a project, i.e. should be defined in
+the top level file <a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a>.</li>
+<li>Each possible owner should be defined in the top level file
+<a href="best-practices.html#file-organisations"><code>ORGANISATIONS.txt</code></a>.</li>
 <li>The naming convention for the organisations is the same as for projects.</li>
 </ul>
 <ol start="19" style="list-style-type: lower-alpha">
@@ -518,7 +632,10 @@ uba: Umweltbundesamt</code></pre>
 </ol>
 <div id="project-folder-structure" class="section level4">
 <h4><span class="header-section-number">2.2.5.1</span> Project Folder Structure</h4>
-<p>We said that we want to concentrate on the folder structures within the project folders. Nevertheless, we would like to give a recommendation on how the project folders could be organised within its top level folder. In this structure, there are no subfolders for the different departments any more.</p>
+<p>We said that we want to concentrate on the folder structures within the project
+folders. Nevertheless, we would like to give a recommendation on how the project
+folders could be organised within its top level folder. In this structure, there
+are no subfolders for the different departments any more.</p>
 <pre><code>//server/projects$
 - PROJECTS.txt
 - project-1/
@@ -527,14 +644,20 @@ uba: Umweltbundesamt</code></pre>
 <p>In the <code>projects$</code> folder</p>
 <ul>
 <li>each subfolder name should appear in the file <a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a></li>
-<li>there should not be any folder on the top level that does not represent a project.</li>
-<li>there should be no other files on the top level as the files that are described in this documentation.</li>
-<li>there are no subfolders representing departments any more. The mapping of projects to departments is done in the file <a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a></li>
+<li>there should not be any folder on the top level that does not represent a
+project.</li>
+<li>there should be no other files on the top level as the files that are
+described in this documentation.</li>
+<li>there are no subfolders representing departments any more. The mapping of
+projects to departments is done in the file <a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a></li>
 </ul>
 </div>
 <div id="rawdata-folder-structure" class="section level4">
 <h4><span class="header-section-number">2.2.5.2</span> Rawdata Folder Structure</h4>
-<p>We will create a network folder <code>//server/rawdata$</code> in which all files have set the read-only property. We suggest to store raw data by project first and by the organisation that owns (i.e. generated, provided) the data second. This could look like this:</p>
+<p>We will create a network folder <code>//server/rawdata$</code> in which all files
+have set the read-only property. We suggest to store raw data by project first
+and by the organisation that owns (i.e. generated, provided) the data second.
+This could look like this:</p>
 <pre><code>//server/rawdata$
 - ORGANISATIONS.txt
 - PROJECTS.lnk [Symbolic Link to PROJECTS.txt in //server/projects$]
@@ -553,15 +676,23 @@ uba: Umweltbundesamt</code></pre>
 </div>
 <div id="versioning" class="section level3">
 <h3><span class="header-section-number">2.2.6</span> Versioning</h3>
-<p>Versioning or version control is the way by which different versions and drafts of a document (or file or record or dataset or software code) are managed. Versioning involves the process of naming and distinguishing between a series of draft documents that leads to a final or approved version in the end. Versioning allows you to disclose an audit trail for the revision and update of drafts and final versions.</p>
+<p>Versioning or version control is the way by which different versions and drafts
+of a document (or file or record or dataset or software code) are managed.
+Versioning involves the process of naming and distinguishing between a series
+of draft documents that leads to a final or approved version in the end.
+Versioning allows you to disclose an audit trail for the revision and update of
+drafts and final versions.</p>
 <div id="manual" class="section level4">
 <h4><span class="header-section-number">2.2.6.1</span> Manual</h4>
 <p>We propose the following workflow:</p>
 <ul>
-<li><p>It is only allowed to modify the current file (e.g. <code>filename.pptx</code>), which contains no version name as postfix</p></li>
-<li><p>A version is created by copying the current file. This copy gets a not already defined version name as file name ending (e.g. <code>filename_v0.1.pptx</code>)</p></li>
+<li><p>It is only allowed to modify the current file (e.g. <code>filename.pptx</code>), which
+contains no version name as postfix</p></li>
+<li><p>A version is created by copying the current file. This copy gets a not already
+defined version name as file name ending (e.g. <code>filename_v0.1.pptx</code>)</p></li>
 <li><p>The versioned file is moved to a folder `VERSIONS&quot; and set as read-only.</p></li>
-<li><p>In the folder <code>VERSIONS</code> is a file <code>VERSIONS.txt</code>, which contrains addtional information on the available version within that folder</p></li>
+<li><p>In the folder <code>VERSIONS</code> is a file <code>VERSIONS.txt</code>, which contrains addtional
+information on the available version within that folder</p></li>
 </ul>
 <p><strong>Drawbacks:</strong></p>
 <ul>
@@ -590,35 +721,59 @@ VERSIONS/
 </div>
 <div id="automatically" class="section level4">
 <h4><span class="header-section-number">2.2.6.2</span> Automatically</h4>
-<p>The versioning is done automatically in case a version control software, like <a href="https://en.wikipedia.org/wiki/Git">Git</a> or <a href="https://en.wikipedia.org/wiki/Apache_Subversion">Subversion</a> are used.</p>
+<p>The versioning is done automatically in case a version control software,
+like <a href="https://en.wikipedia.org/wiki/Git">Git</a> or <a href="https://en.wikipedia.org/wiki/Apache_Subversion">Subversion</a>
+are used.</p>
 <p>At KWB we currently use the following version control software:</p>
 <ul>
-<li><p><a href="https://subversion.apache.org">Subversion</a>: for internally storing programm code (e.g. R-scripts/packages) we have an Subversion server, which is accessible from the KWB intranet. However, this requires:</p>
+<li><p><a href="https://subversion.apache.org">Subversion</a>: for internally storing programm
+code (e.g. R-scripts/packages) we have an Subversion server, which is accessible
+from the KWB intranet. However, this requires:</p>
 <ul>
-<li><p>the installation of the client software <a href="https://tortoisesvn.net/index.de.html">TortoiseSVN</a> and a</p></li>
-<li><p>valid user account (for accessing the server) which is currently provided by the IT department on request</p></li>
+<li><p>the installation of the client software <a href="https://tortoisesvn.net/index.de.html">TortoiseSVN</a>
+and a</p></li>
+<li><p>valid user account (for accessing the server) which is currently provided by the
+IT department on request</p></li>
 </ul></li>
-<li><p><a href="https://git-scm.com/">Git</a>: for publishing programm code external on our KWB organisation group on <a href="https://github.com/KWB-R">Github</a>. Currently all repositories are public (i.e. are visible for everyone), but also use of private repositories is possible for free as KWB is recognised as non-for-profit company by Github, offering <a href="https://help.github.com/articles/discounted-organization-accounts/#discounts-for-nonprofits-and-libraries">additional benefits for free</a></p></li>
+<li><p><a href="https://git-scm.com/">Git</a>: for publishing programm code external on our KWB organisation group on <a href="https://github.com/KWB-R">Github</a>. Currently all repositories are public (i.e.
+are visible for everyone), but also use of private repositories is possible for
+free as KWB is recognised as non-for-profit company by Github, offering <a href="https://help.github.com/articles/discounted-organization-accounts/#discounts-for-nonprofits-and-libraries">additional
+benefits for free</a></p></li>
 </ul>
-<p>Use of version control software is required in case of programming (e.g. in R, Python, and so on) and can be useful in case of tracking changes in small text files (e.g. configuration files that run a specific R script with different parameters for scenario analysis).</p>
+<p>Use of version control software is required in case of programming (e.g. in R,
+Python, and so on) and can be useful in case of tracking changes in small text
+files (e.g. configuration files that run a specific R script with different
+parameters for scenario analysis).</p>
 <p><strong>Drawbacks:</strong></p>
 <ul>
-<li><p>Special software (<a href="https://tortoisesvn.net/index.de.html">TortoiseSVN</a>), login data for each user on KWB-Server and some basic training are required</p></li>
-<li><p>In case of collaborate coding: sticking to ‘best-practices’ for using version control is mandatory, e.g.:</p>
+<li><p>Special software (<a href="https://tortoisesvn.net/index.de.html">TortoiseSVN</a>), login
+data for each user on KWB-Server and some basic training are required</p></li>
+<li><p>In case of collaborate coding: sticking to ‘best-practices’ for using version
+control is mandatory, e.g.:</p>
 <ul>
 <li><p>timely check in of code changes to the central server,</p></li>
-<li><p>Speaking to each other: so that not two people work at the same time at the same program code in one script as this leads to conflicts that need to be resolved manually, which can be quite time demanding. You are much better off if you avoid this in the upfront by talking to each other</p></li>
+<li><p>Speaking to each other: so that not two people work at the same time at the
+same program code in one script as this leads to conflicts that need to be
+resolved manually, which can be quite time demanding. You are much better off
+if you avoid this in the upfront by talking to each other</p></li>
 </ul></li>
 </ul>
 <p><strong>Advantages:</strong></p>
 <ul>
-<li><p>Only one filename per script (file history and code changes are managed either internally on a KWB server in case of using TortoiseSVN or externally for code hosted on Github)</p></li>
+<li><p>Only one filename per script (file history and code changes are managed either
+internally on a KWB server in case of using TortoiseSVN or externally for code
+hosted on Github)</p></li>
 <li><p>Old versions of scripts can be restored easily</p></li>
-<li><p>Additional comments during <code>commit</code> (i.e. at the time of transfering the code from the local computer to the central version control system about <code>why</code> code changes were made and build-in diff-tools for tracking changes improve the reproducibility</p></li>
+<li><p>Additional comments during <code>commit</code> (i.e. at the time of transfering the code
+from the local computer to the central version control system about <code>why</code> code
+changes were made and build-in diff-tools for tracking changes improve the
+reproducibility</p></li>
 </ul>
 
 <div class="rmdwarning">
-Attention: version control software is not designed for versioning of raw data and thus should not be used for it. General thoughts on the topic of ‘data versioning’ are available here: <a href="https://github.com/leeper/data-versioning" class="uri">https://github.com/leeper/data-versioning</a>
+Attention: version control software is not designed for versioning of raw data
+and thus should not be used for it. General thoughts on the topic of ‘data
+versioning’ are available here: <a href="https://github.com/leeper/data-versioning" class="uri">https://github.com/leeper/data-versioning</a>
 </div>
 
 </div>
@@ -626,21 +781,39 @@ Attention: version control software is not designed for versioning of raw data a
 <div id="organising-your-e-mail-account" class="section level3">
 <h3><span class="header-section-number">2.2.7</span> Organising your e-mail account</h3>
 <blockquote>
-<p>“Most people now routinely send and receive lots of messages every day and as a Yesult, their inbox can get very quickly overloaded with hundreds of personal and work-related email. Setting aside some time to organise your emails will ensure information can be found quickly and easily, and is stored securely. Why should I organise my email? Apart from the obvious frustration and time wasted looking for that email you remember sending to someone last month, email is increasingly used to store important documents and data, often with information related to the attachments within the email itself.”</p>
+<p>“Most people now routinely send and receive lots of messages every day and as a
+Yesult, their inbox can get very quickly overloaded with hundreds of personal and
+work-related email. Setting aside some time to organise your emails will ensure
+information can be found quickly and easily, and is stored securely.
+Why should I organise my email?
+Apart from the obvious frustration and time wasted looking for that email you
+remember sending to someone last month, email is increasingly used to store
+important documents and data, often with information related to the attachments
+within the email itself.”</p>
 <p>— <a href="https://www.data.cam.ac.uk/data-management-guide/organising-your-data#Refernces">University of Cambridge (2018)</a></p>
 </blockquote>
 <p><strong>How can I ensure my emails remain organised?</strong></p>
-<p>Here are some general tips to ensure your email remains organised in the long term <a href="https://www.data.cam.ac.uk/data-management-guide/organising-your-data#Refernces">University of Cambridge, 2018</a>:</p>
+<p>Here are some general tips to ensure your email remains organised in the long
+term <a href="https://www.data.cam.ac.uk/data-management-guide/organising-your-data#Refernces">University of Cambridge, 2018</a>:</p>
 <ul>
-<li><p>Delete emails you do not need. Remove any trivial or old messages from your inbox and sent items on a regular (ideally daily) basis.</p></li>
-<li><p>Use folders to store messages. Establish a structured file directory by subject, activity or project.</p></li>
-<li><p>Separate personal emails. Set up a separate folder for these. Ideally, you should not receive any personal emails to your work email account.</p></li>
-<li><p>Limit the use of attachments. Use alternative and more secure methods to exchange data where possible (see ‘data sharing’ for options). If attachments are used, exercise version control and save important attachments to other places, such as a network drive.</p></li>
+<li><p>Delete emails you do not need. Remove any trivial or old messages from your
+inbox and sent items on a regular (ideally daily) basis.</p></li>
+<li><p>Use folders to store messages. Establish a structured file directory by
+subject, activity or project.</p></li>
+<li><p>Separate personal emails. Set up a separate folder for these. Ideally, you
+should not receive any personal emails to your work email account.</p></li>
+<li><p>Limit the use of attachments. Use alternative and more secure methods to
+exchange data where possible (see ‘data sharing’ for options). If attachments
+are used, exercise version control and save important attachments to other
+places, such as a network drive.</p></li>
 </ul>
 </div>
 <div id="managing-references" class="section level3">
 <h3><span class="header-section-number">2.2.8</span> Managing references</h3>
-<p>For managing reference there are plenty of tools available. A detailed overview is provided by <span class="citation">(Fenner, Scheliga, and Bartling <a href="#ref-Fenner_2014">2014</a>)</span> in the Chapter <a href="http://book.openingscience.org.s3-website-eu-west-1.amazonaws.com/tools/reference_management.html">Reference Management</a> At KWB we use Endnote, for which an internal guideline document (<a href="file://Y:/R&amp;D%20Templates/Charts%20Guidelines%20Checklists/KWB-EndNote-Guideline-v02.pdf">KWB-EndNote-Guideline-v02.pdf</a>, (link only accessible from KWB intranet with Firefox in case workflow defined <a href="faq.html#firefox-local-files">here</a> is followed!).) was developed. <!-- add_text_links() only adds more details in case of html output as 
+<p>For managing reference there are plenty of tools available. A detailed overview
+is provided by <span class="citation">(Fenner, Scheliga, and Bartling <a href="#ref-Fenner_2014">2014</a>)</span> in the Chapter <a href="http://book.openingscience.org.s3-website-eu-west-1.amazonaws.com/tools/reference_management.html">Reference Management</a>
+At KWB we use Endnote, for which an internal guideline document (<a href="file://Y:/R&amp;D%20Templates/Charts%20Guidelines%20Checklists/KWB-EndNote-Guideline-v02.pdf">KWB-EndNote-Guideline-v02.pdf</a>, (link only accessible from KWB intranet with Firefox in case workflow defined <a href="faq.html#firefox-local-files">here</a> is followed!).) was developed.
+<!-- add_text_links() only adds more details in case of html output as 
 defined in "R/add_text.R" --></p>
 </div>
 <div id="data-preservation" class="section level3">
@@ -652,7 +825,10 @@ defined in "R/add_text.R" --></p>
 </div>
 <div id="data-collection" class="section level2">
 <h2><span class="header-section-number">2.3</span> Data collection</h2>
-<p>Data are often inconsistent, incomplete, incorrect, or misspelled Data cleaning is essential You may also use OpenRefine <a href="http://openrefine.org/" class="uri">http://openrefine.org/</a> to clean your messy data Or use the following tools</p>
+<p>Data are often inconsistent, incomplete, incorrect, or misspelled
+Data cleaning is essential
+You may also use OpenRefine <a href="http://openrefine.org/" class="uri">http://openrefine.org/</a> to
+clean your messy data Or use the following tools</p>
 <div id="logger-devices" class="section level3">
 <h3><span class="header-section-number">2.3.1</span> Logger devices</h3>
 </div>
@@ -670,22 +846,52 @@ Figure 2.1: Modern life context for the ten simple rules <span class="citation">
 </p>
 </div>
 <blockquote>
-<p>“This figure provides a framework for understanding how the “Ten Simple Rules to Enable Multi-site Collaborations through Data Sharing” <span class="citation">(Boland, Karczewski, and Tatonetti <a href="#ref-Boland_2017">2017</a>)</span> can be translated into easily understood modern life concepts.</p>
-<p><strong>Rule 1</strong> is Open-Source Software. The openness is signified by a window to a room filled with algorithms that are represented by gears.</p>
-<p><strong>Rule 2</strong> involves making the source data available whenever possible. Source data can be very useful for researchers. However, data are often housed in institutions and are not publicly accessible. These files are often stored externally; therefore, we depict this as a shed or storehouse of data, which, if possible, should be provided to research collaborators.</p>
-<p><strong>Rule 3</strong> is to “use multiple platforms to share research products.” This increases thechances that other researchers will find and be able to utilize your research product—this is represented by multiple locations (i.e., shed and house).</p>
-<p><strong>Rule 4</strong> involves the need to secure all necessary permissions a priori. Many datasets have data use agreements that restrict usage. These restrictions can sometimes prevent researchers from performing certain types of analyses or publishing in certain journals (e.g., journals that require all data to be openly accessible); therefore, we represent this rule as a key that can lock or unlock the door of your research.</p>
-<p><strong>Rule 5</strong> discusses the privacy issues that surround source data. Researchers need to understand what they can and cannot do (i.e., the privacy rules) with their data. Privacy often requires allowing certain users to have access to sections of data while restricting access to other sections of data. Researchers need to understand what can and cannot be revealed about their data (i.e., when to open and close the curtains).</p>
-<p><strong>Rule 6</strong> is to facilitate reproducibility whenever possible. Since communication is the forte of reproducibility, we depicted it as two researchers sharing a giant scroll, because data documentation is required and is often substantial.</p>
-<p><strong>Rule 7</strong> is to “think global.” We conceptualize this as a cloud. This cloud allows the research property (i.e., the house and shed) to be accessed across large distances.</p>
-<p><strong>Rule 8</strong> is to publicize your work. Think of it as “shouting from the rooftops.” Publicizing is critical for enabling other researchers to access your research product.</p>
-<p><strong>Rule 9</strong> is to “stay realistic.” It is important for researchers to “stay grounded” and resist the urge to overstate the claims made by their research.</p>
-<p><strong>Rule 10</strong> is to be engaged, and this is depicted as a person waving an “I heart research” sign. It is vitally important to stay engaged and enthusiastic about one’s research. This enables you to draw others to care about your research.&quot;</p>
+<p>“This figure provides a framework for understanding how the “Ten Simple Rules to
+Enable Multi-site Collaborations through Data Sharing” <span class="citation">(Boland, Karczewski, and Tatonetti <a href="#ref-Boland_2017">2017</a>)</span>
+can be translated into easily understood modern life concepts.</p>
+<p><strong>Rule 1</strong> is Open-Source Software. The openness is signified by a window to a room
+filled with algorithms that are represented by gears.</p>
+<p><strong>Rule 2</strong> involves making the source data available whenever possible. Source data
+can be very useful for researchers. However, data are often housed in
+institutions and are not publicly accessible. These files are often stored
+externally; therefore, we depict this as a shed or storehouse of data, which,
+if possible, should be provided to research collaborators.</p>
+<p><strong>Rule 3</strong> is to “use multiple platforms to share research products.” This
+increases thechances that other researchers will find and be able to utilize your
+research product—this is represented by multiple locations (i.e., shed and house).</p>
+<p><strong>Rule 4</strong> involves the need to secure all necessary permissions a priori. Many
+datasets have data use agreements that restrict usage. These restrictions can
+sometimes prevent researchers from performing certain types of analyses or
+publishing in certain journals (e.g., journals that require all data to be
+openly accessible); therefore, we represent this rule as a key that can lock or
+unlock the door of your research.</p>
+<p><strong>Rule 5</strong> discusses the privacy issues that surround source data. Researchers
+need to understand what they can and cannot do (i.e., the privacy rules) with
+their data. Privacy often requires allowing certain users to have access to
+sections of data while restricting access to other sections of data. Researchers
+need to understand what can and cannot be revealed about their data (i.e., when
+to open and close the curtains).</p>
+<p><strong>Rule 6</strong> is to facilitate reproducibility whenever possible. Since
+communication is the forte of reproducibility, we depicted it as two
+researchers sharing a giant scroll, because data documentation is required and
+is often substantial.</p>
+<p><strong>Rule 7</strong> is to “think global.” We conceptualize this as a cloud. This cloud
+allows the research property (i.e., the house and shed) to be accessed across
+large distances.</p>
+<p><strong>Rule 8</strong> is to publicize your work. Think of it as “shouting from the rooftops.”
+Publicizing is critical for enabling other researchers to access your research
+product.</p>
+<p><strong>Rule 9</strong> is to “stay realistic.” It is important for researchers to “stay
+grounded” and resist the urge to overstate the claims made by their research.</p>
+<p><strong>Rule 10</strong> is to be engaged, and this is depicted as a person waving an “I heart
+research” sign. It is vitally important to stay engaged and enthusiastic about
+one’s research. This enables you to draw others to care about your research.&quot;</p>
 <p>—- <span class="citation">(Boland, Karczewski, and Tatonetti <a href="#ref-Boland_2017">2017</a>)</span></p>
 </blockquote>
 <p>Recommended literature:</p>
 <ul>
-<li><p><a href="https://doi.org/10.1371/journal.pcbi.1005278">Ten simple rules to enable multi-site collaborations through data sharing</a> <span class="citation">(Boland, Karczewski, and Tatonetti <a href="#ref-Boland_2017">2017</a>)</span></p></li>
+<li><p><a href="https://doi.org/10.1371/journal.pcbi.1005278">Ten simple rules to enable multi-site collaborations through data sharing</a>
+<span class="citation">(Boland, Karczewski, and Tatonetti <a href="#ref-Boland_2017">2017</a>)</span></p></li>
 <li><p>Guidelines for publishing (PhD) research data <span class="citation">(Kaden and Kleineberg <a href="#ref-Kaden_2018">2018</a>)</span></p></li>
 </ul>
 <div id="repositories" class="section level3">
@@ -695,7 +901,8 @@ Figure 2.1: Modern life context for the ten simple rules <span class="citation">
 <li><p>General</p>
 <ul>
 <li><p><a href="https://figshare.com">Figshare</a>,</p></li>
-<li><p><a href="https://zenodo.org/">Zenodo</a> (a joint project between <a href="https://www.openaire.eu/">OpenAIRE</a> and <a href="https://home.cern/">CERN</a>),</p></li>
+<li><p><a href="https://zenodo.org/">Zenodo</a> (a joint project between
+<a href="https://www.openaire.eu/">OpenAIRE</a> and <a href="https://home.cern/">CERN</a>),</p></li>
 <li><p><a href="https://data.mendeley.com/">Mendeley data</a>,</p></li>
 <li><p><a href="https://dataverse.org/">Dataverse</a>,</p></li>
 <li><p><a href="https://datadryad.org/">Dryad</a></p></li>
@@ -706,21 +913,32 @@ Figure 2.1: Modern life context for the ten simple rules <span class="citation">
 <li><p><a href="http://dataservices.gfz-potsdam.de/portal/">GFZ Potsdam data services</a></p></li>
 </ul></li>
 </ul>
-<p>In addition repositories for publishing program code are for example <a href="https://github.com">Github</a> or <a href="https://gitlab.com">Gitlab</a>, however these do not offer build-in long term preservation by default.</p>
-<p>We are currently using the following repositories and can recommend them for similar usage to others:</p>
+<p>In addition repositories for publishing program code are for example
+<a href="https://github.com">Github</a> or <a href="https://gitlab.com">Gitlab</a>, however these do
+not offer build-in long term preservation by default.</p>
+<p>We are currently using the following repositories and can recommend them for
+similar usage to others:</p>
 <ul>
-<li><p><a href="https://github.com">Github</a>: for developing/publishing program code, because it offers the opportunity to automatically get a</p></li>
-<li><p><a href="https://zenodo.org/">Zenodo</a> <a href="https://www.doi.org/">DOI</a> for each software released publicly on Github (for details see: <a href="https://guides.github.com/activities/citable-code/" class="uri">https://guides.github.com/activities/citable-code/</a>)</p></li>
+<li><p><a href="https://github.com">Github</a>: for developing/publishing program code, because
+it offers the opportunity to automatically get a</p></li>
+<li><p><a href="https://zenodo.org/">Zenodo</a> <a href="https://www.doi.org/">DOI</a> for each software
+released publicly on Github (for details see: <a href="https://guides.github.com/activities/citable-code/" class="uri">https://guides.github.com/activities/citable-code/</a>)</p></li>
 </ul>
 
 <div class="rmdtip">
 <p>A <a href="https://101innovations.wordpress.com/2016/10/09/github-and-more-sharing-data-code/">blog post</a><br />
-<span class="citation">Bosman and Kramer (<a href="#ref-Bosman_2016">2016</a>)</span> provide results of a large survey carried out in 2015 among more than 15000 researchers. Insights can be gained on:</p>
+<span class="citation">Bosman and Kramer (<a href="#ref-Bosman_2016">2016</a>)</span> provide results of a large survey carried out in 2015 among more
+than 15000 researchers. Insights can be gained on:</p>
 <ul>
 <li><p>Which scholary communications tools are used and</p></li>
 <li><p>Are there disciplinary differences in usage?</p></li>
 </ul>
-They finally summarise: “Another surprising finding is the overall low use of Zenodo – a CERN-hosted repository that is the recommended archiving and sharing solution for data from EU-projects and -institutions. The fact that Zenodo is a data-sharing platform that is available to anyone (thus not just for EU project data) might not be widely known yet.”
+They finally summarise:
+“Another surprising finding is the overall low use of Zenodo – a CERN-hosted
+repository that is the recommended archiving and sharing solution for data from
+EU-projects and -institutions. The fact that Zenodo is a data-sharing platform
+that is available to anyone (thus not just for EU project data) might not be
+widely known yet.”
 </div>
 
 </div>
@@ -728,19 +946,31 @@ They finally summarise: “Another surprising finding is the overall low use of 
 <h3><span class="header-section-number">2.4.2</span> ORCID</h3>
 <p>Problem:</p>
 <blockquote>
-<p>“Two large challenges that researchers face today are discovery and evaluation. We are overwhelmed by the volume of new research works, and traditional discovery tools are no longer sufficient. We are spending considerable amounts of time optimizing the impact—and discoverability—of our research work so as to support grant applications and promotions, and the traditional measures for this are not enough. — <span class="citation">(Fenner and Haak <a href="#ref-Fenner2014">2014</a>)</span></p>
+<p>&quot;Two large challenges that researchers face today are discovery and evaluation.
+We are overwhelmed by the volume of new research works, and traditional discovery
+tools are no longer sufficient. We are spending considerable amounts of time
+optimizing the impact—and discoverability—of our research work so as to support
+grant applications and promotions, and the traditional measures for this are not
+enough.
+— <span class="citation">(Fenner and Haak <a href="#ref-Fenner2014">2014</a>)</span></p>
 </blockquote>
 <p>Solution:</p>
 <blockquote>
-<p>“Open Researcher &amp; Contributor ID (<a href="http://orcid.org/">ORCID</a>) is an international, interdisciplinary, open and not-for-profit organization created to solve the researcher name ambiguity problem for the benefit of all stakeholders. <a href="http://orcid.org/">ORCID</a>was built with the goal of becoming the universally accepted unique identifier for researchers:</p>
+<p>&quot;Open Researcher &amp; Contributor ID (<a href="http://orcid.org/">ORCID</a>) is an international, interdisciplinary, open and not-for-profit organization created to solve the
+researcher name ambiguity problem for the benefit of all stakeholders.
+<a href="http://orcid.org/">ORCID</a>was built with the goal of becoming the universally
+accepted unique identifier for researchers:</p>
 <ol style="list-style-type: decimal">
 <li><p>ORCID is a community-driven organization</p></li>
 <li><p>ORCID is not limited by discipline, institution, or geography</p></li>
 <li><p>ORCID is an inclusive and transparently governed not-for profit organization</p></li>
 <li><p>ORCID data and source code are available under recognized open licenses</p></li>
-<li><p>the ORCID iD is part of institutional, publisher, and funding agency infrastructures.</p></li>
+<li><p>the ORCID iD is part of institutional, publisher, and funding agency
+infrastructures.</p></li>
 </ol>
-<p>Furthermore, <a href="http://orcid.org/">ORCID</a> recognizes that existing researcher and identifier schemes serve specific communities, and is working to link with, rather than replace, existing infrastructures.&quot;</p>
+<p>Furthermore, <a href="http://orcid.org/">ORCID</a> recognizes that existing researcher and
+identifier schemes serve specific communities, and is working to link with,
+rather than replace, existing infrastructures.&quot;</p>
 <p>— <span class="citation">(Fenner and Haak <a href="#ref-Fenner2014">2014</a>)</span></p>
 </blockquote>
 </div>
@@ -757,10 +987,17 @@ They finally summarise: “Another surprising finding is the overall low use of 
 <h3><span class="header-section-number">2.4.4</span> File formats</h3>
 <p><a href="http://www.waterml2.org/">WaterML2</a>:</p>
 <blockquote>
-<p>“…is a new data exchange standard in Hydrology which can basically be used to exchange many kinds of hydro-meteorological observations and measurements. WaterML2 has been initiated and designed over a period of several years by a group of major national and international organizations from public and private sector, such as CSIRO, CUAHSI, USGS, BOM, NOAA, KISTERS and others. WaterML2 has been developed within the OGC Hydrology Domain Working group which has a mandate by the WMO, too.”</p>
+<p>“…is a new data exchange standard in Hydrology which can basically be used to
+exchange many kinds of hydro-meteorological observations and measurements.
+WaterML2 has been initiated and designed over a period of several years by a
+group of major national and international organizations from public and private
+sector, such as CSIRO, CUAHSI, USGS, BOM, NOAA, KISTERS and others. WaterML2 has
+been developed within the OGC Hydrology Domain Working group which has a mandate
+by the WMO, too.”</p>
 <p>— <a href="http://www.waterml2.org/">WaterML2</a></p>
 </blockquote>
-<p><a href="http://www.odm2.org/">ODM2</a>: is an information model and supporting software ecosystem for feature-based earth observations</p>
+<p><a href="http://www.odm2.org/">ODM2</a>: is an information model and supporting software
+ecosystem for feature-based earth observations</p>
 
 </div>
 </div>
@@ -768,28 +1005,28 @@ They finally summarise: “Another surprising finding is the overall low use of 
 <h3>References</h3>
 <div id="refs" class="references">
 <div id="ref-Hart_2016">
-<p>Hart, Edmund M., Pauline Barmby, David LeBauer, François Michonneau, Sarah Mount, Patrick Mulrooney, Timoth’ee Poisot, Kara H. Woo, Naupaka B. Zimmerman, and Jeffrey W. Hollister. 2016. “Ten Simple Rules for Digital Data Storage.” Edited by Scott Markel. <em>PLOS Computational Biology</em> 12 (10). Public Library of Science (PLoS): e1005097. doi:<a href="https://doi.org/10.1371/journal.pcbi.1005097">10.1371/journal.pcbi.1005097</a>.</p>
+<p>Hart, Edmund M., Pauline Barmby, David LeBauer, François Michonneau, Sarah Mount, Patrick Mulrooney, Timoth’ee Poisot, Kara H. Woo, Naupaka B. Zimmerman, and Jeffrey W. Hollister. 2016. “Ten Simple Rules for Digital Data Storage.” Edited by Scott Markel. <em>PLOS Computational Biology</em> 12 (10). Public Library of Science (PLoS): e1005097. <a href="https://doi.org/10.1371/journal.pcbi.1005097" class="uri">https://doi.org/10.1371/journal.pcbi.1005097</a>.</p>
 </div>
 <div id="ref-Fenner_2014">
-<p>Fenner, Martin, Kaja Scheliga, and Sönke Bartling. 2014. “Reference Management.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 125–37. Cham: Springer International Publishing. doi:<a href="https://doi.org/10.1007/978-3-319-00026-8_8">10.1007/978-3-319-00026-8_8</a>.</p>
+<p>Fenner, Martin, Kaja Scheliga, and Sönke Bartling. 2014. “Reference Management.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 125–37. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-00026-8_8" class="uri">https://doi.org/10.1007/978-3-319-00026-8_8</a>.</p>
 </div>
 <div id="ref-Boland_2017">
-<p>Boland, Mary Regina, Konrad J. Karczewski, and Nicholas P. Tatonetti. 2017. “Ten Simple Rules to Enable Multi-Site Collaborations Through Data Sharing.” <em>PLOS Computational Biology</em> 13 (1). Public Library of Science (PLoS): e1005278. doi:<a href="https://doi.org/10.1371/journal.pcbi.1005278">10.1371/journal.pcbi.1005278</a>.</p>
+<p>Boland, Mary Regina, Konrad J. Karczewski, and Nicholas P. Tatonetti. 2017. “Ten Simple Rules to Enable Multi-Site Collaborations Through Data Sharing.” <em>PLOS Computational Biology</em> 13 (1). Public Library of Science (PLoS): e1005278. <a href="https://doi.org/10.1371/journal.pcbi.1005278" class="uri">https://doi.org/10.1371/journal.pcbi.1005278</a>.</p>
 </div>
 <div id="ref-Kaden_2018">
-<p>Kaden, Ben, and Michael Kleineberg. 2018. “Guidelines Zur Veröffentlichung Dissertationsbezogener Forschungsdaten.” doi:<a href="https://doi.org/http://dx.doi.org/10.18452/18811">http://dx.doi.org/10.18452/18811</a>.</p>
+<p>Kaden, Ben, and Michael Kleineberg. 2018. “Guidelines Zur Veröffentlichung Dissertationsbezogener Forschungsdaten.” <a href="https://doi.org/http://dx.doi.org/10.18452/18811" class="uri">https://doi.org/http://dx.doi.org/10.18452/18811</a>.</p>
 </div>
 <div id="ref-Bosman_2016">
 <p>Bosman, Jeroen, and Bianca Kramer. 2016. “GitHub and More: Sharing Data &amp; Code.” Blog. <em>Innovations in Scholarly Communication - Changing Research Workflows</em>. <a href="https://101innovations.wordpress.com/2016/10/09/github-and-more-sharing-data-code/" class="uri">https://101innovations.wordpress.com/2016/10/09/github-and-more-sharing-data-code/</a>.</p>
 </div>
 <div id="ref-Fenner2014">
-<p>Fenner, Martin, and Laure Haak. 2014. “Unique Identifiers for Researchers.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 293–96. Cham: Springer International Publishing. doi:<a href="https://doi.org/10.1007/978-3-319-00026-8_21">10.1007/978-3-319-00026-8_21</a>.</p>
+<p>Fenner, Martin, and Laure Haak. 2014. “Unique Identifiers for Researchers.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 293–96. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-00026-8_21" class="uri">https://doi.org/10.1007/978-3-319-00026-8_21</a>.</p>
 </div>
 <div id="ref-Stodden2014">
-<p>Stodden, Victoria. 2014. “Intellectual Property and Computational Science.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 225–35. Cham: Springer International Publishing. doi:<a href="https://doi.org/10.1007/978-3-319-00026-8_15">10.1007/978-3-319-00026-8_15</a>.</p>
+<p>Stodden, Victoria. 2014. “Intellectual Property and Computational Science.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 225–35. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-00026-8_15" class="uri">https://doi.org/10.1007/978-3-319-00026-8_15</a>.</p>
 </div>
 <div id="ref-Friesike2014">
-<p>Friesike, Sascha. 2014. “Creative Commons Licences.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 287–88. Cham: Springer International Publishing. doi:<a href="https://doi.org/10.1007/978-3-319-00026-8_19">10.1007/978-3-319-00026-8_19</a>.</p>
+<p>Friesike, Sascha. 2014. “Creative Commons Licences.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 287–88. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-00026-8_19" class="uri">https://doi.org/10.1007/978-3-319-00026-8_19</a>.</p>
 </div>
 </div>
 <script async defer src="https://hypothes.is/embed.js"></script>
