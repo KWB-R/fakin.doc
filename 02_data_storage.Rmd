@@ -267,6 +267,80 @@ We propose to define some special files that contain metadata related to
 files and folders. To indicate that these files have a special meaning, the
 file names are all uppercase.
 
+
+***copied from `10_old_german_chapters.Rmd` ***:
+
+Beispiel:
+
+Wenn wir Zeitreihen von den Beliner Wasserbetrieben bekommen, dann haben diese
+entweder eine Spalte mit Zeitstempeln oder zwei Spalten mit Zeitstempeln, wobei
+die erste den Anfang und die zweite das Ende des Zeitraums enthält, auf den
+sich die Messwerte in der entsprechenden Zeile beziehen. 
+
+Wenn nur eine Spalte Zeitstempel enthält, dann ist nicht klar, ob der 
+Zeitstempel den Anfang oder das Ende (oder gar einen anderen Zeitpunkt 
+innerhalb) des Zeitraums angibt. 
+
+Bei einer Zeitreihe mit fünfminütigen Messwerten, z.B.
+
+```
+Zeit                Wert
+2018-06-05 16:20:00    0
+2018-06-05 16:25:00    1
+2018-06-05 16:30:00    2
+2018-06-05 16:35:00    3
+2018-06-05 16:40:00    4
+```
+ 
+ist nicht klar, ob sich der Wert 1 auf den Zeitraum `16:20 - 16:25` oder auf
+den Zeitraum `16:25 - 16:30` bezieht.
+
+Dies ist ein Beispiel für eine sehr konkrete Metadatenanforderung. An dieser
+Stelle gehen wir meistens von Annahmen aus oder hat jemand von Euch schon mal
+eine Aussage darüber von einem BWB-Mitarbeiter erhalten?
+
+Die Kenntnis über den Bezugspunkt des Zeitstempels ist zum Beispiel wichtig beim
+
+* [Erzeugen von Regen-Inputdateien für die Software InfoWorks](#input-infoworks-regen)
+
+In der obigen Beispielzeitreihe ist auch nicht klar, auf welche Zeitzone sich
+die Zeitstempel beziehen. Die Zeitzone bzw. die Angabe des UTC-Offsets ist eine
+wichtige Metainformation. Am besten wäre es, wenn alle Zeitstempel diese 
+Information enthielten, z.B.
+
+```
+2018-06-05 16:20:00+02
+2018-06-05 16:25:00+02
+```
+
+Dann bräuchte man diese Information nicht extra zu führen. 
+
+Metadaten werden oft erst bei Bedarf erhoben, nämlich genau dann, wenn man sich
+z.B. die obigen Fragen nach Zeitstempelbezug und Zeitzone stellt. Dann wird
+nachgefragt und im besten Fall wird eine Antwort darauf gegeben, z.B. in Form
+einer E-Mail. Die Metadaten sind dann in der E-Mail enthalten. 
+
+Fragen:
+
+- Wo und unter welchem Namen legen wir diese E-Mail ab?
+
+Beispiel für Metadaten aus meiner persönlichen Logdatei:
+
+> Regendaten gelesen; ca. 10 Impulse gegen 14:00; Dannecker geschrubbt, 
+> neuer Akku: Batterie defect, alte Batterie drin gelassen, 
+> Daten auslesen nicht möglich; H=55cm
+
+Das müssen wir irgendwie besser hinkriegen, aber wie?
+
+Die grundlegenden Fragen sind:
+
+- Wer ist für die Ablage von Metadaten verantwortlich?
+- Wo werden die Metadaten abgelegt? Direkt bei den Daten oder in einer 
+übergeordneten Datei/Datenbank?
+- In welchem Format werden die Metadaten abgelegt? Einfaches Textformat vs. 
+XML-Format, das sich wohl einfach nur mit Hilfe eines Programms editieren lässt.
+
+
 #### File PROJECTS.txt {#file-projects}
 
 This file contains the [project acronyms](#project-acronyms) as we want to use 
@@ -617,8 +691,14 @@ and thus should not be used for it. General thoughts on the topic of 'data
 versioning' are available here: [https://github.com/leeper/data-versioning](https://github.com/leeper/data-versioning) 
 ```
 
+```{block2, type = 'rmdnote'}
 
-###	Organising your e-mail account
+A presentation with different tools for version control is available here: 
+[https://www.fosteropenscience.eu/node/597](https://www.fosteropenscience.eu/node/597)
+
+```
+
+###	Organising e-mails
 
 > "Most people now routinely send and receive lots of messages every day and as a 
 Yesult, their inbox can get very quickly overloaded with hundreds of personal and

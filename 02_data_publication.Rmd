@@ -171,6 +171,31 @@ rather than replace, existing infrastructures."
 
 ### Licenses
 
+>"In most countries in the world, creative work is protected by copyright laws.
+International conventions, and primarily the Berne Convention of 1886, protect
+the copyright of creators even across international borders for 50 years after
+the death of the creator. This means that copying and using the creative work is
+limited by conditions set by the creator, or another copyright holder. For
+example, in many cases musical recordings may not be copied and further
+distributed without the permission of the musician, or of the production company
+that has acquired the copyright from the musician. Facts about the universe that
+are discovered through research are not subject to copyright, but the
+collection, aggregation, analysis and interpretation of research data may be
+considered creative work, and could be protected by copyright laws. Thus, the
+consumption of research publications is governed by copyright law. Furthermore,
+even data sharing is often governed by copyright laws, because the compilation
+of data to be shared often requires a creative effort. Another case of
+resarch-relevant copyrighted products is software that is developed in the
+course of research. In all of these cases, if license terms are not explicitly
+specified, the work is considered to be protected as "all rights reserved". This
+means that no one but the creator of the work can use the work unencumbered. For
+software this means that copying and further distribution of the software is
+prohibited. Even running the software may be restricted. The exact selection of
+a license is beyond the scope of this section, but depends on your intentions
+and goals with regard to the software"
+>
+> --- `citep(manual["Rokem_2018"])`
+
 Recommended literature: 
 
 - [Intellectual Property and Computational Science](https://link.springer.com/chapter/10.1007/978-3-319-00026-8_19) `r citep(manual["Stodden2014"])`
@@ -180,7 +205,21 @@ Recommended literature:
 - [https://choosealicense.com/](https://choosealicense.com/)
 
 
-### File formats
+### File formats 
+
+>"Scientific data is saved in a myriad of file formats. A typical file format
+might include a file header, describing the layout of the data on disk, metadata
+associated with the data, and the data itself, often stored in binary format. In
+some cases (e.g., CSV (or comma-separated value) files), data will be stored as
+text. The danger of proliferation of file formats in scientific data lies in the
+need to build and maintain separate software tools to read, write and process
+all these data formats. This makes interoperability between different
+practitioners more difficult, and limits the value of data sharing, because
+access to the data in the files remains limited."
+>
+> --- `citep(manual["Rokem_2018"])`
+
+### Data exchange standards
 
 [WaterML2](http://www.waterml2.org/): 
 
@@ -197,3 +236,6 @@ by the WMO, too."
 
 [ODM2](http://www.odm2.org/): is an information model and supporting software 
 ecosystem for feature-based earth observations
+
+
+

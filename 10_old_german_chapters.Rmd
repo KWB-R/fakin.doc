@@ -162,116 +162,11 @@ Siehe
 
 Beispielprojekte: [MIACSO](#miacso), [KURAS](#kuras), [Flusshygiene](#flusshygiene)
 
-## LCA
-
-LCA steht für Life Cycle Assessment, bedeutet also soviel wie 
-Lebenszyklusbewertung.
-
 # Problembereiche {#problembereiche}
-
-## Datenaustausch {#datenaustausch}
-
-Es gibt internen Datenaustausch und Austausch mit Projektpartnern. Oft werden
-Dateien intern per E-Mail verschickt. Das sollten wir nicht tun, da wir
-unnötig Kopien von Dateien anlegen. Dateien sollten im besten Fall nur an einem
-Ort abgelegt sein. Dort sollten sie allerdings durch ein Backup-System gesichert
-sein. Natürlich muss der Zugriff auf diesen Ort gewährleistet sein. Einem 
-Studenten mit eingeschränkten Rechten eine Datei per mail zuzuschicken, weil sie
-an dem Ort, an dem sie gespeichert ist, für ihn nicht zugänglich ist, ist meines
-Erachtens nicht die richtige Lösung. Es muss dann ein Ort geschaffen werden,
-an dem der gemeinsame Zugriff möglich ist. Laut Bodo ist der Ordner `Exchange` 
-im Projektordner ein solcher Platz. Aus dem Grund der allgemeinen Zugänglichkeit
-wir er auch in manchen Projekten als allgemeiner Datenablageplatz "misbraucht".
-Es kann aber niemandem ein Vorwurf gemacht werden, da ja nirgendwo dokumentiert
-ist, was in diesem Ort abgelegt werden soll.
-
-Das können wir nun ändern:
-
-Laut Bodo sind Dateien im Exchange-Ordner nur kurzfristig abzulegen, um 
-z.B. Studenten Zugriff darauf zu geben. Die Dateien sollen nach dem Gebrauch
-wieder aus dem Ordner gelöscht werden. Demnach sollte der Ordner im Normallfall
-leer sein. Dies ist in einigen Projekten nicht der Fall.
-
-Wir brauchen eine einheitliche Definition der Bedeutungen von Ordnern.
-
-Wie die zu dokumentieren sind sollten wir in [Metadaten](#metadaten)
-beschreiben.
 
 ## Datenablage {#datenablage}
 
 ## Datenimport {#datenimport}
-
-## Metadaten {#metadaten}
-
-Beispiel:
-
-Wenn wir Zeitreihen von den Beliner Wasserbetrieben bekommen, dann haben diese
-entweder eine Spalte mit Zeitstempeln oder zwei Spalten mit Zeitstempeln, wobei
-die erste den Anfang und die zweite das Ende des Zeitraums enthält, auf den
-sich die Messwerte in der entsprechenden Zeile beziehen. 
-
-Wenn nur eine Spalte Zeitstempel enthält, dann ist nicht klar, ob der 
-Zeitstempel den Anfang oder das Ende (oder gar einen anderen Zeitpunkt 
-innerhalb) des Zeitraums angibt. 
-
-Bei einer Zeitreihe mit fünfminütigen Messwerten, z.B.
-
-```
-Zeit                Wert
-2018-06-05 16:20:00    0
-2018-06-05 16:25:00    1
-2018-06-05 16:30:00    2
-2018-06-05 16:35:00    3
-2018-06-05 16:40:00    4
-```
- 
-ist nicht klar, ob sich der Wert 1 auf den Zeitraum `16:20 - 16:25` oder auf
-den Zeitraum `16:25 - 16:30` bezieht.
-
-Dies ist ein Beispiel für eine sehr konkrete Metadatenanforderung. An dieser
-Stelle gehen wir meistens von Annahmen aus oder hat jemand von Euch schon mal
-eine Aussage darüber von einem BWB-Mitarbeiter erhalten?
-
-Die Kenntnis über den Bezugspunkt des Zeitstempels ist zum Beispiel wichtig beim
-
-* [Erzeugen von Regen-Inputdateien für die Software InfoWorks](#input-infoworks-regen)
-
-In der obigen Beispielzeitreihe ist auch nicht klar, auf welche Zeitzone sich
-die Zeitstempel beziehen. Die Zeitzone bzw. die Angabe des UTC-Offsets ist eine
-wichtige Metainformation. Am besten wäre es, wenn alle Zeitstempel diese 
-Information enthielten, z.B.
-
-```
-2018-06-05 16:20:00+02
-2018-06-05 16:25:00+02
-```
-
-Dann bräuchte man diese Information nicht extra zu führen. 
-
-Metadaten werden oft erst bei Bedarf erhoben, nämlich genau dann, wenn man sich
-z.B. die obigen Fragen nach Zeitstempelbezug und Zeitzone stellt. Dann wird
-nachgefragt und im besten Fall wird eine Antwort darauf gegeben, z.B. in Form
-einer E-Mail. Die Metadaten sind dann in der E-Mail enthalten. 
-
-Fragen:
-
-- Wo und unter welchem Namen legen wir diese E-Mail ab?
-
-Beispiel für Metadaten aus meiner persönlichen Logdatei:
-
-> Regendaten gelesen; ca. 10 Impulse gegen 14:00; Dannecker geschrubbt, 
-> neuer Akku: Batterie defect, alte Batterie drin gelassen, 
-> Daten auslesen nicht möglich; H=55cm
-
-Das müssen wir irgendwie besser hinkriegen, aber wie?
-
-Die grundlegenden Fragen sind:
-
-- Wer ist für die Ablage von Metadaten verantwortlich?
-- Wo werden die Metadaten abgelegt? Direkt bei den Daten oder in einer 
-übergeordneten Datei/Datenbank?
-- In welchem Format werden die Metadaten abgelegt? Einfaches Textformat vs. 
-XML-Format, das sich wohl einfach nur mit Hilfe eines Programms editieren lässt.
 
 ## Zeitstempel {#zeitstempel}
 
@@ -400,29 +295,6 @@ Wir sollten eine einheitliche, eindeutige Vorgehensweise entwickeln.
 
 ## Excel
 
-Wie arbeite ich "sauber" mit Excel?
-
-Best Practices zum Arbeiten mit Excel:
-
-* z.B. Zellbezüge benennen, dadurch werden Formeln besser lesbar
-
-Ihr werdet es kaum glauben, aber am Anfang meiner Zeit am KWB habe ich noch 
-mit Excel gearbeitet. Ich habe auch komplexe Sachen gemacht und auch 
-Excel-Makros programmiert. Ein Beweis findet sich in meiner persönlichen
-Logdatei:
-
-> Fr, 14.09.07 08:15-19:30 benutzerdefinierte Excelfunktionen zur Modellgüte in 
-Personl.xls, Modul1; TW-Kalibrierung Wochentag fertig
-
-Ich würde heute nicht mehr empfehlen, Excel-Makros zu programmieren. Es ist 
-umständlich, es gibt keine Bibliotheken und der Quellcode lässt sich nicht
-unabhängig von der Exceldatei verwalten, so dass keine ordentliche 
-Versionsverwaltung möglich ist. Und wir wollen nicht mehr ohne 
-Versionsverwaltung programmieren!
-
-Wenn wir programmieren, dann sollten wir das einheitlich in R tun. R ist frei,
-es gibt eine großartige Community und wir haben mittlerweile eine große 
-Expertise erlangt.
 
 ## Programmierung {#programmierung}
 
@@ -450,22 +322,6 @@ Wir haben auch einen öffentlich zugänglichen GitHub Account:
 Auf diesem legen wir nach und nach R-Pakete ab, deren 
 Veröffentlichung keinen Beschränkungen unterliegt, z.B. weil der Code im
 Rahmen eines Auftragsprojektes erstellt wurde.
-
-## Kollaboratives Schreiben
-
-Herausforderung:
-
-Projektantrag mit vielen Partnern. Wie kann gewährleistet werden das immer am aktuellen Dokument gearbeitet wird?
-
-
-Lösungsmöglichkeit:
-
-Ulf hat gute Erfahrungen mit Office365 (von KWR zur Verfügung gestellt) gemacht.
-Auch das parallele Arbieten von knapp 10 Personen gleichzeitig stellt kein Problem da, da von einem in Bearbeitung befindliche Abschnitte automatisch für andere blockiert werden. 
-
-Wenn größere Abschnitte von einem zu bearbeiten sind empfielt es sich diese kurzzeitig aus dem syncronisierten Dokument zu entfernen, die Änderungen in einer nicht syncronisierten Kopie der Word Datei zu machen und erst zum Schluss wieder im Dokument einzufügen. 
-
-Ulf strebt an, dass auch am KWB eine Office365 Lizenz erworben wird.
 
 # Konkrete Aufgaben und Lösungen {#loesungen}
 

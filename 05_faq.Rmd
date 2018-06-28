@@ -8,6 +8,7 @@ different research phases as shown below.
 
 [![compliance-tools-workflow](images/compliance-tools-workflow_cropped.png)](https://101innovations.wordpress.com/workflows/)
 
+
 ## Writing more robust R code
 
 For details on making R code more robust to work on different computers
@@ -123,6 +124,31 @@ is provided for free by the [DataCarpentry](https://datacarpentry.org) organisat
 
 ```
 
+***copied from `10_old_german_chapters.Rmd` ***:
+
+Best Practices zum Arbeiten mit Excel:
+
+* z.B. Zellbezüge benennen, dadurch werden Formeln besser lesbar
+
+Ihr werdet es kaum glauben, aber am Anfang meiner Zeit am KWB habe ich noch 
+mit Excel gearbeitet. Ich habe auch komplexe Sachen gemacht und auch 
+Excel-Makros programmiert. Ein Beweis findet sich in meiner persönlichen
+Logdatei:
+
+> Fr, 14.09.07 08:15-19:30 benutzerdefinierte Excelfunktionen zur Modellgüte in 
+Personl.xls, Modul1; TW-Kalibrierung Wochentag fertig
+
+Ich würde heute nicht mehr empfehlen, Excel-Makros zu programmieren. Es ist 
+umständlich, es gibt keine Bibliotheken und der Quellcode lässt sich nicht
+unabhängig von der Exceldatei verwalten, so dass keine ordentliche 
+Versionsverwaltung möglich ist. Und wir wollen nicht mehr ohne 
+Versionsverwaltung programmieren!
+
+Wenn wir programmieren, dann sollten wir das einheitlich in R tun. R ist frei,
+es gibt eine großartige Community und wir haben mittlerweile eine große 
+Expertise erlangt.
+
+
 ## Heterogenous software versions on KWB computers
 
 ```{block2, type = 'rmdcaution'}
@@ -237,27 +263,25 @@ Multiple people developing code together.
 
 
 ```{block2, type = 'rmdtip'}
+1. At KWB we use Subversion (SVN) for version control (see: 
+[How to use subversion?](#using-subversion-at-kwb))  
 
-Proposed solution:
+2. Speak with each other (especially if you are working on code is likely to be 
+changed be others)
 
-Miteinander sprechen, 
-
-Regelmäßige Updates/Commits,
-
-Bei Verwendung/Weiterbearbeitung von Code aus einem Projekt (z.B. OGRE) in 
-einem weiteren (z.B. FLUSSHYGIENE) ist vom Orginalcode eine Kopie mittels 
-`SVN copy` zu erstellen und diese weiterzubearbeiten, da sonst bestehende 
-Prozeduren im Ausgangsprojekt überschrieben werden
+3. Regularly perform updates/commits with the version control software SVN
 
 ```
 
-
-```{block2, type = 'rmdnote'}
-
-Eine Präsentation mit verschiedenen Tools zur Versionsverwaltung findet sich hier:
-[https://www.fosteropenscience.eu/node/597](https://www.fosteropenscience.eu/node/597)
-
+```{block2, type = 'rmdcaution'}
+In case the code base (e.g. R scripts) developed in "project A" should be 
+reused/adapted in a new "project B" (e.g. FLUSSHYGIENE) it is not allowed to  
+change the code base in the original "project A". Instead the code needs to be 
+copied in a folder for the new project by using Subversion`s [SVN copy](https://tortoisesvn.net/docs/release/TortoiseSVN_en/tsvn-dug-copy.html) 
+command. In case this procedure is not followed established processes in the 
+souce project will be overwritten.
 ```
+
 
 ## Workflow automation
 
@@ -330,4 +354,58 @@ print("Ü")
 ### Skript Encoding EGAL (da Umlaut in Unicode codiert wurde)
 print("\u00dc")
 ```
+
+## Collaborative writing 
+
+```{block2, type = 'rmdcaution'}
+
+Project proposal with many partners. How can be guaranteed that only the most 
+recently document is used and how can multiple people work at the same time in 
+that document in the "hot phase" of proposal writing? 
+```
+
+```{block2, type = 'rmdcaution'}
+
+Ulf made good experiences with [Office 365](https://en.wikipedia.org/wiki/Office_365) 
+(provided by [KWR](https://www.kwrwater.nl/) at that time). Also writing of up to  
+10 persons in parallel were not a problem, because the currently processed 
+paragraph automatically gets blocked for others.
+
+However, in case a whole chapter needs to be processed by one person this is not
+performaed automatically. Thus it is recommended to delete the chapter for a short 
+term from the syncronised document and replace it with a placeholder like 
+`Chapter currently in revision by XXXX. Will be put back in this document until 
+YYYY-MM-DD`. 
+
+```
+
+
+## Exchanging data with colleges/project partners {#data-exchange}
+
+**copied from: "10_old_german_chapters.Rmd", to be translated:**
+
+Es gibt internen Datenaustausch und Austausch mit Projektpartnern. Oft werden
+Dateien intern per E-Mail verschickt. Das sollten wir nicht tun, da wir
+unnötig Kopien von Dateien anlegen. Dateien sollten im besten Fall nur an einem
+Ort abgelegt sein. Dort sollten sie allerdings durch ein Backup-System gesichert
+sein. Natürlich muss der Zugriff auf diesen Ort gewährleistet sein. Einem 
+Studenten mit eingeschränkten Rechten eine Datei per mail zuzuschicken, weil sie
+an dem Ort, an dem sie gespeichert ist, für ihn nicht zugänglich ist, ist meines
+Erachtens nicht die richtige Lösung. Es muss dann ein Ort geschaffen werden,
+an dem der gemeinsame Zugriff möglich ist. Laut Bodo ist der Ordner `Exchange` 
+im Projektordner ein solcher Platz. Aus dem Grund der allgemeinen Zugänglichkeit
+wir er auch in manchen Projekten als allgemeiner Datenablageplatz "misbraucht".
+Es kann aber niemandem ein Vorwurf gemacht werden, da ja nirgendwo dokumentiert
+ist, was in diesem Ort abgelegt werden soll.
+
+Das können wir nun ändern:
+
+Laut Bodo sind Dateien im Exchange-Ordner nur kurzfristig abzulegen, um 
+z.B. Studenten Zugriff darauf zu geben. Die Dateien sollen nach dem Gebrauch
+wieder aus dem Ordner gelöscht werden. Demnach sollte der Ordner im Normallfall
+leer sein. Dies ist in einigen Projekten nicht der Fall.
+
+Wir brauchen eine einheitliche Definition der Bedeutungen von Ordnern.
+
+This should be documented in the [metadata](#metadata).
 
