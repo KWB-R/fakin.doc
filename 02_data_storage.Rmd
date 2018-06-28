@@ -33,28 +33,21 @@ by `r citet("10.1371/journal.pcbi.1005097")` should serve us as a guideline:
 
 #### Folder and File Names
 
-##### General Considerations
+##### General Considerations (source unknown)
 
-Useful file names are: 
-
-* consistent,
-
-* meaningful to you and your colleagues
-
-* allow you to find the file easily
-
-It is useful if your department/project agrees on the following elements of a 
-file name: 
+Useful file names are meaningful to you and your colleagues and thus allow to 
+find files easily. It is useful if your department or project agrees on the 
+following elements of a file name: 
 
 * Vocabulary: Choose a standard vocabulary for file names, so that everyone 
 uses a common language
 
-* Punctuation: Decide on conventions for if and when to use punctuation symbols, 
-capitals, hyphens and spaces. Remove spaces from file names or use punctuation 
-such as underscores and hyphens to separate words e.g. 
-`AHRC_TechnicalApp_Response_20120925.docx` or 
-`AHRC-TechnicalApp-Response20120925.docx` rather than 
-`what we got back from funders about the data stuff.docx`
+* Punctuation: Decide on conventions for if and when to use punctuation symbols,
+capitals, hyphens and spaces. Good practice: Remove spaces from file names or
+use punctuation such as underscores and hyphens to separate words e.g.
+`AHRC_TechnicalApp_Response_20120925.docx` or
+`AHRC-TechnicalApp-Response20120925.docx` rather than `what we got back from
+funders about the data stuff.docx`
 
 * Dates: Agree on a logical use of dates so that they display chronologically 
 i.e. `YYYY-MM-DD`
@@ -65,83 +58,80 @@ theme are listed together and can therefore be found easily
 * Numbers: Specify the amount of digits that will be used in numbering so that 
 files are listed numerically e.g. `01`, `002`, etc.
 
-**Keine Sonderzeichen, keine Umlaute, keine Leerzeichen**
+##### Our Choices
 
-Umlaute `ä`, `ö`, `ü` werden durch `ae`, `oe`, `ue` bzw. `Ae`, `Oe`, `Ue`
-und der Buchstabe `ß` durch `ss` ersetzt.
+* Allowed characters in file and folder names are: 
 
-* Vermeidung von Fehlern bei der automatischen Verarbeitung
-* Keine Probleme beim internationalen Austausch von Dateien
+    + upper case letters `A-Z`, 
+    + lower case letters `a-z`, 
+    + numbers `0-9`,
+    + underscore `_`,
+    + hyphen `-`.
 
-Keine Leerzeichen, stattdessen _Unterstrich oder –Bindestrich
+* Therefore, 
 
-* Vermeidung von Fehlern bei der automatischen Verarbeitung
-* doppelte Leerzeichen lassen sich besser erkennen
+    + use underscore or hyphen instead of space,
+    + use `ae`, `oe`, `ue`, `Ae`, `Oe`, `Ue`, `ss` instead of `ä`, `ö`, `ü`, 
+    `Ä`, `Ö`, `Ü`, `ß`
 
-**Datum in der Form yyyy-mm-dd (2017-06-30)**
+* Code dates in one of these forms:
 
-* Alphanumerische Sortierung führt automatisch zu Sortierung nach Datum
-* Bei Zerlegung des Dateinamens bei Unterstrich bleibt das Datum als Einheit
-  erhalten
+    + `yyyy-mm-dd` (e.g. `2018-06-28`)
+    + `yyyymmdd` (e.g. `20180628`)
 
-**Zusammengesetzte Wörter (z.B. Projektnamen) in "CamelCase"**
+* Use hyphen or "camel case" (as in `camelCase`) instead of space or underscore
+for compound words:
 
-Zusammengesetzte Wörter (z.B. Projektnamen) ohne Unterstrich in CamelCase (`ReliableSewer` vs. `Reliable_Sewer`)
+    + `clean-data` or `cleanData` instead of
+    + `clean data` or `clean_data`
 
-* Bei Zerlegung des Dateinamen bei Unterstrich bleibt Projektname erhalten
+* Use uniform spelling for special "objects", such as
 
-**Einheitliche Schreibweise von Projektnamen**
+    + projects or sites or parameters, see [Acronyms](#acronyms)
+    + properties, e.g. use always `validiert`, `kalibriert` or `validated`,
+    `calibrated` instead of sometimes `val`, sometimes `validiert`, etc.
 
-**Einheitliche Sprache: englisch oder deutsch?**
+* Therefore, define so called vocabularies.
 
-**Verwendung eines Vokabulars für wichtige Begriffe**
+* Do not mix languages within one and the same file or folder name: Use
+`regen-ereignis` or `rain-event` instead of `regen-event` or `rain-ereignis`.
 
-z.B. "validiert", "kalibriert"
+* Within one project, use either only English names or only German names. 
 
-- 	Order - confirm which element should go first, so that files on the same 
-theme are listed together and can therefore be found easily
+##### Justification
 
-•	Numbers – specify the amount of digits that will be used in numbering so that 
-files are listed numerically e.g. 01, 002, etc.
+We process files automatically. Listing or reading files with non-standard
+characters very often causes problems. These problems are sometimes not easy to 
+solve. But they are easy to avoid: By sticking to some simple restrictive rules
+when naming files and folders.
 
+Restricting to characters from the base character set defined above set avoids 
+problems when exchanging files between partners in different countries. In the 
+same way we have problems with their files, e.g.
 
-!!!!! Good practice: Remove spaces from file names or use punctuation such as 
-underscores and hyphens to separate words e.g. “AHRC_TechnicalApp_Response20120925.docx” 
-or “AHRC-TechnicalApp-Response20120925.docx” rather than “what we got back from 
-funders about the data stuff.docx !!!!
+```
+Example file from Canasoft жк. Хаджи Димитър, ул.Клисура_Troncons.xml
+``` 
 
-**Keine Sonderzeichen, keine Umlaute, keine Leerzeichen**
+they will have problems with our files such as
 
-Umlaute `ä`, `ö`, `ü` werden durch `ae`, `oe`, `ue` bzw. `Ae`, `Oe`, `Ue`
-und der Buchstabe `ß` durch `ss` ersetzt.
+```
+abgebrochene schmuz- und regenwasserhaltungen schützenstraße nord 2. ba.xls
+```
 
-* Vermeidung von Fehlern bei der automatischen Verarbeitung
-* Keine Probleme beim internationalen Austausch von Dateien
+When dates are coded as `yyyy-mm-dd` or `yyyymmdd` the files are automatically 
+sorted chronologically when they are sorted alphanumerically by their name. 
+Using hyphen to separate the year, month and day parts of the date supports
+to distinguish these parts visually. Using the hyphen instead of the underscore
+allows to split a file name at underscores without splitting the date into 
+parts. 
 
-Keine Leerzeichen, stattdessen _Unterstrich oder –Bindestrich
+Using hyphen or "camel case" for composed words will not split the composed words
+into its parts when splitting the file or folder name at underscores.
 
-* Vermeidung von Fehlern bei der automatischen Verarbeitung
-* doppelte Leerzeichen lassen sich besser erkennen
-
-**Datum in der Form yyyy-mm-dd (2017-06-30)**
-
-* Alphanumerische Sortierung führt automatisch zu Sortierung nach Datum
-* Bei Zerlegung des Dateinamens bei Unterstrich bleibt das Datum als Einheit
-  erhalten
-
-**Zusammengesetzte Wörter (z.B. Projektnamen) in "CamelCase"**
-
-Zusammengesetzte Wörter (z.B. Projektnamen) ohne Unterstrich in CamelCase (`ReliableSewer` vs. `Reliable_Sewer`)
-
-* Bei Zerlegung des Dateinamen bei Unterstrich bleibt Projektname erhalten
-
-**Einheitliche Schreibweise von Projektnamen**
-
-**Einheitliche Sprache: englisch oder deutsch?**
-
-**Verwendung eines Vokabulars für wichtige Begriffe**
-
-z.B. "validiert", "kalibriert"
+The restriction of using consistently one language for file and folder names may
+be too strict. However, I think we should try this at least for the top level 
+[folder structures](#folder-structures).
 
 ```{block2 type="rmdwarning"}
 Regeln zur Vermeidung langer Dateipfade
@@ -154,7 +144,7 @@ Zielordner. Kürzen Sie die Dateinamen und wiederholen Sie den Vorgang, oder
 verwenden Sie einen anderen Ort, der einen kürzeren Pfad hat.
 ```
 
-#### Acronyms
+#### Acronyms {#acronyms}
 
 Acronyms are unique, clear names for objects. They should 
 
