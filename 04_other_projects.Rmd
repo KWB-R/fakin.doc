@@ -132,16 +132,16 @@ Developed R packages:
 
 - Groundwater modelling
 
-    + [kwb.hantush](https://github.com/kwb-r/kwb.hantush)
+    + [kwb.hantush](https://github.com/kwb-r/kwb.hantush) `r citep(manual["Rustler_2016a"])`
     
     + [kwb.vs2dh](https://github.com/kwb-r/kwb.vs2dh)
     
     + [kwb.demoware](https://github.com/kwb-r/kwb.demoware)
 
-- Quantitative microbiological risk assessment: the R package [kwb.qmra](https://github.com/kwb-r/kwb.qrma) 
+- Quantitative microbiological risk assessment: the R package [kwb.qmra](https://github.com/kwb-r/kwb.qrma) `r citep(manual["Rustler_2016b"])`
 is a generic calculation engine assessing the performance of water supply systems. 
 It was successfully applicated for the Old Ford wasterwater treatment plant 
-`r citep(manual[c("Krausetal_2016", "Rustler_2016")])`. A detailed documentation
+`r citep(manual[c("Krausetal_2016", "Rustler_2016c")])`. A detailed documentation
 for the R package and its usage is available [online](https://kwb-r,github.io/kwb.qrma).
 
 

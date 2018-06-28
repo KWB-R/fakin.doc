@@ -28,7 +28,7 @@ Recommended literature:
 
     + [R for data science](http://r4ds.had.co.nz/) `r citep(manual["Grolemund_2017"])`
 
-    + [Advanced R](http://adv-r.had.co.nz/) `r citep(manual[c("Wickham_2014","Wickham2018")])`
+    + [Advanced R](http://adv-r.had.co.nz/) `r citep(manual[c("Wickham_2014","Wickham_2018")])`
     
     + [R packages](http://r-pkgs.had.co.nz/) `r citep(manual["Wickham_2015"])`
 
