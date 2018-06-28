@@ -27,39 +27,43 @@ by `r citet("10.1371/journal.pcbi.1005097")` should serve us as a guideline:
 
 ### Naming
 
-#### Folder and file names
+>We name and name and name. Because we do so much of it, we'd better do it well.
+>
+> --- `r citep(manual["martin2009"])`
+
+#### Folder and File Names
+
+##### General Considerations
 
 Useful file names are: 
 
-- consistent
+* consistent,
 
-- meaningful to you and your colleagues
+* meaningful to you and your colleagues
 
-- allow you to find the file easily
+* allow you to find the file easily
 
 It is useful if your department/project agrees on the following elements of a 
 file name: 
 
-- Vocabulary – choose a standard vocabulary for file names, so that everyone 
+* Vocabulary: Choose a standard vocabulary for file names, so that everyone 
 uses a common language
 
-- Punctuation – decide on conventions for if and when to use punctuation symbols, 
-capitals, hyphens and spaces
+* Punctuation: Decide on conventions for if and when to use punctuation symbols, 
+capitals, hyphens and spaces. Remove spaces from file names or use punctuation 
+such as underscores and hyphens to separate words e.g. 
+`AHRC_TechnicalApp_Response_20120925.docx` or 
+`AHRC-TechnicalApp-Response20120925.docx` rather than 
+`what we got back from funders about the data stuff.docx`
 
-- Dates – agree on a logical use of dates so that they display chronologically 
-i.e. YYYY-MM-DD
+* Dates: Agree on a logical use of dates so that they display chronologically 
+i.e. `YYYY-MM-DD`
 
-- 	Order - confirm which element should go first, so that files on the same 
+* Order: Confirm which element should go first, so that files on the same 
 theme are listed together and can therefore be found easily
 
-•	Numbers – specify the amount of digits that will be used in numbering so that 
-files are listed numerically e.g. 01, 002, etc.
-
-
-!!!!! Good practice: Remove spaces from file names or use punctuation such as 
-underscores and hyphens to separate words e.g. “AHRC_TechnicalApp_Response20120925.docx” 
-or “AHRC-TechnicalApp-Response20120925.docx” rather than “what we got back from 
-funders about the data stuff.docx !!!!
+* Numbers: Specify the amount of digits that will be used in numbering so that 
+files are listed numerically e.g. `01`, `002`, etc.
 
 **Keine Sonderzeichen, keine Umlaute, keine Leerzeichen**
 
