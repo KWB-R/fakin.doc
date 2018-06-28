@@ -368,33 +368,63 @@ availabilities.</li>
 </div>
 <div id="demoware" class="section level2">
 <h2><span class="header-section-number">4.6</span> DEMOWARE</h2>
-<p>Entstandene R Pakete:</p>
+<p>Developed R packages:</p>
 <ul>
-<li><p>Grundwassermodellierung</p>
+<li><p>Groundwater modelling</p>
 <ul>
 <li><p><a href="https://github.com/kwb-r/kwb.hantush">kwb.hantush</a></p></li>
-<li><p>kwb.vs2dh</p></li>
-<li><p>kwb.demoware</p></li>
+<li><p><a href="https://github.com/kwb-r/kwb.vs2dh">kwb.vs2dh</a></p></li>
+<li><p><a href="https://github.com/kwb-r/kwb.demoware">kwb.demoware</a></p></li>
 </ul></li>
-<li><p>Quantitatives mikrobiologisches Risikomanagement</p>
-<ul>
-<li><a href="https://github.com/kwb-r/kwb.qrma">kwb.qmra</a>: wird im Rahmen von AQUANES(#aquanes) weiter genutzt</li>
-</ul></li>
+<li><p>Quantitative microbiological risk assessment: the R package <a href="https://github.com/kwb-r/kwb.qrma">kwb.qmra</a>
+is a generic calculation engine assessing the performance of water supply systems.
+It was successfully applicated for the Old Ford wasterwater treatment plant
+<span class="citation">(Kraus et al. <a href="#ref-Krausetal_2016">2016</a>; Rustler <a href="#ref-Rustler_2016">2016</a>)</span>. A detailed documentation
+for the R package and its usage is available <a href="https://kwb-r,github.io/kwb.qrma">online</a>.</p></li>
 </ul>
 </div>
 <div id="optiwells" class="section level2">
 <h2><span class="header-section-number">4.7</span> OPTIWELLS</h2>
 <p>Created R packages:</p>
 <ul>
-<li><a href="https://github.com/kwb-r/kwb.wtaq">kwb.wtaq</a>: Groundwater Modelling</li>
-<li>kwb.epanet: (Pressure)Pipe Network Simulation (EPANET)</li>
+<li><p><a href="https://github.com/kwb-r/kwb.wtaq">kwb.wtaq</a> <span class="citation">(Sonnenberg and Rustler <a href="#ref-Sonnenberg_2016">2016</a>)</span>:
+groundwater modelling, e.g. for assessing the impact of production well (e.g.
+well diameter, pumping rates) and aquifer characteristics (e.g. hydraulic
+conductivity) on the resulting drawdawn. A detailled tutorial is available
+<a href="https://kwb-r.github.io/kwb.wtaq">online</a>,</p></li>
+<li><p>kwb.epanet: wrapper for (pressurised)pipe network simulation model <a href="https://www.epa.gov/water-research/epanet">EPANET</a></p></li>
 </ul>
 </div>
 <div id="rwe" class="section level2">
 <h2><span class="header-section-number">4.8</span> RWE</h2>
-<p>(Semi)automatisierte Erstellung eines komplexen MODFLOW Modells (mehrere Layer, mehrere hunderte Entnahmebrunnen mit zeitlich variierender Entnahmemenge sowie Hinzufügen/Entfernen von Brunnen innerhalb des Simulationszeitraums) in Phyton mittels <a href="http://modflowpy.github.io/flopydoc/">flopy</a> sowie Entwicklung der Modellszenarien auf Github (siehe hier: <a href="https://github.com/chmenz/Maxflow">Maxflow</a>).</p>
-<p>Input Christian !?!</p>
+<p>(Semi)automated creation of a complex groundwater simulation model with <a href="https://water.usgs.gov/ogw/modflow/MODFLOW.html">MODFLOW-2005</a> for the project
+<a href="https://github.com/chmenz/Maxflow">Maxflow</a>. The developed model consisted of
+up to three model layers with up to 1000 abstraction wells
+with temporal-spatial varying pumping rates within the simulation period.
+For automating the model generation the Python package <a href="http://modflowpy.github.io/flopydoc/">flopy v3.2.5</a>
+<span class="citation">(M. Bakker et al. <a href="#ref-Bakker_2016">2016</a>; Mark Bakker et al. <a href="#ref-https://doi.org/10.5066/f7bk19fh">2016</a>)</span> was used with some minor
+modifications by KWB (see <a href="https://github.com/mrustl/flopy/releases/tag/3.2.5_kwb">here</a>).
+Github was used as version control software for tracking changes in the code and
+each model scenario was stored in its Github branch (for details, see <a href="https://github.com/chmenz/Maxflow/branches/all">here</a>).</p>
 
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Krausetal_2016">
+<p>Kraus, F., W. Seis, C. Remy, M. Rustler, I. Jubany i Guell, Jose J. Espi, and F. Clarens. 2016. “Deliverable D3.2: Show Case of the Environmental Benefits and Risk Assessment of Reuse Schemes.” Report. public report in the DEMOWARE project (www.demoware.eu), KWB. <a href="{&quot;}http://demoware.eu/en/results/deliverables/deliverable-d3-2-show-case-of-the-environmental-benefits-and-risk-assessment-of-reuse-schemes.pdf#page=137{&quot;}" class="uri">{&quot;}http://demoware.eu/en/results/deliverables/deliverable-d3-2-show-case-of-the-environmental-benefits-and-risk-assessment-of-reuse-schemes.pdf#page=137{&quot;}</a>.</p>
+</div>
+<div id="ref-Rustler_2016">
+<p>Rustler, Michael. 2016. “Quantitative microbiological risk assessment for different wastewater reuse options in Old Ford (v.1.0).” <a href="https://doi.org/10.5281/zenodo.159527" class="uri">https://doi.org/10.5281/zenodo.159527</a>.</p>
+</div>
+<div id="ref-Sonnenberg_2016">
+<p>Sonnenberg, Hauke, and Michael Rustler. 2016. “Kwb.wtaq (V.0.2.1).” <a href="https://doi.org/10.5281/zenodo.61610" class="uri">https://doi.org/10.5281/zenodo.61610</a>.</p>
+</div>
+<div id="ref-Bakker_2016">
+<p>Bakker, M., V. Post, C. D. Langevin, J. D. Hughes, J. T. White, J. J. Starn, and M. N. Fienen. 2016. “Scripting MODFLOW Model Development Using Python and FloPy.” <em>Groundwater</em> 54 (5). Wiley: 733–39. <a href="https://doi.org/10.1111/gwat.12413" class="uri">https://doi.org/10.1111/gwat.12413</a>.</p>
+</div>
+<div id="ref-https://doi.org/10.5066/f7bk19fh">
+<p>Bakker, Mark, Vincent Post, Christian D. Langevin, Joseph D. Hughes, Jeremy White, Jeffrey Starn, and Michael Fienen. 2016. “FloPy: Python Package for Creating, Running, and Post-Processing Modflow-Based Models.” U.S. Geological Survey. <a href="https://doi.org/10.5066/f7bk19fh" class="uri">https://doi.org/10.5066/f7bk19fh</a>.</p>
 </div>
 </div>
 <script async defer src="https://hypothes.is/embed.js"></script>
