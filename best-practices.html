@@ -419,25 +419,34 @@ not in <code>\\server\projekte$\department-name\projects\project-name\data-work-
 </ul>
 <div id="project-acronyms" class="section level5">
 <h5><span class="header-section-number">2.2.1.2.1</span> Projects</h5>
-<ul>
-<li>Haben wir eine Regel für die Benennung, Schreibweise von Projektnamen?</li>
-<li>Wir sollten einheitliche, offizielle Schreibweisen definieren</li>
-<li>Sollen wir Acronyme (z.B. drei Zeichen) definieren, um diese z.B. in
-Dateinamen oder in Übersichten zu verwenden?</li>
-</ul>
-<p>At the start of a project we define a project acronym. This acronym is
-intended to be used in file and folder names.</p>
+
+<div class="rmdnote">
+Do we already have rules for naming and spelling of projects and project folders
+or files?
+</div>
+
+<p>If not, we should, at the start of a project, define official project acronyms.
+These are uniform spellings of project names, intended to be used in folder or
+file names.</p>
 <p>Whenever we want to indicate the relation to a certain project in a file or
 folder name, we use the project acronym in exactly the typing that was defined.
 This is important as we want to distinguish between raw data, processed data and
 project results in our <a href="best-practices.html#data-workflow">data workflow</a>.</p>
-<p>The project acronyms are defined in a simple text
-file <a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a> in the <code>//server/projects$</code> folder, see
+<p>The project acronyms are defined in a simple text file
+<a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a> in the <code>//server/projects$</code> folder, see
 <a href="best-practices.html#project-folder-structure">Project Folder Structure</a>.</p>
+
+<div class="rmdnote">
+Should we also define three letter codes for projects? That could
+be beneficial in tables with each column representing a project or in overview
+plots.
+</div>
+
 </div>
 <div id="organisations" class="section level5">
 <h5><span class="header-section-number">2.2.1.2.2</span> Organisations</h5>
-<p>It is very important to know the owners of data. Therefore we define unique
+<p>It is very important to know the origin or owner of data. This is an important
+piece of <a href="best-practices.html#metadata">metadata</a> Therefore we define unique
 acronyms for the owners of data that we use. The acronyms are defined in a
 special file <a href="best-practices.html#file-organisations"><code>ORGANISATIONS.txt</code></a></p>
 </div>
@@ -445,21 +454,31 @@ special file <a href="best-practices.html#file-organisations"><code>ORGANISATION
 </div>
 <div id="metadata" class="section level3">
 <h3><span class="header-section-number">2.2.2</span> Metadata</h3>
-<p>What information would someone need to find/re-use your data?
-Location, title, creator name, description, date collected</p>
+<p>What information would someone need to find/re-use your data? E.g.</p>
+<ul>
+<li>Location,</li>
+<li>Title,</li>
+<li>Creator name,</li>
+<li>Description,</li>
+<li>Date collected?</li>
+</ul>
 <p>Why? Metadata are required for interpreting raw data and gaining an overview
 about the available data.</p>
+<div id="metadata-about-raw-data" class="section level4">
+<h4><span class="header-section-number">2.2.2.1</span> Metadata about Raw Data</h4>
 
 <div class="rmdtip">
-<p><strong>Important metadata for raw data</strong></p>
-<p>von wem, wann, über wen und welches Medium erhalten, z.B. “E-Mail von A an B
-am 25.01.2018” oder “USB-Stick von C an D persönlich am 26.01.2018”</p>
-<p>Nutzungseinschränkung, z.B. “nur für Projekt x”, “nur innerhalb des KWB”,
-“darf auf keinen Fall veröffentlicht werden”</p>
-Erläuterungen zum Inhalt und zum Format (Bedeutung von Spalten, Einheiten,
-Messgeräte, Methoden…)
+<p>Obtained from whom, when, via whom and which medium, e.g. “E-Mail from A to B
+on 2018-01-25” oder “USB-Stick from C to D personally on 2018-01-26”</p>
+<p>Restriction of usage, e.g. “only for project x”, “only within KWB”,
+“must not be published”</p>
+Description of content and format (meaning of columns, units, measurement
+devices, methods…)
 </div>
 
+</div>
+<div id="metadata-about-processed-data" class="section level4">
+<h4><span class="header-section-number">2.2.2.2</span> Metadata about Processed Data</h4>
 
 <div class="rmdtip">
 <p><strong>Important metadata for processed data</strong></p>
@@ -564,8 +583,9 @@ Daten auslesen nicht möglich; H=55cm</p>
 <li>In welchem Format werden die Metadaten abgelegt? Einfaches Textformat vs.
 XML-Format, das sich wohl einfach nur mit Hilfe eines Programms editieren lässt.</li>
 </ul>
+</div>
 <div id="file-projects" class="section level4">
-<h4><span class="header-section-number">2.2.2.1</span> File PROJECTS.txt</h4>
+<h4><span class="header-section-number">2.2.2.3</span> File PROJECTS.txt</h4>
 <p>This file contains the <a href="best-practices.html#project-acronyms">project acronyms</a> as we want to use
 them e.g. as top-level folder names in our
 <a href="best-practices.html#project-folder-structure">project folder structure</a>.
@@ -600,7 +620,7 @@ Do we already have a place where “official”
 metadata about projects are stored? If yes, the acronym could be included there. But then, everybody should know about it!</p>
 </div>
 <div id="file-organisations" class="section level4">
-<h4><span class="header-section-number">2.2.2.2</span> File ORGANISATIONS.txt</h4>
+<h4><span class="header-section-number">2.2.2.4</span> File ORGANISATIONS.txt</h4>
 <p>Possible content of <code>ORGANISATIONS.txt</code></p>
 <pre><code>bwb: Berliner Wasserbetriebe
 kwb: Kompetenzzentrum Wasser Berlin
@@ -918,7 +938,7 @@ clean your messy data Or use the following tools</p>
 </div>
 <div id="data-publishing-and-sharing" class="section level2">
 <h2><span class="header-section-number">2.4</span> Data publishing and sharing</h2>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-11"></span>
 <a href="https://doi.org/10.1371/journal.pcbi.1005278/" target="_blank"><img src="images/tensimplerules_datasharing.png" alt="Modern life context for the ten simple rules [@Boland_2017]"  /></a>
 <p class="caption">
 Figure 2.1: Modern life context for the ten simple rules <span class="citation">(Boland, Karczewski, and Tatonetti <a href="#ref-Boland_2017">2017</a>)</span>
