@@ -148,7 +148,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.4" data-path="best-practices.html"><a href="best-practices.html#data-workflow"><i class="fa fa-check"></i><b>2.2.4</b> Data workflow</a></li>
 <li class="chapter" data-level="2.2.5" data-path="best-practices.html"><a href="best-practices.html#folder-structures"><i class="fa fa-check"></i><b>2.2.5</b> Folder Structures</a></li>
 <li class="chapter" data-level="2.2.6" data-path="best-practices.html"><a href="best-practices.html#versioning"><i class="fa fa-check"></i><b>2.2.6</b> Versioning</a></li>
-<li class="chapter" data-level="2.2.7" data-path="best-practices.html"><a href="best-practices.html#organising-your-e-mail-account"><i class="fa fa-check"></i><b>2.2.7</b> Organising your e-mail account</a></li>
+<li class="chapter" data-level="2.2.7" data-path="best-practices.html"><a href="best-practices.html#organising-e-mails"><i class="fa fa-check"></i><b>2.2.7</b> Organising e-mails</a></li>
 <li class="chapter" data-level="2.2.8" data-path="best-practices.html"><a href="best-practices.html#managing-references"><i class="fa fa-check"></i><b>2.2.8</b> Managing references</a></li>
 <li class="chapter" data-level="2.2.9" data-path="best-practices.html"><a href="best-practices.html#data-preservation"><i class="fa fa-check"></i><b>2.2.9</b> Data preservation</a></li>
 </ul></li>
@@ -161,6 +161,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.4.2" data-path="best-practices.html"><a href="best-practices.html#orcid"><i class="fa fa-check"></i><b>2.4.2</b> ORCID</a></li>
 <li class="chapter" data-level="2.4.3" data-path="best-practices.html"><a href="best-practices.html#licenses"><i class="fa fa-check"></i><b>2.4.3</b> Licenses</a></li>
 <li class="chapter" data-level="2.4.4" data-path="best-practices.html"><a href="best-practices.html#file-formats"><i class="fa fa-check"></i><b>2.4.4</b> File formats</a></li>
+<li class="chapter" data-level="2.4.5" data-path="best-practices.html"><a href="best-practices.html#data-exchange-standards"><i class="fa fa-check"></i><b>2.4.5</b> Data exchange standards</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="case-studies.html"><a href="case-studies.html"><i class="fa fa-check"></i><b>3</b> Case studies</a><ul>
@@ -193,6 +194,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.12" data-path="faq.html"><a href="faq.html#collaborative-version-control"><i class="fa fa-check"></i><b>5.12</b> Collaborative version control</a></li>
 <li class="chapter" data-level="5.13" data-path="faq.html"><a href="faq.html#workflow-automation"><i class="fa fa-check"></i><b>5.13</b> Workflow automation</a></li>
 <li class="chapter" data-level="5.14" data-path="faq.html"><a href="faq.html#encoding"><i class="fa fa-check"></i><b>5.14</b> Encoding</a></li>
+<li class="chapter" data-level="5.15" data-path="faq.html"><a href="faq.html#collaborative-writing"><i class="fa fa-check"></i><b>5.15</b> Collaborative writing</a></li>
+<li class="chapter" data-level="5.16" data-path="faq.html"><a href="faq.html#data-exchange"><i class="fa fa-check"></i><b>5.16</b> Exchanging data with colleges/project partners</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>6</b> Glossary</a><ul>
 <li class="chapter" data-level="6.1" data-path="glossary.html"><a href="glossary.html#reproducibility"><i class="fa fa-check"></i><b>6.1</b> Reproducibility</a></li>
@@ -491,6 +494,61 @@ KWB und gemäß der Verfügbarkeit von Tools.</p>
 <p>We propose to define some special files that contain metadata related to
 files and folders. To indicate that these files have a special meaning, the
 file names are all uppercase.</p>
+<p><strong><em>copied from <code>10_old_german_chapters.Rmd</code> </em></strong>:</p>
+<p>Beispiel:</p>
+<p>Wenn wir Zeitreihen von den Beliner Wasserbetrieben bekommen, dann haben diese
+entweder eine Spalte mit Zeitstempeln oder zwei Spalten mit Zeitstempeln, wobei
+die erste den Anfang und die zweite das Ende des Zeitraums enthält, auf den
+sich die Messwerte in der entsprechenden Zeile beziehen.</p>
+<p>Wenn nur eine Spalte Zeitstempel enthält, dann ist nicht klar, ob der
+Zeitstempel den Anfang oder das Ende (oder gar einen anderen Zeitpunkt
+innerhalb) des Zeitraums angibt.</p>
+<p>Bei einer Zeitreihe mit fünfminütigen Messwerten, z.B.</p>
+<pre><code>Zeit                Wert
+2018-06-05 16:20:00    0
+2018-06-05 16:25:00    1
+2018-06-05 16:30:00    2
+2018-06-05 16:35:00    3
+2018-06-05 16:40:00    4</code></pre>
+<p>ist nicht klar, ob sich der Wert 1 auf den Zeitraum <code>16:20 - 16:25</code> oder auf
+den Zeitraum <code>16:25 - 16:30</code> bezieht.</p>
+<p>Dies ist ein Beispiel für eine sehr konkrete Metadatenanforderung. An dieser
+Stelle gehen wir meistens von Annahmen aus oder hat jemand von Euch schon mal
+eine Aussage darüber von einem BWB-Mitarbeiter erhalten?</p>
+<p>Die Kenntnis über den Bezugspunkt des Zeitstempels ist zum Beispiel wichtig beim</p>
+<ul>
+<li><a href="#input-infoworks-regen">Erzeugen von Regen-Inputdateien für die Software InfoWorks</a></li>
+</ul>
+<p>In der obigen Beispielzeitreihe ist auch nicht klar, auf welche Zeitzone sich
+die Zeitstempel beziehen. Die Zeitzone bzw. die Angabe des UTC-Offsets ist eine
+wichtige Metainformation. Am besten wäre es, wenn alle Zeitstempel diese
+Information enthielten, z.B.</p>
+<pre><code>2018-06-05 16:20:00+02
+2018-06-05 16:25:00+02</code></pre>
+<p>Dann bräuchte man diese Information nicht extra zu führen.</p>
+<p>Metadaten werden oft erst bei Bedarf erhoben, nämlich genau dann, wenn man sich
+z.B. die obigen Fragen nach Zeitstempelbezug und Zeitzone stellt. Dann wird
+nachgefragt und im besten Fall wird eine Antwort darauf gegeben, z.B. in Form
+einer E-Mail. Die Metadaten sind dann in der E-Mail enthalten.</p>
+<p>Fragen:</p>
+<ul>
+<li>Wo und unter welchem Namen legen wir diese E-Mail ab?</li>
+</ul>
+<p>Beispiel für Metadaten aus meiner persönlichen Logdatei:</p>
+<blockquote>
+<p>Regendaten gelesen; ca. 10 Impulse gegen 14:00; Dannecker geschrubbt,
+neuer Akku: Batterie defect, alte Batterie drin gelassen,
+Daten auslesen nicht möglich; H=55cm</p>
+</blockquote>
+<p>Das müssen wir irgendwie besser hinkriegen, aber wie?</p>
+<p>Die grundlegenden Fragen sind:</p>
+<ul>
+<li>Wer ist für die Ablage von Metadaten verantwortlich?</li>
+<li>Wo werden die Metadaten abgelegt? Direkt bei den Daten oder in einer
+übergeordneten Datei/Datenbank?</li>
+<li>In welchem Format werden die Metadaten abgelegt? Einfaches Textformat vs.
+XML-Format, das sich wohl einfach nur mit Hilfe eines Programms editieren lässt.</li>
+</ul>
 <div id="file-projects" class="section level4">
 <h4><span class="header-section-number">2.2.2.1</span> File PROJECTS.txt</h4>
 <p>This file contains the <a href="best-practices.html#project-acronyms">project acronyms</a> as we want to use
@@ -776,10 +834,16 @@ and thus should not be used for it. General thoughts on the topic of ‘data
 versioning’ are available here: <a href="https://github.com/leeper/data-versioning" class="uri">https://github.com/leeper/data-versioning</a>
 </div>
 
+
+<div class="rmdnote">
+<p>A presentation with different tools for version control is available here:
+<a href="https://www.fosteropenscience.eu/node/597" class="uri">https://www.fosteropenscience.eu/node/597</a></p>
+</div>
+
 </div>
 </div>
-<div id="organising-your-e-mail-account" class="section level3">
-<h3><span class="header-section-number">2.2.7</span> Organising your e-mail account</h3>
+<div id="organising-e-mails" class="section level3">
+<h3><span class="header-section-number">2.2.7</span> Organising e-mails</h3>
 <blockquote>
 <p>“Most people now routinely send and receive lots of messages every day and as a
 Yesult, their inbox can get very quickly overloaded with hundreds of personal and
@@ -839,7 +903,7 @@ clean your messy data Or use the following tools</p>
 </div>
 <div id="data-publishing-and-sharing" class="section level2">
 <h2><span class="header-section-number">2.4</span> Data publishing and sharing</h2>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-8"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
 <a href="https://doi.org/10.1371/journal.pcbi.1005278/" target="_blank"><img src="images/tensimplerules_datasharing.png" alt="Modern life context for the ten simple rules [@Boland_2017]"  /></a>
 <p class="caption">
 Figure 2.1: Modern life context for the ten simple rules <span class="citation">(Boland, Karczewski, and Tatonetti <a href="#ref-Boland_2017">2017</a>)</span>
@@ -976,6 +1040,31 @@ rather than replace, existing infrastructures.&quot;</p>
 </div>
 <div id="licenses" class="section level3">
 <h3><span class="header-section-number">2.4.3</span> Licenses</h3>
+<blockquote>
+<p>“In most countries in the world, creative work is protected by copyright laws.
+International conventions, and primarily the Berne Convention of 1886, protect
+the copyright of creators even across international borders for 50 years after
+the death of the creator. This means that copying and using the creative work is
+limited by conditions set by the creator, or another copyright holder. For
+example, in many cases musical recordings may not be copied and further
+distributed without the permission of the musician, or of the production company
+that has acquired the copyright from the musician. Facts about the universe that
+are discovered through research are not subject to copyright, but the
+collection, aggregation, analysis and interpretation of research data may be
+considered creative work, and could be protected by copyright laws. Thus, the
+consumption of research publications is governed by copyright law. Furthermore,
+even data sharing is often governed by copyright laws, because the compilation
+of data to be shared often requires a creative effort. Another case of
+resarch-relevant copyrighted products is software that is developed in the
+course of research. In all of these cases, if license terms are not explicitly
+specified, the work is considered to be protected as”all rights reserved“. This
+means that no one but the creator of the work can use the work unencumbered. For
+software this means that copying and further distribution of the software is
+prohibited. Even running the software may be restricted. The exact selection of
+a license is beyond the scope of this section, but depends on your intentions
+and goals with regard to the software”</p>
+<p>— <code>citep(manual[&quot;Rokem_2018&quot;])</code></p>
+</blockquote>
 <p>Recommended literature:</p>
 <ul>
 <li><p><a href="https://link.springer.com/chapter/10.1007/978-3-319-00026-8_19">Intellectual Property and Computational Science</a> <span class="citation">(Stodden <a href="#ref-Stodden2014">2014</a>)</span></p></li>
@@ -985,6 +1074,21 @@ rather than replace, existing infrastructures.&quot;</p>
 </div>
 <div id="file-formats" class="section level3">
 <h3><span class="header-section-number">2.4.4</span> File formats</h3>
+<blockquote>
+<p>“Scientific data is saved in a myriad of file formats. A typical file format
+might include a file header, describing the layout of the data on disk, metadata
+associated with the data, and the data itself, often stored in binary format. In
+some cases (e.g., CSV (or comma-separated value) files), data will be stored as
+text. The danger of proliferation of file formats in scientific data lies in the
+need to build and maintain separate software tools to read, write and process
+all these data formats. This makes interoperability between different
+practitioners more difficult, and limits the value of data sharing, because
+access to the data in the files remains limited.”</p>
+<p>— <code>citep(manual[&quot;Rokem_2018&quot;])</code></p>
+</blockquote>
+</div>
+<div id="data-exchange-standards" class="section level3">
+<h3><span class="header-section-number">2.4.5</span> Data exchange standards</h3>
 <p><a href="http://www.waterml2.org/">WaterML2</a>:</p>
 <blockquote>
 <p>“…is a new data exchange standard in Hydrology which can basically be used to

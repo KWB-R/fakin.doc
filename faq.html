@@ -148,7 +148,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.4" data-path="best-practices.html"><a href="best-practices.html#data-workflow"><i class="fa fa-check"></i><b>2.2.4</b> Data workflow</a></li>
 <li class="chapter" data-level="2.2.5" data-path="best-practices.html"><a href="best-practices.html#folder-structures"><i class="fa fa-check"></i><b>2.2.5</b> Folder Structures</a></li>
 <li class="chapter" data-level="2.2.6" data-path="best-practices.html"><a href="best-practices.html#versioning"><i class="fa fa-check"></i><b>2.2.6</b> Versioning</a></li>
-<li class="chapter" data-level="2.2.7" data-path="best-practices.html"><a href="best-practices.html#organising-your-e-mail-account"><i class="fa fa-check"></i><b>2.2.7</b> Organising your e-mail account</a></li>
+<li class="chapter" data-level="2.2.7" data-path="best-practices.html"><a href="best-practices.html#organising-e-mails"><i class="fa fa-check"></i><b>2.2.7</b> Organising e-mails</a></li>
 <li class="chapter" data-level="2.2.8" data-path="best-practices.html"><a href="best-practices.html#managing-references"><i class="fa fa-check"></i><b>2.2.8</b> Managing references</a></li>
 <li class="chapter" data-level="2.2.9" data-path="best-practices.html"><a href="best-practices.html#data-preservation"><i class="fa fa-check"></i><b>2.2.9</b> Data preservation</a></li>
 </ul></li>
@@ -161,6 +161,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.4.2" data-path="best-practices.html"><a href="best-practices.html#orcid"><i class="fa fa-check"></i><b>2.4.2</b> ORCID</a></li>
 <li class="chapter" data-level="2.4.3" data-path="best-practices.html"><a href="best-practices.html#licenses"><i class="fa fa-check"></i><b>2.4.3</b> Licenses</a></li>
 <li class="chapter" data-level="2.4.4" data-path="best-practices.html"><a href="best-practices.html#file-formats"><i class="fa fa-check"></i><b>2.4.4</b> File formats</a></li>
+<li class="chapter" data-level="2.4.5" data-path="best-practices.html"><a href="best-practices.html#data-exchange-standards"><i class="fa fa-check"></i><b>2.4.5</b> Data exchange standards</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="case-studies.html"><a href="case-studies.html"><i class="fa fa-check"></i><b>3</b> Case studies</a><ul>
@@ -193,6 +194,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.12" data-path="faq.html"><a href="faq.html#collaborative-version-control"><i class="fa fa-check"></i><b>5.12</b> Collaborative version control</a></li>
 <li class="chapter" data-level="5.13" data-path="faq.html"><a href="faq.html#workflow-automation"><i class="fa fa-check"></i><b>5.13</b> Workflow automation</a></li>
 <li class="chapter" data-level="5.14" data-path="faq.html"><a href="faq.html#encoding"><i class="fa fa-check"></i><b>5.14</b> Encoding</a></li>
+<li class="chapter" data-level="5.15" data-path="faq.html"><a href="faq.html#collaborative-writing"><i class="fa fa-check"></i><b>5.15</b> Collaborative writing</a></li>
+<li class="chapter" data-level="5.16" data-path="faq.html"><a href="faq.html#data-exchange"><i class="fa fa-check"></i><b>5.16</b> Exchanging data with colleges/project partners</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>6</b> Glossary</a><ul>
 <li class="chapter" data-level="6.1" data-path="glossary.html"><a href="glossary.html#reproducibility"><i class="fa fa-check"></i><b>6.1</b> Reproducibility</a></li>
@@ -333,6 +336,27 @@ von langen Ausdrücken in Formeln</li>
 is provided for free by the <a href="https://datacarpentry.org">DataCarpentry</a> organisation.</p>
 </div>
 
+<p><strong><em>copied from <code>10_old_german_chapters.Rmd</code> </em></strong>:</p>
+<p>Best Practices zum Arbeiten mit Excel:</p>
+<ul>
+<li>z.B. Zellbezüge benennen, dadurch werden Formeln besser lesbar</li>
+</ul>
+<p>Ihr werdet es kaum glauben, aber am Anfang meiner Zeit am KWB habe ich noch
+mit Excel gearbeitet. Ich habe auch komplexe Sachen gemacht und auch
+Excel-Makros programmiert. Ein Beweis findet sich in meiner persönlichen
+Logdatei:</p>
+<blockquote>
+<p>Fr, 14.09.07 08:15-19:30 benutzerdefinierte Excelfunktionen zur Modellgüte in
+Personl.xls, Modul1; TW-Kalibrierung Wochentag fertig</p>
+</blockquote>
+<p>Ich würde heute nicht mehr empfehlen, Excel-Makros zu programmieren. Es ist
+umständlich, es gibt keine Bibliotheken und der Quellcode lässt sich nicht
+unabhängig von der Exceldatei verwalten, so dass keine ordentliche
+Versionsverwaltung möglich ist. Und wir wollen nicht mehr ohne
+Versionsverwaltung programmieren!</p>
+<p>Wenn wir programmieren, dann sollten wir das einheitlich in R tun. R ist frei,
+es gibt eine großartige Community und wir haben mittlerweile eine große
+Expertise erlangt.</p>
 </div>
 <div id="heterogenous-software-versions-on-kwb-computers" class="section level2">
 <h2><span class="header-section-number">5.8</span> Heterogenous software versions on KWB computers</h2>
@@ -466,19 +490,23 @@ Multiple people developing code together.
 
 
 <div class="rmdtip">
-<p>Proposed solution:</p>
-<p>Miteinander sprechen,</p>
-<p>Regelmäßige Updates/Commits,</p>
-<p>Bei Verwendung/Weiterbearbeitung von Code aus einem Projekt (z.B. OGRE) in
-einem weiteren (z.B. FLUSSHYGIENE) ist vom Orginalcode eine Kopie mittels
-<code>SVN copy</code> zu erstellen und diese weiterzubearbeiten, da sonst bestehende
-Prozeduren im Ausgangsprojekt überschrieben werden</p>
+<ol style="list-style-type: decimal">
+<li><p>At KWB we use Subversion (SVN) for version control (see:
+<a href="faq.html#using-subversion-at-kwb">How to use subversion?</a>)</p></li>
+<li><p>Speak with each other (especially if you are working on code is likely to be
+changed be others)</p></li>
+<li>Regularly perform updates/commits with the version control software SVN</li>
+</ol>
 </div>
 
 
-<div class="rmdnote">
-<p>Eine Präsentation mit verschiedenen Tools zur Versionsverwaltung findet sich hier:
-<a href="https://www.fosteropenscience.eu/node/597" class="uri">https://www.fosteropenscience.eu/node/597</a></p>
+<div class="rmdcaution">
+In case the code base (e.g. R scripts) developed in “project A” should be
+reused/adapted in a new “project B” (e.g. FLUSSHYGIENE) it is not allowed to<br />
+change the code base in the original “project A”. Instead the code needs to be
+copied in a folder for the new project by using Subversion`s <a href="https://tortoisesvn.net/docs/release/TortoiseSVN_en/tsvn-dug-copy.html">SVN copy</a>
+command. In case this procedure is not followed established processes in the
+souce project will be overwritten.
 </div>
 
 </div>
@@ -542,6 +570,52 @@ mis-encoding of string literals.”</p>
 <pre class="sourceCode r"><code class="sourceCode r">### Skript Encoding EGAL (da Umlaut in Unicode codiert wurde)
 <span class="kw">print</span>(<span class="st">&quot;\u00dc&quot;</span>)</code></pre>
 <pre><code>## [1] &quot;Ü&quot;</code></pre>
+</div>
+<div id="collaborative-writing" class="section level2">
+<h2><span class="header-section-number">5.15</span> Collaborative writing</h2>
+
+<div class="rmdcaution">
+Project proposal with many partners. How can be guaranteed that only the most
+recently document is used and how can multiple people work at the same time in
+that document in the “hot phase” of proposal writing?
+</div>
+
+
+<div class="rmdcaution">
+<p>Ulf made good experiences with <a href="https://en.wikipedia.org/wiki/Office_365">Office 365</a>
+(provided by <a href="https://www.kwrwater.nl/">KWR</a> at that time). Also writing of up to<br />
+10 persons in parallel were not a problem, because the currently processed
+paragraph automatically gets blocked for others.</p>
+<p>However, in case a whole chapter needs to be processed by one person this is not
+performaed automatically. Thus it is recommended to delete the chapter for a short
+term from the syncronised document and replace it with a placeholder like
+<code>Chapter currently in revision by XXXX. Will be put back in this document until  YYYY-MM-DD</code>.</p>
+</div>
+
+</div>
+<div id="data-exchange" class="section level2">
+<h2><span class="header-section-number">5.16</span> Exchanging data with colleges/project partners</h2>
+<p><strong>copied from: “10_old_german_chapters.Rmd”, to be translated:</strong></p>
+<p>Es gibt internen Datenaustausch und Austausch mit Projektpartnern. Oft werden
+Dateien intern per E-Mail verschickt. Das sollten wir nicht tun, da wir
+unnötig Kopien von Dateien anlegen. Dateien sollten im besten Fall nur an einem
+Ort abgelegt sein. Dort sollten sie allerdings durch ein Backup-System gesichert
+sein. Natürlich muss der Zugriff auf diesen Ort gewährleistet sein. Einem
+Studenten mit eingeschränkten Rechten eine Datei per mail zuzuschicken, weil sie
+an dem Ort, an dem sie gespeichert ist, für ihn nicht zugänglich ist, ist meines
+Erachtens nicht die richtige Lösung. Es muss dann ein Ort geschaffen werden,
+an dem der gemeinsame Zugriff möglich ist. Laut Bodo ist der Ordner <code>Exchange</code>
+im Projektordner ein solcher Platz. Aus dem Grund der allgemeinen Zugänglichkeit
+wir er auch in manchen Projekten als allgemeiner Datenablageplatz “misbraucht”.
+Es kann aber niemandem ein Vorwurf gemacht werden, da ja nirgendwo dokumentiert
+ist, was in diesem Ort abgelegt werden soll.</p>
+<p>Das können wir nun ändern:</p>
+<p>Laut Bodo sind Dateien im Exchange-Ordner nur kurzfristig abzulegen, um
+z.B. Studenten Zugriff darauf zu geben. Die Dateien sollen nach dem Gebrauch
+wieder aus dem Ordner gelöscht werden. Demnach sollte der Ordner im Normallfall
+leer sein. Dies ist in einigen Projekten nicht der Fall.</p>
+<p>Wir brauchen eine einheitliche Definition der Bedeutungen von Ordnern.</p>
+<p>This should be documented in the <a href="best-practices.html#metadata">metadata</a>.</p>
 
 </div>
 </div>
