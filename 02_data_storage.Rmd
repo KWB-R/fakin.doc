@@ -169,53 +169,64 @@ Acronyms are unique, clear names for objects. They should
 
 ##### Projects {#project-acronyms}
 
-* Haben wir eine Regel für die Benennung, Schreibweise von Projektnamen?
-* Wir sollten einheitliche, offizielle Schreibweisen definieren
-* Sollen wir Acronyme (z.B. drei Zeichen) definieren, um diese z.B. in 
-  Dateinamen oder in Übersichten zu verwenden?
+```{block2 type = "rmdnote"}
+Do we already have rules for naming and spelling of projects and project folders 
+or files? 
+```
 
-
-At the start of a project we define a project acronym. This acronym is
-intended to be used in file and folder names. 
+If not, we should, at the start of a project, define official project acronyms.
+These are uniform spellings of project names, intended to be used in folder or 
+file names.
 
 Whenever we want to indicate the relation to a certain project in a file or 
 folder name, we use the project acronym in exactly the typing that was defined.
 This is important as we want to distinguish between raw data, processed data and 
 project results in our [data workflow](#data-workflow).
 
-The project acronyms are defined in a simple text 
-file [`PROJECTS.txt`](#file-projects) in the `//server/projects$` folder, see 
+The project acronyms are defined in a simple text file 
+[`PROJECTS.txt`](#file-projects) in the `//server/projects$` folder, see 
 [Project Folder Structure](#project-folder-structure).
+
+```{block2 type = "rmdnote"}
+Should we also define three letter codes for projects? That could
+be beneficial in tables with each column representing a project or in overview 
+plots.
+```
 
 ##### Organisations
 
-It is very important to know the owners of data. Therefore we define unique
+It is very important to know the origin or owner of data. This is an important
+piece of [metadata](#metadata) Therefore we define unique
 acronyms for the owners of data that we use. The acronyms are defined in a
 special file [`ORGANISATIONS.txt`](#file-organisations) 
 
+###	Metadata {#metadata}
 
-###	Metadata
+What information would someone need to find/re-use your data? E.g.
 
-What information would someone need to find/re-use your data?
-Location, title, creator name, description, date collected
+* Location, 
+* Title, 
+* Creator name, 
+* Description, 
+* Date collected?
 
 Why? Metadata are required for interpreting raw data and gaining an overview 
 about the available data.
 
+#### Metadata about Raw Data
 
 ```{block2, type = 'rmdtip'}
-**Important metadata for raw data**
-  
-von wem, wann, über wen und welches Medium erhalten, z.B. "E-Mail von A an B 
-am 25.01.2018" oder "USB-Stick von C an D persönlich am 26.01.2018"
+Obtained from whom, when, via whom and which medium, e.g. "E-Mail from A to B 
+on 2018-01-25" oder "USB-Stick from C to D personally on 2018-01-26"
 
-Nutzungseinschränkung, z.B. "nur für Projekt x", "nur innerhalb des KWB", 
-"darf auf keinen Fall veröffentlicht werden"
+Restriction of usage, e.g.  "only for project x", "only within KWB", 
+"must not be published"
 
-Erläuterungen zum Inhalt und zum Format (Bedeutung von Spalten, Einheiten, 
-Messgeräte, Methoden...)
+Description of content and format (meaning of columns, units, measurement 
+devices, methods...)
 ```
 
+#### Metadata about Processed Data
 
 ```{block2, type = 'rmdtip'}
 **Important metadata for processed data**
