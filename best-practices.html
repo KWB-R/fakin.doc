@@ -303,7 +303,7 @@ by <span class="citation">Hart et al. (<a href="#ref-Hart_2016">2016</a>)</span>
 <div id="general-considerations-source-unknown" class="section level5">
 <h5><span class="header-section-number">2.2.1.1.1</span> General Considerations (source unknown)</h5>
 <p>Useful file names are meaningful to you and your colleagues and thus allow to
-find files easily. It is useful if your department or project agrees on the
+find files easily. It is useful if your department or project team agrees on the
 following elements of a file name:</p>
 <ul>
 <li><p>Vocabulary: Choose a standard vocabulary for file names, so that everyone
@@ -351,7 +351,7 @@ for compound words:</p>
 </ul></li>
 <li><p>Use uniform spelling for special “objects”, such as</p>
 <ul>
-<li>projects or sites or parameters, see <a href="best-practices.html#acronyms">Acronyms</a></li>
+<li>projects or sites or parameters, see <a href="best-practices.html#acronyms">acronyms</a></li>
 <li>properties, e.g. use always <code>validiert</code>, <code>kalibriert</code> or <code>validated</code>,
 <code>calibrated</code> instead of sometimes <code>val</code>, sometimes <code>validiert</code>, etc.</li>
 </ul></li>
@@ -364,37 +364,49 @@ for compound words:</p>
 <div id="justification" class="section level5">
 <h5><span class="header-section-number">2.2.1.1.3</span> Justification</h5>
 <p>We process files automatically. Listing or reading files with non-standard
-characters very often causes problems. These problems are sometimes not easy to
-solve. But they are easy to avoid: By sticking to some simple restrictive rules
-when naming files and folders.</p>
-<p>Restricting to characters from the base character set defined above set avoids
-problems when exchanging files between partners in different countries. In the
-same way we have problems with their files, e.g.</p>
+characters in their names very often causes problems. These problems are sometimes
+not easy to solve. But they are easy to avoid: By sticking to some simple
+restrictive rules when naming files and folders.</p>
+<p>Restricting to characters from the base character set defined above avoids
+problems when exchanging files between partners in different countries.
+We may have a problem with a file from Sofia, called</p>
 <pre><code>Example file from Canasoft жк. Хаджи Димитър, ул.Клисура_Troncons.xml</code></pre>
-<p>they will have problems with our files such as</p>
+<p>and they may have a problem with a file from us, called</p>
 <pre><code>abgebrochene schmuz- und regenwasserhaltungen schützenstraße nord 2. ba.xls</code></pre>
 <p>When dates are coded as <code>yyyy-mm-dd</code> or <code>yyyymmdd</code> the files are automatically
 sorted chronologically when they are sorted alphanumerically by their name.
-Using hyphen to separate the year, month and day parts of the date supports
-to distinguish these parts visually. Using the hyphen instead of the underscore
-allows to split a file name at underscores without splitting the date into
-parts.</p>
-<p>Using hyphen or “camel case” for composed words will not split the composed words
-into its parts when splitting the file or folder name at underscores.</p>
+Using hyphen to separate year, month and day supports to distinguish these date
+parts visually. Using the hyphen instead of the underscore allows to split a
+file name at underscores without splitting the date into parts.</p>
+<p>Using hyphen or “camel case” for composed words will not split the composed
+words into their parts when splitting file or folder names at underscores.</p>
 <p>The restriction of using consistently one language for file and folder names may
 be too strict. However, I think we should try this at least for the top level
 <a href="best-practices.html#folder-structures">folder structures</a>.</p>
+</div>
+<div id="avoid-very-long-file-and-folder-names" class="section level5">
+<h5><span class="header-section-number">2.2.1.1.4</span> Avoid Very Long File and Folder Names</h5>
+<p>File and folder names should be as long as necessary to be meaningful but as
+short as possible.</p>
 
 <div class="rmdwarning">
-<p>Regeln zur Vermeidung langer Dateipfade</p>
-Lange Dateipfade können im Windows-Betriebssystem ein Problem darstellen.
-Das äußert sich beim Kopieren von Dateien, wenn der Pfad des Zielorts, der sich
-durch die Kopie ergeben würde, eine bestimmte Länge überschreitet. Die
-zugehörige Fehlermeldung lautet dann: *Die Dateinamen wären zu lang für den
-Zielordner. Kürzen Sie die Dateinamen und wiederholen Sie den Vorgang, oder
-verwenden Sie einen anderen Ort, der einen kürzeren Pfad hat.
+In the Windows operating system, long file paths can cause problems when copying
+files. If the full path to the target location of a file exceeds a certain
+length (between 255 and 260 characters) you get the following error message
+(here in German): <code>Die Dateinamen wären zu lang für den Zielordner. Kürzen Sie  die Dateinamen und wiederholen Sie den Vorgang, oder verwenden Sie einen anderen  Ort, der einen kürzeren Pfad hat.</code>
 </div>
 
+<p>This problem can be avoided by</p>
+<ul>
+<li>avoiding very long file or folder names,</li>
+<li>avoiding very deep <a href="best-practices.html#folder-structures">folder structures</a>.</li>
+</ul>
+<p>If folder or file names are generated by software (e.g. logger software,
+modelling software, reference manager) we should check if the software allows to
+modify the naming scheme.</p>
+<p>If we nevertheless have to deal with deeply nested folder structures and/or very
+long file or folder names we should store them in a flat folder hierarchy (i.e.
+not in <code>\\server\projekte$\department-name\projects\project-name\data-work-packages\work-package-one-meaning-the-following\modelling\scenario-one-meaning-the-following\results</code>).</p>
 </div>
 </div>
 <div id="acronyms" class="section level4">
