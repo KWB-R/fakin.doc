@@ -128,29 +128,45 @@ Developed Tools:
 
 ## DEMOWARE {#demoware}
 
-Entstandene R Pakete: 
+Developed R packages: 
 
-- Grundwassermodellierung
+- Groundwater modelling
 
     + [kwb.hantush](https://github.com/kwb-r/kwb.hantush)
     
-    + kwb.vs2dh
+    + [kwb.vs2dh](https://github.com/kwb-r/kwb.vs2dh)
     
-    + kwb.demoware
+    + [kwb.demoware](https://github.com/kwb-r/kwb.demoware)
 
-- Quantitatives mikrobiologisches Risikomanagement
+- Quantitative microbiological risk assessment: the R package [kwb.qmra](https://github.com/kwb-r/kwb.qrma) 
+is a generic calculation engine assessing the performance of water supply systems. 
+It was successfully applicated for the Old Ford wasterwater treatment plant 
+`r citep(manual[c("Krausetal_2016", "Rustler_2016")])`. A detailed documentation
+for the R package and its usage is available [online](https://kwb-r,github.io/kwb.qrma).
 
-    + [kwb.qmra](https://github.com/kwb-r/kwb.qrma): wird im Rahmen von AQUANES(#aquanes) weiter genutzt
 
 ## OPTIWELLS {#optiwells}
 
 Created R packages: 
 
-* [kwb.wtaq](https://github.com/kwb-r/kwb.wtaq): Groundwater Modelling
-* kwb.epanet: (Pressure)Pipe Network Simulation (EPANET)
+* [kwb.wtaq](https://github.com/kwb-r/kwb.wtaq) `r citep(manual["Sonnenberg_2016"])`: 
+groundwater modelling, e.g. for assessing the impact of production well (e.g. 
+well diameter, pumping rates) and aquifer characteristics (e.g. hydraulic 
+conductivity) on the resulting drawdawn. A detailled tutorial is available 
+[online](https://kwb-r.github.io/kwb.wtaq), 
+
+* kwb.epanet: wrapper for (pressurised)pipe network simulation model [EPANET](https://www.epa.gov/water-research/epanet)
 
 ## RWE {#rwe}
 
-(Semi)automatisierte Erstellung eines komplexen MODFLOW Modells (mehrere Layer, mehrere hunderte Entnahmebrunnen mit zeitlich variierender Entnahmemenge sowie Hinzufügen/Entfernen von Brunnen innerhalb des Simulationszeitraums) in Phyton mittels [flopy](http://modflowpy.github.io/flopydoc/) sowie Entwicklung der Modellszenarien auf Github (siehe hier: [Maxflow](https://github.com/chmenz/Maxflow)).
+(Semi)automated creation of a complex groundwater simulation model with [MODFLOW-2005](https://water.usgs.gov/ogw/modflow/MODFLOW.html) for the project 
+[Maxflow](https://github.com/chmenz/Maxflow). The developed model consisted of 
+up to three model layers with up to 1000 abstraction wells 
+with temporal-spatial varying pumping rates within the simulation period. 
+For automating the model generation the Python package [flopy v3.2.5](http://modflowpy.github.io/flopydoc/) 
+`r citep(c("10.1111/gwat.12413.", "10.5066/F7BK19FH"))` was used with some minor 
+modifications by KWB (see [here](https://github.com/mrustl/flopy/releases/tag/3.2.5_kwb)).
+Github was used as version control software for tracking changes in the code and 
+each model scenario was stored in its Github branch (for details, see [here](https://github.com/chmenz/Maxflow/branches/all)).
 
-Input Christian !?!
+
