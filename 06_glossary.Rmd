@@ -1,9 +1,9 @@
 # Glossary {#glossary}
 
 A detailed glossary covering the following topics is provided by  
-`r citet(manual["Rokem_2018"])`. 
+`r citet(manual["Rokem_2018"])` is used throughout the glossary. 
 
-## Reproducibility
+## [Reproducibility](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#reproducibility)
 
 > "... is a cornerstone of science. Definitions vary greatly across 
 scientific disciplines, but the meaning that we find most prevalent is the 
@@ -21,7 +21,7 @@ experiments and scientific methods are deemed to be reproducible.
 
 For more details see: `r citet(manual["Rokem_2018"])`
 
-## Provenance: 
+## [Provenance](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#provenence)
 
 > "As the volume of digital data increases and the complexity of computational 
 processes that manipulate these data grows, it is becoming increasingly 
@@ -34,51 +34,54 @@ owners. Provenance helps determine the value, accuracy, and authorship of an obj
 
 For more details see: `r citet(manual["Rokem_2018"])`
 
-## Techniques
+## [Techniques](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#techniques)
 
-- Version control 
+- [Version control](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#version-control)
     
-- Literate Programming
+- [Literate Programming](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#literate-programming)
     
-- Data Publication
+- [Data Publication](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#data-publication)
     
-- Munging (i.e. data cleaning)
+- [Data cleaning/munging](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#munging)
     
-- Software Testing
+- [Software Testing](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#software-testing)
     
-- Continuous Integration
+- [Continuous Integration](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#continuous-integration)
     
-- Workflow Management
+- [Workflow Management](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#workflow-management)
     
-- File Format Standards
+- [File Format Standards](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#file-format-standards)
     
-- Licensing
+- [Licensing](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#licensing)
     
-- Virtualization and Environment Isolation
+- [Virtualization and Environment Isolation](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#virtualization-and-environment isolation)
 
 For details see: `r citet(manual["Rokem_2018"])`
     
-## Tools
+## [Tools](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#tools)
 
-- Programming Language and Related Tools
+- [Programming Language and Related Tools](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#programming-language-and-related-tools)
     
-- Documentation Generators
+- [Documentation Generators](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#documentation-generators)
     
-- Version Control
+- [Version Control](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#documentation-generators)
     
-- Data Munging and Analysis
+- [Data Munging and Analysis](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#data-munging-and-analysis)
     
-- Data Visualization
     
-- Software Testing and Continuous Integration
+- [Data Visualization](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#data-visualization)
     
-- Virtualization and Environment Isolation
     
-- Data Sharing and Repositories
+- [Software Testing and Continuous Integration](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#software-testing-and-continuous-integration)
     
-- Document Authoring
+- [Virtualization and Environment Isolation](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#software-testing-and-continuous-integration)
     
-- File Formats
+- [Data Sharing and Repositories](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#data-sharing-and-repositories)
+    
+    
+- [Document Authoring](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#document-authoring)
+    
+- [File Formats](https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#document-authoring)
 
 For details see: `r citet(manual["Rokem_2018"])`
 
