@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="case-studies.html">
-<link rel="next" href="literature-review.html">
+<link rel="prev" href="other-projects.html">
+<link rel="next" href="faq.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -236,213 +236,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="other-projects" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> Other Projects</h1>
-<p>Here we are just suming up the data workflows and created tools in (old) KWB
-projects, but – in contrast to the <a href="case-studies.html#case-studies">case studies</a> – the workflows
-and tools were not tested explicitly within the FAKIN project.</p>
-<p>The goal of this chapter is to enlarge the internal knowledge base at KWB about
-what and how data challenges have already been successfully solved in the past.</p>
-<div id="spree2011-2007" class="section level2">
-<h2><span class="header-section-number">4.1</span> Spree2011 (2007)</h2>
-<p>Used data by source (data formats in parentheses)</p>
-<ul>
-<li>KWB:
-<ul>
-<li>water level and discharge at one monitoring site (Text/CSV)</li>
-<li>rain (Text/CSV)</li>
-</ul></li>
-<li>BWB:
-<ul>
-<li>pumping rates in the pumping stations (Excel)</li>
-<li>water levels in the pumping stations (Excel)</li>
-<li>rain at some gauges near the monitoring site (Excel)</li>
-</ul></li>
-</ul>
-<p>Tasks and methods by topic</p>
-<ul>
-<li><p>Dry-weather and wet-weather calibration of a sewer network model (Infoworks)</p>
-<ul>
-<li><a href="#input-infoworks-regen">InfoWorks: Creating rain input files</a></li>
-<li><a href="#input-infoworks-rtc">InfoWorks: Creating RTC input files</a></li>
-</ul></li>
-</ul>
-<p>Questions that arose:</p>
-<ul>
-<li>Where to store presentations (trainee vs. employee)?</li>
-<li>Where to store the raw data (personal drive of the trainee)?</li>
-<li>How does Infoworks interpret timestamps, how do BWB provide timestamps?
--&gt; <a href="best-practices.html#metadata">metadata</a></li>
-</ul>
-</div>
-<div id="miacso" class="section level2">
-<h2><span class="header-section-number">4.2</span> MIACSO (2009)</h2>
-<p>Monitoring</p>
-<ul>
-<li>sites: one site in the sewer (monitoring container), more sites in the river</li>
-<li>variables: water quantity and quality</li>
-<li>devices: online sensors</li>
-</ul>
-<p>Modelling</p>
-<ul>
-<li>Sewerage: Infoworks</li>
-<li>River hydraulics: Hydrax</li>
-<li>River quality: QSim</li>
-</ul>
-<p>Data storage</p>
-<ul>
-<li>High amount of data -&gt; extra server: <code>moby</code></li>
-<li>We put some effort in planning good folder structures for the data.
-Nevertheless the structure at the end of the project is not as clean as it was
-planned.</li>
-<li>Data that we received from project partners was stored in <code>Daten/EXTERN</code>.</li>
-<li>Raw data was stored in a folder <code>Daten/RAW</code> which was write-protected and
-required a special user-account for storing new data.</li>
-</ul>
-<pre><code>Daten/
-  ACCESS/ # MS Access databases, containing raw data
-  EXTERN/ # External data (by organisation)
-  META/   # MS Access databases, containing metadata 
-          # (about calibration, maintenane, sites, variables)
-  RAW/    # Text files containing raw data, from KWB-own devices only, by site</code></pre>
-<p>Metadata</p>
-<ul>
-<li>many devices in the container -&gt; meta data about device cleaning and
-maintenance important -&gt; tool: <code>META_Maintenance.mdb</code></li>
-</ul>
-<p>Methods and Tools</p>
-<ul>
-<li>We imported most of the data from text files into MS Access databases in
--&gt; tool: <code>MiaCsoRawImport.mdb</code></li>
-<li>We calibrated the sensors offline by using SQL queries to provide calibrated
-data from raw data -&gt; tool: <code>MiaCsoMetaCalibControl.mdb</code></li>
-<li>We used SQL queries to perform data processing
--&gt; tool: <code>MiaCsoStatAnalysis.mdb</code></li>
-<li>Data validation (outlier detection) was done in a two step procedure:
-<ol style="list-style-type: decimal">
-<li>Automatic preselection using MS Access tool <code>MiaCsoStatAnalysis.mdb</code></li>
-<li>Manual selection using self-developed graphical tool in Origin</li>
-</ol></li>
-</ul>
-<p>Developed Tools:</p>
-<ul>
-<li>MS Access Applications
-<ul>
-<li><code>MetaMaint.mdb</code>: Monitoring Metadata Management</li>
-<li><code>MiaCsoRawImport.mdb</code>: Text File Import to MS Access</li>
-<li><code>MiaCsoStatAnalysis.mdb</code> (project deliverable): Definition and automatic
-execution of sequences of SQL queries</li>
-</ul></li>
-<li>Origin extension to interactively select and store outliers graphically</li>
-<li>R packages
-<ul>
-<li><code>kwb.mia.evalCritO2</code> (project deliverable): graphical evaluation of
-critical oxygen conditions in the river</li>
-<li><code>kwb.mia.iw</code>: Calculation of file sizes of InfoWorks result csv-files
-exported from InfoWorks.</li>
-<li><code>kwb.miacso</code>: functions used in MIA-CSO, for example for plotting data
-availabilities.</li>
-</ul></li>
-</ul>
-</div>
-<div id="kuras" class="section level2">
-<h2><span class="header-section-number">4.3</span> KURAS</h2>
-<p>Developed Tools:</p>
-<ul>
-<li><p>Frontend for KURAS Database of Rainwater Management Measures:
-<code>KURAS_DB_Acc2003_hs.mdb</code></p></li>
-<li><p>R package <code>kwb.kuras</code>: Interface to KURAS database</p></li>
-</ul>
-</div>
-<div id="ogre" class="section level2">
-<h2><span class="header-section-number">4.4</span> OGRE</h2>
-<ul>
-<li>Decision to use <a href="https://www.cuahsi.org/uploads/pages/img/ODM1.1DesignSpecifications_.pdf">CUAHSI Community Observations Data Model (ODM)</a></li>
-<li>R script to import lab data from Excel to MS Access database implementing ODM</li>
-</ul>
-<p>Developed Tools:</p>
-<ul>
-<li>R packages
-<ul>
-<li><code>kwb.ogre</code></li>
-<li><code>kwb.ogre.model</code></li>
-<li><code>kwb.odm</code></li>
-<li><code>kwb.odmx</code></li>
-</ul></li>
-</ul>
-</div>
-<div id="flusshygiene" class="section level2">
-<h2><span class="header-section-number">4.5</span> Flusshygiene</h2>
-<ul>
-<li>Adaptation of free online monitoring data visualisation <a href="https://github.com/KWB-R/HydroServerLite">HydroServerLite</a></li>
-<li>Reusage of lab data import script developed in <a href="other-projects.html#ogre">OGRE</a></li>
-</ul>
-</div>
-<div id="demeau" class="section level2">
-<h2><span class="header-section-number">4.6</span> DEMEAU</h2>
-<p>Developed R packages for groundwater modelling:</p>
-<ul>
-<li><p><a href="https://github.com/kwb-r/kwb.hantush">kwb.hantush</a> <span class="citation">(M. Rustler <a href="#ref-Rustler_2016a">2016</a><a href="#ref-Rustler_2016a">a</a>)</span></p></li>
-<li><p><a href="https://github.com/kwb-r/kwb.vs2dh">kwb.vs2dh</a></p></li>
-<li><p><a href="https://github.com/kwb-r/kwb.demeau">kwb.demeau</a></p></li>
-</ul>
-</div>
-<div id="demoware" class="section level2">
-<h2><span class="header-section-number">4.7</span> DEMOWARE</h2>
-<p>R package <a href="https://github.com/kwb-r/kwb.qmra">kwb.qmra</a> <span class="citation">(M. Rustler <a href="#ref-Rustler_2016b">2016</a><a href="#ref-Rustler_2016b">b</a>)</span>
-is a generic QMRA (Quantitative Microbiological Risk Assessment) calculation engine
-assessing the performance of water supply systems.</p>
-<p>It was successfully applicated for the Old Ford wasterwater treatment plant
-<span class="citation">(Kraus et al. <a href="#ref-Krausetal_2016">2016</a>; M. Rustler <a href="#ref-Rustler_2016c">2016</a><a href="#ref-Rustler_2016c">c</a>)</span>. A detailed documentation
-for the R package and its usage is available <a href="https://kwb-r.github.io/kwb.qmra">online</a>.</p>
-</div>
-<div id="optiwells" class="section level2">
-<h2><span class="header-section-number">4.8</span> OPTIWELLS</h2>
-<p>Created R packages:</p>
-<ul>
-<li><p><a href="https://github.com/kwb-r/kwb.wtaq">kwb.wtaq</a> <span class="citation">(Sonnenberg and Rustler <a href="#ref-Sonnenberg_2016">2016</a>)</span>:
-groundwater modelling, e.g. for assessing the impact of production well (e.g.
-well diameter, pumping rates) and aquifer characteristics (e.g. hydraulic
-conductivity) on the resulting drawdawn. A detailled tutorial is available
-<a href="https://kwb-r.github.io/kwb.wtaq">online</a>,</p></li>
-<li><p>kwb.epanet: wrapper for (pressurised)pipe network simulation model <a href="https://www.epa.gov/water-research/epanet">EPANET</a></p></li>
-</ul>
-</div>
-<div id="rwe" class="section level2">
-<h2><span class="header-section-number">4.9</span> RWE</h2>
-<p>(Semi)automated creation of a complex groundwater simulation model with <a href="https://water.usgs.gov/ogw/modflow/MODFLOW.html">MODFLOW-2005</a> for the project <a href="https://github.com/chmenz/Maxflow">Maxflow</a>. The developed model
-consisted of up to three model layers with up to 1000 abstraction wells
-with temporal-spatial varying pumping rates within the simulation period.
-For automating the model generation the Python package <a href="http://modflowpy.github.io/flopydoc/">flopy v3.2.5</a>
-<span class="citation">(M. Bakker et al. <a href="#ref-Bakker_2016">2016</a>; Mark Bakker et al. <a href="#ref-https://doi.org/10.5066/f7bk19fh">2016</a>)</span> was used with some minor
-modifications by KWB (see <a href="https://github.com/mrustl/flopy/releases/tag/3.2.5_kwb">here</a>).
-Github was used as version control software for tracking changes in the code and
-each model scenario was stored in its Github branch (for details, see <a href="https://github.com/chmenz/Maxflow/branches/all">here</a>).</p>
+<div id="literature-review" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Literature Review</h1>
+<div id="data-storage-1" class="section level2">
+<h2><span class="header-section-number">5.1</span> Data Storage</h2>
+<div id="storage-ten-simple-rules" class="section level3">
+<h3><span class="header-section-number">5.1.1</span> Ten Simple Rules for Digital Data Storage</h3>
+<p>The following rules are defined by <span class="citation">Hart et al. (<a href="#ref-Hart_2016">2016</a>)</span>:</p>
+<blockquote>
+<p>Rule 1: Anticipate How Your Data Will Be Used</p>
+<p>Rule 2: Know Your Use Case</p>
+<p>Rule 3: Keep Raw Data Raw</p>
+<p>Rule 4: Store Data in Open Formats</p>
+<p>Rule 5: Data Should Be Structured for Analysis</p>
+<p>Rule 6: Data Should Be Uniquely Identifiable</p>
+<p>Rule 7: Link Relevant Metadata</p>
+<p>Rule 8: Adopt the Proper Privacy Protocols</p>
+<p>Rule 9: Have a Systematic Backup Scheme</p>
+<p>Rule 10: The Location and Method of Data Storage Depend on How Much Data You Have</p>
+<p>— <span class="citation">(Hart et al. <a href="#ref-Hart_2016">2016</a>)</span></p>
+</blockquote>
 
+</div>
 </div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
-<div id="ref-Rustler_2016a">
-<p>Rustler, Michael. 2016a. “Kwb.hantush (V.0.2.1).” <a href="https://doi.org/10.5281/zenodo.61613" class="uri">https://doi.org/10.5281/zenodo.61613</a>.</p>
-</div>
-<div id="ref-Rustler_2016b">
-<p>Rustler, Michael. 2016b. “Kwb.qmra (V.0.1.1).” <a href="https://doi.org/10.5281/zenodo.154111" class="uri">https://doi.org/10.5281/zenodo.154111</a>.</p>
-</div>
-<div id="ref-Krausetal_2016">
-<p>Kraus, F., W. Seis, C. Remy, M. Rustler, I. Jubany i Guell, Jose J. Espi, and F. Clarens. 2016. “Deliverable D3.2: Show Case of the Environmental Benefits and Risk Assessment of Reuse Schemes.” Report. public report in the DEMOWARE project (www.demoware.eu), KWB. <a href="http://demoware.eu/en/results/deliverables/deliverable-d3-2-show-case-of-the-environmental-benefits-and-risk-assessment-of-reuse-schemes.pdf#page=137" class="uri">http://demoware.eu/en/results/deliverables/deliverable-d3-2-show-case-of-the-environmental-benefits-and-risk-assessment-of-reuse-schemes.pdf#page=137</a>.</p>
-</div>
-<div id="ref-Rustler_2016c">
-<p>Rustler, Michael. 2016c. “Quantitative microbiological risk assessment for different wastewater reuse options in Old Ford (v.1.0).” <a href="https://doi.org/10.5281/zenodo.159527" class="uri">https://doi.org/10.5281/zenodo.159527</a>.</p>
-</div>
-<div id="ref-Sonnenberg_2016">
-<p>Sonnenberg, Hauke, and Michael Rustler. 2016. “Kwb.wtaq (V.0.2.1).” <a href="https://doi.org/10.5281/zenodo.61610" class="uri">https://doi.org/10.5281/zenodo.61610</a>.</p>
-</div>
-<div id="ref-Bakker_2016">
-<p>Bakker, M., V. Post, C. D. Langevin, J. D. Hughes, J. T. White, J. J. Starn, and M. N. Fienen. 2016. “Scripting MODFLOW Model Development Using Python and FloPy.” <em>Groundwater</em> 54 (5). Wiley: 733–39. <a href="https://doi.org/10.1111/gwat.12413" class="uri">https://doi.org/10.1111/gwat.12413</a>.</p>
-</div>
-<div id="ref-https://doi.org/10.5066/f7bk19fh">
-<p>Bakker, Mark, Vincent Post, Christian D. Langevin, Joseph D. Hughes, Jeremy White, Jeffrey Starn, and Michael Fienen. 2016. “FloPy: Python Package for Creating, Running, and Post-Processing Modflow-Based Models.” U.S. Geological Survey. <a href="https://doi.org/10.5066/f7bk19fh" class="uri">https://doi.org/10.5066/f7bk19fh</a>.</p>
+<div id="ref-Hart_2016">
+<p>Hart, Edmund M., Pauline Barmby, David LeBauer, François Michonneau, Sarah Mount, Patrick Mulrooney, Timoth’ee Poisot, Kara H. Woo, Naupaka B. Zimmerman, and Jeffrey W. Hollister. 2016. “Ten Simple Rules for Digital Data Storage.” Edited by Scott Markel. <em>PLOS Computational Biology</em> 12 (10). Public Library of Science (PLoS): e1005097. <a href="https://doi.org/10.1371/journal.pcbi.1005097" class="uri">https://doi.org/10.1371/journal.pcbi.1005097</a>.</p>
 </div>
 </div>
 <script async defer src="https://hypothes.is/embed.js"></script>
@@ -451,8 +272,8 @@ each model scenario was stored in its Github branch (for details, see <a href="h
           </div>
         </div>
       </div>
-<a href="case-studies.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="literature-review.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="other-projects.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="faq.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -482,7 +303,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/KWB-R/fakin.doc/blob/master/04_other_projects.Rmd",
+"link": "https://github.com/KWB-R/fakin.doc/blob/master/04a_literature-review.Rmd",
 "text": "Edit"
 },
 "download": ["fakin_documentation.docx", "fakin_documentation.pdf", "fakin_documentation.epub"],
