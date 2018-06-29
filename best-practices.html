@@ -143,14 +143,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="best-practices.html"><a href="best-practices.html#data-storage"><i class="fa fa-check"></i><b>2.2</b> Data storage</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="best-practices.html"><a href="best-practices.html#naming"><i class="fa fa-check"></i><b>2.2.1</b> Naming</a></li>
-<li class="chapter" data-level="2.2.2" data-path="best-practices.html"><a href="best-practices.html#metadata"><i class="fa fa-check"></i><b>2.2.2</b> Metadata</a></li>
-<li class="chapter" data-level="2.2.3" data-path="best-practices.html"><a href="best-practices.html#raw-data"><i class="fa fa-check"></i><b>2.2.3</b> Raw data</a></li>
-<li class="chapter" data-level="2.2.4" data-path="best-practices.html"><a href="best-practices.html#data-workflow"><i class="fa fa-check"></i><b>2.2.4</b> Data workflow</a></li>
+<li class="chapter" data-level="2.2.2" data-path="best-practices.html"><a href="best-practices.html#metadata"><i class="fa fa-check"></i><b>2.2.2</b> Metadata (should go one level up!)</a></li>
+<li class="chapter" data-level="2.2.3" data-path="best-practices.html"><a href="best-practices.html#raw-data"><i class="fa fa-check"></i><b>2.2.3</b> Raw Data</a></li>
+<li class="chapter" data-level="2.2.4" data-path="best-practices.html"><a href="best-practices.html#data-workflow"><i class="fa fa-check"></i><b>2.2.4</b> Data Workflow</a></li>
 <li class="chapter" data-level="2.2.5" data-path="best-practices.html"><a href="best-practices.html#folder-structures"><i class="fa fa-check"></i><b>2.2.5</b> Folder Structures</a></li>
 <li class="chapter" data-level="2.2.6" data-path="best-practices.html"><a href="best-practices.html#versioning"><i class="fa fa-check"></i><b>2.2.6</b> Versioning</a></li>
-<li class="chapter" data-level="2.2.7" data-path="best-practices.html"><a href="best-practices.html#organising-e-mails"><i class="fa fa-check"></i><b>2.2.7</b> Organising e-mails</a></li>
-<li class="chapter" data-level="2.2.8" data-path="best-practices.html"><a href="best-practices.html#managing-references"><i class="fa fa-check"></i><b>2.2.8</b> Managing references</a></li>
-<li class="chapter" data-level="2.2.9" data-path="best-practices.html"><a href="best-practices.html#data-preservation"><i class="fa fa-check"></i><b>2.2.9</b> Data preservation</a></li>
+<li class="chapter" data-level="2.2.7" data-path="best-practices.html"><a href="best-practices.html#organising-e-mails"><i class="fa fa-check"></i><b>2.2.7</b> Organising E-Mails</a></li>
+<li class="chapter" data-level="2.2.8" data-path="best-practices.html"><a href="best-practices.html#managing-references"><i class="fa fa-check"></i><b>2.2.8</b> Managing References</a></li>
+<li class="chapter" data-level="2.2.9" data-path="best-practices.html"><a href="best-practices.html#data-preservation"><i class="fa fa-check"></i><b>2.2.9</b> Data Preservation</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="best-practices.html"><a href="best-practices.html#data-collection"><i class="fa fa-check"></i><b>2.3</b> Data collection</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="best-practices.html"><a href="best-practices.html#logger-devices"><i class="fa fa-check"></i><b>2.3.1</b> Logger devices</a></li>
@@ -418,7 +418,7 @@ not in <code>\\server\projekte$\department-name\projects\project-name\data-work-
 <li>consist of only alphanumeric letters (<code>a-z</code>, <code>0-9</code>) or the hyphen (<code>-</code>).</li>
 </ul>
 <div id="project-acronyms" class="section level5">
-<h5><span class="header-section-number">2.2.1.2.1</span> Projects</h5>
+<h5><span class="header-section-number">2.2.1.2.1</span> Acronyms for Projects</h5>
 
 <div class="rmdnote">
 Do we already have rules for naming and spelling of projects and project folders
@@ -443,51 +443,118 @@ plots.
 </div>
 
 </div>
-<div id="organisations" class="section level5">
-<h5><span class="header-section-number">2.2.1.2.2</span> Organisations</h5>
+<div id="organisation-acronyms" class="section level5">
+<h5><span class="header-section-number">2.2.1.2.2</span> Acronyms for Organisations</h5>
 <p>It is very important to know the origin or owner of data. This is an important
-piece of <a href="best-practices.html#metadata">metadata</a> Therefore we define unique
-acronyms for the owners of data that we use. The acronyms are defined in a
-special file <a href="best-practices.html#file-organisations"><code>ORGANISATIONS.txt</code></a></p>
+piece of <a href="best-practices.html#metadata">metadata</a> Therefore we define unique acronyms for the
+owners of data that we use. The acronyms are defined in a special file
+<a href="best-practices.html#file-organisations"><code>ORGANISATIONS.txt</code></a></p>
 </div>
 </div>
 </div>
 <div id="metadata" class="section level3">
-<h3><span class="header-section-number">2.2.2</span> Metadata</h3>
+<h3><span class="header-section-number">2.2.2</span> Metadata (should go one level up!)</h3>
+<p>Metadata are data about data. It is up to us to define</p>
+<ul>
+<li><p><a href="best-practices.html#metadata-what">what metadata</a> (about raw data, processed data, produced
+plots, documents, reports, etc.) we want to store,</p></li>
+<li><p><a href="best-practices.html#metadata-where">where</a> to store metadata and</p></li>
+<li><p><a href="best-practices.html#metadata-format">in what format</a> to store metadata.</p></li>
+</ul>
+<div id="metadata-why" class="section level4">
+<h4><span class="header-section-number">2.2.2.1</span> Why Metadata?</h4>
+<p>Why should we store metadata about data? Metadata are required to</p>
+<ul>
+<li><p>interpret raw data, e.g. “Why are the oxygen values so high? Ah, I see,
+someone was there to clean the sensor!”,</p></li>
+<li><p>gain an overview about available data,</p></li>
+<li><p>know what we are allowed to do with the data.</p></li>
+</ul>
+</div>
+<div id="metadata-what" class="section level4">
+<h4><span class="header-section-number">2.2.2.2</span> What Metadata to Store?</h4>
+<div id="general" class="section level5">
+<h5><span class="header-section-number">2.2.2.2.1</span> General</h5>
 <p>What information would someone need to find/re-use your data? E.g.</p>
 <ul>
-<li>Location,</li>
-<li>Title,</li>
-<li>Creator name,</li>
-<li>Description,</li>
-<li>Date collected?</li>
+<li><p>Location,</p></li>
+<li><p>Title,</p></li>
+<li><p>Creator name,</p></li>
+<li><p>Description,</p></li>
+<li><p>Date collected?</p></li>
 </ul>
-<p>Why? Metadata are required for interpreting raw data and gaining an overview
-about the available data.</p>
-<div id="metadata-about-raw-data" class="section level4">
-<h4><span class="header-section-number">2.2.2.1</span> Metadata about Raw Data</h4>
-
-<div class="rmdtip">
-<p>Obtained from whom, when, via whom and which medium, e.g. “E-Mail from A to B
-on 2018-01-25” oder “USB-Stick from C to D personally on 2018-01-26”</p>
-<p>Restriction of usage, e.g. “only for project x”, “only within KWB”,
-“must not be published”</p>
-Description of content and format (meaning of columns, units, measurement
-devices, methods…)
 </div>
-
+<div id="metadata-about-raw-data" class="section level5">
+<h5><span class="header-section-number">2.2.2.2.2</span> Metadata about Raw Data</h5>
+<p>What are the most important information about raw data that we receive?</p>
+<ul>
+<li><p>Obtained from whom, when, via whom and which medium, e.g.</p>
+<ul>
+<li><p><code>E-Mail from A to B on 2018-01-25</code> or</p></li>
+<li><p><code>USB-Stick given personally from C to D on 2018-01-26</code></p></li>
+</ul></li>
+<li><p>Restriction of usage, e.g.</p>
+<ul>
+<li><p><code>only for project x</code> or</p></li>
+<li><p><code>only within KWB</code> or</p></li>
+<li><p><code>must not be published!</code> or</p></li>
+<li><p><code>should be published!</code>!</p></li>
+</ul></li>
+<li><p>Description of content and format</p>
+<ul>
+<li><p>where measurements were taken?</p></li>
+<li><p>what methods were used (to take samples, to analyse parameters in the
+laboratory)?</p></li>
+<li><p>what devices where used?</p></li>
+<li><p>what do the columns of the table (in the database, XLS/CSV file) mean?</p></li>
+<li><p>in what units are the values given?</p></li>
+</ul></li>
+</ul>
 </div>
-<div id="metadata-about-processed-data" class="section level4">
-<h4><span class="header-section-number">2.2.2.2</span> Metadata about Processed Data</h4>
-
-<div class="rmdtip">
-<p><strong>Important metadata for processed data</strong></p>
-<p>von wem (Person), wann, mit welchen Methoden (z.B. Skript) unter welchen
-Randbedingungen (z.B. Versionen von Software, Paketen) erstellt?</p>
-<p>Welche Rohdaten wurden verwendet?</p>
-keep metadata in plain text file “readme.txt”
+<div id="metadata-about-processed-data" class="section level5">
+<h5><span class="header-section-number">2.2.2.2.3</span> Metadata about Processed Data</h5>
+<p>What are the most important information about the data that we produce?</p>
+<ul>
+<li><p>who created the file? If the file was created by a script, what script created
+the file and who ran the script?</p></li>
+<li><p>when was the file created?</p></li>
+<li><p>what was the input data (e.g. raw data or preprocessed data)?</p></li>
+<li><p>which methods were applied to generate the output from the input?</p></li>
+<li><p>what was the environment, what were boundary conditions, e.g.</p>
+<ul>
+<li><p>versions of software,</p></li>
+<li><p>versions of R packages?</p></li>
+</ul></li>
+</ul>
 </div>
-
+<div id="metadata-about-programming-scripts" class="section level5">
+<h5><span class="header-section-number">2.2.2.2.4</span> Metadata about Programming Scripts</h5>
+<ul>
+<li><p>What does the script do?</p></li>
+<li><p>Who wrote the script?</p></li>
+<li><p>How to use the script? Give a short tutorial.</p></li>
+</ul>
+<p>Regarding R programming, we should consider providing scripts in the form of
+R packages. The R packaging system defines a framework of how to answer all of
+the above questions. See how we did this (not yet always with with a tutorial)
+with <a href="https://github.com/kwb-r">our packages on GitHub</a>.</p>
+</div>
+</div>
+<div id="metadata-where" class="section level4">
+<h4><span class="header-section-number">2.2.2.3</span> Where to Store Metadata?</h4>
+<p>The two main options of storing metadata are:</p>
+<ol style="list-style-type: decimal">
+<li><p>together with the data or near to the data i.e. in the same folder as the
+data file is in</p></li>
+<li><p>in a central file or database.</p></li>
+</ol>
+<p>Unless we have a professional solution (i.e. software on metadata management)
+we should prefer the first approach which is simpler and more flexible than the
+second one.</p>
+</div>
+<div id="metadata-format" class="section level4">
+<h4><span class="header-section-number">2.2.2.4</span> In What Format to Store Metadata?</h4>
+<p>keep metadata in plain text file “readme.txt”</p>
 <p>Tools for metadata tracking and data standards are:</p>
 <ul>
 <li>metadata editor, e.g. online editor of GFZ Potsdam</li>
@@ -585,7 +652,7 @@ XML-Format, das sich wohl einfach nur mit Hilfe eines Programms editieren lässt
 </ul>
 </div>
 <div id="file-projects" class="section level4">
-<h4><span class="header-section-number">2.2.2.3</span> File PROJECTS.txt</h4>
+<h4><span class="header-section-number">2.2.2.5</span> File PROJECTS.txt</h4>
 <p>This file contains the <a href="best-practices.html#project-acronyms">project acronyms</a> as we want to use
 them e.g. as top-level folder names in our
 <a href="best-practices.html#project-folder-structure">project folder structure</a>.
@@ -620,7 +687,7 @@ Do we already have a place where “official”
 metadata about projects are stored? If yes, the acronym could be included there. But then, everybody should know about it!</p>
 </div>
 <div id="file-organisations" class="section level4">
-<h4><span class="header-section-number">2.2.2.4</span> File ORGANISATIONS.txt</h4>
+<h4><span class="header-section-number">2.2.2.6</span> File ORGANISATIONS.txt</h4>
 <p>Possible content of <code>ORGANISATIONS.txt</code></p>
 <pre><code>bwb: Berliner Wasserbetriebe
 kwb: Kompetenzzentrum Wasser Berlin
@@ -628,7 +695,7 @@ uba: Umweltbundesamt</code></pre>
 </div>
 </div>
 <div id="raw-data" class="section level3">
-<h3><span class="header-section-number">2.2.3</span> Raw data</h3>
+<h3><span class="header-section-number">2.2.3</span> Raw Data</h3>
 <p>Especially in environmental sciences, raw data often cannot be reproduced (e.g.
 rainfall, river discharge measurements) and are therefore of high value. Thus
 the following rules apply in case of raw data:</p>
@@ -650,7 +717,7 @@ of raw data by</p>
 <p>Rawdata are stored in the <a href="best-practices.html#rawdata-folder-structure">rawdata folder structure</a></p>
 </div>
 <div id="data-workflow" class="section level3">
-<h3><span class="header-section-number">2.2.4</span> Data workflow</h3>
+<h3><span class="header-section-number">2.2.4</span> Data Workflow</h3>
 <p>For each project separation of:</p>
 <ul>
 <li><p><a href="best-practices.html#raw-data">raw data</a> (i.e. <code>\\server\\rawdata</code>)</p></li>
@@ -878,7 +945,7 @@ versioning’ are available here: <a href="https://github.com/leeper/data-versio
 </div>
 </div>
 <div id="organising-e-mails" class="section level3">
-<h3><span class="header-section-number">2.2.7</span> Organising e-mails</h3>
+<h3><span class="header-section-number">2.2.7</span> Organising E-Mails</h3>
 <blockquote>
 <p>“Most people now routinely send and receive lots of messages every day and as a
 Yesult, their inbox can get very quickly overloaded with hundreds of personal and
@@ -908,7 +975,7 @@ places, such as a network drive.</p></li>
 </ul>
 </div>
 <div id="managing-references" class="section level3">
-<h3><span class="header-section-number">2.2.8</span> Managing references</h3>
+<h3><span class="header-section-number">2.2.8</span> Managing References</h3>
 <p>For managing reference there are plenty of tools available. A detailed overview
 is provided by <span class="citation">(Fenner, Scheliga, and Bartling <a href="#ref-Fenner_2014">2014</a>)</span> in the Chapter <a href="http://book.openingscience.org.s3-website-eu-west-1.amazonaws.com/tools/reference_management.html">Reference Management</a>
 At KWB we use Endnote, for which an internal guideline document (<a href="file://Y:/R&amp;D%20Templates/Charts%20Guidelines%20Checklists/KWB-EndNote-Guideline-v02.pdf">KWB-EndNote-Guideline-v02.pdf</a>, (link only accessible from KWB intranet with Firefox in case workflow defined <a href="faq.html#firefox-local-files">here</a> is followed!).) was developed.
@@ -916,7 +983,7 @@ At KWB we use Endnote, for which an internal guideline document (<a href="file:/
 defined in "R/add_text.R" --></p>
 </div>
 <div id="data-preservation" class="section level3">
-<h3><span class="header-section-number">2.2.9</span> Data preservation</h3>
+<h3><span class="header-section-number">2.2.9</span> Data Preservation</h3>
 <p>Data must be retained to support your research findings</p>
 <p>Standards: ?5 years?</p>
 
@@ -938,7 +1005,7 @@ clean your messy data Or use the following tools</p>
 </div>
 <div id="data-publishing-and-sharing" class="section level2">
 <h2><span class="header-section-number">2.4</span> Data publishing and sharing</h2>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-11"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
 <a href="https://doi.org/10.1371/journal.pcbi.1005278/" target="_blank"><img src="images/tensimplerules_datasharing.png" alt="Modern life context for the ten simple rules [@Boland_2017]"  /></a>
 <p class="caption">
 Figure 2.1: Modern life context for the ten simple rules <span class="citation">(Boland, Karczewski, and Tatonetti <a href="#ref-Boland_2017">2017</a>)</span>
