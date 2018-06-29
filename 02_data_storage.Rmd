@@ -167,7 +167,7 @@ Acronyms are unique, clear names for objects. They should
 * be all lowercase,
 * consist of only alphanumeric letters (`a-z`, `0-9`) or the hyphen (`-`). 
 
-##### Projects {#project-acronyms}
+##### Acronyms for Projects {#project-acronyms}
 
 ```{block2 type = "rmdnote"}
 Do we already have rules for naming and spelling of projects and project folders 
@@ -193,56 +193,136 @@ be beneficial in tables with each column representing a project or in overview
 plots.
 ```
 
-##### Organisations
+##### Acronyms for Organisations {#organisation-acronyms}
 
 It is very important to know the origin or owner of data. This is an important
-piece of [metadata](#metadata) Therefore we define unique
-acronyms for the owners of data that we use. The acronyms are defined in a
-special file [`ORGANISATIONS.txt`](#file-organisations) 
+piece of [metadata](#metadata) Therefore we define unique acronyms for the
+owners of data that we use. The acronyms are defined in a special file
+[`ORGANISATIONS.txt`](#file-organisations) 
 
-###	Metadata {#metadata}
+### Metadata (should go one level up!){#metadata}
+
+Metadata are data about data. It is up to us to define 
+
+* [what metadata](#metadata-what) (about raw data, processed data, produced 
+plots, documents, reports, etc.) we want to store, 
+
+* [where](#metadata-where) to store metadata and 
+
+* [in what format](#metadata-format) to store metadata.
+
+#### Why Metadata? {#metadata-why}
+
+Why should we store metadata about data? Metadata are required to 
+
+* interpret raw data, e.g. "Why are the oxygen values so high? Ah, I see,
+someone was there to clean the sensor!",
+
+* gain an overview about available data,
+
+* know what we are allowed to do with the data.
+
+#### What Metadata to Store? {#metadata-what}
+
+##### General
 
 What information would someone need to find/re-use your data? E.g.
 
 * Location, 
+
 * Title, 
+
 * Creator name, 
+
 * Description, 
+
 * Date collected?
 
-Why? Metadata are required for interpreting raw data and gaining an overview 
-about the available data.
+##### Metadata about Raw Data
 
-#### Metadata about Raw Data
+What are the most important information about raw data that we receive?
 
-```{block2, type = 'rmdtip'}
-Obtained from whom, when, via whom and which medium, e.g. "E-Mail from A to B 
-on 2018-01-25" oder "USB-Stick from C to D personally on 2018-01-26"
+* Obtained from whom, when, via whom and which medium, e.g. 
 
-Restriction of usage, e.g.  "only for project x", "only within KWB", 
-"must not be published"
+    + `E-Mail from A to B on 2018-01-25` or
+    
+    + `USB-Stick given personally from C to D on 2018-01-26`
 
-Description of content and format (meaning of columns, units, measurement 
-devices, methods...)
-```
+* Restriction of usage, e.g.
 
-#### Metadata about Processed Data
+    + `only for project x` or 
+    
+    + `only within KWB` or
+    
+    + `must not be published!` or 
+    
+    + `should be published!`!
 
-```{block2, type = 'rmdtip'}
-**Important metadata for processed data**
+* Description of content and format
 
-von wem (Person), wann, mit welchen Methoden (z.B. Skript) unter welchen 
-Randbedingungen (z.B. Versionen von Software, Paketen) erstellt?
+    + where measurements were taken?
+    
+    + what methods were used (to take samples, to analyse parameters in the
+    laboratory)?
+    
+    + what devices where used?
+    
+    + what do the columns of the table (in the database, XLS/CSV file) mean?
+    
+    + in what units are the values given?
 
-Welche Rohdaten wurden verwendet?
+##### Metadata about Processed Data
+
+What are the most important information about the data that we produce?
+
+* who created the file? If the file was created by a script, what script created
+the file and who ran the script?
+
+* when was the file created?
+
+* what was the input data (e.g. raw data or preprocessed data)?
+
+* which methods were applied to generate the output from the input?
+
+* what was the environment, what were boundary conditions, e.g.
+
+    + versions of software,
+    
+    + versions of R packages?
+
+##### Metadata about Programming Scripts
+
+* What does the script do?
+
+* Who wrote the script?
+
+* How to use the script? Give a short tutorial.
+
+Regarding R programming, we should consider providing scripts in the form of 
+R packages. The R packaging system defines a framework of how to answer all of 
+the above questions. See how we did this (not yet always with with a tutorial) 
+with [our packages on GitHub](https://github.com/kwb-r).
+
+#### Where to Store Metadata? {#metadata-where}
+
+The two main options of storing metadata are:
+
+1. together with the data or near to the data i.e. in the same folder as the
+data file is in
+
+2. in a central file or database.
+
+Unless we have a professional solution (i.e. software on metadata management) 
+we should prefer the first approach which is simpler and more flexible than the
+second one.
+
+#### In What Format to Store Metadata? {#metadata-format}
 
 keep metadata in plain text file “readme.txt”
-```
 
 Tools for metadata tracking and data standards are:
 
 * metadata editor, e.g. online editor of GFZ Potsdam
-
 
 **Best Practices:**
 
@@ -414,7 +494,7 @@ uba: Umweltbundesamt
 ```
 
 
-### Raw data 
+### Raw Data 
 
 Especially in environmental sciences, raw data often cannot be reproduced (e.g. 
 rainfall, river discharge measurements) and are therefore of high value. Thus 
@@ -443,7 +523,7 @@ of raw data by
 Rawdata are stored in the [rawdata folder structure](#rawdata-folder-structure)
 
 
-###	Data workflow
+### Data Workflow
 
 For each project separation of:
 
@@ -719,7 +799,7 @@ A presentation with different tools for version control is available here:
 
 ```
 
-###	Organising e-mails
+### Organising E-Mails
 
 > "Most people now routinely send and receive lots of messages every day and as a 
 Yesult, their inbox can get very quickly overloaded with hundreds of personal and
@@ -753,7 +833,7 @@ are used, exercise version control and save important attachments to other
 places, such as a network drive.
 
 
-### Managing references 
+### Managing References 
 
 For managing reference there are plenty of tools available. A detailed overview 
 is provided by `r citep(manual["Fenner_2014"])` in the Chapter [Reference Management](http://book.openingscience.org.s3-website-eu-west-1.amazonaws.com/tools/reference_management.html) 
@@ -761,7 +841,7 @@ At KWB we use Endnote, for which an internal guideline document ([KWB-EndNote-Gu
 <!-- add_text_links() only adds more details in case of html output as 
 defined in "R/add_text.R" -->
 
-###	Data preservation
+### Data Preservation
 Data must be retained to support your research findings
 
 Standards: ?5 years?
