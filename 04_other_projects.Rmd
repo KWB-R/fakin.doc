@@ -106,6 +106,7 @@ Developed Tools:
 
 * Frontend for KURAS Database of Rainwater Management Measures: 
 `KURAS_DB_Acc2003_hs.mdb`
+
 * R package `kwb.kuras`: Interface to KURAS database
 
 ## OGRE {#ogre}
@@ -126,23 +127,26 @@ Developed Tools:
 * Adaptation of free online monitoring data visualisation [HydroServerLite](https://github.com/KWB-R/HydroServerLite)
 * Reusage of lab data import script developed in [OGRE](#ogre)
 
-## DEMOWARE {#demoware}
+## DEMEAU
 
-Developed R packages: 
+Developed R packages for groundwater modelling:
 
-- Groundwater modelling
-
-    + [kwb.hantush](https://github.com/kwb-r/kwb.hantush) `r citep(manual["Rustler_2016a"])`
+- [kwb.hantush](https://github.com/kwb-r/kwb.hantush) `r citep(manual["Rustler_2016a"])`
     
-    + [kwb.vs2dh](https://github.com/kwb-r/kwb.vs2dh)
+- [kwb.vs2dh](https://github.com/kwb-r/kwb.vs2dh)
     
-    + [kwb.demoware](https://github.com/kwb-r/kwb.demoware)
+- [kwb.demeau](https://github.com/kwb-r/kwb.demeau)
 
-- Quantitative microbiological risk assessment: the R package [kwb.qmra](https://github.com/kwb-r/kwb.qrma) `r citep(manual["Rustler_2016b"])`
-is a generic calculation engine assessing the performance of water supply systems. 
+
+## DEMOWARE
+
+R package [kwb.qmra](https://github.com/kwb-r/kwb.qmra) `r citep(manual["Rustler_2016b"])` 
+is a generic QMRA (Quantitative Microbiological Risk Assessment) calculation engine 
+assessing the performance of water supply systems. 
+
 It was successfully applicated for the Old Ford wasterwater treatment plant 
 `r citep(manual[c("Krausetal_2016", "Rustler_2016c")])`. A detailed documentation
-for the R package and its usage is available [online](https://kwb-r,github.io/kwb.qrma).
+for the R package and its usage is available [online](https://kwb-r.github.io/kwb.qmra).
 
 
 ## OPTIWELLS {#optiwells}
@@ -159,9 +163,8 @@ conductivity) on the resulting drawdawn. A detailled tutorial is available
 
 ## RWE {#rwe}
 
-(Semi)automated creation of a complex groundwater simulation model with [MODFLOW-2005](https://water.usgs.gov/ogw/modflow/MODFLOW.html) for the project 
-[Maxflow](https://github.com/chmenz/Maxflow). The developed model consisted of 
-up to three model layers with up to 1000 abstraction wells 
+(Semi)automated creation of a complex groundwater simulation model with [MODFLOW-2005](https://water.usgs.gov/ogw/modflow/MODFLOW.html) for the project [Maxflow](https://github.com/chmenz/Maxflow). The developed model 
+consisted of up to three model layers with up to 1000 abstraction wells 
 with temporal-spatial varying pumping rates within the simulation period. 
 For automating the model generation the Python package [flopy v3.2.5](http://modflowpy.github.io/flopydoc/) 
 `r citep(c("10.1111/gwat.12413.", "10.5066/F7BK19FH"))` was used with some minor 

@@ -194,15 +194,17 @@ prohibited. Even running the software may be restricted. The exact selection of
 a license is beyond the scope of this section, but depends on your intentions
 and goals with regard to the software"
 >
-> --- `citep(manual["Rokem_2018"])`
+> --- `r citep(manual["Rokem_2018"])`
 
 Recommended literature: 
 
 - [Intellectual Property and Computational Science](https://link.springer.com/chapter/10.1007/978-3-319-00026-8_19) `r citep(manual["Stodden2014"])`
 
+- [forschungslizenzen.de](http://www.forschungslizenzen.de) `r citep(manual["Forschungslizenzen"])`
+
 - [Creative Commons Licences](https://link.springer.com/chapter/10.1007/978-3-319-00026-8_19) `r citep(manual["Friesike2014"])`
 
-- [https://choosealicense.com/](https://choosealicense.com/)
+- [choosealicense.com/](https://choosealicense.com/)
 
 
 ### File formats 
@@ -217,7 +219,7 @@ all these data formats. This makes interoperability between different
 practitioners more difficult, and limits the value of data sharing, because
 access to the data in the files remains limited."
 >
-> --- `citep(manual["Rokem_2018"])`
+> --- `r citep(manual["Rokem_2018"])`
 
 ### Data exchange standards
 

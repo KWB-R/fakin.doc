@@ -1,10 +1,50 @@
 ##	Data collection
-Data are often inconsistent, incomplete, incorrect, or misspelled
-Data cleaning is essential
-You may also use OpenRefine [http://openrefine.org/](http://openrefine.org/) to 
-clean your messy data Or use the following tools 
+
+Data are often inconsistent, incomplete, incorrect, or misspelled. [Data cleaning]((https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#munging)) 
+is essential. 
+
+For data cleaning you may use a GUI (Graphical User Interface) based tool like 
+OpenRefine [http://openrefine.org/](http://openrefine.org/) or choose a programmatic 
+approach.
+
+In the following we describe how data can be imported into the [R](https://r-project.org)-Programming
+Environment, which can be used for data cleaning, aggregation and visualisation. 
+`r citep(manual["Grolemund_2017"])`
 
 ###	Logger devices
 
+The R package [kwb.logger](https://github.com/kwb-r.kwb.logger) `r citep(manual["Sonnenberg_2018"])`
+helps to import raw data from loggers used in different KWB projects into the 
+software [R](https://r-project.org) `r citep(citation())`, which is used for 
+data processing (e.g. data cleaning, aggregation and visualisation).
+
+
+```{block2, type = 'rmdtip'} 
+For details, which loggers currently are supported by the R packages [kwb.logger](https://kwb-r.github.io/kwb.logger) 
+please check the [documentation website](https://kwb-r.github.io/kwb.logger/reference/index.html).
+```
+
 
 ###	Spreadsheets
+
+General recommendations for working with EXCEL spreadsheets is given in the 
+[FAQs](#faq-excel) section.
+
+#### Import Data From One Excel File
+
+* Save the original file in the rawdata zone. 
+
+#### Import Data From Many Excel Files
+
+##### Files Are In the Same Format
+
+Import Excel files of the same format by 
+
+* defining a function that is able to read the data from that file
+* calling this function in a loop for each file to import.
+
+##### Files Are In Different Formats
+
+We developed a general approach of importing data from many Excel files in which 
+the formats (e.g. more than one table area within one sheet, differing numbers
+of header rows) differ from file to file.

@@ -111,7 +111,7 @@ Recommended literature:
 - [Advanced R](http://adv-r.had.co.nz/) `r citep(manual[c("Wickham_2014","Wickham2018")])`
 
 
-## Working with EXCEL
+## Working with EXCEL {#faq-excel}
 
 
 ```{block2, type = 'rmdcaution'} 
@@ -285,12 +285,13 @@ Currently there is no established coding style at KWB for in case of programming
 e.g. R scripts
 ```
 
+```{block2, type = 'rmdtip'}
 
-(R) programmers at KWB will use the tidyverse coding style 
-[http://style.tidyverse.org](http://style.tidyverse.org) as default. 
-This will help increasing both, the readability and reusability of 
-the developed (R-)scripts at KWB (currently: approximately 1000 Rscripts).
+(R)Programmers at KWB will use the tidyverse coding style [http://style.tidyverse.org](http://style.tidyverse.org) 
+as default. This will help increasing both, the readability and reusability of 
+the developed (R-)scripts at KWB (currently: 1000 R scripts).
 
+```
 
 Recommended literature:
 
@@ -314,10 +315,10 @@ changed be others)
 
 ```
 
-```{block2, type = 'rmdcaution'}
-In case the code base (e.g. R scripts) developed in "project A" should be 
-reused/adapted in a new "project B" (e.g. FLUSSHYGIENE) it is not allowed to  
-change the code base in the original "project A". Instead the code needs to be 
+```{block2, type = 'rmdwarning'}
+In case the code base (e.g. R scripts) developed in 'project A' should be 
+reused/adapted in a new 'project B' (e.g. FLUSSHYGIENE) it is not allowed to  
+change the code base in the original 'project A'. Instead the code needs to be 
 copied in a folder for the new project by using Subversion`s [SVN copy](https://tortoisesvn.net/docs/release/TortoiseSVN_en/tsvn-dug-copy.html) 
 command. In case this procedure is not followed established processes in the 
 souce project will be overwritten.
@@ -373,7 +374,7 @@ erste Ansatz (Vorgabe von UTF-8 als Default Encoding) angestrebt werden.
 ``` 
 
 A great blogpost for the topic (How do I write UTF-8 encoded content to a file?) 
-is provided by `citet(manual["Ushey_2018"])`, including background information 
+is provided by `r citet(manual["Ushey_2018"])`, including background information 
 on how encoding in R works.
 
 For increasing the portability of R script he recommands the for example the 
@@ -382,7 +383,7 @@ following:
 > "Portable R scripts should use unicode code points, to avoid accidental 
 mis-encoding of string literals."
 >
-> --- `citep(manual["Ushey_2018"])`
+> --- `r citep(manual["Ushey_2018"])`
 
 
 **Encoding example in R:**
@@ -405,7 +406,7 @@ recently document is used and how can multiple people work at the same time in
 that document in the "hot phase" of proposal writing? 
 ```
 
-```{block2, type = 'rmdcaution'}
+```{block2, type = 'rmdtip'}
 
 Ulf made good experiences with [Office 365](https://en.wikipedia.org/wiki/Office_365) 
 (provided by [KWR](https://www.kwrwater.nl/) at that time). Also writing of up to  
@@ -415,7 +416,7 @@ paragraph automatically gets blocked for others.
 However, in case a whole chapter needs to be processed by one person this is not
 performaed automatically. Thus it is recommended to delete the chapter for a short 
 term from the syncronised document and replace it with a placeholder like 
-`Chapter currently in revision by XXXX. Will be put back in this document until 
+'Chapter currently in revision by XXXX. Will be put back in this document until 
 YYYY-MM-DD`. 
 
 ```
