@@ -430,7 +430,8 @@ These are uniform spellings of project names, intended to be used in folder or
 file names.</p>
 <p>Whenever we want to indicate the relation to a certain project in a file or
 folder name, we use the project acronym in exactly the typing that was defined.
-This is important as we want to distinguish between raw data, processed data and
+This is important as we want to distinguish between <a href="best-practices.html#raw-data">raw data</a>,
+processed data and
 project results in our <a href="best-practices.html#data-workflow">data workflow</a>.</p>
 <p>The project acronyms are defined in a simple text file
 <a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a> in the <code>//server/projects$</code> folder, see
@@ -456,17 +457,26 @@ owners of data that we use. The acronyms are defined in a special file
 <h3><span class="header-section-number">2.2.2</span> Metadata (should go one level up!)</h3>
 <p>Metadata are data about data. It is up to us to define</p>
 <ul>
-<li><p><a href="best-practices.html#metadata-what">what metadata</a> (about raw data, processed data, produced
-plots, documents, reports, etc.) we want to store,</p></li>
+<li><p><a href="best-practices.html#metadata-what">what metadata</a> (about <a href="best-practices.html#raw-data">raw data</a>, processed data,
+produced plots, documents, reports, etc.) we want to store,
+<!-- Mindestanforderungen definieren (unterschieden nach Roh- und verarbeiteten -->
+<!-- Daten) --></p></li>
 <li><p><a href="best-practices.html#metadata-where">where</a> to store metadata and</p></li>
 <li><p><a href="best-practices.html#metadata-format">in what format</a> to store metadata.</p></li>
 </ul>
+<p>We plan to specify the requirements in more detail when dealing with the test
+projects (<a href="case-studies.html#case-studies">case studies</a>). Then, will also check
+<a href="best-practices.html#metadata-standards">metadata standards</a>.</p>
+<p>Metadata about <a href="best-practices.html#raw-data">raw data</a> should always be stored.</p>
+<p>Metadata about processed data are also important. However, in case of automated
+processing with a script, it may be possible to deduce the content of a
+generated file from the content of the script.</p>
 <div id="metadata-why" class="section level4">
 <h4><span class="header-section-number">2.2.2.1</span> Why Metadata?</h4>
 <p>Why should we store metadata about data? Metadata are required to</p>
 <ul>
-<li><p>interpret raw data, e.g. “Why are the oxygen values so high? Ah, I see,
-someone was there to clean the sensor!”,</p></li>
+<li><p>interpret <a href="best-practices.html#raw-data">raw data</a>, e.g. “Why are the oxygen values so high?
+Ah, I see, someone was there to clean the sensor!”,</p></li>
 <li><p>gain an overview about available data,</p></li>
 <li><p>know what we are allowed to do with the data.</p></li>
 </ul>
@@ -486,7 +496,7 @@ someone was there to clean the sensor!”,</p></li>
 </div>
 <div id="metadata-about-raw-data" class="section level5">
 <h5><span class="header-section-number">2.2.2.2.2</span> Metadata about Raw Data</h5>
-<p>What are the most important information about raw data that we receive?</p>
+<p>What are the most important information about <a href="best-practices.html#raw-data">raw data</a> that we receive?</p>
 <ul>
 <li><p>Obtained from whom, when, via whom and which medium, e.g.</p>
 <ul>
@@ -502,12 +512,12 @@ someone was there to clean the sensor!”,</p></li>
 </ul></li>
 <li><p>Description of content and format</p>
 <ul>
-<li><p>where measurements were taken?</p></li>
-<li><p>what methods were used (to take samples, to analyse parameters in the
+<li><p>Where measurements were taken?</p></li>
+<li><p>What methods were used (to take samples, to analyse parameters in the
 laboratory)?</p></li>
-<li><p>what devices where used?</p></li>
-<li><p>what do the columns of the table (in the database, XLS/CSV file) mean?</p></li>
-<li><p>in what units are the values given?</p></li>
+<li><p>What devices where used?</p></li>
+<li><p>What do the columns of the table (in the database, XLS/CSV file) mean?</p></li>
+<li><p>In what units are the values given?</p></li>
 </ul></li>
 </ul>
 </div>
@@ -515,12 +525,12 @@ laboratory)?</p></li>
 <h5><span class="header-section-number">2.2.2.2.3</span> Metadata about Processed Data</h5>
 <p>What are the most important information about the data that we produce?</p>
 <ul>
-<li><p>who created the file? If the file was created by a script, what script created
+<li><p>Who created the file? If the file was created by a script, what script created
 the file and who ran the script?</p></li>
-<li><p>when was the file created?</p></li>
-<li><p>what was the input data (e.g. raw data or preprocessed data)?</p></li>
-<li><p>which methods were applied to generate the output from the input?</p></li>
-<li><p>what was the environment, what were boundary conditions, e.g.</p>
+<li><p>When was the file created?</p></li>
+<li><p>What was the input data (e.g. <a href="best-practices.html#raw-data">raw data</a> or preprocessed data)?</p></li>
+<li><p>Which methods were applied to generate the output from the input?</p></li>
+<li><p>What was the environment, what were boundary conditions, e.g.</p>
 <ul>
 <li><p>versions of software,</p></li>
 <li><p>versions of R packages?</p></li>
@@ -544,8 +554,8 @@ with <a href="https://github.com/kwb-r">our packages on GitHub</a>.</p>
 <h4><span class="header-section-number">2.2.2.3</span> Where to Store Metadata?</h4>
 <p>The two main options of storing metadata are:</p>
 <ol style="list-style-type: decimal">
-<li><p>together with the data or near to the data i.e. in the same folder as the
-data file is in</p></li>
+<li><p>together with the data or near to the data i.e. in the same folder in which
+the data file resides,</p></li>
 <li><p>in a central file or database.</p></li>
 </ol>
 <p>Unless we have a professional solution (i.e. software on metadata management)
@@ -555,21 +565,17 @@ second one.</p>
 <div id="metadata-format" class="section level4">
 <h4><span class="header-section-number">2.2.2.4</span> In What Format to Store Metadata?</h4>
 <p>keep metadata in plain text file “readme.txt”</p>
+</div>
+<div id="metadata-management-tools" class="section level4">
+<h4><span class="header-section-number">2.2.2.5</span> Metadata Management Tools</h4>
 <p>Tools for metadata tracking and data standards are:</p>
 <ul>
 <li>metadata editor, e.g. online editor of GFZ Potsdam</li>
 </ul>
-<p><strong>Best Practices:</strong></p>
-<ul>
-<li><p>Mindestanforderungen definieren (unterschieden nach Roh- und verarbeiteten
-Daten)</p></li>
-<li><p>Metadatenstandards prüfen, z. B. DataCite (siehe u.a. ZALF, GFZ Potsdam)</p></li>
-<li><p>Werden wir am konkreten Anwendungsfall in den Testprojekten entwickeln</p></li>
-<li><p>Metadaten zu Rohdaten sind immer abzulegen. Metadaten zu verarbeiteten Daten
-sind ebenso wichtig. Sie können bei automatisierter Datenverarbeitung aber
-aus den Skripten geschlossen werden.</p></li>
-</ul>
-<p><strong>Metadatenstandards</strong>:</p>
+</div>
+<div id="metadata-standards" class="section level4">
+<h4><span class="header-section-number">2.2.2.6</span> Metadata Standards</h4>
+<p>Examples: DataCite (see e.g. ZALF, GFZ Potsdam)</p>
 <p>Wir wollen einen Metadatenstandard verwenden.
 Beispiele für Metadatenstandards sind (in Klammern stehen Institutionen, die
 unter anderem Daten mit Metadtaen in diesem Standard veröffentlichen):</p>
@@ -652,7 +658,7 @@ XML-Format, das sich wohl einfach nur mit Hilfe eines Programms editieren lässt
 </ul>
 </div>
 <div id="file-projects" class="section level4">
-<h4><span class="header-section-number">2.2.2.5</span> File PROJECTS.txt</h4>
+<h4><span class="header-section-number">2.2.2.7</span> File PROJECTS.txt</h4>
 <p>This file contains the <a href="best-practices.html#project-acronyms">project acronyms</a> as we want to use
 them e.g. as top-level folder names in our
 <a href="best-practices.html#project-folder-structure">project folder structure</a>.
@@ -683,11 +689,12 @@ wellma: WELLMA
 order. They map the acronym to a project name or a project title and the year
 of the start of the project.</p>
 <p><strong>Question:</strong>
-Do we already have a place where “official”
-metadata about projects are stored? If yes, the acronym could be included there. But then, everybody should know about it!</p>
+Do we already have a place where “official” metadata about projects are stored?
+If yes, the acronym could be included there. But then, everybody should know
+about it!</p>
 </div>
 <div id="file-organisations" class="section level4">
-<h4><span class="header-section-number">2.2.2.6</span> File ORGANISATIONS.txt</h4>
+<h4><span class="header-section-number">2.2.2.8</span> File ORGANISATIONS.txt</h4>
 <p>Possible content of <code>ORGANISATIONS.txt</code></p>
 <pre><code>bwb: Berliner Wasserbetriebe
 kwb: Kompetenzzentrum Wasser Berlin
@@ -696,20 +703,20 @@ uba: Umweltbundesamt</code></pre>
 </div>
 <div id="raw-data" class="section level3">
 <h3><span class="header-section-number">2.2.3</span> Raw Data</h3>
-<p>Especially in environmental sciences, raw data often cannot be reproduced (e.g.
-rainfall, river discharge measurements) and are therefore of high value. Thus
-the following rules apply in case of raw data:</p>
+<p>Especially in environmental sciences, <a href="best-practices.html#raw-data">raw data</a> often cannot be
+reproduced (e.g. rainfall, river discharge measurements) and are therefore of
+high value. Thus the following rules apply in case of raw data:</p>
 <ul>
 <li><p>can be renamed (in case this is documented in a <a href="best-practices.html#metadata">metadata</a> file)</p></li>
 <li><p>the content must not be changed</p></li>
 <li><p>will be stored as read-only in an secure area (i.e. one folder contains all
-raw data)</p></li>
+<a href="best-practices.html#raw-data">raw data</a>)</p></li>
 </ul>
 <p><strong><em>added from: 04_rawdata.Rmd</em></strong></p>
-<p>As raw data we define data that we receive from a device or from a project
+<p>As <a href="best-practices.html#raw-data">raw data</a> we define data that we receive from a device or from a project
 partner.</p>
 <p>Most of our research results are based on data. We acknowledge the importance
-of raw data by</p>
+of <a href="best-practices.html#raw-data">raw data</a> by</p>
 <ul>
 <li><p>storing then in a special place where it is specially secured</p></li>
 <li><p>describing them with <a href="best-practices.html#metadata">metadata</a></p></li>
