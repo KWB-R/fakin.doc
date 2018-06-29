@@ -175,9 +175,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3" data-path="other-projects.html"><a href="other-projects.html#kuras"><i class="fa fa-check"></i><b>4.3</b> KURAS</a></li>
 <li class="chapter" data-level="4.4" data-path="other-projects.html"><a href="other-projects.html#ogre"><i class="fa fa-check"></i><b>4.4</b> OGRE</a></li>
 <li class="chapter" data-level="4.5" data-path="other-projects.html"><a href="other-projects.html#flusshygiene"><i class="fa fa-check"></i><b>4.5</b> Flusshygiene</a></li>
-<li class="chapter" data-level="4.6" data-path="other-projects.html"><a href="other-projects.html#demoware"><i class="fa fa-check"></i><b>4.6</b> DEMOWARE</a></li>
-<li class="chapter" data-level="4.7" data-path="other-projects.html"><a href="other-projects.html#optiwells"><i class="fa fa-check"></i><b>4.7</b> OPTIWELLS</a></li>
-<li class="chapter" data-level="4.8" data-path="other-projects.html"><a href="other-projects.html#rwe"><i class="fa fa-check"></i><b>4.8</b> RWE</a></li>
+<li class="chapter" data-level="4.6" data-path="other-projects.html"><a href="other-projects.html#demeau"><i class="fa fa-check"></i><b>4.6</b> DEMEAU</a></li>
+<li class="chapter" data-level="4.7" data-path="other-projects.html"><a href="other-projects.html#demoware"><i class="fa fa-check"></i><b>4.7</b> DEMOWARE</a></li>
+<li class="chapter" data-level="4.8" data-path="other-projects.html"><a href="other-projects.html#optiwells"><i class="fa fa-check"></i><b>4.8</b> OPTIWELLS</a></li>
+<li class="chapter" data-level="4.9" data-path="other-projects.html"><a href="other-projects.html#rwe"><i class="fa fa-check"></i><b>4.9</b> RWE</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>5</b> FAQs</a><ul>
 <li class="chapter" data-level="5.1" data-path="faq.html"><a href="faq.html#tools-for-researchers"><i class="fa fa-check"></i><b>5.1</b> Tools for researchers</a></li>
@@ -187,7 +188,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.5" data-path="faq.html"><a href="faq.html#how-to-install-kwb-r-packages"><i class="fa fa-check"></i><b>5.5</b> How to install KWB R packages?</a></li>
 <li class="chapter" data-level="5.6" data-path="faq.html"><a href="faq.html#firefox-local-files"><i class="fa fa-check"></i><b>5.6</b> How to open local file links in Firefox (&gt;= v57)</a></li>
 <li class="chapter" data-level="5.7" data-path="faq.html"><a href="faq.html#how-to-build-your-own-kwb-styled-r-package"><i class="fa fa-check"></i><b>5.7</b> How to build your own KWB styled R package?</a></li>
-<li class="chapter" data-level="5.8" data-path="faq.html"><a href="faq.html#working-with-excel"><i class="fa fa-check"></i><b>5.8</b> Working with EXCEL</a></li>
+<li class="chapter" data-level="5.8" data-path="faq.html"><a href="faq.html#faq-excel"><i class="fa fa-check"></i><b>5.8</b> Working with EXCEL</a></li>
 <li class="chapter" data-level="5.9" data-path="faq.html"><a href="faq.html#heterogenous-software-versions-on-kwb-computers"><i class="fa fa-check"></i><b>5.9</b> Heterogenous software versions on KWB computers</a></li>
 <li class="chapter" data-level="5.10" data-path="faq.html"><a href="faq.html#r-packageversion-dependency-of-r-scripts"><i class="fa fa-check"></i><b>5.10</b> R package/version dependency of R scripts</a></li>
 <li class="chapter" data-level="5.11" data-path="faq.html"><a href="faq.html#complex-r-script-dependencies"><i class="fa fa-check"></i><b>5.11</b> Complex R script dependencies</a></li>
@@ -998,21 +999,60 @@ defined in "R/add_text.R" --></p>
 </div>
 <div id="data-collection" class="section level2">
 <h2><span class="header-section-number">2.3</span> Data collection</h2>
-<p>Data are often inconsistent, incomplete, incorrect, or misspelled
-Data cleaning is essential
-You may also use OpenRefine <a href="http://openrefine.org/" class="uri">http://openrefine.org/</a> to
-clean your messy data Or use the following tools</p>
+<p>Data are often inconsistent, incomplete, incorrect, or misspelled. <a href="(https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#munging)">Data cleaning</a>
+is essential.</p>
+<p>For data cleaning you may use a GUI (Graphical User Interface) based tool like
+OpenRefine <a href="http://openrefine.org/" class="uri">http://openrefine.org/</a> or choose a programmatic
+approach.</p>
+<p>In the following we describe how data can be imported into the <a href="https://r-project.org">R</a>-Programming
+Environment, which can be used for data cleaning, aggregation and visualisation.
+<span class="citation">(Grolemund and Wickham <a href="#ref-Grolemund_2017">2017</a>)</span></p>
 <div id="logger-devices" class="section level3">
 <h3><span class="header-section-number">2.3.1</span> Logger devices</h3>
+<p>The R package <a href="https://github.com/kwb-r.kwb.logger">kwb.logger</a> <span class="citation">(Sonnenberg <a href="#ref-Sonnenberg_2018">2018</a>)</span>
+helps to import raw data from loggers used in different KWB projects into the
+software <a href="https://r-project.org">R</a> <span class="citation">(R Core Team <a href="#ref-R_Core_Team_2017">2017</a>)</span>, which is used for
+data processing (e.g. data cleaning, aggregation and visualisation).</p>
+
+<div class="rmdtip">
+For details, which loggers currently are supported by the R packages <a href="https://kwb-r.github.io/kwb.logger">kwb.logger</a>
+please check the <a href="https://kwb-r.github.io/kwb.logger/reference/index.html">documentation website</a>.
+</div>
+
 </div>
 <div id="spreadsheets" class="section level3">
 <h3><span class="header-section-number">2.3.2</span> Spreadsheets</h3>
+<p>General recommendations for working with EXCEL spreadsheets is given in the
+<a href="faq.html#faq-excel">FAQs</a> section.</p>
+<div id="import-data-from-one-excel-file" class="section level4">
+<h4><span class="header-section-number">2.3.2.1</span> Import Data From One Excel File</h4>
+<ul>
+<li>Save the original file in the rawdata zone.</li>
+</ul>
+</div>
+<div id="import-data-from-many-excel-files" class="section level4">
+<h4><span class="header-section-number">2.3.2.2</span> Import Data From Many Excel Files</h4>
+<div id="files-are-in-the-same-format" class="section level5">
+<h5><span class="header-section-number">2.3.2.2.1</span> Files Are In the Same Format</h5>
+<p>Import Excel files of the same format by</p>
+<ul>
+<li>defining a function that is able to read the data from that file</li>
+<li>calling this function in a loop for each file to import.</li>
+</ul>
+</div>
+<div id="files-are-in-different-formats" class="section level5">
+<h5><span class="header-section-number">2.3.2.2.2</span> Files Are In Different Formats</h5>
+<p>We developed a general approach of importing data from many Excel files in which
+the formats (e.g. more than one table area within one sheet, differing numbers
+of header rows) differ from file to file.</p>
 
+</div>
+</div>
 </div>
 </div>
 <div id="data-publishing-and-sharing" class="section level2">
 <h2><span class="header-section-number">2.4</span> Data publishing and sharing</h2>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-10"></span>
 <a href="https://doi.org/10.1371/journal.pcbi.1005278/" target="_blank"><img src="images/tensimplerules_datasharing.png" alt="Modern life context for the ten simple rules [@Boland_2017]"  /></a>
 <p class="caption">
 Figure 2.1: Modern life context for the ten simple rules <span class="citation">(Boland, Karczewski, and Tatonetti <a href="#ref-Boland_2017">2017</a>)</span>
@@ -1172,13 +1212,14 @@ software this means that copying and further distribution of the software is
 prohibited. Even running the software may be restricted. The exact selection of
 a license is beyond the scope of this section, but depends on your intentions
 and goals with regard to the software”</p>
-<p>— <code>citep(manual[&quot;Rokem_2018&quot;])</code></p>
+<p>— <span class="citation">(Rokem and Chirigati <a href="#ref-Rokem_2018">2018</a>)</span></p>
 </blockquote>
 <p>Recommended literature:</p>
 <ul>
 <li><p><a href="https://link.springer.com/chapter/10.1007/978-3-319-00026-8_19">Intellectual Property and Computational Science</a> <span class="citation">(Stodden <a href="#ref-Stodden2014">2014</a>)</span></p></li>
+<li><p><a href="http://www.forschungslizenzen.de">forschungslizenzen.de</a> <span class="citation">(“Forschungslizenzen” <a href="#ref-Forschungslizenzen">2018</a>)</span></p></li>
 <li><p><a href="https://link.springer.com/chapter/10.1007/978-3-319-00026-8_19">Creative Commons Licences</a> <span class="citation">(Friesike <a href="#ref-Friesike2014">2014</a>)</span></p></li>
-<li><p><a href="https://choosealicense.com/" class="uri">https://choosealicense.com/</a></p></li>
+<li><p><a href="https://choosealicense.com/">choosealicense.com/</a></p></li>
 </ul>
 </div>
 <div id="file-formats" class="section level3">
@@ -1193,7 +1234,7 @@ need to build and maintain separate software tools to read, write and process
 all these data formats. This makes interoperability between different
 practitioners more difficult, and limits the value of data sharing, because
 access to the data in the files remains limited.”</p>
-<p>— <code>citep(manual[&quot;Rokem_2018&quot;])</code></p>
+<p>— <span class="citation">(Rokem and Chirigati <a href="#ref-Rokem_2018">2018</a>)</span></p>
 </blockquote>
 </div>
 <div id="data-exchange-standards" class="section level3">
@@ -1226,11 +1267,20 @@ ecosystem for feature-based earth observations</p>
 <div id="ref-Fenner_2014">
 <p>Fenner, Martin, Kaja Scheliga, and Sönke Bartling. 2014. “Reference Management.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 125–37. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-00026-8_8" class="uri">https://doi.org/10.1007/978-3-319-00026-8_8</a>.</p>
 </div>
+<div id="ref-Grolemund_2017">
+<p>Grolemund, Garrett, and Hadley Wickham, eds. 2017. <em>R for Data Science</em>. 1st ed. Sebastopol, CA: O‘Reilly Media. <a href="https://r4ds.had.co.nz" class="uri">https://r4ds.had.co.nz</a>.</p>
+</div>
+<div id="ref-Sonnenberg_2018">
+<p>Sonnenberg, Hauke. 2018. “Kwb.logger (V 0.2.0).” <a href="https://doi.org/10.5281/zenodo.1289425" class="uri">https://doi.org/10.5281/zenodo.1289425</a>.</p>
+</div>
+<div id="ref-R_Core_Team_2017">
+<p>R Core Team. 2017. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</p>
+</div>
 <div id="ref-Boland_2017">
 <p>Boland, Mary Regina, Konrad J. Karczewski, and Nicholas P. Tatonetti. 2017. “Ten Simple Rules to Enable Multi-Site Collaborations Through Data Sharing.” <em>PLOS Computational Biology</em> 13 (1). Public Library of Science (PLoS): e1005278. <a href="https://doi.org/10.1371/journal.pcbi.1005278" class="uri">https://doi.org/10.1371/journal.pcbi.1005278</a>.</p>
 </div>
 <div id="ref-Kaden_2018">
-<p>Kaden, Ben, and Michael Kleineberg. 2018. “Guidelines Zur Veröffentlichung Dissertationsbezogener Forschungsdaten.” <a href="https://doi.org/http://dx.doi.org/10.18452/18811" class="uri">https://doi.org/http://dx.doi.org/10.18452/18811</a>.</p>
+<p>Kaden, Ben, and Michael Kleineberg. 2018. “Guidelines Zur Veröffentlichung Dissertationsbezogener Forschungsdaten.” <a href="https://doi.org/https://doi.org/10.18452/18811" class="uri">https://doi.org/https://doi.org/10.18452/18811</a>.</p>
 </div>
 <div id="ref-Bosman_2016">
 <p>Bosman, Jeroen, and Bianca Kramer. 2016. “GitHub and More: Sharing Data &amp; Code.” Blog. <em>Innovations in Scholarly Communication - Changing Research Workflows</em>. <a href="https://101innovations.wordpress.com/2016/10/09/github-and-more-sharing-data-code/" class="uri">https://101innovations.wordpress.com/2016/10/09/github-and-more-sharing-data-code/</a>.</p>
@@ -1238,8 +1288,14 @@ ecosystem for feature-based earth observations</p>
 <div id="ref-Fenner2014">
 <p>Fenner, Martin, and Laure Haak. 2014. “Unique Identifiers for Researchers.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 293–96. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-00026-8_21" class="uri">https://doi.org/10.1007/978-3-319-00026-8_21</a>.</p>
 </div>
+<div id="ref-Rokem_2018">
+<p>Rokem, Ariel, and Fernando Chirigati. 2018. “Glossary.” In <em>The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences</em>, edited by Justin Kitzes, Daniel Turek, and Fatma Deniz. Oakland, CA: University of California Press. <a href="https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html" class="uri">https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html</a>.</p>
+</div>
 <div id="ref-Stodden2014">
 <p>Stodden, Victoria. 2014. “Intellectual Property and Computational Science.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 225–35. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-00026-8_15" class="uri">https://doi.org/10.1007/978-3-319-00026-8_15</a>.</p>
+</div>
+<div id="ref-Forschungslizenzen">
+<p>“Forschungslizenzen.” 2018. <a href="http://forschungslizenzen.de/" class="uri">http://forschungslizenzen.de/</a>.</p>
 </div>
 <div id="ref-Friesike2014">
 <p>Friesike, Sascha. 2014. “Creative Commons Licences.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 287–88. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-00026-8_19" class="uri">https://doi.org/10.1007/978-3-319-00026-8_19</a>.</p>
