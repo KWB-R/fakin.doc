@@ -341,109 +341,114 @@ Tools for metadata tracking and data standards are:
 
 #### Metadata Standards {#metadata-standards}
 
-Examples: DataCite (see e.g. ZALF, GFZ Potsdam)
+We want to use a metadata standard. 
 
-Wir wollen einen Metadatenstandard verwenden. 
-Beispiele für Metadatenstandards sind (in Klammern stehen Institutionen, die 
-unter anderem Daten mit Metadtaen in diesem Standard veröffentlichen):
+Examples for metadata standards are (in brackets are listed the institutions who 
+publish their data by using this standard):
 
-* DataCite Metadata Schema
+- [DataCite metadata scheme](https://schema.datacite.org/)
 
-    + Leibniz-Zentrum für Agrarlandschaftsforschung e. V. (ZALF)
+    + [Leibniz-Zentrum für Agrarlandschaftsforschung e. V. (ZALF)](http://www.zalf.de)
     
-    + Deutsches GeoForschungsZentrum Potsdam (GFZ) (+ ISO + DIF + Dublin Core)
+    + [Deutsches GeoForschungsZentrum Potsdam (GFZ)](http://dataservices.gfz-potsdam.de/portal/) (+ ISO + DIF + [Dublin Core](http://dublincore.org/))
 
-* ISO 19115-2
+- [ISO 19115-2](https://www.iso.org/standard/39229.html)
 
-    + Bundesanstalt für Gewässerkunde (BfG)
+    + [Bundesanstalt für Gewässerkunde (BfG)](https://www.re3data.org/repository/r3d100011664)
     
-    + Alfred-Wegener-Institut Helmholtz-Zentrum für Polar- und Meeresforschung
-      (AWI)
-
-Die Auswahl erfolgt gemäß einer guten Übertragbarkeit auf die Anforderungen des 
-KWB und gemäß der Verfügbarkeit von Tools.
-
-**Tools:**
-
-* Metadaten-Editor, z.B. Online-Editor vom GFZ Potsdam
+    + [Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research 
+    (AWI)](https://www.awi.de/en.html)
 
 
-We propose to define some special files that contain metadata related to 
-files and folders. To indicate that these files have a special meaning, the
+```{block2, type = 'rmdnote'} 
+
+Best-practices roadmap:
+
+1. Check meta data standards, e. g. [DataCite](https://schema.datacite.org/) (see 
+also: ZALF, GFZ Potsdam)  
+  
+2. Define minimum metadata requirements at KWB for raw and processed data.  
+projects. 
+
+The 'best-practices for metadata' will be developed for the [case studies](#case-studies) 
+which are assessed within FAKIN project.
+
+We propose to define some special files that contain metadata related 
+to files and folders. To indicate that these files have a special meaning, the
 file names are all uppercase.
-
-
-***copied from `10_old_german_chapters.Rmd` ***:
-
-Beispiel:
-
-Wenn wir Zeitreihen von den Beliner Wasserbetrieben bekommen, dann haben diese
-entweder eine Spalte mit Zeitstempeln oder zwei Spalten mit Zeitstempeln, wobei
-die erste den Anfang und die zweite das Ende des Zeitraums enthält, auf den
-sich die Messwerte in der entsprechenden Zeile beziehen. 
-
-Wenn nur eine Spalte Zeitstempel enthält, dann ist nicht klar, ob der 
-Zeitstempel den Anfang oder das Ende (oder gar einen anderen Zeitpunkt 
-innerhalb) des Zeitraums angibt. 
-
-Bei einer Zeitreihe mit fünfminütigen Messwerten, z.B.
-
-```
-Zeit                Wert
-2018-06-05 16:20:00    0
-2018-06-05 16:25:00    1
-2018-06-05 16:30:00    2
-2018-06-05 16:35:00    3
-2018-06-05 16:40:00    4
-```
- 
-ist nicht klar, ob sich der Wert 1 auf den Zeitraum `16:20 - 16:25` oder auf
-den Zeitraum `16:25 - 16:30` bezieht.
-
-Dies ist ein Beispiel für eine sehr konkrete Metadatenanforderung. An dieser
-Stelle gehen wir meistens von Annahmen aus oder hat jemand von Euch schon mal
-eine Aussage darüber von einem BWB-Mitarbeiter erhalten?
-
-Die Kenntnis über den Bezugspunkt des Zeitstempels ist zum Beispiel wichtig beim
-
-* [Erzeugen von Regen-Inputdateien für die Software InfoWorks](#input-infoworks-regen)
-
-In der obigen Beispielzeitreihe ist auch nicht klar, auf welche Zeitzone sich
-die Zeitstempel beziehen. Die Zeitzone bzw. die Angabe des UTC-Offsets ist eine
-wichtige Metainformation. Am besten wäre es, wenn alle Zeitstempel diese 
-Information enthielten, z.B.
-
-```
-2018-06-05 16:20:00+02
-2018-06-05 16:25:00+02
 ```
 
-Dann bräuchte man diese Information nicht extra zu führen. 
+<!-- ***copied from `10_old_german_chapters.Rmd` ***: -->
 
-Metadaten werden oft erst bei Bedarf erhoben, nämlich genau dann, wenn man sich
-z.B. die obigen Fragen nach Zeitstempelbezug und Zeitzone stellt. Dann wird
-nachgefragt und im besten Fall wird eine Antwort darauf gegeben, z.B. in Form
-einer E-Mail. Die Metadaten sind dann in der E-Mail enthalten. 
+<!-- Beispiel: -->
 
-Fragen:
+<!-- Wenn wir Zeitreihen von den Beliner Wasserbetrieben bekommen, dann haben diese -->
+<!-- entweder eine Spalte mit Zeitstempeln oder zwei Spalten mit Zeitstempeln, wobei -->
+<!-- die erste den Anfang und die zweite das Ende des Zeitraums enthält, auf den -->
+<!-- sich die Messwerte in der entsprechenden Zeile beziehen.  -->
 
-- Wo und unter welchem Namen legen wir diese E-Mail ab?
+<!-- Wenn nur eine Spalte Zeitstempel enthält, dann ist nicht klar, ob der  -->
+<!-- Zeitstempel den Anfang oder das Ende (oder gar einen anderen Zeitpunkt  -->
+<!-- innerhalb) des Zeitraums angibt.  -->
 
-Beispiel für Metadaten aus meiner persönlichen Logdatei:
+<!-- Bei einer Zeitreihe mit fünfminütigen Messwerten, z.B. -->
 
-> Regendaten gelesen; ca. 10 Impulse gegen 14:00; Dannecker geschrubbt, 
-> neuer Akku: Batterie defect, alte Batterie drin gelassen, 
-> Daten auslesen nicht möglich; H=55cm
+<!-- ``` -->
+<!-- Zeit                Wert -->
+<!-- 2018-06-05 16:20:00    0 -->
+<!-- 2018-06-05 16:25:00    1 -->
+<!-- 2018-06-05 16:30:00    2 -->
+<!-- 2018-06-05 16:35:00    3 -->
+<!-- 2018-06-05 16:40:00    4 -->
+<!-- ``` -->
 
-Das müssen wir irgendwie besser hinkriegen, aber wie?
+<!-- ist nicht klar, ob sich der Wert 1 auf den Zeitraum `16:20 - 16:25` oder auf -->
+<!-- den Zeitraum `16:25 - 16:30` bezieht. -->
 
-Die grundlegenden Fragen sind:
+<!-- Dies ist ein Beispiel für eine sehr konkrete Metadatenanforderung. An dieser -->
+<!-- Stelle gehen wir meistens von Annahmen aus oder hat jemand von Euch schon mal -->
+<!-- eine Aussage darüber von einem BWB-Mitarbeiter erhalten? -->
 
-- Wer ist für die Ablage von Metadaten verantwortlich?
-- Wo werden die Metadaten abgelegt? Direkt bei den Daten oder in einer 
-übergeordneten Datei/Datenbank?
-- In welchem Format werden die Metadaten abgelegt? Einfaches Textformat vs. 
-XML-Format, das sich wohl einfach nur mit Hilfe eines Programms editieren lässt.
+<!-- Die Kenntnis über den Bezugspunkt des Zeitstempels ist zum Beispiel wichtig beim -->
+
+<!-- * [Erzeugen von Regen-Inputdateien für die Software InfoWorks](#input-infoworks-regen) -->
+
+<!-- In der obigen Beispielzeitreihe ist auch nicht klar, auf welche Zeitzone sich -->
+<!-- die Zeitstempel beziehen. Die Zeitzone bzw. die Angabe des UTC-Offsets ist eine -->
+<!-- wichtige Metainformation. Am besten wäre es, wenn alle Zeitstempel diese  -->
+<!-- Information enthielten, z.B. -->
+
+<!-- ``` -->
+<!-- 2018-06-05 16:20:00+02 -->
+<!-- 2018-06-05 16:25:00+02 -->
+<!-- ``` -->
+
+<!-- Dann bräuchte man diese Information nicht extra zu führen.  -->
+
+<!-- Metadaten werden oft erst bei Bedarf erhoben, nämlich genau dann, wenn man sich -->
+<!-- z.B. die obigen Fragen nach Zeitstempelbezug und Zeitzone stellt. Dann wird -->
+<!-- nachgefragt und im besten Fall wird eine Antwort darauf gegeben, z.B. in Form -->
+<!-- einer E-Mail. Die Metadaten sind dann in der E-Mail enthalten.  -->
+
+<!-- Fragen: -->
+
+<!-- - Wo und unter welchem Namen legen wir diese E-Mail ab? -->
+
+<!-- Beispiel für Metadaten aus meiner persönlichen Logdatei: -->
+
+<!-- > Regendaten gelesen; ca. 10 Impulse gegen 14:00; Dannecker geschrubbt,  -->
+<!-- > neuer Akku: Batterie defect, alte Batterie drin gelassen,  -->
+<!-- > Daten auslesen nicht möglich; H=55cm -->
+
+<!-- Das müssen wir irgendwie besser hinkriegen, aber wie? -->
+
+<!-- Die grundlegenden Fragen sind: -->
+
+<!-- - Wer ist für die Ablage von Metadaten verantwortlich? -->
+<!-- - Wo werden die Metadaten abgelegt? Direkt bei den Daten oder in einer  -->
+<!-- übergeordneten Datei/Datenbank? -->
+<!-- - In welchem Format werden die Metadaten abgelegt? Einfaches Textformat vs.  -->
+<!-- XML-Format, das sich wohl einfach nur mit Hilfe eines Programms editieren lässt. -->
 
 
 #### File PROJECTS.txt {#file-projects}
