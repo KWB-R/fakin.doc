@@ -576,87 +576,89 @@ second one.</p>
 </div>
 <div id="metadata-standards" class="section level4">
 <h4><span class="header-section-number">2.2.2.6</span> Metadata Standards</h4>
-<p>Examples: DataCite (see e.g. ZALF, GFZ Potsdam)</p>
-<p>Wir wollen einen Metadatenstandard verwenden.
-Beispiele für Metadatenstandards sind (in Klammern stehen Institutionen, die
-unter anderem Daten mit Metadtaen in diesem Standard veröffentlichen):</p>
+<p>We want to use a metadata standard.</p>
+<p>Examples for metadata standards are (in brackets are listed the institutions who
+publish their data by using this standard):</p>
 <ul>
-<li><p>DataCite Metadata Schema</p>
+<li><p><a href="https://schema.datacite.org/">DataCite metadata scheme</a></p>
 <ul>
-<li><p>Leibniz-Zentrum für Agrarlandschaftsforschung e. V. (ZALF)</p></li>
-<li><p>Deutsches GeoForschungsZentrum Potsdam (GFZ) (+ ISO + DIF + Dublin Core)</p></li>
+<li><p><a href="http://www.zalf.de">Leibniz-Zentrum für Agrarlandschaftsforschung e. V. (ZALF)</a></p></li>
+<li><p><a href="http://dataservices.gfz-potsdam.de/portal/">Deutsches GeoForschungsZentrum Potsdam (GFZ)</a> (+ ISO + DIF + <a href="http://dublincore.org/">Dublin Core</a>)</p></li>
 </ul></li>
-<li><p>ISO 19115-2</p>
+<li><p><a href="https://www.iso.org/standard/39229.html">ISO 19115-2</a></p>
 <ul>
-<li><p>Bundesanstalt für Gewässerkunde (BfG)</p></li>
-<li><p>Alfred-Wegener-Institut Helmholtz-Zentrum für Polar- und Meeresforschung
-(AWI)</p></li>
+<li><p><a href="https://www.re3data.org/repository/r3d100011664">Bundesanstalt für Gewässerkunde (BfG)</a></p></li>
+<li><p><a href="https://www.awi.de/en.html">Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research
+(AWI)</a></p></li>
 </ul></li>
 </ul>
-<p>Die Auswahl erfolgt gemäß einer guten Übertragbarkeit auf die Anforderungen des
-KWB und gemäß der Verfügbarkeit von Tools.</p>
-<p><strong>Tools:</strong></p>
-<ul>
-<li>Metadaten-Editor, z.B. Online-Editor vom GFZ Potsdam</li>
-</ul>
-<p>We propose to define some special files that contain metadata related to
-files and folders. To indicate that these files have a special meaning, the
-file names are all uppercase.</p>
-<p><strong><em>copied from <code>10_old_german_chapters.Rmd</code> </em></strong>:</p>
-<p>Beispiel:</p>
-<p>Wenn wir Zeitreihen von den Beliner Wasserbetrieben bekommen, dann haben diese
-entweder eine Spalte mit Zeitstempeln oder zwei Spalten mit Zeitstempeln, wobei
-die erste den Anfang und die zweite das Ende des Zeitraums enthält, auf den
-sich die Messwerte in der entsprechenden Zeile beziehen.</p>
-<p>Wenn nur eine Spalte Zeitstempel enthält, dann ist nicht klar, ob der
-Zeitstempel den Anfang oder das Ende (oder gar einen anderen Zeitpunkt
-innerhalb) des Zeitraums angibt.</p>
-<p>Bei einer Zeitreihe mit fünfminütigen Messwerten, z.B.</p>
-<pre><code>Zeit                Wert
-2018-06-05 16:20:00    0
-2018-06-05 16:25:00    1
-2018-06-05 16:30:00    2
-2018-06-05 16:35:00    3
-2018-06-05 16:40:00    4</code></pre>
-<p>ist nicht klar, ob sich der Wert 1 auf den Zeitraum <code>16:20 - 16:25</code> oder auf
-den Zeitraum <code>16:25 - 16:30</code> bezieht.</p>
-<p>Dies ist ein Beispiel für eine sehr konkrete Metadatenanforderung. An dieser
-Stelle gehen wir meistens von Annahmen aus oder hat jemand von Euch schon mal
-eine Aussage darüber von einem BWB-Mitarbeiter erhalten?</p>
-<p>Die Kenntnis über den Bezugspunkt des Zeitstempels ist zum Beispiel wichtig beim</p>
-<ul>
-<li><a href="#input-infoworks-regen">Erzeugen von Regen-Inputdateien für die Software InfoWorks</a></li>
-</ul>
-<p>In der obigen Beispielzeitreihe ist auch nicht klar, auf welche Zeitzone sich
-die Zeitstempel beziehen. Die Zeitzone bzw. die Angabe des UTC-Offsets ist eine
-wichtige Metainformation. Am besten wäre es, wenn alle Zeitstempel diese
-Information enthielten, z.B.</p>
-<pre><code>2018-06-05 16:20:00+02
-2018-06-05 16:25:00+02</code></pre>
-<p>Dann bräuchte man diese Information nicht extra zu führen.</p>
-<p>Metadaten werden oft erst bei Bedarf erhoben, nämlich genau dann, wenn man sich
-z.B. die obigen Fragen nach Zeitstempelbezug und Zeitzone stellt. Dann wird
-nachgefragt und im besten Fall wird eine Antwort darauf gegeben, z.B. in Form
-einer E-Mail. Die Metadaten sind dann in der E-Mail enthalten.</p>
-<p>Fragen:</p>
-<ul>
-<li>Wo und unter welchem Namen legen wir diese E-Mail ab?</li>
-</ul>
-<p>Beispiel für Metadaten aus meiner persönlichen Logdatei:</p>
-<blockquote>
-<p>Regendaten gelesen; ca. 10 Impulse gegen 14:00; Dannecker geschrubbt,
-neuer Akku: Batterie defect, alte Batterie drin gelassen,
-Daten auslesen nicht möglich; H=55cm</p>
-</blockquote>
-<p>Das müssen wir irgendwie besser hinkriegen, aber wie?</p>
-<p>Die grundlegenden Fragen sind:</p>
-<ul>
-<li>Wer ist für die Ablage von Metadaten verantwortlich?</li>
-<li>Wo werden die Metadaten abgelegt? Direkt bei den Daten oder in einer
-übergeordneten Datei/Datenbank?</li>
-<li>In welchem Format werden die Metadaten abgelegt? Einfaches Textformat vs.
-XML-Format, das sich wohl einfach nur mit Hilfe eines Programms editieren lässt.</li>
-</ul>
+
+<div class="rmdnote">
+<p>Best-practices roadmap:</p>
+<ol style="list-style-type: decimal">
+<li><p>Check meta data standards, e. g. <a href="https://schema.datacite.org/">DataCite</a> (see
+also: ZALF, GFZ Potsdam)</p></li>
+<li><p>Define minimum metadata requirements at KWB for raw and processed data.<br />
+projects.</p></li>
+</ol>
+<p>The ‘best-practices for metadata’ will be developed for the <a href="case-studies.html#case-studies">case studies</a>
+which are assessed within FAKIN project.</p>
+We propose to define some special files that contain metadata related
+to files and folders. To indicate that these files have a special meaning, the
+file names are all uppercase.
+</div>
+
+<!-- ***copied from `10_old_german_chapters.Rmd` ***: -->
+<!-- Beispiel: -->
+<!-- Wenn wir Zeitreihen von den Beliner Wasserbetrieben bekommen, dann haben diese -->
+<!-- entweder eine Spalte mit Zeitstempeln oder zwei Spalten mit Zeitstempeln, wobei -->
+<!-- die erste den Anfang und die zweite das Ende des Zeitraums enthält, auf den -->
+<!-- sich die Messwerte in der entsprechenden Zeile beziehen.  -->
+<!-- Wenn nur eine Spalte Zeitstempel enthält, dann ist nicht klar, ob der  -->
+<!-- Zeitstempel den Anfang oder das Ende (oder gar einen anderen Zeitpunkt  -->
+<!-- innerhalb) des Zeitraums angibt.  -->
+<!-- Bei einer Zeitreihe mit fünfminütigen Messwerten, z.B. -->
+<!-- ``` -->
+<!-- Zeit                Wert -->
+<!-- 2018-06-05 16:20:00    0 -->
+<!-- 2018-06-05 16:25:00    1 -->
+<!-- 2018-06-05 16:30:00    2 -->
+<!-- 2018-06-05 16:35:00    3 -->
+<!-- 2018-06-05 16:40:00    4 -->
+<!-- ``` -->
+<!-- ist nicht klar, ob sich der Wert 1 auf den Zeitraum `16:20 - 16:25` oder auf -->
+<!-- den Zeitraum `16:25 - 16:30` bezieht. -->
+<!-- Dies ist ein Beispiel für eine sehr konkrete Metadatenanforderung. An dieser -->
+<!-- Stelle gehen wir meistens von Annahmen aus oder hat jemand von Euch schon mal -->
+<!-- eine Aussage darüber von einem BWB-Mitarbeiter erhalten? -->
+<!-- Die Kenntnis über den Bezugspunkt des Zeitstempels ist zum Beispiel wichtig beim -->
+<!-- * [Erzeugen von Regen-Inputdateien für die Software InfoWorks](#input-infoworks-regen) -->
+<!-- In der obigen Beispielzeitreihe ist auch nicht klar, auf welche Zeitzone sich -->
+<!-- die Zeitstempel beziehen. Die Zeitzone bzw. die Angabe des UTC-Offsets ist eine -->
+<!-- wichtige Metainformation. Am besten wäre es, wenn alle Zeitstempel diese  -->
+<!-- Information enthielten, z.B. -->
+<!-- ``` -->
+<!-- 2018-06-05 16:20:00+02 -->
+<!-- 2018-06-05 16:25:00+02 -->
+<!-- ``` -->
+<!-- Dann bräuchte man diese Information nicht extra zu führen.  -->
+<!-- Metadaten werden oft erst bei Bedarf erhoben, nämlich genau dann, wenn man sich -->
+<!-- z.B. die obigen Fragen nach Zeitstempelbezug und Zeitzone stellt. Dann wird -->
+<!-- nachgefragt und im besten Fall wird eine Antwort darauf gegeben, z.B. in Form -->
+<!-- einer E-Mail. Die Metadaten sind dann in der E-Mail enthalten.  -->
+<!-- Fragen: -->
+<!-- - Wo und unter welchem Namen legen wir diese E-Mail ab? -->
+<!-- Beispiel für Metadaten aus meiner persönlichen Logdatei: -->
+<!-- > Regendaten gelesen; ca. 10 Impulse gegen 14:00; Dannecker geschrubbt,  -->
+<!-- > neuer Akku: Batterie defect, alte Batterie drin gelassen,  -->
+<!-- > Daten auslesen nicht möglich; H=55cm -->
+<!-- Das müssen wir irgendwie besser hinkriegen, aber wie? -->
+<!-- Die grundlegenden Fragen sind: -->
+<!-- - Wer ist für die Ablage von Metadaten verantwortlich? -->
+<!-- - Wo werden die Metadaten abgelegt? Direkt bei den Daten oder in einer  -->
+<!-- übergeordneten Datei/Datenbank? -->
+<!-- - In welchem Format werden die Metadaten abgelegt? Einfaches Textformat vs.  -->
+<!-- XML-Format, das sich wohl einfach nur mit Hilfe eines Programms editieren lässt. -->
 </div>
 <div id="file-projects" class="section level4">
 <h4><span class="header-section-number">2.2.2.7</span> File PROJECTS.txt</h4>
@@ -1052,7 +1054,7 @@ of header rows) differ from file to file.</p>
 </div>
 <div id="data-publishing-and-sharing" class="section level2">
 <h2><span class="header-section-number">2.4</span> Data publishing and sharing</h2>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-10"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-11"></span>
 <a href="https://doi.org/10.1371/journal.pcbi.1005278/" target="_blank"><img src="images/tensimplerules_datasharing.png" alt="Modern life context for the ten simple rules [@Boland_2017]"  /></a>
 <p class="caption">
 Figure 2.1: Modern life context for the ten simple rules <span class="citation">(Boland, Karczewski, and Tatonetti <a href="#ref-Boland_2017">2017</a>)</span>
