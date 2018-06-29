@@ -11,6 +11,7 @@ rmd_files: [
   "02_data_publication.Rmd",
   "03_case_studies.Rmd",
   "04_other_projects.Rmd",
+  "04a_literature-review.Rmd",
   "05_faq.Rmd",
   "06_glossary.Rmd",
   "07_references.Rmd"

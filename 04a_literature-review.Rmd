@@ -1,0 +1,29 @@
+# Literature Review
+
+## Data Storage
+
+### Ten Simple Rules for Digital Data Storage {#storage-ten-simple-rules}
+
+The following rules are defined by `r citet("10.1371/journal.pcbi.1005097")`:
+
+>Rule 1: Anticipate How Your Data Will Be Used
+>
+>Rule 2: Know Your Use Case
+>
+>Rule 3: Keep Raw Data Raw
+>
+>Rule 4: Store Data in Open Formats
+>
+>Rule 5: Data Should Be Structured for Analysis
+>
+>Rule 6: Data Should Be Uniquely Identifiable
+>
+>Rule 7: Link Relevant Metadata
+>
+>Rule 8: Adopt the Proper Privacy Protocols
+>
+>Rule 9: Have a Systematic Backup Scheme
+>
+>Rule 10: The Location and Method of Data Storage Depend on How Much Data You Have
+>
+> --- `r citep("10.1371/journal.pcbi.1005097")`

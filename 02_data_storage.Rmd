@@ -1,89 +1,134 @@
-## Data storage
+## Data Storage
 
-The [Ten Simple Rules for Digital Data Storage](https://doi.org/10.1371/journal.pcbi.1005097) 
-by `r citet("10.1371/journal.pcbi.1005097")` should serve us as a guideline:
+This chapter describes 
 
->Rule 1: Anticipate How Your Data Will Be Used
->
->Rule 2: Know Your Use Case
->
->Rule 3: Keep Raw Data Raw
->
->Rule 4: Store Data in Open Formats
->
->Rule 5: Data Should Be Structured for Analysis
->
->Rule 6: Data Should Be Uniquely Identifiable
->
->Rule 7: Link Relevant Metadata
->
->Rule 8: Adopt the Proper Privacy Protocols
->
->Rule 9: Have a Systematic Backup Scheme
->
->Rule 10: The Location and Method of Data Storage Depend on How Much Data You Have
->
-> --- `r citep("10.1371/journal.pcbi.1005097")`
+* where to store data files, see [Where to Store Data](#data-storage-where),
+* what names to choose for files and folders, see 
+[Naming of Files and Folders](#data-storage-naming),
+* how to group files in folders, see [Folder Structures](#folder-structures).
 
-### Naming
+With the following recommendations we intend to comply with the 
+[Ten Simple Rules for Digital Data Storage](#storage-ten-simple-rules).
 
->We name and name and name. Because we do so much of it, we'd better do it well.
->
-> --- `r citep(manual["martin2009"])`
+### Where to Store Data {#data-storage-where}
 
-#### Folder and File Names
+We want to store project relevant files on a KWB network drive that is 
+accessible to all the persons working in the project.
 
-##### General Considerations (source unknown)
+We want to avoid that project relevant files are stored 
 
-Useful file names are meaningful to you and your colleagues and thus allow to 
-find files easily. It is useful if your department or project team agrees on the 
+* locally on the hard drive of an employee or trainee or
+
+* on the personal network drive assigned to an employee or trainee.
+
+### Naming of Files and Folders {#data-storage-naming}
+
+<!-- >We name and name and name. Because we do so much of it, we'd better do it well. -->
+<!-- > -->
+<!-- > --- `r citep(manual["martin2009"])` -->
+
+In this section we define rules for good names for files and folders. We want to
+apply these rules whenever we have the freedom to define our own names, i.e. 
+when creating a new file or a new folder.
+
+<!-- By giving rules for the naming of files and folders  -->
+We pursue different objectives:
+
+1. Names should not cause problems during automated data processing. 
+
+2. Names should be meaningful to you and your colleagues. You and they should be
+able to guess what a folder or file contains so that required files are found 
+easily. 
+
+3. Names should not cause problems when copying files within your (computer) 
+system or between different systems, especially between different operating 
+systems or systems in different countries.
+
+We process files automatically. Listing or reading files with non-standard 
+characters in their names very often causes problems. These problems are 
+sometimes not easy to  solve. But they are easy to avoid: By sticking to some 
+simple restrictive rules when naming files and folders.
+
+In order to hit the first target we define the following set of allowed 
+characters:
+
+* upper case letters `A-Z`, 
+* lower case letters `a-z`, 
+* numbers `0-9`,
+* underscore `_`,
+* hyphen `-`,
+* dot `.`.
+
+See the FAQ chapter to answer the following questions:
+
+* [Why are special characters not allowed?](#faq-why-no-german-specials)
+* [Why is the space character not allowed?](#faq-why-no-space)
+
+Instead of German special characters (`ä`, `ö`, `ü`, `Ä`, `Ö`, `Ü`, `ß`) use the 
+following substitutions: `ae`, `oe`, `ue`, `Ae`, `Oe`, `Ue`, `ss`.
+
+Instead of space, use underscore, hyphen or "camel case":
+
+* Use underscore to separate different parts of the file or folder name, as in
+  `results_today`, `results_tomorrow`, `input_site-1`, `output_site-1`.
+
+* Use hyphen or "camel case" (as in `camelCase`) instead of space or underscore
+  to visually separate the parts of compound words or names, e.g.
+  
+    + `site-1` instead of `site 1` or `site_1`, 
+    + `dissolved-oxygen` or `dissolvedOxygen` instead of `dissolved oxygen` or 
+    `dissolved_oxygen`,
+    + `clean-data` or `cleanData` instead of `clean data` or `clean_data`.
+
+* Use hyphen (or no separation at all) in dates (see below).
+
+```{block2 type = "rmdnote"}
+Should we decide on if and when to use capitals, i.e. should we allow only one
+of the following: 
+  
+`dissolved-oxygen` (all lower case), 
+`dissolved-Oxygen` (attributes lower case, nouns upper case), 
+`Dissolved-oxygen` (first letter upper case),
+`Dissolved-Oxygen` (all parts of compund words upper case)?
+```
+
+Good practice: Remove spaces from file names or use punctuation such as 
+underscores and hyphens to separate words e.g.
+`AHRC_TechnicalApp_Response_20120925.docx` or
+`AHRC-TechnicalApp-Response20120925.docx` rather than `what we got back from
+funders about the data stuff.docx`
+
+We distinguish between rules specifying
+
+* a set of allowed characters,
+* a set of allowed words (vocabulary) that may appear as part of a file or 
+folder,
+* the order in which we expect the words to appear in a file or folder name.
+
+It is useful if your department or project team agrees on the 
 following elements of a file name: 
 
 * Vocabulary: Choose a standard vocabulary for file names, so that everyone 
 uses a common language
 
-* Punctuation: Decide on conventions for if and when to use punctuation symbols,
-capitals, hyphens and spaces. Good practice: Remove spaces from file names or
-use punctuation such as underscores and hyphens to separate words e.g.
-`AHRC_TechnicalApp_Response_20120925.docx` or
-`AHRC-TechnicalApp-Response20120925.docx` rather than `what we got back from
-funders about the data stuff.docx`
+We aggreed on coding **dates** in file or folder names in one of these forms:
 
-* Dates: Agree on a logical use of dates so that they display chronologically 
-i.e. `YYYY-MM-DD`
+* `yyyy-mm-dd` (e.g. `2018-06-28`)
+* `yyyymmdd` (e.g. `20180628`)
+
+When dates are coded like so, files names only differing in the date by default
+display chronologically in the file explorer or in file listings. This is 
+because by default files are sorted alphanumerically by their name. 
+
+Using hyphen to separate year, month and day supports to distinguish these date 
+parts visually. Using the hyphen instead of the underscore allows to split a 
+file name at underscores without splitting the date into parts. 
 
 * Order: Confirm which element should go first, so that files on the same 
 theme are listed together and can therefore be found easily
 
 * Numbers: Specify the amount of digits that will be used in numbering so that 
 files are listed numerically e.g. `01`, `002`, etc.
-
-##### Our Choices
-
-* Allowed characters in file and folder names are: 
-
-    + upper case letters `A-Z`, 
-    + lower case letters `a-z`, 
-    + numbers `0-9`,
-    + underscore `_`,
-    + hyphen `-`.
-
-* Therefore, 
-
-    + use underscore or hyphen instead of space,
-    + use `ae`, `oe`, `ue`, `Ae`, `Oe`, `Ue`, `ss` instead of `ä`, `ö`, `ü`, 
-    `Ä`, `Ö`, `Ü`, `ß`
-
-* Code dates in one of these forms:
-
-    + `yyyy-mm-dd` (e.g. `2018-06-28`)
-    + `yyyymmdd` (e.g. `20180628`)
-
-* Use hyphen or "camel case" (as in `camelCase`) instead of space or underscore
-for compound words:
-
-    + `clean-data` or `cleanData` instead of
-    + `clean data` or `clean_data`
 
 * Use uniform spelling for special "objects", such as
 
@@ -98,32 +143,6 @@ for compound words:
 
 * Within one project, use either only English names or only German names. 
 
-##### Justification
-
-We process files automatically. Listing or reading files with non-standard
-characters in their names very often causes problems. These problems are sometimes 
-not easy to  solve. But they are easy to avoid: By sticking to some simple 
-restrictive rules when naming files and folders.
-
-Restricting to characters from the base character set defined above avoids 
-problems when exchanging files between partners in different countries. 
-We may have a problem with a file from Sofia, called
-
-```
-Example file from Canasoft жк. Хаджи Димитър, ул.Клисура_Troncons.xml
-``` 
-
-and they may have a problem with a file from us, called
-
-```
-abgebrochene schmuz- und regenwasserhaltungen schützenstraße nord 2. ba.xls
-```
-
-When dates are coded as `yyyy-mm-dd` or `yyyymmdd` the files are automatically 
-sorted chronologically when they are sorted alphanumerically by their name. 
-Using hyphen to separate year, month and day supports to distinguish these date 
-parts visually. Using the hyphen instead of the underscore allows to split a 
-file name at underscores without splitting the date into parts. 
 
 Using hyphen or "camel case" for composed words will not split the composed 
 words into their parts when splitting file or folder names at underscores.
