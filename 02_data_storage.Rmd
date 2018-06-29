@@ -260,31 +260,31 @@ What are the most important information about raw data that we receive?
 
 * Description of content and format
 
-    + where measurements were taken?
+    + Where measurements were taken?
     
-    + what methods were used (to take samples, to analyse parameters in the
+    + What methods were used (to take samples, to analyse parameters in the
     laboratory)?
     
-    + what devices where used?
+    + What devices where used?
     
-    + what do the columns of the table (in the database, XLS/CSV file) mean?
+    + What do the columns of the table (in the database, XLS/CSV file) mean?
     
-    + in what units are the values given?
+    + In what units are the values given?
 
 ##### Metadata about Processed Data
 
 What are the most important information about the data that we produce?
 
-* who created the file? If the file was created by a script, what script created
+* Who created the file? If the file was created by a script, what script created
 the file and who ran the script?
 
-* when was the file created?
+* When was the file created?
 
-* what was the input data (e.g. raw data or preprocessed data)?
+* What was the input data (e.g. raw data or preprocessed data)?
 
-* which methods were applied to generate the output from the input?
+* Which methods were applied to generate the output from the input?
 
-* what was the environment, what were boundary conditions, e.g.
+* What was the environment, what were boundary conditions, e.g.
 
     + versions of software,
     
