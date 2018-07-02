@@ -27,7 +27,47 @@ effort and time investment.
 
 An ELN to make your data FAIR? Welches ist das?
 
-### Define acronyms
+### Define Acronyms {#acronyms}
+
+Acronyms are unique, clear names for objects. They should 
+
+* be short but meaningful and easy to remember, 
+* be all lowercase,
+* consist of only alphanumeric letters (`a-z`, `0-9`) or the hyphen (`-`). 
+
+#### Acronyms for Projects {-#project-acronyms}
+
+```{block2 type = "rmdnote"}
+Do we already have rules for naming and spelling of projects and project folders 
+or files? 
+```
+
+If not, we should, at the start of a project, define official project acronyms.
+These are uniform spellings of project names, intended to be used in folder or 
+file names.
+
+Whenever we want to indicate the relation to a certain project in a file or 
+folder name, we use the project acronym in exactly the typing that was defined.
+This is important as we want to distinguish between [raw data](#raw-data), 
+processed data and 
+project results in our [data workflow](#data-workflow).
+
+The project acronyms are defined in a simple text file 
+[`PROJECTS.txt`](#file-projects) in the `//server/projects$` folder, see 
+[Project Folder Structure](#project-folder-structure).
+
+```{block2 type = "rmdnote"}
+Should we also define three letter codes for projects? That could
+be beneficial in tables with each column representing a project or in overview 
+plots.
+```
+
+#### Acronyms for Organisations {-#organisation-acronyms}
+
+It is very important to know the origin or owner of data. This is an important
+piece of [metadata](#metadata) Therefore we define unique acronyms for the
+owners of data that we use. The acronyms are defined in a special file
+[`ORGANISATIONS.txt`](#file-organisations) 
 
 At the start of a research project
 

@@ -2,7 +2,7 @@
 
 ## Naming
 
-### Why is the space character not allowed? {#faq-why-no-space}
+### Why is the space character not allowed? {-#faq-why-no-space}
 
 Why is the space character not allowed in file or folder names?
 
@@ -22,9 +22,7 @@ C:\Programs\model-software-xyz\run.exe \\server\path-without-space\input.txt
 Consequent usage of paths without spaces allows for simpler programming and 
 leads to less errors during program execution.
 
-### Why are special characters not allowed? {#faq-why-no-german-specials}
-
-Why are special characters not allowed in file or folder names?
+### Why are special characters not allowed in file or folder names? {-#faq-why-no-german-specials}
 
 The way in which special characters are encoded may differ from system to 
 system, especially between systems with different language settings. 
@@ -32,7 +30,7 @@ File names containing German special characters are e.g. not shown correctly
 on a French computer and vice versa.
 
 Excluding (e.g. language-specific) special characters from the set of allowed
-characters in file or folder namesavoids problems when exchanging files between 
+characters in file or folder names avoids problems when exchanging files between 
 partners in different countries. 
 
 We may have a problem with a file from Sofia, called

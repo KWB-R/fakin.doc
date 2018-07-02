@@ -34,23 +34,25 @@ when creating a new file or a new folder.
 <!-- By giving rules for the naming of files and folders  -->
 We pursue different objectives:
 
-1. Names should not cause problems during automated data processing. 
+* *Objective 1:* Names should not cause problems during automated data 
+processing. 
 
-2. Names should be meaningful to you and your colleagues. You and they should be
-able to guess what a folder or file contains so that required files are found 
-easily. 
+* *Objective 2:* Names should be meaningful to you and your colleagues. You and 
+they should be able to guess what a folder or file contains so that required 
+files are found easily. 
 
-3. Names should not cause problems when copying files within your (computer) 
-system or between different systems, especially between different operating 
-systems or systems in different countries.
+* *Objective 3:* Names should not cause problems when copying files within your 
+(computer) system or between different systems, especially between different 
+operating systems or systems in different countries.
 
 We process files automatically. Listing or reading files with non-standard 
-characters in their names very often causes problems. These problems are 
-sometimes not easy to  solve. But they are easy to avoid: By sticking to some 
-simple restrictive rules when naming files and folders.
+characters in their names often cause problems. These problems are easy to avoid
+by sticking to some simple restrictive rules when naming files and folders.
 
-In order to hit the first target we define the following set of allowed 
-characters:
+#### Allowed Characters {-}
+
+In order to meet *Objectives 1 and 3* we define the following 
+**set of characters** that are allowed in file or folder names:
 
 * upper case letters `A-Z`, 
 * lower case letters `a-z`, 
@@ -59,7 +61,7 @@ characters:
 * hyphen `-`,
 * dot `.`.
 
-See the FAQ chapter to answer the following questions:
+See the FAQ chapter for answers to the following questions:
 
 * [Why are special characters not allowed?](#faq-why-no-german-specials)
 * [Why is the space character not allowed?](#faq-why-no-space)
@@ -67,24 +69,50 @@ See the FAQ chapter to answer the following questions:
 Instead of German special characters (`ä`, `ö`, `ü`, `Ä`, `Ö`, `Ü`, `ß`) use the 
 following substitutions: `ae`, `oe`, `ue`, `Ae`, `Oe`, `Ue`, `ss`.
 
-Instead of space, use underscore, hyphen or "camel case":
+Instead of space, use underscore `_` or hyphen `-` (see next).
 
-* Use underscore to separate different parts of the file or folder name, as in
-  `results_today`, `results_tomorrow`, `input_site-1`, `output_site-1`.
+#### Separation of Words or Parts of Words {-}
 
-* Use hyphen or "camel case" (as in `camelCase`) instead of space or underscore
-  to visually separate the parts of compound words or names, e.g.
+Use underscore to separate different words in the file or folder name that 
+contain different types of information:
+
+* `results_today`, `results_tomorrow` instead of `results-today`, 
+`results-tomorrow`,
+
+* `protocol_hauke`, `protocol_michael` instead of `protocol-hauke`, 
+`protocol-michael`
+
+Use hyphen `-` instead of underscore `_` to visually separate the parts of 
+compound words or names:
   
-    + `site-1` instead of `site 1` or `site_1`, 
-    + `dissolved-oxygen` or `dissolvedOxygen` instead of `dissolved oxygen` or 
-    `dissolved_oxygen`,
-    + `clean-data` or `cleanData` instead of `clean data` or `clean_data`.
+* `site-1` instead of `site_1`, 
 
-* Use hyphen (or no separation at all) in dates (see below).
+* `dissolved-oxygen` instead of `dissolved_oxygen`,
+
+* `clean-data` instead of `clean_data`.
+
+Use hyphen (or no separation at all) in dates (see below).
+
+Using hyphen instead of underscore in composed words will not split the composed 
+words into their parts when splitting a file or folder name at underscore.
+
+For example, splitting the name 
+`project-report_example-project-1_v1.0_2018-07-02` at underscore results in the 
+following words (giving different types of information on the file or folder)
+
+* `project-report` (type of document),
+
+* `example-project-1` (name of related project),
+
+* `v1.0` (version number),
+
+* `2018-07-02` (version date).
+
+#### Capitalisation {-}
 
 ```{block2 type = "rmdnote"}
 Should we decide on if and when to use capitals, i.e. should we allow only one
-of the following: 
+of the following spellings: 
   
 `dissolved-oxygen` (all lower case), 
 `dissolved-Oxygen` (attributes lower case, nouns upper case), 
@@ -92,69 +120,75 @@ of the following:
 `Dissolved-Oxygen` (all parts of compund words upper case)?
 ```
 
-Good practice: Remove spaces from file names or use punctuation such as 
-underscores and hyphens to separate words e.g.
-`AHRC_TechnicalApp_Response_20120925.docx` or
-`AHRC-TechnicalApp-Response20120925.docx` rather than `what we got back from
-funders about the data stuff.docx`
+#### Formatting of Dates and Numbers {-}
 
-We distinguish between rules specifying
-
-* a set of allowed characters,
-* a set of allowed words (vocabulary) that may appear as part of a file or 
-folder,
-* the order in which we expect the words to appear in a file or folder name.
-
-It is useful if your department or project team agrees on the 
-following elements of a file name: 
-
-* Vocabulary: Choose a standard vocabulary for file names, so that everyone 
-uses a common language
-
-We aggreed on coding **dates** in file or folder names in one of these forms:
+We want to write **dates** in file or folder names in one of these forms:
 
 * `yyyy-mm-dd` (e.g. `2018-06-28`)
+
 * `yyyymmdd` (e.g. `20180628`)
 
-When dates are coded like so, files names only differing in the date by default
-display chronologically in the file explorer or in file listings. This is 
-because by default files are sorted alphanumerically by their name. 
+By doing so, file names only differing in the date will display chronologically 
+in file listings. This is because, by default, files are sorted alphanumerically
+by their name. Using the first form improves the visual distinction of the year, 
+month and day part of the date. Using hyphen instead of underscore will keep 
+these parts together when splitting the name at underscore (see above). 
 
-Using hyphen to separate year, month and day supports to distinguish these date 
-parts visually. Using the hyphen instead of the underscore allows to split a 
-file name at underscores without splitting the date into parts. 
+When using numbers in file or folder names to bring them into a certain order
+we should use leading zeroes and specify the amount of digits that will be used,
+e.g. `01`, `02`, `03` or `001`, `002`, `003`, etc.
 
-* Order: Confirm which element should go first, so that files on the same 
-theme are listed together and can therefore be found easily
+#### Allowed Words {-}
 
-* Numbers: Specify the amount of digits that will be used in numbering so that 
-files are listed numerically e.g. `01`, `002`, etc.
+In order to meet *Objective 2*, we should define **sets of allowed words** in
+so called vocabularies. Only words from the vocabularies are then expected to
+appear as words in file or folder names. Getting accustomed to the words from 
+the vocabularies and their meanings allows for more precise file searching.
 
-* Use uniform spelling for special "objects", such as
+This is most important to clearly indicate that a file or folder relates to
+"special objects", such as projects or organisations or monitoring sites. 
+At least for projects and organisations we want to define vocabularies in which
+"official" acronyms are defined for all projects and all organisations from 
+which we expect to receive data (see the chapter on [acronyms](#acronyms)).
+Always using the acronyms defined in the vocabularies allows to search for files 
+or folders belonging to one specific project or being provided by one specific
+organisation.
 
-    + projects or sites or parameters, see [acronyms](#acronyms)
-    + properties, e.g. use always `validiert`, `kalibriert` or `validated`,
-    `calibrated` instead of sometimes `val`, sometimes `validiert`, etc.
+We could also define vocabularies of words describing other properties of a file
+or folder. We could e.g. decide to always use `clean-data` instead of
+`data-clean`, `cleaned-data`, `data-cleaning`, `Datenbereinigung`,
+`bereinigte-daten`, etc.
 
-* Therefore, define so called vocabularies.
+#### Order of Words {-}
 
-* Do not mix languages within one and the same file or folder name: Use
-`regen-ereignis` or `rain-event` instead of `regen-event` or `rain-ereignis`.
+We could go one step further and define the order in which we expect the words 
+to appear in a file or folder name. Which types of information should go first 
+in the filename? The order of words determines in which way files are grouped
+visually when being listed by their name. If the acronym of the organisation 
+goes first, files are grouped by organisation. If the acronym of the monitoring
+site goes first, files are grouped by monitoring site.
 
-* Within one project, use either only English names or only German names. 
+#### Allowed Languages {-}
 
+Do not mix words from different languages within one and the same file or folder 
+name. For example, use `regen-ereignis` or `rain-event` instead of `regen-event` 
+or `rain-ereignis`.
 
-Using hyphen or "camel case" for composed words will not split the composed 
-words into their parts when splitting file or folder names at underscores.
+Within one project, use either only English words or only German words in
+file or folder names. This restriction may be too strict. However, I think that
+we should follow this rule at least for the top level 
+[folder structures](#folder-structures). It is not nice that we see folders
+`AUFTRAEGE` (German) and `GROUNDWATER` (English) as folder names within the
+same parent folder.
 
-The restriction of using consistently one language for file and folder names may
-be too strict. However, I think we should try this at least for the top level 
-[folder structures](#folder-structures).
+#### Avoid Very Long Names {-}
 
-##### Avoid Very Long File and Folder Names
+In order to meet *Objective 3*, very long file and folder names should be 
+avoided. File and folder names should be 
 
-File and folder names should be as long as necessary to be meaningful but as
-short as possible. 
+* as long as necessary to be meaningful but at the same time 
+
+* as short as possible. 
 
 ```{block2 type = "rmdwarning"}
 In the Windows operating system, long file paths can cause problems when copying
@@ -178,47 +212,16 @@ If we nevertheless have to deal with deeply nested folder structures and/or very
 long file or folder names we should store them in a flat folder hierarchy (i.e. 
 not in `\\server\projekte$\department-name\projects\project-name\data-work-packages\work-package-one-meaning-the-following\modelling\scenario-one-meaning-the-following\results`).
 
-#### Acronyms {#acronyms}
+#### Examples {-}
 
-Acronyms are unique, clear names for objects. They should 
+Examples for good file names:
 
-* be short but meaningful and easy to remember, 
-* be all lowercase,
-* consist of only alphanumeric letters (`a-z`, `0-9`) or the hyphen (`-`). 
+* `AHRC_TechnicalApp_Response_20120925.docx` or
+* `AHRC-TechnicalApp-Response20120925.docx`
 
-##### Acronyms for Projects {#project-acronyms}
+Example for bad file names:
 
-```{block2 type = "rmdnote"}
-Do we already have rules for naming and spelling of projects and project folders 
-or files? 
-```
-
-If not, we should, at the start of a project, define official project acronyms.
-These are uniform spellings of project names, intended to be used in folder or 
-file names.
-
-Whenever we want to indicate the relation to a certain project in a file or 
-folder name, we use the project acronym in exactly the typing that was defined.
-This is important as we want to distinguish between [raw data](#raw-data), 
-processed data and 
-project results in our [data workflow](#data-workflow).
-
-The project acronyms are defined in a simple text file 
-[`PROJECTS.txt`](#file-projects) in the `//server/projects$` folder, see 
-[Project Folder Structure](#project-folder-structure).
-
-```{block2 type = "rmdnote"}
-Should we also define three letter codes for projects? That could
-be beneficial in tables with each column representing a project or in overview 
-plots.
-```
-
-##### Acronyms for Organisations {#organisation-acronyms}
-
-It is very important to know the origin or owner of data. This is an important
-piece of [metadata](#metadata) Therefore we define unique acronyms for the
-owners of data that we use. The acronyms are defined in a special file
-[`ORGANISATIONS.txt`](#file-organisations) 
+* `what we got back from funders about the data stuff.docx`
 
 ### Metadata (should go one level up!){#metadata}
 
