@@ -1,8 +1,8 @@
 # Best Practices {#best-practices}
 
-## Plan and fund a new project
+## Plan and Fund a New Project
 
-### Data management plan
+### Data Management Plan
 
 Action 1: Look through a data management planning checklist 
 [DMP checklist](http://www.dcc.ac.uk/resources/data-management-plans/checklist)?

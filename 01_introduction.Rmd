@@ -32,6 +32,6 @@ Recommended literature:
 (in German!) `r citep(manual["Buettner_2011"])`
 
 
-## For whom ? 
+## For Whom ? 
 
 Info on the document – create links between projects and thematic groups

@@ -1,10 +1,10 @@
-# Case studies {#case-studies}
+# Case Studies {#case-studies}
 
 The three following case-studies are tested in detail within FAKIN (i.e. proposed 
 best-practices will be applied for this case studies and cross-checked whether 
 their application is useful.
 
-## Geogenic salination
+## Geogenic Salination
 
 Adapt and test with new folder drive workflow as proposed
 
@@ -14,11 +14,7 @@ Adapt and test with new folder drive workflow as proposed
 
 - `processing`
 
-
-
-
-## LCA modelling 
-
+## LCA Modelling 
 
 **Challenge:**
 
@@ -47,10 +43,7 @@ to the `results.xlsx` in order to update the predefined figures).
 This workflow now reduces the time consuming and error-prone formerly manually 
 performed data aggregation in EXCEL, whilst still enabling the users to adapt 
 the figures to their needs without coding knowledge. 
-
- 
-
-## Pilot plants {#aquanes}
+## Pilot Plants {#aquanes}
 
 Challenges: 
 

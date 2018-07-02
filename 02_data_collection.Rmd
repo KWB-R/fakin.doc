@@ -1,4 +1,4 @@
-##	Data collection
+## Data Collection
 
 Data are often inconsistent, incomplete, incorrect, or misspelled. [Data cleaning]((https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#munging)) 
 is essential. 
@@ -11,7 +11,7 @@ In the following we describe how data can be imported into the [R](https://r-pro
 Environment, which can be used for data cleaning, aggregation and visualisation. 
 `r citep(manual["Grolemund_2017"])`
 
-###	Logger devices
+### Logger Devices
 
 The R package [kwb.logger](https://github.com/kwb-r.kwb.logger) `r citep(manual["Sonnenberg_2018"])`
 helps to import raw data from loggers used in different KWB projects into the 
@@ -25,7 +25,7 @@ please check the [documentation website](https://kwb-r.github.io/kwb.logger/refe
 ```
 
 
-###	Spreadsheets
+### Spreadsheets
 
 General recommendations for working with EXCEL spreadsheets is given in the 
 [FAQs](#faq-excel) section.

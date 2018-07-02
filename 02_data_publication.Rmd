@@ -1,5 +1,4 @@
-##	Data publishing and sharing
-
+## Data Publishing and Sharing
 
 ```{r fig.align='center', echo=FALSE, include=grepl('html', knitr:::pandoc_to()), fig.cap= 'Modern life context for the ten simple rules [@Boland_2017]', fig.link='https://doi.org/10.1371/journal.pcbi.1005278/'}
 knitr::include_graphics('images/tensimplerules_datasharing.png', dpi = NA)
@@ -207,7 +206,7 @@ Recommended literature:
 - [choosealicense.com/](https://choosealicense.com/)
 
 
-### File formats 
+### File Formats 
 
 >"Scientific data is saved in a myriad of file formats. A typical file format
 might include a file header, describing the layout of the data on disk, metadata
@@ -221,7 +220,7 @@ access to the data in the files remains limited."
 >
 > --- `r citep(manual["Rokem_2018"])`
 
-### Data exchange standards
+### Data Exchange Standards
 
 [WaterML2](http://www.waterml2.org/): 
 

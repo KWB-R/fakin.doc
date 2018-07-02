@@ -45,7 +45,7 @@ and they may have a problem with a file from us, called
 abgebrochene schmuz- und regenwasserhaltungen schützenstraße nord 2. ba.xls
 ```
 
-## Tools for researchers
+## Tools for Researchers
 
 A very exhaustive overview of tools used in the researcher`s workflow are 
 provided by `r citet(manual["Bosman_2018"])`, which are grouped according to 
@@ -54,7 +54,7 @@ different research phases as shown below.
 [![compliance-tools-workflow](images/compliance-tools-workflow_cropped.png)](https://101innovations.wordpress.com/workflows/)
 
 
-## Writing more robust R code
+## Writing More Robust R Code
 
 For details on making R code more robust to work on different computers
 please read the following [tutorial](file:///Y:/Z-Exchange/_Tutorials/HomeDirectory.html).
@@ -127,7 +127,7 @@ For details on how to use Subversion at KWB please read the following [tutorial]
 defined in "R/add_text.R" -->
 `r add_text_links()`
 
-## How to install KWB R packages?
+## How to Install KWB R Packages?
 
 For details please read the following [tutorial](file:///Y:/Z-Exchange/_Tutorials/installing_kwb_packages.html) 
 <!-- Only adds more details in case of html output as 
@@ -140,7 +140,7 @@ defined in "R/add_text.R" -->
 `r add_chapter_firefox_local_files()`
 
 
-## How to build your own KWB styled R package?
+## How to Build Your Own Kwb Styled R Package?
 
 For building your own R package from scratch we developed a helper R package 
 [kwb.pkgbuild](https://github.com/kwb-r/kwb.pkgbuild) (available on Github), 
@@ -156,7 +156,7 @@ Recommended literature:
 - [Advanced R](http://adv-r.had.co.nz/) `r citep(manual[c("Wickham_2014","Wickham2018")])`
 
 
-## Working with EXCEL {#faq-excel}
+## Working with Excel {#faq-excel}
 
 
 ```{block2, type = 'rmdcaution'} 
@@ -235,7 +235,7 @@ es gibt eine großartige Community und wir haben mittlerweile eine große
 Expertise erlangt.
 
 
-## Heterogenous software versions on KWB computers
+## Heterogenous Software Versions on KWB Computers
 
 ```{block2, type = 'rmdcaution'}
 Unterschiedliche Softwareversionen (z.B. R) können dazu führen, dass Skripte 
@@ -250,7 +250,7 @@ Nutzergruppe hinzugefügt werden und somit alle die gleichen Softwareversionen
 installiert haben. 
 ```
 
-## R package/version dependency of R scripts
+## R Package/Version Dependency of R Scripts
 
 Lösungsvorschlag:
 
@@ -300,7 +300,7 @@ von Interessierten im Webbrowser ausgeführt werden kann
 ([siehe hier](http://o2r.info/2018/01/12/sensebox-binder/)).
 
 
-## Complex R script dependencies
+## Complex R Script Dependencies
 
 ```{block2, type = 'rmdcaution'}
 Dieses Problem tritt insbesondere auf, wenn mehrere verschiedene Nutzer 
@@ -321,7 +321,7 @@ erstellen. Das ist insbesondere wichtig, wenn Skripte häufig verwendet werden.
 ```
 
 
-## Heterogenous (R-)coding styles
+## Heterogenous Coding Styles
 
 
 ```{block2, type = 'rmdcaution'}
@@ -342,7 +342,7 @@ Recommended literature:
 
 Clean code `r citep(manual["martin2009"])`
 
-## Collaborative version control 
+## Collaborative Version Control 
 
 ```{block2, type = 'rmdcaution'}
 Multiple people developing code together.
@@ -370,7 +370,7 @@ souce project will be overwritten.
 ```
 
 
-## Workflow automation
+## Workflow Automation
 
 **Ressources:**
 
@@ -398,15 +398,12 @@ Recommended literature:
 
 ## Encoding 
 
-
 ```{block2, type = 'rmdcaution'}
-
 Umlaute und Sonderzeichen werden falsch angezeigt, wenn R-Skripte in 
 unterschiedlichen Encodings abgespeichert und eingelesen werden.
 ```
 
 ```{block2, type = 'rmdtip'}
-
 Vorgabe einer Default Encoding Einstellung in RStudio (z.B. UTF-8)
 
 Alternativ könnten auch alle [Umlaute](http://javawiki.sowas.com/doku.php?id=java:unicode) 
@@ -414,16 +411,13 @@ in [Unicode](https://de.wikipedia.org/wiki/Unicode) dokumentiert werden
 (siehe folgendes Beispiel). Allerdings ist dies wohl nicht praktikabel, 
 da die Lesbarkeit der Texte erschwert wird und es sollte daher von uns der 
 erste Ansatz (Vorgabe von UTF-8 als Default Encoding) angestrebt werden.
-
-  
 ``` 
 
 A great blogpost for the topic (How do I write UTF-8 encoded content to a file?) 
 is provided by `r citet(manual["Ushey_2018"])`, including background information 
 on how encoding in R works.
 
-For increasing the portability of R script he recommands the for example the 
-following:
+In order to increase the portability of R script he recommends the following:
 
 > "Portable R scripts should use unicode code points, to avoid accidental 
 mis-encoding of string literals."
@@ -442,7 +436,12 @@ print("Ü")
 print("\u00dc")
 ```
 
-## Collaborative writing 
+See also Hauke's article 
+[Understanding Encoding](https://kwb-r.github.io/kwb.fakin/dev/articles/understanding_encoding.html)
+being part of the documentation of our R package kwb.fakin that is available 
+on [GitHub](https://github.com/kwb-r/kwb.fakin).
+
+## Collaborative Writing 
 
 ```{block2, type = 'rmdcaution'}
 
@@ -467,7 +466,7 @@ YYYY-MM-DD`.
 ```
 
 
-## Exchanging data with colleges/project partners {#data-exchange}
+## Exchanging Data with Colleagues/Project Partners {#data-exchange}
 
 **copied from: "10_old_german_chapters.Rmd", to be translated:**
 
