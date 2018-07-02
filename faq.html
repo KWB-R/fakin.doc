@@ -139,7 +139,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1" data-path="best-practices.html"><a href="best-practices.html#plan-and-fund-a-new-project"><i class="fa fa-check"></i><b>2.1</b> Plan and fund a new project</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="best-practices.html"><a href="best-practices.html#data-management-plan"><i class="fa fa-check"></i><b>2.1.1</b> Data management plan</a></li>
 <li class="chapter" data-level="2.1.2" data-path="best-practices.html"><a href="best-practices.html#electronic-lab-notebooks"><i class="fa fa-check"></i><b>2.1.2</b> Electronic Lab Notebooks</a></li>
-<li class="chapter" data-level="2.1.3" data-path="best-practices.html"><a href="best-practices.html#define-acronyms"><i class="fa fa-check"></i><b>2.1.3</b> Define acronyms</a></li>
+<li class="chapter" data-level="2.1.3" data-path="best-practices.html"><a href="best-practices.html#acronyms"><i class="fa fa-check"></i><b>2.1.3</b> Define Acronyms</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="best-practices.html"><a href="best-practices.html#data-storage"><i class="fa fa-check"></i><b>2.2</b> Data Storage</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="best-practices.html"><a href="best-practices.html#data-storage-where"><i class="fa fa-check"></i><b>2.2.1</b> Where to Store Data</a></li>
@@ -188,8 +188,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>6</b> FAQs</a><ul>
 <li class="chapter" data-level="6.1" data-path="faq.html"><a href="faq.html#naming"><i class="fa fa-check"></i><b>6.1</b> Naming</a><ul>
-<li class="chapter" data-level="6.1.1" data-path="faq.html"><a href="faq.html#faq-why-no-space"><i class="fa fa-check"></i><b>6.1.1</b> Why is the space character not allowed?</a></li>
-<li class="chapter" data-level="6.1.2" data-path="faq.html"><a href="faq.html#faq-why-no-german-specials"><i class="fa fa-check"></i><b>6.1.2</b> Why are special characters not allowed?</a></li>
+<li class="chapter" data-level="" data-path="faq.html"><a href="faq.html#faq-why-no-space"><i class="fa fa-check"></i>Why is the space character not allowed?</a></li>
+<li class="chapter" data-level="" data-path="faq.html"><a href="faq.html#faq-why-no-german-specials"><i class="fa fa-check"></i>Why are special characters not allowed in file or folder names?</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="faq.html"><a href="faq.html#tools-for-researchers"><i class="fa fa-check"></i><b>6.2</b> Tools for researchers</a></li>
 <li class="chapter" data-level="6.3" data-path="faq.html"><a href="faq.html#writing-more-robust-r-code"><i class="fa fa-check"></i><b>6.3</b> Writing more robust R code</a></li>
@@ -240,8 +240,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 6</span> FAQs</h1>
 <div id="naming" class="section level2">
 <h2><span class="header-section-number">6.1</span> Naming</h2>
-<div id="faq-why-no-space" class="section level3">
-<h3><span class="header-section-number">6.1.1</span> Why is the space character not allowed?</h3>
+<div id="faq-why-no-space" class="section level3 unnumbered">
+<h3>Why is the space character not allowed?</h3>
 <p>Why is the space character not allowed in file or folder names?</p>
 <p>File paths containing spaces need to be put into quotes when being used in a
 command line, such as in:</p>
@@ -251,15 +251,14 @@ command line, such as in:</p>
 <p>Consequent usage of paths without spaces allows for simpler programming and
 leads to less errors during program execution.</p>
 </div>
-<div id="faq-why-no-german-specials" class="section level3">
-<h3><span class="header-section-number">6.1.2</span> Why are special characters not allowed?</h3>
-<p>Why are special characters not allowed in file or folder names?</p>
+<div id="faq-why-no-german-specials" class="section level3 unnumbered">
+<h3>Why are special characters not allowed in file or folder names?</h3>
 <p>The way in which special characters are encoded may differ from system to
 system, especially between systems with different language settings.
 File names containing German special characters are e.g. not shown correctly
 on a French computer and vice versa.</p>
 <p>Excluding (e.g. language-specific) special characters from the set of allowed
-characters in file or folder namesavoids problems when exchanging files between
+characters in file or folder names avoids problems when exchanging files between
 partners in different countries.</p>
 <p>We may have a problem with a file from Sofia, called</p>
 <pre><code>Example file from Canasoft жк. Хаджи Димитър, ул.Клисура_Troncons.xml</code></pre>

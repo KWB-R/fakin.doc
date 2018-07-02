@@ -139,7 +139,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1" data-path="best-practices.html"><a href="best-practices.html#plan-and-fund-a-new-project"><i class="fa fa-check"></i><b>2.1</b> Plan and fund a new project</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="best-practices.html"><a href="best-practices.html#data-management-plan"><i class="fa fa-check"></i><b>2.1.1</b> Data management plan</a></li>
 <li class="chapter" data-level="2.1.2" data-path="best-practices.html"><a href="best-practices.html#electronic-lab-notebooks"><i class="fa fa-check"></i><b>2.1.2</b> Electronic Lab Notebooks</a></li>
-<li class="chapter" data-level="2.1.3" data-path="best-practices.html"><a href="best-practices.html#define-acronyms"><i class="fa fa-check"></i><b>2.1.3</b> Define acronyms</a></li>
+<li class="chapter" data-level="2.1.3" data-path="best-practices.html"><a href="best-practices.html#acronyms"><i class="fa fa-check"></i><b>2.1.3</b> Define Acronyms</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="best-practices.html"><a href="best-practices.html#data-storage"><i class="fa fa-check"></i><b>2.2</b> Data Storage</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="best-practices.html"><a href="best-practices.html#data-storage-where"><i class="fa fa-check"></i><b>2.2.1</b> Where to Store Data</a></li>
@@ -188,8 +188,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>6</b> FAQs</a><ul>
 <li class="chapter" data-level="6.1" data-path="faq.html"><a href="faq.html#naming"><i class="fa fa-check"></i><b>6.1</b> Naming</a><ul>
-<li class="chapter" data-level="6.1.1" data-path="faq.html"><a href="faq.html#faq-why-no-space"><i class="fa fa-check"></i><b>6.1.1</b> Why is the space character not allowed?</a></li>
-<li class="chapter" data-level="6.1.2" data-path="faq.html"><a href="faq.html#faq-why-no-german-specials"><i class="fa fa-check"></i><b>6.1.2</b> Why are special characters not allowed?</a></li>
+<li class="chapter" data-level="" data-path="faq.html"><a href="faq.html#faq-why-no-space"><i class="fa fa-check"></i>Why is the space character not allowed?</a></li>
+<li class="chapter" data-level="" data-path="faq.html"><a href="faq.html#faq-why-no-german-specials"><i class="fa fa-check"></i>Why are special characters not allowed in file or folder names?</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="faq.html"><a href="faq.html#tools-for-researchers"><i class="fa fa-check"></i><b>6.2</b> Tools for researchers</a></li>
 <li class="chapter" data-level="6.3" data-path="faq.html"><a href="faq.html#writing-more-robust-r-code"><i class="fa fa-check"></i><b>6.3</b> Writing more robust R code</a></li>
@@ -261,8 +261,47 @@ ELNs empower researchers by allowing them to implement their RDM plan without
 effort and time investment.</p>
 <p>An ELN to make your data FAIR? Welches ist das?</p>
 </div>
-<div id="define-acronyms" class="section level3">
-<h3><span class="header-section-number">2.1.3</span> Define acronyms</h3>
+<div id="acronyms" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Define Acronyms</h3>
+<p>Acronyms are unique, clear names for objects. They should</p>
+<ul>
+<li>be short but meaningful and easy to remember,</li>
+<li>be all lowercase,</li>
+<li>consist of only alphanumeric letters (<code>a-z</code>, <code>0-9</code>) or the hyphen (<code>-</code>).</li>
+</ul>
+<div id="project-acronyms" class="section level4 unnumbered">
+<h4>Acronyms for Projects</h4>
+
+<div class="rmdnote">
+Do we already have rules for naming and spelling of projects and project folders
+or files?
+</div>
+
+<p>If not, we should, at the start of a project, define official project acronyms.
+These are uniform spellings of project names, intended to be used in folder or
+file names.</p>
+<p>Whenever we want to indicate the relation to a certain project in a file or
+folder name, we use the project acronym in exactly the typing that was defined.
+This is important as we want to distinguish between <a href="best-practices.html#raw-data">raw data</a>,
+processed data and
+project results in our <a href="best-practices.html#data-workflow">data workflow</a>.</p>
+<p>The project acronyms are defined in a simple text file
+<a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a> in the <code>//server/projects$</code> folder, see
+<a href="best-practices.html#project-folder-structure">Project Folder Structure</a>.</p>
+
+<div class="rmdnote">
+Should we also define three letter codes for projects? That could
+be beneficial in tables with each column representing a project or in overview
+plots.
+</div>
+
+</div>
+<div id="organisation-acronyms" class="section level4 unnumbered">
+<h4>Acronyms for Organisations</h4>
+<p>It is very important to know the origin or owner of data. This is an important
+piece of <a href="best-practices.html#metadata">metadata</a> Therefore we define unique acronyms for the
+owners of data that we use. The acronyms are defined in a special file
+<a href="best-practices.html#file-organisations"><code>ORGANISATIONS.txt</code></a></p>
 <p>At the start of a research project</p>
 <ul>
 <li>Choose a <a href="best-practices.html#project-acronyms">project acronym</a> and store it in
@@ -284,6 +323,7 @@ complies with the <a href="best-practices.html#rawdata-folder-structure">rawdata
 clean the structure, if not.</li>
 </ul>
 
+</div>
 </div>
 </div>
 <div id="data-storage" class="section level2">
@@ -317,21 +357,23 @@ apply these rules whenever we have the freedom to define our own names, i.e.
 when creating a new file or a new folder.</p>
 <!-- By giving rules for the naming of files and folders  -->
 <p>We pursue different objectives:</p>
-<ol style="list-style-type: decimal">
-<li><p>Names should not cause problems during automated data processing.</p></li>
-<li><p>Names should be meaningful to you and your colleagues. You and they should be
-able to guess what a folder or file contains so that required files are found
-easily.</p></li>
-<li><p>Names should not cause problems when copying files within your (computer)
-system or between different systems, especially between different operating
-systems or systems in different countries.</p></li>
-</ol>
+<ul>
+<li><p><em>Objective 1:</em> Names should not cause problems during automated data
+processing.</p></li>
+<li><p><em>Objective 2:</em> Names should be meaningful to you and your colleagues. You and
+they should be able to guess what a folder or file contains so that required
+files are found easily.</p></li>
+<li><p><em>Objective 3:</em> Names should not cause problems when copying files within your
+(computer) system or between different systems, especially between different
+operating systems or systems in different countries.</p></li>
+</ul>
 <p>We process files automatically. Listing or reading files with non-standard
-characters in their names very often causes problems. These problems are
-sometimes not easy to solve. But they are easy to avoid: By sticking to some
-simple restrictive rules when naming files and folders.</p>
-<p>In order to hit the first target we define the following set of allowed
-characters:</p>
+characters in their names often cause problems. These problems are easy to avoid
+by sticking to some simple restrictive rules when naming files and folders.</p>
+<div id="allowed-characters" class="section level4 unnumbered">
+<h4>Allowed Characters</h4>
+<p>In order to meet <em>Objectives 1 and 3</em> we define the following
+<strong>set of characters</strong> that are allowed in file or folder names:</p>
 <ul>
 <li>upper case letters <code>A-Z</code>,</li>
 <li>lower case letters <code>a-z</code>,</li>
@@ -340,90 +382,122 @@ characters:</p>
 <li>hyphen <code>-</code>,</li>
 <li>dot <code>.</code>.</li>
 </ul>
-<p>See the FAQ chapter to answer the following questions:</p>
+<p>See the FAQ chapter for answers to the following questions:</p>
 <ul>
 <li><a href="faq.html#faq-why-no-german-specials">Why are special characters not allowed?</a></li>
 <li><a href="faq.html#faq-why-no-space">Why is the space character not allowed?</a></li>
 </ul>
 <p>Instead of German special characters (<code>ä</code>, <code>ö</code>, <code>ü</code>, <code>Ä</code>, <code>Ö</code>, <code>Ü</code>, <code>ß</code>) use the
 following substitutions: <code>ae</code>, <code>oe</code>, <code>ue</code>, <code>Ae</code>, <code>Oe</code>, <code>Ue</code>, <code>ss</code>.</p>
-<p>Instead of space, use underscore, hyphen or “camel case”:</p>
+<p>Instead of space, use underscore <code>_</code> or hyphen <code>-</code> (see next).</p>
+</div>
+<div id="separation-of-words-or-parts-of-words" class="section level4 unnumbered">
+<h4>Separation of Words or Parts of Words</h4>
+<p>Use underscore to separate different words in the file or folder name that
+contain different types of information:</p>
 <ul>
-<li><p>Use underscore to separate different parts of the file or folder name, as in
-<code>results_today</code>, <code>results_tomorrow</code>, <code>input_site-1</code>, <code>output_site-1</code>.</p></li>
-<li><p>Use hyphen or “camel case” (as in <code>camelCase</code>) instead of space or underscore
-to visually separate the parts of compound words or names, e.g.</p>
-<ul>
-<li><code>site-1</code> instead of <code>site 1</code> or <code>site_1</code>,</li>
-<li><code>dissolved-oxygen</code> or <code>dissolvedOxygen</code> instead of <code>dissolved oxygen</code> or
-<code>dissolved_oxygen</code>,</li>
-<li><code>clean-data</code> or <code>cleanData</code> instead of <code>clean data</code> or <code>clean_data</code>.</li>
-</ul></li>
-<li><p>Use hyphen (or no separation at all) in dates (see below).</p></li>
+<li><p><code>results_today</code>, <code>results_tomorrow</code> instead of <code>results-today</code>,
+<code>results-tomorrow</code>,</p></li>
+<li><p><code>protocol_hauke</code>, <code>protocol_michael</code> instead of <code>protocol-hauke</code>,
+<code>protocol-michael</code></p></li>
 </ul>
+<p>Use hyphen <code>-</code> instead of underscore <code>_</code> to visually separate the parts of
+compound words or names:</p>
+<ul>
+<li><p><code>site-1</code> instead of <code>site_1</code>,</p></li>
+<li><p><code>dissolved-oxygen</code> instead of <code>dissolved_oxygen</code>,</p></li>
+<li><p><code>clean-data</code> instead of <code>clean_data</code>.</p></li>
+</ul>
+<p>Use hyphen (or no separation at all) in dates (see below).</p>
+<p>Using hyphen instead of underscore in composed words will not split the composed
+words into their parts when splitting a file or folder name at underscore.</p>
+<p>For example, splitting the name
+<code>project-report_example-project-1_v1.0_2018-07-02</code> at underscore results in the
+following words (giving different types of information on the file or folder)</p>
+<ul>
+<li><p><code>project-report</code> (type of document),</p></li>
+<li><p><code>example-project-1</code> (name of related project),</p></li>
+<li><p><code>v1.0</code> (version number),</p></li>
+<li><p><code>2018-07-02</code> (version date).</p></li>
+</ul>
+</div>
+<div id="capitalisation" class="section level4 unnumbered">
+<h4>Capitalisation</h4>
 
 <div class="rmdnote">
 <p>Should we decide on if and when to use capitals, i.e. should we allow only one
-of the following:</p>
+of the following spellings:</p>
 <code>dissolved-oxygen</code> (all lower case),
 <code>dissolved-Oxygen</code> (attributes lower case, nouns upper case),
 <code>Dissolved-oxygen</code> (first letter upper case),
 <code>Dissolved-Oxygen</code> (all parts of compund words upper case)?
 </div>
 
-<p>Good practice: Remove spaces from file names or use punctuation such as
-underscores and hyphens to separate words e.g.
-<code>AHRC_TechnicalApp_Response_20120925.docx</code> or
-<code>AHRC-TechnicalApp-Response20120925.docx</code> rather than <code>what we got back from funders about the data stuff.docx</code></p>
-<p>We distinguish between rules specifying</p>
+</div>
+<div id="formatting-of-dates-and-numbers" class="section level4 unnumbered">
+<h4>Formatting of Dates and Numbers</h4>
+<p>We want to write <strong>dates</strong> in file or folder names in one of these forms:</p>
 <ul>
-<li>a set of allowed characters,</li>
-<li>a set of allowed words (vocabulary) that may appear as part of a file or
-folder,</li>
-<li>the order in which we expect the words to appear in a file or folder name.</li>
+<li><p><code>yyyy-mm-dd</code> (e.g. <code>2018-06-28</code>)</p></li>
+<li><p><code>yyyymmdd</code> (e.g. <code>20180628</code>)</p></li>
 </ul>
-<p>It is useful if your department or project team agrees on the
-following elements of a file name:</p>
+<p>By doing so, file names only differing in the date will display chronologically
+in file listings. This is because, by default, files are sorted alphanumerically
+by their name. Using the first form improves the visual distinction of the year,
+month and day part of the date. Using hyphen instead of underscore will keep
+these parts together when splitting the name at underscore (see above).</p>
+<p>When using numbers in file or folder names to bring them into a certain order
+we should use leading zeroes and specify the amount of digits that will be used,
+e.g. <code>01</code>, <code>02</code>, <code>03</code> or <code>001</code>, <code>002</code>, <code>003</code>, etc.</p>
+</div>
+<div id="allowed-words" class="section level4 unnumbered">
+<h4>Allowed Words</h4>
+<p>In order to meet <em>Objective 2</em>, we should define <strong>sets of allowed words</strong> in
+so called vocabularies. Only words from the vocabularies are then expected to
+appear as words in file or folder names. Getting accustomed to the words from
+the vocabularies and their meanings allows for more precise file searching.</p>
+<p>This is most important to clearly indicate that a file or folder relates to
+“special objects”, such as projects or organisations or monitoring sites.
+At least for projects and organisations we want to define vocabularies in which
+“official” acronyms are defined for all projects and all organisations from
+which we expect to receive data (see the chapter on <a href="best-practices.html#acronyms">acronyms</a>).
+Always using the acronyms defined in the vocabularies allows to search for files
+or folders belonging to one specific project or being provided by one specific
+organisation.</p>
+<p>We could also define vocabularies of words describing other properties of a file
+or folder. We could e.g. decide to always use <code>clean-data</code> instead of
+<code>data-clean</code>, <code>cleaned-data</code>, <code>data-cleaning</code>, <code>Datenbereinigung</code>,
+<code>bereinigte-daten</code>, etc.</p>
+</div>
+<div id="order-of-words" class="section level4 unnumbered">
+<h4>Order of Words</h4>
+<p>We could go one step further and define the order in which we expect the words
+to appear in a file or folder name. Which types of information should go first
+in the filename? The order of words determines in which way files are grouped
+visually when being listed by their name. If the acronym of the organisation
+goes first, files are grouped by organisation. If the acronym of the monitoring
+site goes first, files are grouped by monitoring site.</p>
+</div>
+<div id="allowed-languages" class="section level4 unnumbered">
+<h4>Allowed Languages</h4>
+<p>Do not mix words from different languages within one and the same file or folder
+name. For example, use <code>regen-ereignis</code> or <code>rain-event</code> instead of <code>regen-event</code>
+or <code>rain-ereignis</code>.</p>
+<p>Within one project, use either only English words or only German words in
+file or folder names. This restriction may be too strict. However, I think that
+we should follow this rule at least for the top level
+<a href="best-practices.html#folder-structures">folder structures</a>. It is not nice that we see folders
+<code>AUFTRAEGE</code> (German) and <code>GROUNDWATER</code> (English) as folder names within the
+same parent folder.</p>
+</div>
+<div id="avoid-very-long-names" class="section level4 unnumbered">
+<h4>Avoid Very Long Names</h4>
+<p>In order to meet <em>Objective 3</em>, very long file and folder names should be
+avoided. File and folder names should be</p>
 <ul>
-<li>Vocabulary: Choose a standard vocabulary for file names, so that everyone
-uses a common language</li>
+<li><p>as long as necessary to be meaningful but at the same time</p></li>
+<li><p>as short as possible.</p></li>
 </ul>
-<p>We aggreed on coding <strong>dates</strong> in file or folder names in one of these forms:</p>
-<ul>
-<li><code>yyyy-mm-dd</code> (e.g. <code>2018-06-28</code>)</li>
-<li><code>yyyymmdd</code> (e.g. <code>20180628</code>)</li>
-</ul>
-<p>When dates are coded like so, files names only differing in the date by default
-display chronologically in the file explorer or in file listings. This is
-because by default files are sorted alphanumerically by their name.</p>
-<p>Using hyphen to separate year, month and day supports to distinguish these date
-parts visually. Using the hyphen instead of the underscore allows to split a
-file name at underscores without splitting the date into parts.</p>
-<ul>
-<li><p>Order: Confirm which element should go first, so that files on the same
-theme are listed together and can therefore be found easily</p></li>
-<li><p>Numbers: Specify the amount of digits that will be used in numbering so that
-files are listed numerically e.g. <code>01</code>, <code>002</code>, etc.</p></li>
-<li><p>Use uniform spelling for special “objects”, such as</p>
-<ul>
-<li>projects or sites or parameters, see <a href="best-practices.html#acronyms">acronyms</a></li>
-<li>properties, e.g. use always <code>validiert</code>, <code>kalibriert</code> or <code>validated</code>,
-<code>calibrated</code> instead of sometimes <code>val</code>, sometimes <code>validiert</code>, etc.</li>
-</ul></li>
-<li><p>Therefore, define so called vocabularies.</p></li>
-<li><p>Do not mix languages within one and the same file or folder name: Use
-<code>regen-ereignis</code> or <code>rain-event</code> instead of <code>regen-event</code> or <code>rain-ereignis</code>.</p></li>
-<li><p>Within one project, use either only English names or only German names.</p></li>
-</ul>
-<p>Using hyphen or “camel case” for composed words will not split the composed
-words into their parts when splitting file or folder names at underscores.</p>
-<p>The restriction of using consistently one language for file and folder names may
-be too strict. However, I think we should try this at least for the top level
-<a href="best-practices.html#folder-structures">folder structures</a>.</p>
-<div id="avoid-very-long-file-and-folder-names" class="section level5">
-<h5><span class="header-section-number">2.2.2.0.1</span> Avoid Very Long File and Folder Names</h5>
-<p>File and folder names should be as long as necessary to be meaningful but as
-short as possible.</p>
 
 <div class="rmdwarning">
 In the Windows operating system, long file paths can cause problems when copying
@@ -444,48 +518,17 @@ modify the naming scheme.</p>
 long file or folder names we should store them in a flat folder hierarchy (i.e.
 not in <code>\\server\projekte$\department-name\projects\project-name\data-work-packages\work-package-one-meaning-the-following\modelling\scenario-one-meaning-the-following\results</code>).</p>
 </div>
-<div id="acronyms" class="section level4">
-<h4><span class="header-section-number">2.2.2.1</span> Acronyms</h4>
-<p>Acronyms are unique, clear names for objects. They should</p>
+<div id="examples" class="section level4 unnumbered">
+<h4>Examples</h4>
+<p>Examples for good file names:</p>
 <ul>
-<li>be short but meaningful and easy to remember,</li>
-<li>be all lowercase,</li>
-<li>consist of only alphanumeric letters (<code>a-z</code>, <code>0-9</code>) or the hyphen (<code>-</code>).</li>
+<li><code>AHRC_TechnicalApp_Response_20120925.docx</code> or</li>
+<li><code>AHRC-TechnicalApp-Response20120925.docx</code></li>
 </ul>
-<div id="project-acronyms" class="section level5">
-<h5><span class="header-section-number">2.2.2.1.1</span> Acronyms for Projects</h5>
-
-<div class="rmdnote">
-Do we already have rules for naming and spelling of projects and project folders
-or files?
-</div>
-
-<p>If not, we should, at the start of a project, define official project acronyms.
-These are uniform spellings of project names, intended to be used in folder or
-file names.</p>
-<p>Whenever we want to indicate the relation to a certain project in a file or
-folder name, we use the project acronym in exactly the typing that was defined.
-This is important as we want to distinguish between <a href="best-practices.html#raw-data">raw data</a>,
-processed data and
-project results in our <a href="best-practices.html#data-workflow">data workflow</a>.</p>
-<p>The project acronyms are defined in a simple text file
-<a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a> in the <code>//server/projects$</code> folder, see
-<a href="best-practices.html#project-folder-structure">Project Folder Structure</a>.</p>
-
-<div class="rmdnote">
-Should we also define three letter codes for projects? That could
-be beneficial in tables with each column representing a project or in overview
-plots.
-</div>
-
-</div>
-<div id="organisation-acronyms" class="section level5">
-<h5><span class="header-section-number">2.2.2.1.2</span> Acronyms for Organisations</h5>
-<p>It is very important to know the origin or owner of data. This is an important
-piece of <a href="best-practices.html#metadata">metadata</a> Therefore we define unique acronyms for the
-owners of data that we use. The acronyms are defined in a special file
-<a href="best-practices.html#file-organisations"><code>ORGANISATIONS.txt</code></a></p>
-</div>
+<p>Example for bad file names:</p>
+<ul>
+<li><code>what we got back from funders about the data stuff.docx</code></li>
+</ul>
 </div>
 </div>
 <div id="metadata" class="section level3">
