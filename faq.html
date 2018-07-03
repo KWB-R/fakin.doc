@@ -46,6 +46,7 @@
 
 
 
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
 
 
 <style type="text/css">
@@ -357,8 +358,10 @@ defined in "R/add_text.R" -->
 <h2><span class="header-section-number">6.7</span> How to open local file links in Firefox (&gt;= v57)</h2>
 <p>For opening the local file links in Firefox (&gt;= v57), you either need to:</p>
 <ul>
-<li><p>Install the Firefox plugin <a href="https://addons.mozilla.org/de/firefox/addon/local-filesystem-links/">Local Filesystem Links</a> or</p></li>
-<li><p>Copy the link manually and subsequently enter it in the browser</p></li>
+<li><p>Install the Firefox plugin <a href="https://addons.mozilla.org/de/firefox/addon/local-filesystem-links/">Local Filesystem Links</a> or</p>
+<ul>
+<li>Copy the link manually and subsequently enter it in the browser</li>
+</ul></li>
 </ul>
 </div>
 <div id="how-to-build-your-own-kwb-styled-r-package" class="section level2">
@@ -493,16 +496,22 @@ eine Funktion in einem KWB R-Paket (z.B. <code>kwb.utils</code>) implementiert w
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-## [1] knitcitations_1.0.8
+## [1] kableExtra_0.9.0    tibble_1.4.2        knitcitations_1.0.8
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] Rcpp_0.12.17     bookdown_0.7.13  lubridate_1.7.4  digest_0.6.15   
-##  [5] rprojroot_1.3-2  plyr_1.8.4       R6_2.2.2         jsonlite_1.5    
-##  [9] backports_1.1.2  magrittr_1.5     evaluate_0.10.1  highr_0.6       
-## [13] httr_1.3.1       bibtex_0.4.2     stringi_1.2.2    curl_3.2        
-## [17] rstudioapi_0.7   xml2_1.2.0       rmarkdown_1.10   tools_3.5.0     
-## [21] RefManageR_1.2.0 stringr_1.3.1    xfun_0.2         yaml_2.1.19     
-## [25] compiler_3.5.0   htmltools_0.3.6  knitr_1.20</code></pre>
+##  [1] Rcpp_0.12.17      rstudioapi_0.7    knitr_1.20       
+##  [4] xml2_1.2.0        magrittr_1.5      hms_0.4.2        
+##  [7] munsell_0.5.0     rvest_0.3.2       viridisLite_0.3.0
+## [10] colorspace_1.3-2  R6_2.2.2          rlang_0.2.1      
+## [13] bibtex_0.4.2      stringr_1.3.1     httr_1.3.1       
+## [16] highr_0.6         plyr_1.8.4        tools_3.5.0      
+## [19] xfun_0.2          htmltools_0.3.6   yaml_2.1.19      
+## [22] rprojroot_1.3-2   digest_0.6.15     bookdown_0.7.13  
+## [25] readr_1.1.1       RefManageR_1.2.0  curl_3.2         
+## [28] evaluate_0.10.1   rmarkdown_1.10    stringi_1.2.2    
+## [31] pillar_1.2.3      compiler_3.5.0    scales_0.5.0     
+## [34] backports_1.1.2   jsonlite_1.5      lubridate_1.7.4  
+## [37] pkgconfig_2.0.1</code></pre>
 <p>Schreiben in standardisierte Metadatei:</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sink</span>(<span class="st">&quot;session_info.txt&quot;</span>)
 <span class="kw">sessionInfo</span>()
