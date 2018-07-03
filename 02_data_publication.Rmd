@@ -265,7 +265,7 @@ kableExtra::column_spec(
     booktabs = T,
     caption = "Suitability of file formats for long-term preservation \\citep{Kaden_2018}"
   ),
-  column = 2:4, width = "4cm"
+  column = 2:4, width = "3.5cm"
 )
 ```
 
