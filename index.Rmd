@@ -12,6 +12,7 @@ github-repo: kwb-r/fakin.doc
 url: 'https\://kwb-r.github.io/fakin.doc'
 description: "FAKIN Best Practices"
 cover-image: images/cover.png
+always_allow_html: yes
 ---
 
 ```{r include=FALSE}
