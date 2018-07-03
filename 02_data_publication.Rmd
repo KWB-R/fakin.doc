@@ -220,6 +220,61 @@ access to the data in the files remains limited."
 >
 > --- `r citep(manual["Rokem_2018"])`
 
+
+```{r echo = FALSE, warning=FALSE, message=FALSE}
+
+if (! require("tibble")) {
+   install.packages("tibble")
+ }
+
+tbl_longterm_file_formats <- tibble::tribble(
+  ~., ~More.than.ten.years, ~Up.to.ten.years, ~Not.suitable,
+  "Text", "PDF/A, TXT, ASC, XML", "PDF, RTF, HTML, DOCX, PPTX, ODT, LATEX", "DOC, PPT",
+  "Data", "CSV",  "XLSX, ODS", "XLS",
+  "Pictures", "TIFF, PNG, JPG 2000, SVG", "GIF, BMP, JPEG", "INDD, EPS",
+  "Audio", "WAV", "MP3, MP4", "",
+  "Video", "Motion JPG 2000, MOV", "MP4", "WMV"
+)
+
+names(tbl_longterm_file_formats) <- c("","More than ten years", "Up to ten years", 
+                                      "Not suitable")
+
+if (! require("kableExtra")) {
+   install.packages("kableExtra")
+ }
+library(kableExtra, quietly = TRUE)
+
+```
+
+```{r echo = FALSE, include=grepl('html', knitr:::pandoc_to())}
+knitr::kable(tbl_longterm_file_formats,format = "html",
+caption = "Suitability of file formats for long-term preservation [@Kaden_2018]") %>%  
+kableExtra::column_spec(2:4, width = "5cm")
+
+```
+
+```{r echo = FALSE, include=grepl('latex', knitr:::pandoc_to())}
+
+latex_table <- knitr::kable(tbl_longterm_file_formats,
+             "latex",
+             booktabs = T,
+caption = "Suitability of file formats for long-term preservation \\citep{Kaden_2018}") 
+
+latex_table %>%
+kableExtra::column_spec(column = 2:4, width = "4cm")
+
+
+```
+
+
+```{r echo = TRUE, include=grepl('docx|epub', knitr:::pandoc_to()), fig.width = 5, fig.height = 5 }
+knitr::kable(tbl_longterm_file_formats, 
+             caption = "Suitability of file formats for long-term preservation [@Kaden_2018]")
+```
+
+
+
+
 ### Data Exchange Standards
 
 [WaterML2](http://www.waterml2.org/): 

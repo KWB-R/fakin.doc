@@ -4,4 +4,6 @@ Title: Does not matter.
 Version: 0.0.1
 Imports: 
    bookdown,
-   knitcitations
+   knitcitations,
+   kableExtra,
+   tibble
