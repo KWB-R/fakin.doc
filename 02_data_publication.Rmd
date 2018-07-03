@@ -270,8 +270,9 @@ kableExtra::column_spec(
 ```
 
 
-```{r echo = TRUE, include=grepl('docx|epub', knitr:::pandoc_to()), fig.width = 5, fig.height = 5 }
+```{r echo = FALSE, include=grepl('docx|epub', knitr:::pandoc_to()), fig.width = 5, fig.height = 5 }
 knitr::kable(tbl_longterm_file_formats,
+             format = "markdown",
              align = "c", 
   caption = "Suitability of file formats for long-term preservation [@Kaden_2018]"
 )
