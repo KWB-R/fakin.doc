@@ -76,9 +76,10 @@ KWB projects and how they were solved in order to increase our awareness at KWB,
 * [Chapter 6](#glossary) is a [glossary](#glossary) for explaining commonly used 
 terms within this document.
 
-This document is assumed to be a "living" document. We highly appreciate any
-comments and suggestions for improvements. What are your experiences with
-research data managment tasks? Can you provide solutions for specific tasks?
+`r if(!grepl('html', knitr:::pandoc_to())) 'This document is assumed to be a 
+"living" document. We highly appreciate any comments and suggestions for improvements. 
+What are your experiences with research data managment tasks? Can you provide 
+solutions for specific tasks?'`
 
 
 The online version of this report is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).

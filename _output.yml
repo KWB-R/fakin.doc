@@ -1,5 +1,6 @@
 bookdown::gitbook:
   includes:
+    before_body: open_review_block.html
     after_body: hypothesis.html
   css: style.css
   split_by: chapter  
