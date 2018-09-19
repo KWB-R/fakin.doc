@@ -135,7 +135,8 @@ For building your own R package from scratch we developed a helper R package
 which builds a KWB styled skeleton for your future R package. 
 
 With the help of this tool Andreas Matzinger was able to convert this R scripts 
-on resilience within a few hours into the R package [kwb.resilience](https://kwb-r.github.io/kwb.resilience/dev/) with fo now available on Github.
+on resilience within a few hours into the R package [kwb.resilience](https://kwb-r.github.io/kwb.resilience/dev/) which is now 
+available on Github.
 
 For more details on turning your own code into a R package checkout the [tutorial](https://kwb-r.github.io/kwb.pkgbuild/dev/articles/tutorial.html) 
 at the package documentation website.
