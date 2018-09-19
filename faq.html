@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Best Practices in Research Data Management</title>
   <meta name="description" content="FAKIN Best Practices">
-  <meta name="generator" content="bookdown 0.7.13 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
   <meta property="og:title" content="Best Practices in Research Data Management" />
   <meta property="og:type" content="book" />
@@ -205,9 +205,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.3" data-path="faq.html"><a href="faq.html#writing-more-robust-r-code"><i class="fa fa-check"></i><b>6.3</b> Writing More Robust R Code</a></li>
 <li class="chapter" data-level="6.4" data-path="faq.html"><a href="faq.html#learning-r-on-datacamp"><i class="fa fa-check"></i><b>6.4</b> Learning R on DataCamp</a></li>
 <li class="chapter" data-level="6.5" data-path="faq.html"><a href="faq.html#using-subversion-at-kwb"><i class="fa fa-check"></i><b>6.5</b> Using Subversion at KWB</a></li>
-<li class="chapter" data-level="6.6" data-path="faq.html"><a href="faq.html#how-to-install-kwb-r-packages"><i class="fa fa-check"></i><b>6.6</b> How to Install KWB R Packages?</a></li>
-<li class="chapter" data-level="6.7" data-path="faq.html"><a href="faq.html#firefox-local-files"><i class="fa fa-check"></i><b>6.7</b> How to open local file links in Firefox (&gt;= v57)</a></li>
-<li class="chapter" data-level="6.8" data-path="faq.html"><a href="faq.html#how-to-build-your-own-kwb-styled-r-package"><i class="fa fa-check"></i><b>6.8</b> How to Build Your Own Kwb Styled R Package?</a></li>
+<li class="chapter" data-level="6.6" data-path="faq.html"><a href="faq.html#how-to-build-your-own-kwb-styled-r-package"><i class="fa fa-check"></i><b>6.6</b> How to Build Your Own Kwb Styled R Package?</a></li>
+<li class="chapter" data-level="6.7" data-path="faq.html"><a href="faq.html#how-to-install-kwb-r-packages"><i class="fa fa-check"></i><b>6.7</b> How to Install KWB R Packages?</a></li>
+<li class="chapter" data-level="6.8" data-path="faq.html"><a href="faq.html#firefox-local-files"><i class="fa fa-check"></i><b>6.8</b> How to open local file links in Firefox (&gt;= v57)</a></li>
 <li class="chapter" data-level="6.9" data-path="faq.html"><a href="faq.html#faq-excel"><i class="fa fa-check"></i><b>6.9</b> Working with Excel</a></li>
 <li class="chapter" data-level="6.10" data-path="faq.html"><a href="faq.html#heterogenous-software-versions-on-kwb-computers"><i class="fa fa-check"></i><b>6.10</b> Heterogenous Software Versions on KWB Computers</a></li>
 <li class="chapter" data-level="6.11" data-path="faq.html"><a href="faq.html#r-packageversion-dependency-of-r-scripts"><i class="fa fa-check"></i><b>6.11</b> R Package/Version Dependency of R Scripts</a></li>
@@ -363,9 +363,36 @@ he can make your seat available for others at KWB who are interested in learning
 defined in "R/add_text.R" -->
 (link only accessible from KWB intranet with Firefox in case workflow defined <a href="faq.html#firefox-local-files">here</a> is followed!).</p>
 </div>
+<div id="how-to-build-your-own-kwb-styled-r-package" class="section level2">
+<h2><span class="header-section-number">6.6</span> How to Build Your Own Kwb Styled R Package?</h2>
+<p>For building your own R package from scratch we developed a helper R package
+<a href="https://github.com/kwb-r/kwb.pkgbuild">kwb.pkgbuild</a> (available on Github),
+which builds a KWB styled skeleton for your future R package.</p>
+<p>With the help of this tool Andreas Matzinger was able to convert this R scripts
+on resilience within a few hours into the R package <a href="https://kwb-r.github.io/kwb.resilience/dev/">kwb.resilience</a> with fo now available on Github.</p>
+<p>For more details on turning your own code into a R package checkout the <a href="https://kwb-r.github.io/kwb.pkgbuild/dev/articles/tutorial.html">tutorial</a>
+at the package documentation website.</p>
+<p>Recommended literature:</p>
+<ul>
+<li><p><a href="http://r-pkgs.had.co.nz/">R packages</a> <span class="citation">(Wickham <a href="#ref-Wickham_2015">2015</a><a href="#ref-Wickham_2015">b</a>)</span></p></li>
+<li><p><a href="http://adv-r.had.co.nz/">Advanced R</a> <span class="citation">(Wickham <a href="#ref-Wickham_2014">2015</a><a href="#ref-Wickham_2014">a</a>)</span></p></li>
+</ul>
+</div>
 <div id="how-to-install-kwb-r-packages" class="section level2">
-<h2><span class="header-section-number">6.6</span> How to Install KWB R Packages?</h2>
-<p>For details please read the following <a href="file:///Y:/Z-Exchange/_Tutorials/installing_kwb_packages.html">tutorial</a>
+<h2><span class="header-section-number">6.7</span> How to Install KWB R Packages?</h2>
+<p>Most R packages developed at KWB are not only available in the intranet but are
+also available on Github. Please check the following website:
+<a href="http://kwb-r.github.io/status/" class="uri">http://kwb-r.github.io/status/</a> or
+<a href="https://github.com/KWB-R" class="uri">https://github.com/KWB-R</a></p>
+<p>Installation of these R packages can be performed with the following
+command in R(studio):</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1">### Required to install an R package from Github </a>
+<a class="sourceLine" id="cb15-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>, <span class="dt">repos =</span> <span class="st">&quot;https://cloud.r-project.org&quot;</span>)</a>
+<a class="sourceLine" id="cb15-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb15-4" data-line-number="4">### Now install your desired R package (e.g. &quot;kwb.resilience&quot;)</a>
+<a class="sourceLine" id="cb15-5" data-line-number="5">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;kwb-r/kwb.resilience&quot;</span>)</a></code></pre></div>
+<p>However, in case your required R package that is not yet Github please read the
+following <a href="file:///Y:/Z-Exchange/_Tutorials/installing_kwb_packages.html">tutorial</a>
 <!-- Only adds more details in case of html output as 
 defined in "R/add_text.R" -->
 (link only accessible from KWB intranet with Firefox in case workflow defined <a href="faq.html#firefox-local-files">here</a> is followed!).</p>
@@ -373,26 +400,13 @@ defined in "R/add_text.R" -->
 defined in "R/add_text.R" -->
 </div>
 <div id="firefox-local-files" class="section level2">
-<h2><span class="header-section-number">6.7</span> How to open local file links in Firefox (&gt;= v57)</h2>
+<h2><span class="header-section-number">6.8</span> How to open local file links in Firefox (&gt;= v57)</h2>
 <p>For opening the local file links in Firefox (&gt;= v57), you either need to:</p>
 <ul>
 <li><p>Install the Firefox plugin <a href="https://addons.mozilla.org/de/firefox/addon/local-filesystem-links/">Local Filesystem Links</a> or</p>
 <ul>
 <li>Copy the link manually and subsequently enter it in the browser</li>
 </ul></li>
-</ul>
-</div>
-<div id="how-to-build-your-own-kwb-styled-r-package" class="section level2">
-<h2><span class="header-section-number">6.8</span> How to Build Your Own Kwb Styled R Package?</h2>
-<p>For building your own R package from scratch we developed a helper R package
-<a href="https://github.com/kwb-r/kwb.pkgbuild">kwb.pkgbuild</a> (available on Github),
-which builds a KWB styled skeleton for your future R package.</p>
-<p>For more details checkout the <a href="https://kwb-r.github.io/kwb.pkgbuild/dev/articles/tutorial.html">tutorial</a>
-at the package documentation website.</p>
-<p>Recommended literature:</p>
-<ul>
-<li><p><a href="http://r-pkgs.had.co.nz/">R packages</a> <span class="citation">(Wickham <a href="#ref-Wickham_2015">2015</a><a href="#ref-Wickham_2015">b</a>)</span></p></li>
-<li><p><a href="http://adv-r.had.co.nz/">Advanced R</a> <span class="citation">(Wickham <a href="#ref-Wickham_2014">2015</a><a href="#ref-Wickham_2014">a</a>)</span></p></li>
 </ul>
 </div>
 <div id="faq-excel" class="section level2">
@@ -493,7 +507,7 @@ der Erzeugung von R-Markdown-Dokumenten direkt am Anfang der Analyse im
 <p>Das Schreiben der Metadaten-Datei <code>session_info.txt</code> sollte standardisert über
 eine Funktion in einem KWB R-Paket (z.B. <code>kwb.utils</code>) implementiert werden.</p>
 <p>Direktausgabe in R Console / RMarkddown:</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sessionInfo</span>()</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="kw">sessionInfo</span>()</a></code></pre></div>
 <pre><code>## R version 3.5.0 (2017-01-27)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
 ## Running under: Ubuntu 14.04.5 LTS
@@ -517,23 +531,23 @@ eine Funktion in einem KWB R-Paket (z.B. <code>kwb.utils</code>) implementiert w
 ## [1] kableExtra_0.9.0    tibble_1.4.2        knitcitations_1.0.8
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] Rcpp_0.12.17      rstudioapi_0.7    knitr_1.20       
+##  [1] Rcpp_0.12.18      rstudioapi_0.7    knitr_1.20       
 ##  [4] xml2_1.2.0        magrittr_1.5      hms_0.4.2        
 ##  [7] munsell_0.5.0     rvest_0.3.2       viridisLite_0.3.0
-## [10] colorspace_1.3-2  R6_2.2.2          rlang_0.2.1      
+## [10] colorspace_1.3-2  R6_2.2.2          rlang_0.2.2      
 ## [13] bibtex_0.4.2      stringr_1.3.1     httr_1.3.1       
-## [16] highr_0.6         plyr_1.8.4        tools_3.5.0      
-## [19] xfun_0.2          htmltools_0.3.6   yaml_2.1.19      
-## [22] rprojroot_1.3-2   digest_0.6.15     bookdown_0.7.13  
-## [25] readr_1.1.1       RefManageR_1.2.0  curl_3.2         
-## [28] evaluate_0.10.1   rmarkdown_1.10    stringi_1.2.2    
-## [31] pillar_1.2.3      compiler_3.5.0    scales_0.5.0     
-## [34] backports_1.1.2   jsonlite_1.5      lubridate_1.7.4  
-## [37] pkgconfig_2.0.1</code></pre>
+## [16] highr_0.7         plyr_1.8.4        tools_3.5.0      
+## [19] xfun_0.3          htmltools_0.3.6   yaml_2.2.0       
+## [22] rprojroot_1.3-2   digest_0.6.17     crayon_1.3.4     
+## [25] bookdown_0.7      readr_1.1.1       RefManageR_1.2.0 
+## [28] curl_3.2          evaluate_0.11     rmarkdown_1.10   
+## [31] stringi_1.2.4     pillar_1.3.0      compiler_3.5.0   
+## [34] scales_1.0.0      backports_1.1.2   jsonlite_1.5     
+## [37] lubridate_1.7.4   pkgconfig_2.0.2</code></pre>
 <p>Schreiben in standardisierte Metadatei:</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sink</span>(<span class="st">&quot;session_info.txt&quot;</span>)
-<span class="kw">sessionInfo</span>()
-<span class="kw">sink</span>()</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="kw">sink</span>(<span class="st">&quot;session_info.txt&quot;</span>)</a>
+<a class="sourceLine" id="cb18-2" data-line-number="2"><span class="kw">sessionInfo</span>()</a>
+<a class="sourceLine" id="cb18-3" data-line-number="3"><span class="kw">sink</span>()</a></code></pre></div>
 <p>Hierzu ist auch noch ein Tutorial zu erstellen!</p>
 
 <div class="rmdnote">
@@ -674,12 +688,12 @@ mis-encoding of string literals.”</p>
 <p>— <span class="citation">(Ushey <a href="#ref-Ushey_2018">2018</a>)</span></p>
 </blockquote>
 <p><strong>Encoding example in R:</strong></p>
-<pre class="sourceCode r"><code class="sourceCode r">### Richtiges Skript Encoding WICHTIG (richtiges Einlesen des Skripts nur wenn 
-### mit gleichem Encoding eingelesen  wie es auch abgespeichert wurde)
-<span class="kw">print</span>(<span class="st">&quot;Ü&quot;</span>)</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1">### Richtiges Skript Encoding WICHTIG (richtiges Einlesen des Skripts nur wenn </a>
+<a class="sourceLine" id="cb19-2" data-line-number="2">### mit gleichem Encoding eingelesen  wie es auch abgespeichert wurde)</a>
+<a class="sourceLine" id="cb19-3" data-line-number="3"><span class="kw">print</span>(<span class="st">&quot;Ü&quot;</span>)</a></code></pre></div>
 <pre><code>## [1] &quot;Ü&quot;</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r">### Skript Encoding EGAL (da Umlaut in Unicode codiert wurde)
-<span class="kw">print</span>(<span class="st">&quot;\u00dc&quot;</span>)</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" data-line-number="1">### Skript Encoding EGAL (da Umlaut in Unicode codiert wurde)</a>
+<a class="sourceLine" id="cb21-2" data-line-number="2"><span class="kw">print</span>(<span class="st">&quot;\u00dc&quot;</span>)</a></code></pre></div>
 <pre><code>## [1] &quot;Ü&quot;</code></pre>
 <p>See also Hauke’s article
 <a href="https://kwb-r.github.io/kwb.fakin/dev/articles/understanding_encoding.html">Understanding Encoding</a>
