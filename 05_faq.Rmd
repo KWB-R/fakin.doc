@@ -127,9 +127,49 @@ For details on how to use Subversion at KWB please read the following [tutorial]
 defined in "R/add_text.R" -->
 `r add_text_links()`
 
+
+## How to Build Your Own Kwb Styled R Package?
+
+For building your own R package from scratch we developed a helper R package 
+[kwb.pkgbuild](https://github.com/kwb-r/kwb.pkgbuild) (available on Github), 
+which builds a KWB styled skeleton for your future R package. 
+
+With the help of this tool Andreas Matzinger was able to convert this R scripts 
+on resilience within a few hours into the R package [kwb.resilience](https://kwb-r.github.io/kwb.resilience/dev/) with fo now available on Github.
+
+For more details on turning your own code into a R package checkout the [tutorial](https://kwb-r.github.io/kwb.pkgbuild/dev/articles/tutorial.html) 
+at the package documentation website.
+
+Recommended literature: 
+
+- [R packages](http://r-pkgs.had.co.nz/) `r citep(manual["Wickham_2015"])`
+
+- [Advanced R](http://adv-r.had.co.nz/) `r citep(manual[c("Wickham_2014","Wickham2018")])`
+
+
 ## How to Install KWB R Packages?
 
-For details please read the following [tutorial](file:///Y:/Z-Exchange/_Tutorials/installing_kwb_packages.html) 
+Most R packages developed at KWB are not only available in the intranet but are 
+also available on Github. Please check the following website:
+[http://kwb-r.github.io/status/](http://kwb-r.github.io/status/) or 
+[https://github.com/KWB-R](https://github.com/KWB-R) 
+
+
+Installation of these R packages can be performed with the following 
+command in R(studio):
+```{r, eval = FALSE}
+
+### Required to install an R package from Github 
+install.packages("devtools", repos = "https://cloud.r-project.org")
+
+### Now install your desired R package (e.g. "kwb.resilience")
+devtools::install_github("kwb-r/kwb.resilience")
+
+
+```
+
+However, in case your required R package that is not yet Github please read the 
+following [tutorial](file:///Y:/Z-Exchange/_Tutorials/installing_kwb_packages.html) 
 <!-- Only adds more details in case of html output as 
 defined in "R/add_text.R" -->
 `r add_text_links()`
@@ -138,22 +178,6 @@ defined in "R/add_text.R" -->
 <!-- Only adds chapter firefox local files in case of html output as 
 defined in "R/add_text.R" -->
 `r add_chapter_firefox_local_files()`
-
-
-## How to Build Your Own Kwb Styled R Package?
-
-For building your own R package from scratch we developed a helper R package 
-[kwb.pkgbuild](https://github.com/kwb-r/kwb.pkgbuild) (available on Github), 
-which builds a KWB styled skeleton for your future R package. 
-
-For more details checkout the [tutorial](https://kwb-r.github.io/kwb.pkgbuild/dev/articles/tutorial.html) 
-at the package documentation website.
-
-Recommended literature: 
-
-- [R packages](http://r-pkgs.had.co.nz/) `r citep(manual["Wickham_2015"])`
-
-- [Advanced R](http://adv-r.had.co.nz/) `r citep(manual[c("Wickham_2014","Wickham2018")])`
 
 
 ## Working with Excel {#faq-excel}
