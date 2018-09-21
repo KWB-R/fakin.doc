@@ -93,9 +93,9 @@ individually, which is now obsolete.
 **For using DataCamp at KWB the following workflow applies:**
 
 
-1. **Become a member in our free [R@KWB DataCamp Gruppe](https://www.datacamp.com/groups/r-kwb)** 
+1. **Become a member in our free [R@KWB DataCamp group](https://www.datacamp.com/groups/r-kwb)** 
 by clicking on the following [link](https://www.datacamp.com/groups/3a6e6d4a7314de1b56a33c99c457b5c7eca00f6a/invite). 
-In case you do hat have a [DataCamp](https://datacamp.com) account yet, please 
+In case you do not have a [DataCamp](https://datacamp.com) account yet, please 
 register yourself first by using your KWB email address. The membership in this 
 group serves two purposes: on the one hand you should start on DataCamp with 
 the free courses like for example [Introduction to R](https://www.datacamp.com/courses/free-introduction-to-r) 
