@@ -160,7 +160,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.4" data-path="best-practices.html"><a href="best-practices.html#metadata-format"><i class="fa fa-check"></i><b>2.3.4</b> In What Format to Store Metadata?</a></li>
 <li class="chapter" data-level="2.3.5" data-path="best-practices.html"><a href="best-practices.html#metadata-management-tools"><i class="fa fa-check"></i><b>2.3.5</b> Metadata Management Tools</a></li>
 <li class="chapter" data-level="2.3.6" data-path="best-practices.html"><a href="best-practices.html#metadata-standards"><i class="fa fa-check"></i><b>2.3.6</b> Metadata Standards</a></li>
-<li class="chapter" data-level="2.3.7" data-path="best-practices.html"><a href="best-practices.html#file-projects"><i class="fa fa-check"></i><b>2.3.7</b> File PROJECTS.txt</a></li>
+<li class="chapter" data-level="2.3.7" data-path="best-practices.html"><a href="best-practices.html#file-projects"><i class="fa fa-check"></i><b>2.3.7</b> File PROJECTS.yml</a></li>
 <li class="chapter" data-level="2.3.8" data-path="best-practices.html"><a href="best-practices.html#file-organisations"><i class="fa fa-check"></i><b>2.3.8</b> File ORGANISATIONS.txt</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="best-practices.html"><a href="best-practices.html#data-collection"><i class="fa fa-check"></i><b>2.4</b> Data Collection</a><ul>
@@ -392,11 +392,11 @@ also available on Github. Please check the following website:
 <a href="https://github.com/KWB-R" class="uri">https://github.com/KWB-R</a></p>
 <p>Installation of these R packages can be performed with the following
 command in R(studio):</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1">### Required to install an R package from Github </a>
-<a class="sourceLine" id="cb15-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>, <span class="dt">repos =</span> <span class="st">&quot;https://cloud.r-project.org&quot;</span>)</a>
-<a class="sourceLine" id="cb15-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb15-4" data-line-number="4">### Now install your desired R package (e.g. &quot;kwb.resilience&quot;)</a>
-<a class="sourceLine" id="cb15-5" data-line-number="5">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;kwb-r/kwb.resilience&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1">### Required to install an R package from Github </a>
+<a class="sourceLine" id="cb17-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>, <span class="dt">repos =</span> <span class="st">&quot;https://cloud.r-project.org&quot;</span>)</a>
+<a class="sourceLine" id="cb17-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb17-4" data-line-number="4">### Now install your desired R package (e.g. &quot;kwb.resilience&quot;)</a>
+<a class="sourceLine" id="cb17-5" data-line-number="5">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;kwb-r/kwb.resilience&quot;</span>)</a></code></pre></div>
 <p>However, in case your required R package that is not yet Github please read the
 following <a href="file:///Y:/Z-Exchange/_Tutorials/installing_kwb_packages.html">tutorial</a>
 <!-- Only adds more details in case of html output as 
@@ -513,7 +513,7 @@ der Erzeugung von R-Markdown-Dokumenten direkt am Anfang der Analyse im
 <p>Das Schreiben der Metadaten-Datei <code>session_info.txt</code> sollte standardisert über
 eine Funktion in einem KWB R-Paket (z.B. <code>kwb.utils</code>) implementiert werden.</p>
 <p>Direktausgabe in R Console / RMarkddown:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="kw">sessionInfo</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="kw">sessionInfo</span>()</a></code></pre></div>
 <pre><code>## R version 3.5.0 (2017-01-27)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
 ## Running under: Ubuntu 14.04.5 LTS
@@ -551,9 +551,9 @@ eine Funktion in einem KWB R-Paket (z.B. <code>kwb.utils</code>) implementiert w
 ## [34] scales_1.0.0      backports_1.1.2   jsonlite_1.5     
 ## [37] lubridate_1.7.4   pkgconfig_2.0.2</code></pre>
 <p>Schreiben in standardisierte Metadatei:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="kw">sink</span>(<span class="st">&quot;session_info.txt&quot;</span>)</a>
-<a class="sourceLine" id="cb18-2" data-line-number="2"><span class="kw">sessionInfo</span>()</a>
-<a class="sourceLine" id="cb18-3" data-line-number="3"><span class="kw">sink</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="kw">sink</span>(<span class="st">&quot;session_info.txt&quot;</span>)</a>
+<a class="sourceLine" id="cb20-2" data-line-number="2"><span class="kw">sessionInfo</span>()</a>
+<a class="sourceLine" id="cb20-3" data-line-number="3"><span class="kw">sink</span>()</a></code></pre></div>
 <p>Hierzu ist auch noch ein Tutorial zu erstellen!</p>
 
 <div class="rmdnote">
@@ -694,12 +694,12 @@ mis-encoding of string literals.”</p>
 <p>— <span class="citation">(Ushey <a href="#ref-Ushey_2018">2018</a>)</span></p>
 </blockquote>
 <p><strong>Encoding example in R:</strong></p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1">### Richtiges Skript Encoding WICHTIG (richtiges Einlesen des Skripts nur wenn </a>
-<a class="sourceLine" id="cb19-2" data-line-number="2">### mit gleichem Encoding eingelesen  wie es auch abgespeichert wurde)</a>
-<a class="sourceLine" id="cb19-3" data-line-number="3"><span class="kw">print</span>(<span class="st">&quot;Ü&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" data-line-number="1">### Richtiges Skript Encoding WICHTIG (richtiges Einlesen des Skripts nur wenn </a>
+<a class="sourceLine" id="cb21-2" data-line-number="2">### mit gleichem Encoding eingelesen  wie es auch abgespeichert wurde)</a>
+<a class="sourceLine" id="cb21-3" data-line-number="3"><span class="kw">print</span>(<span class="st">&quot;Ü&quot;</span>)</a></code></pre></div>
 <pre><code>## [1] &quot;Ü&quot;</code></pre>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" data-line-number="1">### Skript Encoding EGAL (da Umlaut in Unicode codiert wurde)</a>
-<a class="sourceLine" id="cb21-2" data-line-number="2"><span class="kw">print</span>(<span class="st">&quot;\u00dc&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" data-line-number="1">### Skript Encoding EGAL (da Umlaut in Unicode codiert wurde)</a>
+<a class="sourceLine" id="cb23-2" data-line-number="2"><span class="kw">print</span>(<span class="st">&quot;\u00dc&quot;</span>)</a></code></pre></div>
 <pre><code>## [1] &quot;Ü&quot;</code></pre>
 <p>See also Hauke’s article
 <a href="https://kwb-r.github.io/kwb.fakin/dev/articles/understanding_encoding.html">Understanding Encoding</a>

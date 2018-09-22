@@ -160,7 +160,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.4" data-path="best-practices.html"><a href="best-practices.html#metadata-format"><i class="fa fa-check"></i><b>2.3.4</b> In What Format to Store Metadata?</a></li>
 <li class="chapter" data-level="2.3.5" data-path="best-practices.html"><a href="best-practices.html#metadata-management-tools"><i class="fa fa-check"></i><b>2.3.5</b> Metadata Management Tools</a></li>
 <li class="chapter" data-level="2.3.6" data-path="best-practices.html"><a href="best-practices.html#metadata-standards"><i class="fa fa-check"></i><b>2.3.6</b> Metadata Standards</a></li>
-<li class="chapter" data-level="2.3.7" data-path="best-practices.html"><a href="best-practices.html#file-projects"><i class="fa fa-check"></i><b>2.3.7</b> File PROJECTS.txt</a></li>
+<li class="chapter" data-level="2.3.7" data-path="best-practices.html"><a href="best-practices.html#file-projects"><i class="fa fa-check"></i><b>2.3.7</b> File PROJECTS.yml</a></li>
 <li class="chapter" data-level="2.3.8" data-path="best-practices.html"><a href="best-practices.html#file-organisations"><i class="fa fa-check"></i><b>2.3.8</b> File ORGANISATIONS.txt</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="best-practices.html"><a href="best-practices.html#data-collection"><i class="fa fa-check"></i><b>2.4</b> Data Collection</a><ul>
@@ -1080,36 +1080,60 @@ file names are all uppercase.
 <!-- XML-Format, das sich wohl einfach nur mit Hilfe eines Programms editieren lässt. -->
 </div>
 <div id="file-projects" class="section level3">
-<h3><span class="header-section-number">2.3.7</span> File PROJECTS.txt</h3>
+<h3><span class="header-section-number">2.3.7</span> File PROJECTS.yml</h3>
 <p>This file contains the <a href="best-practices.html#project-acronyms">project acronyms</a> as we want to use
 them e.g. as top-level folder names in our
 <a href="best-practices.html#project-folder-structure">project folder structure</a>.
 The projects are grouped by department.</p>
-<p>Possible content of <code>PROJECTS.txt</code>:</p>
-<pre><code># Department SUW (Surface Water)
-dswt: DSWT
-flusshygiene: Flusshygiene
-kuras: KURAS
-mia-cso: MIACSO
-monitor: MONITOR
-ogre: OGRE
-reliable-sewer: RELIABLE_SEWER
-sema: SEMA
-sema-berlin: SEMA Berlin
-sema-berlin-2: SEMA Berlin 2
-spree-2011: SPREE2011
-spree-2011-2: SPREE2011 &quot;reloaded&quot;
-
-# Department GRW (Groundwater)
-optiwells: OPTIWELLS
-optiwells-2: OPTIWELLS 2
-wellma: WELLMA
-
-# Department WWT (Wastewater Treatment)
+<p>Possible content of <code>PROJECTS.yml</code>:</p>
+<pre><code>flusshygiene:
+  department: suw
+  short-name: Flusshygiene
+  long-name: &gt;
+    Hygienically relevant microorganisms and pathogens in multifunctional water
+    bodies and hydrologic circles - Sustainable management of different types of
+    water bodies in Germany
+  financing: 
+    funder: bmbf
+    with additional co-financing by Berliner Wasserbetriebe
+  type: funded
+ogre:
+  department: suw
+  short-name: OGRE
+  long-name: 
+  type: funded
+optiwells-2:
+  department: grw
+  short-name: OPTIWELLS 2
+  long-name:
+  type: sponsored
+reliable-sewer:
+  department: suw
+  short-name: RELIABLE_SEWER
+  long-name:
+  type: contracted
+smartplant:
+  department: wwt
+  short-name: Smartplant
+  type: sponsored
 ...</code></pre>
-<p>In the file <code>PROJECTS.txt</code> the project acronyms appear in alphabetical
-order. They map the acronym to a project name or a project title and the year
-of the start of the project.</p>
+<p>In the file <code>PROJECTS.yml</code> each entry represents a project. Each project is
+identified by its acronym. The project acronyms appear in alphabetical order.
+Each entry should at least contains information onthe department, a short/long
+name or title of the project and the type of project (funded, sponsored,
+contracted). Additional information such as the year of the start of the project could be given.</p>
+<p>The department acronyms could be defined in a file <code>DEPARTMENTS.yml</code>:</p>
+<pre><code>grw:
+  short-name: Groundwater
+  head: Hella Schwarzmüller
+suw:
+  short-name: Urban Systems
+  head: Pascale Rouault 
+wwt:
+  short-name: Process Innovation
+  head: Ulf Miehe</code></pre>
+<p>The funder acronyms could be defined in a file <code>FUNDERS.yml</code>:</p>
+<pre><code>bmbf: German Federal Ministry of Education and Research (BMBF)</code></pre>
 <p><strong>Question:</strong>
 Do we already have a place where “official” metadata about projects are stored?
 If yes, the acronym could be included there. But then, everybody should know
