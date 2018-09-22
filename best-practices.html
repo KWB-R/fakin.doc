@@ -160,7 +160,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.4" data-path="best-practices.html"><a href="best-practices.html#metadata-format"><i class="fa fa-check"></i><b>2.3.4</b> In What Format to Store Metadata?</a></li>
 <li class="chapter" data-level="2.3.5" data-path="best-practices.html"><a href="best-practices.html#metadata-management-tools"><i class="fa fa-check"></i><b>2.3.5</b> Metadata Management Tools</a></li>
 <li class="chapter" data-level="2.3.6" data-path="best-practices.html"><a href="best-practices.html#metadata-standards"><i class="fa fa-check"></i><b>2.3.6</b> Metadata Standards</a></li>
-<li class="chapter" data-level="2.3.7" data-path="best-practices.html"><a href="best-practices.html#file-projects"><i class="fa fa-check"></i><b>2.3.7</b> File PROJECTS.yml</a></li>
+<li class="chapter" data-level="2.3.7" data-path="best-practices.html"><a href="best-practices.html#file-projects"><i class="fa fa-check"></i><b>2.3.7</b> Special Metadata Files</a></li>
 <li class="chapter" data-level="2.3.8" data-path="best-practices.html"><a href="best-practices.html#file-organisations"><i class="fa fa-check"></i><b>2.3.8</b> File ORGANISATIONS.txt</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="best-practices.html"><a href="best-practices.html#data-collection"><i class="fa fa-check"></i><b>2.4</b> Data Collection</a><ul>
@@ -1080,11 +1080,10 @@ file names are all uppercase.
 <!-- XML-Format, das sich wohl einfach nur mit Hilfe eines Programms editieren lässt. -->
 </div>
 <div id="file-projects" class="section level3">
-<h3><span class="header-section-number">2.3.7</span> File PROJECTS.yml</h3>
-<p>This file contains the <a href="best-practices.html#project-acronyms">project acronyms</a> as we want to use
-them e.g. as top-level folder names in our
-<a href="best-practices.html#project-folder-structure">project folder structure</a>.
-The projects are grouped by department.</p>
+<h3><span class="header-section-number">2.3.7</span> Special Metadata Files</h3>
+<p>Thie file <code>PROJECTS.yml</code>contains the <a href="best-practices.html#project-acronyms">project acronyms</a> as we
+want to use them e.g. as top-level folder names in our
+<a href="best-practices.html#project-folder-structure">project folder structure</a>.</p>
 <p>Possible content of <code>PROJECTS.yml</code>:</p>
 <pre><code>flusshygiene:
   department: suw
@@ -1095,13 +1094,15 @@ The projects are grouped by department.</p>
     water bodies in Germany
   financing: 
     funder: bmbf
-    with additional co-financing by Berliner Wasserbetriebe
-  type: funded
+    sponsor: bwb
 ogre:
   department: suw
   short-name: OGRE
-  long-name: 
-  type: funded
+  long-name: &gt;
+    Relevance of trace organic substances in stormwater runoff of Berlin
+  financing:
+    funder: uep-2 
+    sponsor: Veolia
 optiwells-2:
   department: grw
   short-name: OPTIWELLS 2
@@ -1119,7 +1120,7 @@ smartplant:
 ...</code></pre>
 <p>In the file <code>PROJECTS.yml</code> each entry represents a project. Each project is
 identified by its acronym. The project acronyms appear in alphabetical order.
-Each entry should at least contains information onthe department, a short/long
+Each entry should at least contain information on the department, a short/long
 name or title of the project and the type of project (funded, sponsored,
 contracted). Additional information such as the year of the start of the project could be given.</p>
 <p>The department acronyms could be defined in a file <code>DEPARTMENTS.yml</code>:</p>
@@ -1133,7 +1134,10 @@ wwt:
   short-name: Process Innovation
   head: Ulf Miehe</code></pre>
 <p>The funder acronyms could be defined in a file <code>FUNDERS.yml</code>:</p>
-<pre><code>bmbf: German Federal Ministry of Education and Research (BMBF)</code></pre>
+<pre><code>bmbf: German Federal Ministry of Education and Research (BMBF)
+uep-2: &gt;
+  Umweltentlastungsprogramm des Landes Berlin, co-financed by the European Union
+  (UEP II)</code></pre>
 <p><strong>Question:</strong>
 Do we already have a place where “official” metadata about projects are stored?
 If yes, the acronym could be included there. But then, everybody should know
