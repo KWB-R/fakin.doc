@@ -1,8 +1,8 @@
 # Introduction {#introduction}
 
 A very good book on how research data management (RDM) improves reproducibility 
-is provided by `r citet(manual["Kitzesetal_2018"])` which also is available online
-at [http://practicereproducibleresearch.org/](http://practicereproducibleresearch.org/).
+is provided by `r citet(manual["Kitzesetal_2018"])` and available online at: 
+[http://practicereproducibleresearch.org/](http://practicereproducibleresearch.org/).
 
 ## Why RDM ? 
 
