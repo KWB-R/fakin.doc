@@ -16,11 +16,11 @@ Doing research data management (RDM) is useful according to [Labfolder.com (2018
 
 - Increases data visibility and number of citations
 
-- Fulfill funders’ requirements and receive more grants
+- Fulfills funders’ requirements and receives more grants
 
-- Produce new knowledge and make more discoveries just by re-using data
+- Produces new knowledge and makes more discoveries just by re-using data
 
-- Archive, retrieve and re-use own data
+- Archives, retrieves and re-uses own data.
 
 
 Recommended literature: 
