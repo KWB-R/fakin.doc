@@ -4,16 +4,42 @@
 
 ### Data Management Plan
 
-Action 1: Look through a data management planning checklist 
-[DMP checklist](http://www.dcc.ac.uk/resources/data-management-plans/checklist)?
+Before starting with a new project, perform the following actions:
+
+Action 1: 
+Look through a (Research) Data Management Planning (DMP) checklist, e.g. here:
+[DMP checklist](http://www.dcc.ac.uk/resources/data-management-plans/checklist)
   
-Action 2: Create a data management plan. You can use [DMP Online](https://dmponline.dcc.ac.uk/) 
-as it has a template or if required, use a funder's format.
+Action 2: 
+Create a Data Management Plan. 
 
-RDM checklist before starting with a new project
-Brauchen wir eine Data Management Plan? 
-See e.g. https://dmponline.dcc.ac.uk/
+If the project's funding organisation demands a Data Management Plan, use the
+template that is provided by the funder. You find different DMP-templates (e.g. 
+that required for European Horizon 2020 projects) here: 
+[DMP Online](https://dmponline.dcc.ac.uk/). 
 
+Have a look at the online tool [RDMOrganizer](https://rdmorganiser.github.io/)
+that lets you describe the data-related aspects of your project by letting you
+answer questions.
+
+Action 3: 
+Propose a folder structure for the three areas `rawdata`,`processing`, `results` 
+that we propose in this document. Create the folders and provide a metadata file 
+(see below) describing their meaning. In addition to the general recommendations
+given in this document, create and document naming conventions for files and 
+folders for your project.
+
+Action 3: 
+Determine a "data curator" for your project. This person is responsible for:
+
+* saving raw data in the `rawdata` network folder (see below). The curator will
+get a special login account with write-access to the `rawdata` folder. The login information can be got from Michael Rustler or Hauke Sonnenberg, the members of 
+the FAKIN project team.
+
+* regularly checking if both the file and folder names as well as the folder 
+structure comply with the best practices described in this document and with the
+naming conventions aggreed on at the start of the project. The curator checks
+if metadata files are available and up-to-date.
 
 ### Electronic Lab Notebooks
 
