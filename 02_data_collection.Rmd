@@ -9,13 +9,13 @@ approach.
 
 In the following we describe how data can be imported into the [R](https://r-project.org)-Programming
 Environment, which can be used for data cleaning, aggregation and visualisation. 
-`r citep(manual["Grolemund_2017"])`
+`r knitcitations::citep(manual["Grolemund_2017"])`
 
 ### Logger Devices
 
-The R package [kwb.logger](https://github.com/kwb-r.kwb.logger) `r citep(manual["Sonnenberg_2018"])`
+The R package [kwb.logger](https://github.com/kwb-r.kwb.logger) `r knitcitations::citep(manual["Sonnenberg_2018"])`
 helps to import raw data from loggers used in different KWB projects into the 
-software [R](https://r-project.org) `r citep(citation())`, which is used for 
+software [R](https://r-project.org) `r knitcitations::citep(citation())`, which is used for 
 data processing (e.g. data cleaning, aggregation and visualisation).
 
 
