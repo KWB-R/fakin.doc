@@ -90,7 +90,7 @@ skills within our institute up to a certain level.
 As the institution "KWB" we have a 
 [Free group account](https://www.datacamp.com/pricing) and a 
 [Premium group account](https://www.datacamp.com/pricing). The premium
-group account comprises five seats, i.e. five persons can work with the online 
+group account comprises ten seats, i.e. ten persons can work with the online 
 tutorials at the same time.
 
 **For using DataCamp at KWB the following workflow applies:**
@@ -106,19 +106,26 @@ assess who and how frequently the DataCamp courses are used as the amount of use
 in the free group is -- in contrast to our paid premium DataCamp group -- not 
 limited. 
 
-2. If you want to do a paid DataCamp course, please contract our DataCamp 
-administrator [Nicolas Caradot](https://www.researchgate.net/profile/Nicolas_Caradot) 
-either personally or via [email](mailto:nicolas.caradot@kompetenz-wasser.de). In 
-case there is a free seat available in our corporate premium group, he will add 
-you so that you can start any of the available premium DataCamp courses. 
+2. If you want to do a paid DataCamp course, please contact one of our 
+**DataCamp admins** (***see box below***)) who will add you to our corporate 
+premium group in case there is a free seat available. Subsequently you are able 
+to start any of the available premium DataCamp courses. 
 
 3. As soon as you either do not want to or you do not have the time for a longer 
-period do one of the paid DataCamp courses, please contact our group administrator
-[Nicolas Caradot](https://www.researchgate.net/profile/Nicolas_Caradot) either 
-personally or via [email](mailto:nicolas.caradot@kompetenz-wasser.de), so that 
-he can make your seat available for others at KWB who are interested in learning 
-R.
+period do one of the paid DataCamp courses, please get in touch with one of our 
+**DataCamp admins** (***see box below***) again, so that he can make your seat 
+available for others at KWB who are interested in learning R.
 
+```{block2 type = "rmdtip"}
+**Admins for our corporate premium group on DataCamp are:**
+
+- [Nicolas Caradot](https://www.researchgate.net/profile/Nicolas_Caradot) 
+
+- [Michael Rustler](https://mrustl.github.io)
+
+- [Hauke Sonnenberg](https://www.researchgate.net/profile/Hauke_Sonnenberg) 
+
+```
 
 
 
