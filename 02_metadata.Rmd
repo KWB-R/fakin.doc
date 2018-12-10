@@ -128,7 +128,32 @@ second one.
 
 ### In What Format to Store Metadata? {#metadata-format}
 
-keep metadata in plain text file “readme.txt”
+Metadata should be stored in a simple plain (i.e. not formatted) text format. 
+This format can be read and written by any text editor on different operating 
+systems and does not require any specific software. And most important: it
+is human readable. 
+
+In the simplest form, metadata can be stored in a plain text file `README.txt`.
+As stated above, this file should reside in the same folder as the files that 
+contain the data to be described.
+
+Please keep in mind: It is better to write something than to write nothing.
+It does not have to be perfect. Just try the best yout can at the moment 
+that you are storing the data. Try to write the metadata directly after
+storing the data, do not wait until you "feel in the mood" to do so.
+Anyone who is later working or planning to work with the data may be grateful 
+finding some information on it.
+
+Better than writing an unstructured text file is to write a structured
+text file. The so called YAML format is such a structured format.
+We want to use this standard. It seems to have established in the
+scientific world. The advantage of a structured format is that reading of
+this format can be automated. We aim at collecting all available metadata 
+by automatically browsing for YAML files, reading their content and
+creating overviews on available files and data.
+
+Once you have written a YAML file you can check the validity of the 
+format with this online validator: https://ci.appveyor.com/tools/validate-yaml
 
 ### Metadata Management Tools
 
