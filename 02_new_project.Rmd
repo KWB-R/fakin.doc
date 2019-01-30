@@ -29,7 +29,7 @@ that we propose in this document. Create the folders and provide a metadata file
 given in this document, create and document naming conventions for files and 
 folders for your project.
 
-Action 3: 
+Action 4: 
 Determine a "data curator" for your project. This person is responsible for:
 
 * saving raw data in the `rawdata` network folder (see below). The curator will
