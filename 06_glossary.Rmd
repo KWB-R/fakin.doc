@@ -1,5 +1,10 @@
 # Glossary {#glossary}
 
+## Small research institute {#small-institute}
+
+Research institute with less than about 100 employees. 
+
+
 A detailed glossary covering the following topics is provided by  
 `r citet(manual["Rokem_2018"])` is used throughout the glossary. 
 
