@@ -1,5 +1,11 @@
 # Glossary {#glossary}
 
+## Acronym {#acronym}
+
+An acronym is a word or name formed as an abbreviation from the initial
+components of a phrase or a word.
+([Wikipedia](https://en.wikipedia.org/wiki/Acronym))
+
 ## Small research institute {#small-institute}
 
 Research institute with less than about 100 employees. 
