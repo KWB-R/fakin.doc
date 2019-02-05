@@ -26,7 +26,7 @@ that model output data was below EXCEL`s 1 million row limit.
 
 **Workflow improvement developed within FAKIN:**
 
-An open source R package [kwb.umberto](https://kwb-r.github.io/kwb.umberto/dev) 
+An open source R package [kwb.umberto](https://kwb-r.github.io/kwb.umberto) 
 was programmed for automating: 
 
  - data import the Umberto model results,
