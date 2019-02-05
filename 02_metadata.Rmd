@@ -273,11 +273,18 @@ file names are all uppercase.
 <!-- XML-Format, das sich wohl einfach nur mit Hilfe eines Programms editieren lässt. -->
 
 
-### Special Metadata Files {#file-projects}
+### Special Metadata Files
 
-Thie file `PROJECTS.yml`contains the [project acronyms](#project-acronyms) as we 
-want to use them e.g. as top-level folder names in our 
-[project folder structure](#project-folder-structure).
+As stated earlier, we want to use consistent, unique identifiers to indicate the
+belonging of data to a certain project or data owner. We propose to define the 
+identifiers in terms of special metadata files.
+
+#### Metadata File PROJECTS.txt and related files {#file-projects}
+
+The project identifiers are defined in a simple YAML file `PROJECTS.yml` in
+the `//server/projects$` folder. Only the identifiers defined in this file are
+expected to appear as top-level folder names in the
+[project folder structure](#project-folder-structure) within this network drive.
 
 Possible content of `PROJECTS.yml`:
 
@@ -318,10 +325,16 @@ smartplant:
 ```
 
 In the file `PROJECTS.yml` each entry represents a project. Each project is
-identified by its acronym. The project acronyms appear in alphabetical order. 
+identified by its identifier. The project acronyms appear in alphabetical order. 
 Each entry should at least contain information on the department, a short/long 
 name or title of the project and the type of project (funded, sponsored, 
 contracted). Additional information such as the year of the start of the project could be given. 
+
+```{block2 type = "rmdnote"}
+It could also be useful to define three letter codes for projects. These codes
+could e.g. be used in tables or diagrams in which different projects are 
+compared and in which space may be limited.
+```
 
 The department acronyms could be defined in a file `DEPARTMENTS.yml`:
 
@@ -346,14 +359,12 @@ uep-2: >
   (UEP II)
 ```
 
-**Question:**
-Do we already have a place where "official" metadata about projects are stored? 
-If yes, the acronym could be included there. But then, everybody should know 
-about it!
+#### Metadata File ORGANISATIONS.txt {#file-organisations}
 
-### File ORGANISATIONS.txt {#file-organisations}
-
-Possible content of `ORGANISATIONS.txt`
+It is very important to know the origin or owner of data. This is an important
+piece of [metadata](#metadata). Therefore we define unique identifiers for the
+owners of data that we use. The acronyms are defined in a special file
+`ORGANISATIONS.txt`. Possible content of this file:
 
 ```
 bwb: Berliner Wasserbetriebe

@@ -40,7 +40,6 @@ using which code files."
 > --- [Professor Charles Randy Gallistel, Rutgers University](https://elifesciences.org/labs/7dbeb390/reproducible-document-stack-supporting-the-next-generation-research-article)
 
 
-
 ```{r fig.align='center', out.width = "400px", echo=FALSE, include=grepl('html', knitr:::pandoc_to()), fig.link='http://www.kompetenz-wasser.de/en/project/fakin-research-data-management/'}
 knitr::include_graphics('images/cover.png', dpi = NA)
 ```
@@ -49,13 +48,11 @@ knitr::include_graphics('images/cover.png', dpi = NA)
 knitr::include_graphics('images/cover.png', dpi = NA)
 ```
 
-
 This document is the outcome of the KWB project [FAKIN](http://www.kompetenz-wasser.de/en/project/fakin-research-data-management) 
 (Forschungsdatenmanagement an kleinen Instituten = research data management at small institutes).
 
-It defines best practices for research data management. It is mainly based on
-the personal experiences of the authors having worked in many different 
-research projects at KWB.
+This report defines [Best Practices](#best-practices) for research data
+management especially designed for small reserach institutes.
 
 The document is outlined as follows:
 
@@ -63,6 +60,8 @@ The document is outlined as follows:
 is important
 
 * [Chapter 2](#best-practices) defines Best Practices for different topics.
+In section [Data workflow](#data-workflow) of this chapter we propose to
+distinguish between [raw data](#raw-data), processed data and project results.
 
 * [Chapter 3](#case-studies) gives an overview on three [case studies](#case-studies) 
 with different data related tasks that have been solved within the FAKIN project, 
@@ -81,8 +80,6 @@ terms within this document.
 What are your experiences with research data managment tasks? Can you provide 
 solutions for specific tasks?'`
 
-
 The online version of this report is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 [![Creative Commons License](images/by-nc-sa.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
-
