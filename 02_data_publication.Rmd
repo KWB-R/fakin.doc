@@ -103,7 +103,7 @@ Repositories for publishing program code are:
 
 - [Gitlab](https://gitlab.com). 
 
-However, both do not offer long term data preservation by default, but using the 
+However, both do not offer long term data preservation by default, but using
 [Github](https://github.com)  it is posible to make the code citable by linking 
 it with [Zenodo](https://zenodo.org/) (see: https://guides.github.com/activities/citable-code/).
 
@@ -152,8 +152,8 @@ in case that the source code does not:
   + confidential data. 
 
   Code should be developed in such a way that both of the criteria 
-  (security critical paths, confidential data) above defined are considered. 
-  Making the code openly available will decrease our burden to install them (e.g. 
+  (security critical paths, confidential data) defined above are considered. 
+  Making the code openly available will decrease the burden to install them (e.g. 
   not each student needs to get an "access" token to install private repositories, as 
   required for "contract" projects, see below).
 
