@@ -95,29 +95,80 @@ Repositories for permanently deposing data are for example:
     + [Pangea](https://www.pangaea.de/)
     
     + [GFZ Potsdam data services](http://dataservices.gfz-potsdam.de/portal/)
-  
-
-In addition repositories for publishing program code are for example 
-[Github](https://github.com) or [Gitlab](https://gitlab.com), however these do 
-not offer build-in long term preservation by default.
 
 
-We are currently using the following repositories and can recommend them for 
-similar usage to others: 
+Repositories for publishing program code are: 
 
-- [Github](https://github.com): for developing/publishing program code, because 
-it offers the opportunity to automatically get a
+- [Github](https://github.com) or 
+
+- [Gitlab](https://gitlab.com). 
+
+However, both do not offer long term data preservation by default, but using the 
+[Github](https://github.com)  it is posible to make the code citable by linking 
+it with [Zenodo](https://zenodo.org/) (see: https://guides.github.com/activities/citable-code/).
+
+We are currently using the following three repositories for publishing program 
+code (mainly R packages): 
+
+- [Github](https://github.com): for developing and publishing program code (mainly
+R packages) we use [https://github.com/kwb-r](https://github.com/kwb-r). Currently 
+81 (i.e. 38 public and 43 private) repositories are published on this Github 
+account. For all 32 public R packages there is also a detailed status 
+report available available at https://kwb-r.github.io/status/ , e.g. with information on license, 
+documentation and the "health" of the R package (i.e. whether it can be 
+successfully installed on Linux or Windows platforms).
 
 
-- [Zenodo](https://zenodo.org/) [DOI](https://www.doi.org/) for each software 
-released publicly on Github (for details see: https://guides.github.com/activities/citable-code/)
+- [Zenodo](https://zenodo.org/): for automatically getting a [DOI](https://www.doi.org/) 
+for each software release made in one of our public Github repositories, e.g. 
+[aquanes.report](https://doi.org/10.5281/zenodo.825029) (for details see: https://guides.github.com/activities/citable-code/)
+and 
+
+- [Gitlab](https://gitlab.com): as backup mirror ([https://gitlab.com/kwb-r](https://gitlab.com/kwb-r)) 
+for all of our currently 81 (i.e. 34 public and 47 private) repositories currently 
+published on our Github account ([https://github.com/kwb-r](https://github.com/kwb-r)) 
+
+
+**Proposal: define company-wide QMS policy ("top-down") for publishing program code**
+
+The above workflow was established from "bottom-up" (i.e. Michael Rustler and 
+Hauke Sonnenberg) with the idea in mind to make the code as open as possible 
+(e.g. by chossing the permisse [MIT license](https://choosealicense.com/licenses/mit/) as default for all of our public 
+R packages). 
+
+However, up to now there is no company wide strategy ("top-down") defined yet 
+that would legitimate this "bottom-up" approach. This creates uncertainty (e.g. 
+what can be published?), so that much more code than necessary is labelled 
+as "private". To reduce this uncertainty the following QMS policy is proposed, 
+which should be discussed and agreed on in one of the next KWB management meetings:
+
+- **Sponsor projects (e.g. funded by BMBF, EU)**: source code will be published 
+by default at https://github.com/kwb-r in **public** repositories (i.e. 
+it will be accessible for everyone) under the permissive [MIT license](https://choosealicense.com/licenses/mit/) 
+in case that the source code does not: 
+
+  + contain security critical paths (e.g. to our company server) or
+    
+  + confidential data. 
+
+  Code should be developed in such a way that both of the criteria 
+  (security critical paths, confidential data) above defined are considered. 
+  Making the code openly available will decrease our burden to install them (e.g. 
+  not each student needs to get an "access" token to install private repositories, as 
+  required for "contract" projects, see below).
+
+- **Contract projects (e.g. funded by BWB, Veolia)**: will be published in 
+**private** repositories by default at [https://github.com/kwb-r](https://github.com/kwb-r) 
+in case the funder does not pre-define a specific repository. Access to the source 
+code is thus resticted to KWB researchers and students working in the contract 
+project. Project partners and funders can access the source code only if they get 
+an "access token" from the KWB project team. 
+
 
 
 
 ```{block2 type = "rmdtip"}
-A [blog post](https://101innovations.wordpress.com/2016/10/09/github-and-more-sharing-data-code/)  
-@Bosman_2016 provide results of a large survey carried out in 2015 among more 
-than 15000 researchers. Insights can be gained on:   
+A [blog post](https://101innovations.wordpress.com/2016/10/09/github-and-more-sharing-data-code/) by @Bosman_2016 provide results of a large survey carried out in 2015 among more than 15000 researchers. Insights can be gained on:   
 
 - Which scholary communications tools are used and
 
@@ -130,6 +181,10 @@ EU-projects and -institutions. The fact that Zenodo is a data-sharing platform
 that is available to anyone (thus not just for EU project data) might not be 
 widely known yet."
 ```
+
+
+
+
 
 ### ORCID
 
