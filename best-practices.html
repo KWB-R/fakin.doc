@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html >
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Best Practices | Best Practices in Research Data Management</title>
-  <meta name="description" content="FAKIN Best Practices">
-  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+  <meta name="description" content="FAKIN Best Practices" />
+  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Best Practices | Best Practices in Research Data Management" />
   <meta property="og:type" content="book" />
@@ -22,17 +21,17 @@
   <meta name="twitter:description" content="FAKIN Best Practices" />
   <meta name="twitter:image" content="https://kwb-r.github.io/fakin.docimages/cover.png" />
 
-<meta name="author" content="Hauke Sonnenberg, Michael Rustler &amp; Christoph Sprenger">
+<meta name="author" content="Hauke Sonnenberg, Michael Rustler &amp; Christoph Sprenger" />
 
 
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introduction.html">
-<link rel="next" href="case-studies.html">
+<link rel="prev" href="introduction.html"/>
+<link rel="next" href="case-studies.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -56,7 +55,6 @@ a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
 a.sourceLine:empty { height: 1.2em; position: absolute; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
@@ -148,28 +146,62 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1.5" data-path="best-practices.html"><a href="best-practices.html#electronic-lab-notebooks"><i class="fa fa-check"></i><b>2.1.5</b> Electronic Lab Notebooks</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="best-practices.html"><a href="best-practices.html#data-storage"><i class="fa fa-check"></i><b>2.2</b> Data Storage</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="best-practices.html"><a href="best-practices.html#data-storage-where"><i class="fa fa-check"></i><b>2.2.1</b> Where to Store Data</a></li>
-<li class="chapter" data-level="2.2.2" data-path="best-practices.html"><a href="best-practices.html#data-storage-naming"><i class="fa fa-check"></i><b>2.2.2</b> Naming of Files and Folders</a></li>
-<li class="chapter" data-level="2.2.3" data-path="best-practices.html"><a href="best-practices.html#raw-data"><i class="fa fa-check"></i><b>2.2.3</b> Raw Data</a></li>
-<li class="chapter" data-level="2.2.4" data-path="best-practices.html"><a href="best-practices.html#data-workflow"><i class="fa fa-check"></i><b>2.2.4</b> Data Workflow</a></li>
-<li class="chapter" data-level="2.2.5" data-path="best-practices.html"><a href="best-practices.html#folder-structures"><i class="fa fa-check"></i><b>2.2.5</b> Folder Structures</a></li>
-<li class="chapter" data-level="2.2.6" data-path="best-practices.html"><a href="best-practices.html#versioning"><i class="fa fa-check"></i><b>2.2.6</b> Versioning</a></li>
-<li class="chapter" data-level="2.2.7" data-path="best-practices.html"><a href="best-practices.html#organising-e-mails"><i class="fa fa-check"></i><b>2.2.7</b> Organising E-Mails</a></li>
-<li class="chapter" data-level="2.2.8" data-path="best-practices.html"><a href="best-practices.html#managing-references"><i class="fa fa-check"></i><b>2.2.8</b> Managing References</a></li>
-<li class="chapter" data-level="2.2.9" data-path="best-practices.html"><a href="best-practices.html#data-preservation"><i class="fa fa-check"></i><b>2.2.9</b> Data Preservation</a></li>
+<li class="chapter" data-level="2.2.1" data-path="best-practices.html"><a href="best-practices.html#data-storage-where"><i class="fa fa-check"></i><b>2.2.1</b> Where to Store Data</a><ul>
+<li class="chapter" data-level="2.2.1.1" data-path="best-practices.html"><a href="best-practices.html#network-instead-of-local-hard-drives"><i class="fa fa-check"></i><b>2.2.1.1</b> Network instead of local hard drives</a></li>
+<li class="chapter" data-level="2.2.1.2" data-path="best-practices.html"><a href="best-practices.html#the-input-processing-output-ipo-model"><i class="fa fa-check"></i><b>2.2.1.2</b> The Input-Processing-Output (IPO) Model</a></li>
+<li class="chapter" data-level="2.2.1.3" data-path="best-practices.html"><a href="best-practices.html#raw-data"><i class="fa fa-check"></i><b>2.2.1.3</b> Raw data</a></li>
+<li class="chapter" data-level="2.2.1.4" data-path="best-practices.html"><a href="best-practices.html#data-in-processing"><i class="fa fa-check"></i><b>2.2.1.4</b> Data in Processing</a></li>
+<li class="chapter" data-level="2.2.1.5" data-path="best-practices.html"><a href="best-practices.html#result-data"><i class="fa fa-check"></i><b>2.2.1.5</b> Result Data</a></li>
+<li class="chapter" data-level="2.2.1.6" data-path="best-practices.html"><a href="best-practices.html#clean-datasets"><i class="fa fa-check"></i><b>2.2.1.6</b> Clean Datasets</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2.2" data-path="best-practices.html"><a href="best-practices.html#data-storage-naming"><i class="fa fa-check"></i><b>2.2.2</b> Naming of Files and Folders</a><ul>
+<li class="chapter" data-level="" data-path="best-practices.html"><a href="best-practices.html#rule-a-allowed-characters"><i class="fa fa-check"></i>Rule A: Allowed Characters</a></li>
+<li class="chapter" data-level="" data-path="best-practices.html"><a href="best-practices.html#rule-b-separation-of-words-or-parts-of-words"><i class="fa fa-check"></i>Rule B: Separation of Words or Parts of Words</a></li>
+<li class="chapter" data-level="" data-path="best-practices.html"><a href="best-practices.html#rule-c-capitalisation"><i class="fa fa-check"></i>Rule C: Capitalisation</a></li>
+<li class="chapter" data-level="" data-path="best-practices.html"><a href="best-practices.html#rule-d-avoid-long-names"><i class="fa fa-check"></i>Rule D: Avoid Long Names</a></li>
+<li class="chapter" data-level="" data-path="best-practices.html"><a href="best-practices.html#rule-e-formatting-of-dates-and-numbers"><i class="fa fa-check"></i>Rule E: Formatting of Dates and Numbers</a></li>
+<li class="chapter" data-level="" data-path="best-practices.html"><a href="best-practices.html#rule-f-allowed-words"><i class="fa fa-check"></i>Rule F: Allowed Words</a></li>
+<li class="chapter" data-level="" data-path="best-practices.html"><a href="best-practices.html#rule-g-order-of-words"><i class="fa fa-check"></i>Rule G: Order of Words</a></li>
+<li class="chapter" data-level="" data-path="best-practices.html"><a href="best-practices.html#rule-h-allowed-languages"><i class="fa fa-check"></i>Rule H: Allowed Languages</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2.3" data-path="best-practices.html"><a href="best-practices.html#folder-structures"><i class="fa fa-check"></i><b>2.2.3</b> Folder Structures</a><ul>
+<li class="chapter" data-level="" data-path="best-practices.html"><a href="best-practices.html#metadata-about-folder-structures"><i class="fa fa-check"></i>Metadata About Folder Structures</a></li>
+<li class="chapter" data-level="" data-path="best-practices.html"><a href="best-practices.html#project-folder-structure"><i class="fa fa-check"></i>Project Folder Structure</a></li>
+<li class="chapter" data-level="" data-path="best-practices.html"><a href="best-practices.html#rawdata-folder-structure"><i class="fa fa-check"></i>Rawdata Folder Structure</a></li>
+<li class="chapter" data-level="" data-path="best-practices.html"><a href="best-practices.html#data-processing-folder-structure"><i class="fa fa-check"></i>Data Processing Folder Structure</a></li>
+<li class="chapter" data-level="" data-path="best-practices.html"><a href="best-practices.html#results-folder-structure"><i class="fa fa-check"></i>Results folder structure</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2.4" data-path="best-practices.html"><a href="best-practices.html#versioning"><i class="fa fa-check"></i><b>2.2.4</b> Versioning</a><ul>
+<li class="chapter" data-level="" data-path="best-practices.html"><a href="best-practices.html#manual"><i class="fa fa-check"></i>Manual</a></li>
+<li class="chapter" data-level="" data-path="best-practices.html"><a href="best-practices.html#automatic"><i class="fa fa-check"></i>Automatic</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2.5" data-path="best-practices.html"><a href="best-practices.html#organising-e-mails"><i class="fa fa-check"></i><b>2.2.5</b> Organising E-Mails</a></li>
+<li class="chapter" data-level="2.2.6" data-path="best-practices.html"><a href="best-practices.html#managing-references"><i class="fa fa-check"></i><b>2.2.6</b> Managing References</a></li>
+<li class="chapter" data-level="2.2.7" data-path="best-practices.html"><a href="best-practices.html#data-preservation"><i class="fa fa-check"></i><b>2.2.7</b> Data Preservation</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="best-practices.html"><a href="best-practices.html#metadata"><i class="fa fa-check"></i><b>2.3</b> Metadata</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="best-practices.html"><a href="best-practices.html#metadata-why"><i class="fa fa-check"></i><b>2.3.1</b> Why Metadata?</a></li>
-<li class="chapter" data-level="2.3.2" data-path="best-practices.html"><a href="best-practices.html#metadata-what"><i class="fa fa-check"></i><b>2.3.2</b> What Metadata to Store?</a></li>
+<li class="chapter" data-level="2.3.2" data-path="best-practices.html"><a href="best-practices.html#metadata-what"><i class="fa fa-check"></i><b>2.3.2</b> What Metadata to Store?</a><ul>
+<li class="chapter" data-level="" data-path="best-practices.html"><a href="best-practices.html#general"><i class="fa fa-check"></i>General</a></li>
+<li class="chapter" data-level="" data-path="best-practices.html"><a href="best-practices.html#metadata-about-raw-data"><i class="fa fa-check"></i>Metadata about Raw Data</a></li>
+<li class="chapter" data-level="" data-path="best-practices.html"><a href="best-practices.html#metadata-about-processed-data"><i class="fa fa-check"></i>Metadata about Processed Data</a></li>
+<li class="chapter" data-level="" data-path="best-practices.html"><a href="best-practices.html#metadata-about-programming-scripts"><i class="fa fa-check"></i>Metadata about Programming Scripts</a></li>
+</ul></li>
 <li class="chapter" data-level="2.3.3" data-path="best-practices.html"><a href="best-practices.html#metadata-where"><i class="fa fa-check"></i><b>2.3.3</b> Where to Store Metadata?</a></li>
 <li class="chapter" data-level="2.3.4" data-path="best-practices.html"><a href="best-practices.html#metadata-format"><i class="fa fa-check"></i><b>2.3.4</b> In What Format to Store Metadata?</a></li>
 <li class="chapter" data-level="2.3.5" data-path="best-practices.html"><a href="best-practices.html#metadata-management-tools"><i class="fa fa-check"></i><b>2.3.5</b> Metadata Management Tools</a></li>
 <li class="chapter" data-level="2.3.6" data-path="best-practices.html"><a href="best-practices.html#metadata-standards"><i class="fa fa-check"></i><b>2.3.6</b> Metadata Standards</a></li>
-<li class="chapter" data-level="2.3.7" data-path="best-practices.html"><a href="best-practices.html#special-metadata-files"><i class="fa fa-check"></i><b>2.3.7</b> Special Metadata Files</a></li>
+<li class="chapter" data-level="2.3.7" data-path="best-practices.html"><a href="best-practices.html#special-metadata-files"><i class="fa fa-check"></i><b>2.3.7</b> Special Metadata Files</a><ul>
+<li class="chapter" data-level="2.3.7.1" data-path="best-practices.html"><a href="best-practices.html#file-projects"><i class="fa fa-check"></i><b>2.3.7.1</b> Metadata File PROJECTS.txt and related files</a></li>
+<li class="chapter" data-level="2.3.7.2" data-path="best-practices.html"><a href="best-practices.html#file-organisations"><i class="fa fa-check"></i><b>2.3.7.2</b> Metadata File ORGANISATIONS.txt</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="best-practices.html"><a href="best-practices.html#data-collection"><i class="fa fa-check"></i><b>2.4</b> Data Collection</a><ul>
 <li class="chapter" data-level="2.4.1" data-path="best-practices.html"><a href="best-practices.html#logger-devices"><i class="fa fa-check"></i><b>2.4.1</b> Logger Devices</a></li>
-<li class="chapter" data-level="2.4.2" data-path="best-practices.html"><a href="best-practices.html#spreadsheets"><i class="fa fa-check"></i><b>2.4.2</b> Spreadsheets</a></li>
+<li class="chapter" data-level="2.4.2" data-path="best-practices.html"><a href="best-practices.html#spreadsheets"><i class="fa fa-check"></i><b>2.4.2</b> Spreadsheets</a><ul>
+<li class="chapter" data-level="2.4.2.1" data-path="best-practices.html"><a href="best-practices.html#import-data-from-one-excel-file"><i class="fa fa-check"></i><b>2.4.2.1</b> Import Data From One Excel File</a></li>
+<li class="chapter" data-level="2.4.2.2" data-path="best-practices.html"><a href="best-practices.html#import-data-from-many-excel-files"><i class="fa fa-check"></i><b>2.4.2.2</b> Import Data From Many Excel Files</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="best-practices.html"><a href="best-practices.html#data-publishing-and-sharing"><i class="fa fa-check"></i><b>2.5</b> Data Publishing and Sharing</a><ul>
 <li class="chapter" data-level="2.5.1" data-path="best-practices.html"><a href="best-practices.html#repositories"><i class="fa fa-check"></i><b>2.5.1</b> Repositories</a></li>
@@ -308,7 +340,7 @@ folder that resides on the institute’s file system.</p>
 <p>Therefore, we recommend to use unique identifiers, either as (part of) the
 name of the file or as (part of) the name of the folder or parent folder that
 the file resides in. The usage of a consistent project identifier becomes
-particularly important when, as we suggest for a good <a href="best-practices.html#data-workflow">data
+particularly important when, as we suggest for a good <a href="#data-workflow">data
 workflow</a>, different types of data and documents of the project
 are stored at different places on the file system.</p>
 <p>Together with her team, the project leader is requested to define the project
@@ -409,6 +441,10 @@ effort and time investment.</p>
 </div>
 <div id="data-storage" class="section level2">
 <h2><span class="header-section-number">2.2</span> Data Storage</h2>
+<p>A logical and consistent folder structure as well as naming conventions and
+versioning rules for your data files help you and your colleagues find and use
+the data. The following rules will save time on the long run and will help avoid
+data duplication.</p>
 <p>This chapter describes</p>
 <ul>
 <li>where to store data files, see <a href="best-practices.html#data-storage-where">Where to Store Data</a>,</li>
@@ -416,68 +452,206 @@ effort and time investment.</p>
 <a href="best-practices.html#data-storage-naming">Naming of Files and Folders</a>,</li>
 <li>how to group files in folders, see <a href="best-practices.html#folder-structures">Folder Structures</a>.</li>
 </ul>
-<p>With the following recommendations we intend to comply with the
-<a href="literature-review.html#storage-ten-simple-rules">Ten Simple Rules for Digital Data Storage</a>.</p>
+<p>With the following recommendations we intend to comply with <span class="citation">Hart et al. (<a href="#ref-Hart_2016">2016</a>)</span>.</p>
 <div id="data-storage-where" class="section level3">
 <h3><span class="header-section-number">2.2.1</span> Where to Store Data</h3>
-<p>We want to store project relevant files on a KWB network drive that is
-accessible to all the persons working in the project.</p>
-<p>We want to avoid that project relevant files are stored</p>
+<div id="network-instead-of-local-hard-drives" class="section level4">
+<h4><span class="header-section-number">2.2.1.1</span> Network instead of local hard drives</h4>
+<p>In general, data related to one project should be accessible to all the persons
+that are involved in the project. It should be avoided that project relevant
+files are permanently stored on local hard drives or on personal network drives.
+Project data should therefore be stored on network drives to which all project
+members have access.</p>
+</div>
+<div id="the-input-processing-output-ipo-model" class="section level4">
+<h4><span class="header-section-number">2.2.1.2</span> The Input-Processing-Output (IPO) Model</h4>
+<p>A research institute aims at creating knowledge from data. A typical data flow
+may look like the following: raw data are received or collected from foreign
+sources or created from own measurements. The raw data are processed, i.e.
+cleaned, aggregated, filtered and analysed. Finally result data sets are composed
+from which conclusions are drawn and published. To cut it short: raw data get
+processed and become result data.</p>
+<p>In computer science, the clear distinction between data input, data processing
+and data output is a well-known and widely-used model to describe the structure
+of an information processing program. It is referred to as the input-process-output
+(IPO) model. We recommend to apply this model to the distinction of different
+categories of data:</p>
 <ul>
-<li><p>locally on the hard drive of an employee or trainee or</p></li>
-<li><p>on the personal network drive assigned to an employee or trainee.</p></li>
+<li><p><code>raw data</code> (= input data),</p></li>
+<li><p><code>data in processing</code> (=data processing) and</p></li>
+<li><p><code>result data</code> (= output data).</p></li>
 </ul>
+<div id="why-to-use-the-ipo-model" class="section level6">
+<h6><span class="header-section-number">2.2.1.2.0.1</span> Why to use the IPO Model?</h6>
+<p>Using the IPO model:</p>
+<ul>
+<li><p>Minimizes the risk of overwriting, deleting of files and folders by automatic
+data processing (e.g. scripts).</p></li>
+<li><p>Rawdata are protected against accidental overwriting.</p></li>
+<li><p>Helps to keep files and folders clearly organised.</p></li>
+<li><p>Reflects roles and responsibilities of different project team members (e.g. #
+project manager is mainly interested in results).</p></li>
+<li><p>Helps avoid deep folder structures.</p></li>
+</ul>
+</div>
+<div id="ipo-model-in-practice" class="section level6">
+<h6><span class="header-section-number">2.2.1.2.0.2</span> IPO Model in Practice</h6>
+<p>According to the three categories we suggest to create three different areas,
+represented by three different network drives, on the top level of your file
+server. The first area is for raw data, the second area is for data in processing
+and the third area is for result data. Within each area, the data are organised
+by project first, i.e. each project is represented by one folder within each of
+the network drives:</p>
+<pre><code>//server/rawdata
+    project-1/
+    project-2/
+    …
+    
+//server/processing
+    project-1/
+    project-2/
+    …
+
+//server/results
+    project-1/
+    project-2/
+    …
+</code></pre>
+<p>Sub-folder structure within the project folders in each of these top-level
+network drives is described in the section ([link]<folder-structures>).</p>
+</div>
+</div>
+<div id="raw-data" class="section level4">
+<h4><span class="header-section-number">2.2.1.3</span> Raw data</h4>
+<p>As raw data we define data that we receive from a measurement device, project
+partner or other external sources (e.g. internet download) even if these data
+were processed externally. Raw data are, for example, analytical measurements
+from laboratories, filled out questionnaires from project partners, meteorological
+data from other institutes, measurements from loggers or sensors, or scans of
+hand written manual sampling protocols.
+Especially in environmental sciences, raw data often cannot or only with high
+costs be reproduced (e.g. rainfall, river discharge measurements). They are
+therefore of high value. Raw data are often large in terms of file size or number
+(e.g. measurements of devices logging at high temporal resolution). Raw data can
+already come in a complex, deep folder structure. Raw data are closely related
+to metadata such as sensor configurations generated by loggers or email
+correspondence when receiving data by email from external partners.
+We acknowledge the high value of raw data by storing them on a dedicated,
+protected space and by requiring them to be accompanied by metadata ([link] Metadata).</p>
+<p>Raw data are stored in an unmodified state. All modifications of the data are to
+be done on a copy of the raw data in the “processing” space (see next). The only
+modification allowed is the renaming of a raw data file, given that the renaming
+is documented in the metadata. Once stored, raw data are to be protected from
+being accidentally deleted or modified. This is achieved by making the raw data
+space write-protected ([link] FAQ: How to make a file write protected).</p>
+</div>
+<div id="data-in-processing" class="section level4">
+<h4><span class="header-section-number">2.2.1.4</span> Data in Processing</h4>
+<p>As “data in processing” we understand data in any stage of processing between
+“raw” and “final”, i.e. all intermediate results, such as different stages of
+data cleaning, different levels of data aggregation or different types of data
+visualisation.</p>
+<p>We recommend to store data in these stages in their own space on the file system.
+This space is assumed to be a “playground”, where the researchers are asked to
+store all these intermediate results. This space is where different approaches
+or models or scenarios can be tested and where, as a result, different “versions”
+of data are available. The data processing space is intended to be used for data
+only, and not for e.g. documents, presentations, or images.</p>
+<p>Compared to the raw data space the data processing space is expected to require
+much more disk space.</p>
+<ul>
+<li><p>stages of data cleaning, different levels of data aggregation or</p></li>
+<li><p>types of data visualisation. The data processing area is where</p></li>
+<li><p>approaches or models or scenarios can be tested and where, as a result,</p></li>
+<li><p>“versions” of data are available.</p></li>
+</ul>
+<p>Compared to the raw data network drive the data processing network drive is
+expected to require much more disk space.</p>
+</div>
+<div id="result-data" class="section level4">
+<h4><span class="header-section-number">2.2.1.5</span> Result Data</h4>
+<p>With “result data” we mean clean, aggregated, well formatted data sets. Result
+data sets are the basis for interpretation or assessment and for the formulation
+of research findings. We consider all data that are relevant for the reporting
+of project results as result data. Result data will very often be spreadsheet
+data but they can also comprise other types of data such as figures or diagrams.
+We propose to prepare result data in the data processing area (see above) and to
+put symbolic links that point to the corresponding locations in the data processing
+folder into the result data folder. The idea is that the result area always gives
+the view onto the “best available” (intermediate) project results at a given
+point in time. Using symbolic links instead of file copies avoids accidental
+modification of data in the result data area that are actually expected to
+happen in the data processing area.</p>
+<p>Often, result data sets are the result of temporal aggregation. They are
+consequently smaller in size than raw data sets. There will also be less result
+data sets than there are data sets representing different stages of data
+processing. For these reasons, the result data space is expected to require much
+less disk space than the spaces dedicated to raw data and data in processing.</p>
+</div>
+<div id="clean-datasets" class="section level4">
+<h4><span class="header-section-number">2.2.1.6</span> Clean Datasets</h4>
+<p>In a project-driven research institute, almost all data processing steps are
+closely related to their specific research project. One project may e.g. require
+to prepare rain data for being fed into a rainfall-runoff and sewer simulation
+software. Unprocessed (raw) rain data are received from a rain gauge station and
+cleaned. The clean rain data are then converted to the format that is required
+by the sewer simulation software.</p>
+<p>In this example, the clean rain data are a data processing output. They are also
+the input to further processing and thus the source of even more valuable results.</p>
+<p>The specific rain data file that is input to the sewer modelling software is the
+final (rain data) result.
+However, the clean rain data that are an intermediate result in the context of
+one project are themselves already valuable results. They can be used in other
+projects that require clean rain data for other purposes, e.g. for looking at
+climate change effects.</p>
+<p>We recommend to store clean datasets in their own space. In this space the
+datasets are organised by topic, not by project:</p>
+<pre><code>//server/treasure
+  rain/
+  flow/
+  level/</code></pre>
+<p>This increases the visibility of existing clean datasets and reduces the risk
+that work that has already been done in one project is done again in another
+project. Often, people start again from the raw data even though somebody already
+cleaned that data.</p>
+</div>
 </div>
 <div id="data-storage-naming" class="section level3">
 <h3><span class="header-section-number">2.2.2</span> Naming of Files and Folders</h3>
-<p>In this section we define rules for good names for files and folders. We want to
-apply these rules whenever we have the freedom to define our own names, i.e.
-when creating a new file or a new folder.</p>
-<!-- By giving rules for the naming of files and folders  -->
-<p>We pursue different objectives:</p>
+<p>A concise and meaningful name of your file and folder is the key to relocate your
+data. Whenever you have the freedom to name your data file and structure your
+project folder you should do so. Names should be concise and meaningful to you
+and your colleagues. Your colleague, who may not be familiar with the project,
+should be able to guess the content of a folder or a file by intuition. Naming
+conventions are also necessary to avoid read errors during automatic data
+processing and to prevent errors when working on different operating systems.</p>
+<p>Please comply with the following rules:</p>
+<div id="rule-a-allowed-characters" class="section level4 unnumbered">
+<h4>Rule A: Allowed Characters</h4>
+<p>The following <strong>set of characters</strong> are authorized in file or folder names:</p>
 <ul>
-<li><p><em>Objective 1:</em> Names should not cause problems during automated data
-processing.</p></li>
-<li><p><em>Objective 2:</em> Names should be meaningful to you and your colleagues. You and
-they should be able to guess what a folder or file contains so that required
-files are found easily.</p></li>
-<li><p><em>Objective 3:</em> Names should not cause problems when copying files within your
-(computer) system or between different systems, especially between different
-operating systems or systems in different countries.</p></li>
+<li><p>upper case letters <code>A-Z</code>,</p></li>
+<li><p>lower case letters <code>a-z</code>,</p></li>
+<li><p>numbers <code>0-9</code>,</p></li>
+<li><p>underscore <code>_</code>,</p></li>
+<li><p>hyphen <code>-</code>,</p></li>
+<li><p>dot <code>.</code></p></li>
 </ul>
-<p>We process files automatically. Listing or reading files with non-standard
-characters in their names often cause problems. These problems are easy to avoid
-by sticking to some simple restrictive rules when naming files and folders.</p>
-<div id="allowed-characters" class="section level4 unnumbered">
-<h4>Allowed Characters</h4>
-<p>In order to meet <em>Objectives 1 and 3</em> we define the following
-<strong>set of characters</strong> that are allowed in file or folder names:</p>
+<p>If you want to know why some characters are not authorized, please check the FAQ:</p>
 <ul>
-<li>upper case letters <code>A-Z</code>,</li>
-<li>lower case letters <code>a-z</code>,</li>
-<li>numbers <code>0-9</code>,</li>
-<li>underscore <code>_</code>,</li>
-<li>hyphen <code>-</code>,</li>
-<li>dot <code>.</code>.</li>
+<li><p><a href="faq.html#faq-why-no-german-specials">Why are special characters not allowed?</a></p></li>
+<li><p><a href="faq.html#faq-why-no-space">Why is the space character not allowed?</a></p></li>
 </ul>
-<p>See the FAQ chapter for answers to the following questions:</p>
-<ul>
-<li><a href="faq.html#faq-why-no-german-specials">Why are special characters not allowed?</a></li>
-<li><a href="faq.html#faq-why-no-space">Why is the space character not allowed?</a></li>
-</ul>
-<p>Instead of German special characters (<code>ä</code>, <code>ö</code>, <code>ü</code>, <code>Ä</code>, <code>Ö</code>, <code>Ü</code>, <code>ß</code>) use the
-following substitutions: <code>ae</code>, <code>oe</code>, <code>ue</code>, <code>Ae</code>, <code>Oe</code>, <code>Ue</code>, <code>ss</code>.</p>
-<p>Instead of space, use underscore <code>_</code> or hyphen <code>-</code> (see next).</p>
+<p>Instead of German umlauts and the sharp s (<code>ä</code>, <code>ö</code>, <code>ü</code>, <code>Ä</code>, <code>Ö</code>, <code>Ü</code>, <code>ß</code>)
+use the following substitutions: <code>ae</code>, <code>oe</code>, <code>ue</code>, <code>Ae</code>, <code>Oe</code>, <code>Ue</code>, <code>ss</code>.</p>
 </div>
-<div id="separation-of-words-or-parts-of-words" class="section level4 unnumbered">
-<h4>Separation of Words or Parts of Words</h4>
-<p>Use underscore to separate different words in the file or folder name that
-contain different types of information:</p>
+<div id="rule-b-separation-of-words-or-parts-of-words" class="section level4 unnumbered">
+<h4>Rule B: Separation of Words or Parts of Words</h4>
+<p>Please use the characters underscore <code>_</code> or hyphen <code>–</code> instead of <code>space</code>.
+Use underscore <code>_</code> to separate words that contain different types of information:</p>
 <ul>
-<li><p><code>results_today</code>, <code>results_tomorrow</code> instead of <code>results-today</code>,
-<code>results-tomorrow</code>,</p></li>
-<li><p><code>protocol_hauke</code>, <code>protocol_michael</code> instead of <code>protocol-hauke</code>,
-<code>protocol-michael</code></p></li>
+<li><p><code>results_today</code> instead of <code>results-today</code></p></li>
+<li><p><code>protocol_hauke</code> instead of <code>protocol-hauke</code></p></li>
 </ul>
 <p>Use hyphen <code>-</code> instead of underscore <code>_</code> to visually separate the parts of
 compound words or names:</p>
@@ -486,78 +660,116 @@ compound words or names:</p>
 <li><p><code>dissolved-oxygen</code> instead of <code>dissolved_oxygen</code>,</p></li>
 <li><p><code>clean-data</code> instead of <code>clean_data</code>.</p></li>
 </ul>
-<p>Use hyphen (or no separation at all) in dates (see below).</p>
+<p>Use hyphen <code>-</code> (or no separation at all) in dates (i.e. <code>2018-07-02</code> or <code>20180702</code>).</p>
 <p>Using hyphen instead of underscore in composed words will not split the composed
 words into their parts when splitting a file or folder name at underscore.</p>
-<p>For example, splitting the name
-<code>project-report_example-project-1_v1.0_2018-07-02</code> at underscore results in the
-following words (giving different types of information on the file or folder)</p>
+<p>For example, splitting the name <code>project-report_example-project-1_v1.0_2018-07-02</code>
+at underscore results in the following words (giving different types of
+information on the file or folder)</p>
 <ul>
-<li><p><code>project-report</code> (type of document),</p></li>
-<li><p><code>example-project-1</code> (name of related project),</p></li>
-<li><p><code>v1.0</code> (version number),</p></li>
-<li><p><code>2018-07-02</code> (version date).</p></li>
+<li><code>project-report</code> (type of document),</li>
+<li><code>example-project-1</code> (name of related project),</li>
+<li><code>v1.0</code> (version number),</li>
+<li><code>2018-07-02</code> (version date).</li>
 </ul>
 </div>
-<div id="capitalisation" class="section level4 unnumbered">
-<h4>Capitalisation</h4>
-
-<div class="rmdnote">
-<p>Should we decide on if and when to use capitals, i.e. should we allow only one
-of the following spellings:</p>
-<code>dissolved-oxygen</code> (all lower case),
-<code>dissolved-Oxygen</code> (attributes lower case, nouns upper case),
-<code>Dissolved-oxygen</code> (first letter upper case),
-<code>Dissolved-Oxygen</code> (all parts of compund words upper case)?
+<div id="rule-c-capitalisation" class="section level4 unnumbered">
+<h4>Rule C: Capitalisation</h4>
+<p>From the pure data management’s point of view it would be best not to use upper
+case letters in file or folder names at all. This would avoid possible conflicts
+when exchanging files between operating systems that either care about case in
+file names (as e.g. Unix systems) or not (as e.g. Windows systems).</p>
+<p>If allowing upper case letters it should be decided on if and when to use
+capitals. Having a corresponding rule in place, only one of the following
+spellings would, for example, be allowed:</p>
+<ul>
+<li><p><code>dissolved-oxygen</code> (all lower case),</p></li>
+<li><p><code>dissolved-Oxygen</code> (attributes lower case, nouns upper case),</p></li>
+<li><p><code>Dissolved-oxygen</code> (first letter upper case),</p></li>
+<li><p><code>Dissolved-Oxygen</code> (all parts of compound words upper case).</p></li>
+</ul>
 </div>
-
+<div id="rule-d-avoid-long-names" class="section level4 unnumbered">
+<h4>Rule D: Avoid Long Names</h4>
+<p>At least on Windows operating systems, very long file paths can cause trouble.
+When copying or moving a file to a target path that exceeds a length of 260
+characters an error will occur. This is particularly unfortunate when copying or
+moving many files at once and when the process stops before completion. As the
+length of a file path mainly depends on the lengths of its components, we
+suggest to restrict</p>
+<ul>
+<li><p>folder names to no more than 20 characters and</p></li>
+<li><p>file names to no more than 50 characters.</p></li>
+</ul>
+<p>This would allow a file path to contain nine subfolder names at maximum. The
+maximum number of subfolders, i.e. the maximum folder depth, should be kept
+small by following best-practices in Folder Structures.
+If folder or file names are generated by software (e.g. logger software,
+modelling software, or reference manager) please check if the software allows
+to modify the naming scheme. If we nevertheless have to deal with deeply nested
+folder structures and/or very long file or folder names we should store them
+in a flat folder hierarchy, i.e. not in</p>
+<pre><code>\\server\projekte$\department-name\projects\project-name\
+  data-work-packages\work-package-one-meaning-the-following\modelling\
+  scenario-one-meaning-the-following\results.
+</code></pre>
 </div>
-<div id="formatting-of-dates-and-numbers" class="section level4 unnumbered">
-<h4>Formatting of Dates and Numbers</h4>
-<p>We want to write <strong>dates</strong> in file or folder names in one of these forms:</p>
+<div id="rule-e-formatting-of-dates-and-numbers" class="section level4 unnumbered">
+<h4>Rule E: Formatting of Dates and Numbers</h4>
+<p>When adding date information to file names, please use one of these formats:</p>
 <ul>
 <li><p><code>yyyy-mm-dd</code> (e.g. <code>2018-06-28</code>)</p></li>
 <li><p><code>yyyymmdd</code> (e.g. <code>20180628</code>)</p></li>
 </ul>
-<p>By doing so, file names only differing in the date will display chronologically
-in file listings. This is because, by default, files are sorted alphanumerically
-by their name. Using the first form improves the visual distinction of the year,
-month and day part of the date. Using hyphen instead of underscore will keep
-these parts together when splitting the name at underscore (see above).</p>
-<p>When using numbers in file or folder names to bring them into a certain order
-we should use leading zeroes and specify the amount of digits that will be used,
-e.g. <code>01</code>, <code>02</code>, <code>03</code> or <code>001</code>, <code>002</code>, <code>003</code>, etc.</p>
+<p>By doing so, file or folder names that differ only in the date will be displayed
+in chronological order. Using the first form improves the visual distinction of
+the year, month and day part of the date. Using hyphen instead of underscore
+will keep these parts together when splitting the name at underscore (see above).</p>
+<p>When using numbers in file or folder names to bring them into a certain order,
+use leading zeros as required to make all numbers used in one folder level have
+the same length. Otherwise they will not be displayed in chronological order in
+your file browser.</p>
+<p>Example:</p>
+<ul>
+<li><p><code>01</code>, <code>02</code>, <code>03</code>, etc. if there are 9 to 99 files/folders or</p></li>
+<li><p><code>001</code>, <code>002</code>, <code>003</code>, etc. if there are 100 to 999 files/folders.</p></li>
+</ul>
 </div>
-<div id="allowed-words" class="section level4 unnumbered">
-<h4>Allowed Words</h4>
-<p>In order to meet <em>Objective 2</em>, we should define <strong>sets of allowed words</strong> in
-so called vocabularies. Only words from the vocabularies are then expected to
-appear as words in file or folder names. Getting accustomed to the words from
-the vocabularies and their meanings allows for more precise file searching.</p>
-<p>This is most important to clearly indicate that a file or folder relates to
-“special objects”, such as projects or organisations or monitoring sites.
-At least for projects and organisations we want to define vocabularies in which
-“official” acronyms are defined for all projects and all organisations from
-which we expect to receive data (see the chapter on <a href="#acronyms">acronyms</a>).
-Always using the acronyms defined in the vocabularies allows to search for files
-or folders belonging to one specific project or being provided by one specific
+<div id="rule-f-allowed-words" class="section level4 unnumbered">
+<h4>Rule F: Allowed Words</h4>
+<p>We recommend to define sets of allowed words in so called vocabularies. Only
+words from the vocabularies are then expected to appear as words in file or
+folder names. Getting accustomed to the words from the vocabularies and their
+meanings allows for more precise file searching.
+This is most important to clearly indicate that a file or folder relates to
+“special objects”, such as projects or organisations or monitoring sites. At
+least for projects and organisations we want to define vocabularies in which
+“official” acronyms are defined for all projects and all organisations from which
+we expect to receive data (see the chapter on <a href="#acronyms">acronyms</a>). Always
+using the acronyms defined in the vocabularies allows to search for files or
+folders belonging to one specific project or being provided by one specific
 organisation.</p>
 <p>We could also define vocabularies of words describing other properties of a file
 or folder. We could e.g. decide to always use <code>clean-data</code> instead of
 <code>data-clean</code>, <code>cleaned-data</code>, <code>data-cleaning</code>, <code>Datenbereinigung</code>,
-<code>bereinigte-daten</code>, etc.</p>
+<code>bereinigte-daten</code>, and so on.</p>
 </div>
-<div id="order-of-words" class="section level4 unnumbered">
-<h4>Order of Words</h4>
+<div id="rule-g-order-of-words" class="section level4 unnumbered">
+<h4>Rule G: Order of Words</h4>
 <p>We could go one step further and define the order in which we expect the words
 to appear in a file or folder name. Which types of information should go first
 in the filename? The order of words determines in which way files are grouped
 visually when being listed by their name. If the acronym of the organisation
 goes first, files are grouped by organisation. If the acronym of the monitoring
-site goes first, files are grouped by monitoring site.</p>
+site goes first, files are grouped by monitoring site.
+According rules cannot be set on a global level, i.e. for the whole company or
+even for a whole project. The requirements will be different depending on the
+type of information that are to be stored. We recommend to define naming
+conventions where appropriate and to describe them in a metadata file in the
+folder below which to apply the naming convention.</p>
 </div>
-<div id="allowed-languages" class="section level4 unnumbered">
-<h4>Allowed Languages</h4>
+<div id="rule-h-allowed-languages" class="section level4 unnumbered">
+<h4>Rule H: Allowed Languages</h4>
 <p>Do not mix words from different languages within one and the same file or folder
 name. For example, use <code>regen-ereignis</code> or <code>rain-event</code> instead of <code>regen-event</code>
 or <code>rain-ereignis</code>.</p>
@@ -568,219 +780,190 @@ we should follow this rule at least for the top level
 <code>AUFTRAEGE</code> (German) and <code>GROUNDWATER</code> (English) as folder names within the
 same parent folder.</p>
 </div>
-<div id="avoid-very-long-names" class="section level4 unnumbered">
-<h4>Avoid Very Long Names</h4>
-<p>In order to meet <em>Objective 3</em>, very long file and folder names should be
-avoided. File and folder names should be</p>
-<ul>
-<li><p>as long as necessary to be meaningful but at the same time</p></li>
-<li><p>as short as possible.</p></li>
-</ul>
-
-<div class="rmdwarning">
-In the Windows operating system, long file paths can cause problems when copying
-files. If the full path to the target location of a file exceeds a certain
-length (between 255 and 260 characters) you get the following error message
-(here in German): <code>Die Dateinamen wären zu lang für den Zielordner. Kürzen Sie  die Dateinamen und wiederholen Sie den Vorgang, oder verwenden Sie einen anderen  Ort, der einen kürzeren Pfad hat.</code>
-</div>
-
-<p>This problem can be avoided by</p>
-<ul>
-<li>avoiding very long file or folder names,</li>
-<li>avoiding very deep <a href="best-practices.html#folder-structures">folder structures</a>.</li>
-</ul>
-<p>If folder or file names are generated by software (e.g. logger software,
-modelling software, reference manager) we should check if the software allows to
-modify the naming scheme.</p>
-<p>If we nevertheless have to deal with deeply nested folder structures and/or very
-long file or folder names we should store them in a flat folder hierarchy (i.e.
-not in <code>\\server\projekte$\department-name\projects\project-name\data-work-packages\work-package-one-meaning-the-following\modelling\scenario-one-meaning-the-following\results</code>).</p>
-</div>
-<div id="examples" class="section level4 unnumbered">
-<h4>Examples</h4>
-<p>Examples for good file names:</p>
-<ul>
-<li><code>AHRC_TechnicalApp_Response_20120925.docx</code> or</li>
-<li><code>AHRC-TechnicalApp-Response20120925.docx</code></li>
-</ul>
-<p>Example for bad file names:</p>
-<ul>
-<li><code>what we got back from funders about the data stuff.docx</code></li>
-</ul>
-</div>
-</div>
-<div id="raw-data" class="section level3">
-<h3><span class="header-section-number">2.2.3</span> Raw Data</h3>
-<p>Especially in environmental sciences, <a href="best-practices.html#raw-data">raw data</a> often cannot be
-reproduced (e.g. rainfall, river discharge measurements) and are therefore of
-high value. Thus the following rules apply in case of raw data:</p>
-<ul>
-<li><p>can be renamed (in case this is documented in a <a href="best-practices.html#metadata">metadata</a> file)</p></li>
-<li><p>the content must not be changed</p></li>
-<li><p>will be stored as read-only in an secure area (i.e. one folder contains all
-<a href="best-practices.html#raw-data">raw data</a>)</p></li>
-</ul>
-<p><strong><em>added from: 04_rawdata.Rmd</em></strong></p>
-<p>As <a href="best-practices.html#raw-data">raw data</a> we define data that we receive from a device or from a project
-partner.</p>
-<p>Most of our research results are based on data. We acknowledge the importance
-of <a href="best-practices.html#raw-data">raw data</a> by</p>
-<ul>
-<li><p>storing then in a special place where it is specially secured</p></li>
-<li><p>describing them with <a href="best-practices.html#metadata">metadata</a></p></li>
-</ul>
-<p>Rawdata are stored in the <a href="best-practices.html#rawdata-folder-structure">rawdata folder structure</a></p>
-</div>
-<div id="data-workflow" class="section level3">
-<h3><span class="header-section-number">2.2.4</span> Data Workflow</h3>
-<p>For each project separation of:</p>
-<ul>
-<li><p><a href="best-practices.html#raw-data">raw data</a> (i.e. <code>\\server\\rawdata</code>)</p></li>
-<li><p>data processing (i.e. <code>\\server\\processing</code>)</p></li>
-<li><p>results (i.e. <code>\\server\\projekte$</code>)</p></li>
-</ul>
-<p>Raw data are highly valuable because they if necessary cannot or only with high
-costs be reproduced. Thus raw data will be compiled on the highest level (i.e.
-<code>\\server\\rawdata</code>) for each <code>project</code> and <code>origin</code> (e.g. KWB, BWB) as shown
-below:</p>
-<p><strong>Raw data folder structure:</strong></p>
-<pre><code>TestProjekt
-  BWB
-    Regen
-      METADATEN
-      regen.xls
-    Labor
-      METADATEN
-      labor.xls
-
-  KWB
-    Durchfluss
-      METADATEN
-      q01.csv
-      q02.csv
-      q03.csv</code></pre>
-<p>The data processing is a “playground”, where different approaches or scenarios
-can be tested and where possibly different versions for a specific approach
-or scenario are available. The files will be stored here according to the
-corresponding <code>project</code> and <code>topic</code> and the data processing step, respectively.</p>
-<p><strong>Data processing folder structure:</strong></p>
-<pre><code>TestProjekt
-  01_Bereinigung
-    METADATEN
-    regen_roh.csv
-    regen.csv
-    qualitaet.csv      
-    durchfluss.csv
-  02_Modellierung
-    sommer
-    winter
-    VERSIONEN
-      v0.1
-      v1.0
-        sommer
-        winter
-  Software</code></pre>
-<p>In the results folder only the “reporting relevant” results should be saved.
-Relevant results files (e.g. plots) should be added according to <code>project</code> and
-<code>project structure</code> (i.e. per <code>working package</code>) in form of links from the
-<code>data processing</code> folder structure (see above).</p>
-<p><strong>Results folder structure:</strong></p>
-<pre><code>TestProjekt
-  Data-Work Packages
-    WP1_Monitoring
-    WP2_Modellierung
-      sommer.lnk
-      winter.lnk</code></pre>
 </div>
 <div id="folder-structures" class="section level3">
-<h3><span class="header-section-number">2.2.5</span> Folder Structures</h3>
+<h3><span class="header-section-number">2.2.3</span> Folder Structures</h3>
+<p>“Here are some tips from digital asset management expert Edward Smith:</p>
+<ul>
+<li><p>Create a template: Copy and paste it every time you start a new project or task.
+Or, even better: save yourself from the hassle of manually re-creating your
+structure over and over again bysetting up a Zap to do it for you.</p></li>
+<li><p>Think of folder names as keywords: Keep in mind that you can search for files
+using folder names; the more specific, the more quickly you’ll find what you’re
+looking for.</p></li>
+<li><p>Keep folders unique: Make sure there’s no overlap in what goes into your folders
+(e.g., there shouldn’t be two places you’re keeping invoices for the same project).</p></li>
+<li><p>Make a cheat sheet: It’s OK if you don’t have every single folder memorized.
+There’s no shame in saving a flow chart for quick reference.”
+(<a href="https://zapier.com/blog/organize-files-folders/" class="uri">https://zapier.com/blog/organize-files-folders/</a>)</p></li>
+</ul>
+<p><strong>Restrictions/Conventions:</strong></p>
+<ul>
+<li><p>Each top-level folder should represent a project, i.e. should be defined in
+the top level file PROJECTS.txt.</p></li>
+<li><p>Each possible owner should be defined in the top level file ORGANISATIONS.txt.</p></li>
+<li><p>The naming convention for the organisations is the same as for projects.</p></li>
+</ul>
+<div id="metadata-about-folder-structures" class="section level4 unnumbered">
+<h4>Metadata About Folder Structures</h4>
+<p>We recommend to describe the meaning of subfolders in a file README.yaml in the
+folder that contains the subfolders.</p>
+<p>Example for such a README file:</p>
+<pre><code>rlib:
+  created-by: Hauke Sonnenberg
+  created-on: 2019-04-05
+  description: &gt;
+    R library for packages needed for R training at BWB.
+    To use the packages from that folder, use 
+    .libPaths(c(.libPaths(), &quot;C:/_UserProgData/rlib&quot;))
+
+rlib_downloads:
+  created-by: Hauke Sonnenberg
+  created-on: 2019-04-05
+  description: &gt;
+    files downloaded by install.packages(). Each file represents a package
+    that is installed in the rlib folder.
+</code></pre>
 <p>Restrictions/Conventions:</p>
 <ul>
-<li>Each top-level folder should represent a project, i.e. should be defined in
-the top level file <a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a>.</li>
-<li>Each possible owner should be defined in the top level file
-<a href="best-practices.html#file-organisations"><code>ORGANISATIONS.txt</code></a>.</li>
+<li><p>Each top-level folder should represent a project, i.e. should be defined in
+the top level file <a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a>.</p></li>
+<li><p>Each possible owner should be defined in the top level file
+<a href="best-practices.html#file-organisations"><code>ORGANISATIONS.txt</code></a>.</p></li>
 <li>The naming convention for the organisations is the same as for projects.</li>
 </ul>
 <ol start="19" style="list-style-type: lower-alpha">
 <li></li>
 </ol>
-<div id="project-folder-structure" class="section level4">
-<h4><span class="header-section-number">2.2.5.1</span> Project Folder Structure</h4>
+</div>
+<div id="project-folder-structure" class="section level4 unnumbered">
+<h4>Project Folder Structure</h4>
 <p>We said that we want to concentrate on the folder structures within the project
 folders. Nevertheless, we would like to give a recommendation on how the project
 folders could be organised within its top level folder. In this structure, there
 are no subfolders for the different departments any more.</p>
 <pre><code>//server/projects$
-- PROJECTS.txt
-- project-1/
-- project-2/
-- project-3/</code></pre>
+  PROJECTS.txt
+  project-1/
+  project-2/
+  project-3/</code></pre>
 <p>In the <code>projects$</code> folder</p>
 <ul>
-<li>each subfolder name should appear in the file <a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a></li>
-<li>there should not be any folder on the top level that does not represent a
-project.</li>
-<li>there should be no other files on the top level as the files that are
-described in this documentation.</li>
-<li>there are no subfolders representing departments any more. The mapping of
-projects to departments is done in the file <a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a></li>
+<li><p>each subfolder name should appear in the file <a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a></p></li>
+<li><p>there should not be any folder on the top level that does not represent a
+project.</p></li>
+<li><p>there should be no other files on the top level as the files that are
+described in this documentation.</p></li>
+<li><p>there are no subfolders representing departments any more. The mapping of
+projects to departments is done in the file <a href="best-practices.html#file-projects"><code>PROJECTS.txt</code></a></p></li>
 </ul>
 </div>
-<div id="rawdata-folder-structure" class="section level4">
-<h4><span class="header-section-number">2.2.5.2</span> Rawdata Folder Structure</h4>
-<p>We will create a network folder <code>//server/rawdata$</code> in which all files
-have set the read-only property. We suggest to store raw data by project first
-and by the organisation that owns (i.e. generated, provided) the data second.
-This could look like this:</p>
-<pre><code>//server/rawdata$
-- ORGANISATIONS.txt
-- PROJECTS.lnk [Symbolic Link to PROJECTS.txt in //server/projects$]
-- flusshygiene
-  - bwb
-  - kwb
-  - uba
-  - ...
-- ogre
-  - kwb
-  - bwb
-  - uba
-  - ...
-- ...</code></pre>
+<div id="rawdata-folder-structure" class="section level4 unnumbered">
+<h4>Rawdata Folder Structure</h4>
+<p>We propose to organise raw data by project first and by origin (i.e. source or
+owner) of the data second.
+We will create a network folder //server/rawdata$ in which all files have set
+the read-only property. We suggest to store raw data by project first and by the
+organisation that owns (i.e. generated, provided) the data second. This could
+look like this:</p>
+<pre><code>//server/rawdata
+
+  ORGANISATIONS.txt
+  
+  PROJECTS.lnk [Symbolic Link to PROJECTS.txt in //server/projects$]
+  
+  test-project/
+    bwb/
+      rain/
+        METADA/
+        rain.xls
+      laboratory/
+        METADATA/
+        laboratory.xls
+
+    kwb/
+      discharge/
+        METADATA/
+        q01.csv
+        q02.csv
+        q03.csv
+</code></pre>
+</div>
+<div id="data-processing-folder-structure" class="section level4 unnumbered">
+<h4>Data Processing Folder Structure</h4>
+<p>In the data processing area the files are stored by project first.
+Within each project data may be organised by topic and/or data processing step.</p>
+<pre><code>//server/processing
+
+test-project/
+  01_data-cleaning
+    METADATEN
+    rain_raw.csv
+    rain.csv
+    quality.csv      
+    discharge.csv
+  02_modelling
+    summer
+    winter
+    VERSIONEN
+      v0.1
+      v1.0
+        summer
+        winter
+  software</code></pre>
+</div>
+<div id="results-folder-structure" class="section level4 unnumbered">
+<h4>Results folder structure</h4>
+<p>The structure in the result data area should represent the project structure.
+It could e.g. be organised by working package. When being organised by working
+package the folder names should not only contain the working package number but
+also indicate the name of the working package.</p>
+<pre><code>//server/projects
+
+  test-project/
+    Data-Work Packages
+      wp-1_monitoring
+      wp-2_modelling
+        summer.lnk # symbolic links to last version 
+        winter.lnk # in data processing
+</code></pre>
 </div>
 </div>
 <div id="versioning" class="section level3">
-<h3><span class="header-section-number">2.2.6</span> Versioning</h3>
+<h3><span class="header-section-number">2.2.4</span> Versioning</h3>
 <p>Versioning or version control is the way by which different versions and drafts
 of a document (or file or record or dataset or software code) are managed.
-Versioning involves the process of naming and distinguishing between a series
-of draft documents that leads to a final or approved version in the end.
-Versioning allows you to disclose an audit trail for the revision and update of
-drafts and final versions.</p>
-<div id="manual" class="section level4">
-<h4><span class="header-section-number">2.2.6.1</span> Manual</h4>
-<p>We propose the following workflow:</p>
+Versioning involves the process of naming and distinguishing between a series of
+draft documents that leads to a final or approved version in the end. Versioning
+“freezes” certain development steps and allows you to disclose an audit trail
+for the revision and update of drafts and final versions. It is essential to
+reproduce results that may be based on older data.</p>
+<div id="manual" class="section level4 unnumbered">
+<h4>Manual</h4>
+<p>Manual versioning may costs more time and requires some discipline, but ensures
+long-term clean and generally understandable file structure and provides a quick
+overview of the actual status of development. Manual versioning does not require
+additional software (except a simple text editor) and is realized by following
+these simple guidelines:</p>
 <ul>
-<li><p>It is only allowed to modify the current file (e.g. <code>filename.pptx</code>), which
-contains no version name as postfix</p></li>
-<li><p>A version is created by copying the current file. This copy gets a not already
-defined version name as file name ending (e.g. <code>filename_v0.1.pptx</code>)</p></li>
-<li><p>The versioned file is moved to a folder `VERSIONS&quot; and set as read-only.</p></li>
-<li><p>In the folder <code>VERSIONS</code> is a file <code>VERSIONS.txt</code>, which contrains addtional
-information on the available version within that folder</p></li>
+<li><p>A version is created by copying the current file and pasting it to a subfolder
+named VERSIONS</p></li>
+<li><p>Each successive draft of a file in the VERSIONS folder is numbered sequentially
+from e.g. <code>v0.1</code>, <code>v0.2</code>, <code>v0.3</code> as a postfix at the end of the file name (e.g.
+<code>filename_v0.1</code>, <code>…v0.2</code>, <code>…v0.3</code>, and so on)</p></li>
+<li><p>Finalised forms (e.g. the presentations was held on a conference, the report
+was reviewed) become entitled with a new version number, e.g. <code>v1.0</code>, <code>v2.0</code> and
+so on</p></li>
+<li><p>Read-only is applied to each versioned file (to prevent accidental loss of
+final versions of files)</p></li>
+<li><p>Only files without version name as postfix are modified</p></li>
+<li><p>A <code>VERSIONS.txt</code> is created and kept up-to-date with a text editor, containing
+meta information on purpose of the modification and the person who made it</p></li>
 </ul>
-<p><strong>Drawbacks:</strong></p>
-<ul>
-<li><p>possibly more time demanding,</p></li>
-<li><p>needs time getting used to it and</p></li>
-<li><p>requires high level of discipline</p></li>
-</ul>
-<p><strong>Advantages:</strong></p>
-<ul>
-<li><p>Simple and safe method, which requires not version control software</p></li>
-<li><p>Cleaner workspace as old versions are stored in a separate folder</p></li>
-<li><p>Sorting by name equals the chronology</p></li>
-</ul>
+<p>It is noteworthy that “final” does not necessarily mean ultimately. Final forms
+are subject to modification and it is sometimes questionable whether a “final”
+status has been reached. Therefore, it is more important to be able to track the
+modifications in the <code>VERSIONS.txt</code> rather than arguing on version numbers.</p>
 <p><strong>Example:</strong></p>
 <pre><code>BestPractices_Workshop.ppt
 VERSIONS/
@@ -790,12 +973,13 @@ VERSIONS/
   + BestPractices_Workshop_v1.0.ppt</code></pre>
 <p>Content of file <code>VERSIONS.txt</code>:</p>
 <pre><code>BestPractices_Workshop.ppt
-- v0.1: first draft version, written by Michael Rustler
-- v0.2: after additions by Hauke Sonnenberg
-- v1.0: first final version, after review by Pascale Rouault</code></pre>
+- v1.0: first final version, after review by NAME
+- v0.2: after additions by NAME
+- v0.1: first draft version, written by NAME</code></pre>
 </div>
-<div id="automatically" class="section level4">
-<h4><span class="header-section-number">2.2.6.2</span> Automatically</h4>
+<div id="automatic" class="section level4 unnumbered">
+<h4>Automatic</h4>
+<p>Automatic versioning is mandatory in case of programming.</p>
 <p>The versioning is done automatically in case a version control software,
 like <a href="https://en.wikipedia.org/wiki/Git">Git</a> or <a href="https://en.wikipedia.org/wiki/Apache_Subversion">Subversion</a>
 are used.</p>
@@ -810,10 +994,11 @@ and a</p></li>
 <li><p>valid user account (for accessing the server) which is currently provided by the
 IT department on request</p></li>
 </ul></li>
-<li><p><a href="https://git-scm.com/">Git</a>: for publishing programm code external on our KWB organisation group on <a href="https://github.com/KWB-R">Github</a>. Currently all repositories are public (i.e.
-are visible for everyone), but also use of private repositories is possible for
-free as KWB is recognised as non-for-profit company by Github, offering <a href="https://help.github.com/articles/discounted-organization-accounts/#discounts-for-nonprofits-and-libraries">additional
-benefits for free</a></p></li>
+<li><p><a href="https://git-scm.com/">Git</a>: for publishing programm code (e.g. R packages)
+external on our KWB organisation group on <a href="https://github.com/KWB-R">Github</a>.
+Currently all repositories are public (i.e. are visible for everyone), but also
+use of private repositories is possible for free as KWB is recognised as
+non-for-profit company by Github, offering <a href="https://help.github.com/articles/discounted-organization-accounts/#discounts-for-nonprofits-and-libraries">additional benefits for free</a></p></li>
 </ul>
 <p>Use of version control software is required in case of programming (e.g. in R,
 Python, and so on) and can be useful in case of tracking changes in small text
@@ -860,7 +1045,7 @@ versioning’ are available here: <a href="https://github.com/leeper/data-versio
 </div>
 </div>
 <div id="organising-e-mails" class="section level3">
-<h3><span class="header-section-number">2.2.7</span> Organising E-Mails</h3>
+<h3><span class="header-section-number">2.2.5</span> Organising E-Mails</h3>
 <blockquote>
 <p>“Most people now routinely send and receive lots of messages every day and as a
 Yesult, their inbox can get very quickly overloaded with hundreds of personal and
@@ -890,7 +1075,7 @@ places, such as a network drive.</p></li>
 </ul>
 </div>
 <div id="managing-references" class="section level3">
-<h3><span class="header-section-number">2.2.8</span> Managing References</h3>
+<h3><span class="header-section-number">2.2.6</span> Managing References</h3>
 <p>For managing reference there are plenty of tools available. A detailed overview
 is provided by <span class="citation">(Fenner, Scheliga, and Bartling <a href="#ref-Fenner_2014">2014</a>)</span> in the Chapter <a href="http://book.openingscience.org.s3-website-eu-west-1.amazonaws.com/tools/reference_management.html">Reference Management</a>
 At KWB we use Endnote, for which an internal guideline document (<a href="file://Y:/R&amp;D%20Templates/Charts%20Guidelines%20Checklists/KWB-EndNote-Guideline-v02.pdf">KWB-EndNote-Guideline-v02.pdf</a>, (link only accessible from KWB intranet with Firefox in case workflow defined <a href="faq.html#firefox-local-files">here</a> is followed!).) was developed.
@@ -898,7 +1083,7 @@ At KWB we use Endnote, for which an internal guideline document (<a href="file:/
 defined in "R/add_text.R" --></p>
 </div>
 <div id="data-preservation" class="section level3">
-<h3><span class="header-section-number">2.2.9</span> Data Preservation</h3>
+<h3><span class="header-section-number">2.2.7</span> Data Preservation</h3>
 <p>Data must be retained to support your research findings</p>
 <p>Standards: ?5 years?</p>
 
@@ -1272,7 +1457,7 @@ of header rows) differ from file to file.</p>
 </div>
 <div id="data-publishing-and-sharing" class="section level2">
 <h2><span class="header-section-number">2.5</span> Data Publishing and Sharing</h2>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-11"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
 <a href="https://doi.org/10.1371/journal.pcbi.1005278/" target="_blank"><img src="images/tensimplerules_datasharing.png" alt="Modern life context for the ten simple rules [@Boland_2017]"  /></a>
 <p class="caption">
 Figure 2.1: Modern life context for the ten simple rules <span class="citation">(Boland, Karczewski, and Tatonetti <a href="#ref-Boland_2017">2017</a>)</span>
@@ -1502,7 +1687,7 @@ access to the data in the files remains limited.”</p>
 </blockquote>
 <table>
 <caption>
-<span id="tab:unnamed-chunk-16">Table 2.1: </span>Suitability of file formats for long-term preservation <span class="citation">(Kaden and Kleineberg <a href="#ref-Kaden_2018">2018</a>)</span>
+<span id="tab:unnamed-chunk-14">Table 2.1: </span>Suitability of file formats for long-term preservation <span class="citation">(Kaden and Kleineberg <a href="#ref-Kaden_2018">2018</a>)</span>
 </caption>
 <thead>
 <tr>
@@ -1613,23 +1798,8 @@ ecosystem for feature-based earth observations</p>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
-<div id="ref-Fenner_2014">
-<p>Fenner, Martin, Kaja Scheliga, and Sönke Bartling. 2014. “Reference Management.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 125–37. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-00026-8_8" class="uri">https://doi.org/10.1007/978-3-319-00026-8_8</a>.</p>
-</div>
-<div id="ref-Grolemund_2017">
-<p>Grolemund, Garrett, and Hadley Wickham, eds. 2017. <em>R for Data Science</em>. 1st ed. Sebastopol, CA: O‘Reilly Media. <a href="https://r4ds.had.co.nz" class="uri">https://r4ds.had.co.nz</a>.</p>
-</div>
-<div id="ref-Sonnenberg_2018">
-<p>Sonnenberg, Hauke. 2018. “Kwb.logger (V 0.2.0).” <a href="https://doi.org/10.5281/zenodo.1289425" class="uri">https://doi.org/10.5281/zenodo.1289425</a>.</p>
-</div>
-<div id="ref-R_Core_Team_2017">
-<p>R Core Team. 2017. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</p>
-</div>
 <div id="ref-Boland_2017">
 <p>Boland, Mary Regina, Konrad J. Karczewski, and Nicholas P. Tatonetti. 2017. “Ten Simple Rules to Enable Multi-Site Collaborations Through Data Sharing.” <em>PLOS Computational Biology</em> 13 (1). Public Library of Science (PLoS): e1005278. <a href="https://doi.org/10.1371/journal.pcbi.1005278" class="uri">https://doi.org/10.1371/journal.pcbi.1005278</a>.</p>
-</div>
-<div id="ref-Kaden_2018">
-<p>Kaden, Ben, and Michael Kleineberg. 2018. “Guidelines Zur Veröffentlichung Dissertationsbezogener Forschungsdaten.” <a href="https://doi.org/10.18452/18811" class="uri">https://doi.org/10.18452/18811</a>.</p>
 </div>
 <div id="ref-Bosman_2016">
 <p>Bosman, Jeroen, and Bianca Kramer. 2016. “GitHub and More: Sharing Data &amp; Code.” Blog. <em>Innovations in Scholarly Communication - Changing Research Workflows</em>. <a href="https://101innovations.wordpress.com/2016/10/09/github-and-more-sharing-data-code/" class="uri">https://101innovations.wordpress.com/2016/10/09/github-and-more-sharing-data-code/</a>.</p>
@@ -1637,17 +1807,35 @@ ecosystem for feature-based earth observations</p>
 <div id="ref-Fenner2014">
 <p>Fenner, Martin, and Laure Haak. 2014. “Unique Identifiers for Researchers.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 293–96. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-00026-8_21" class="uri">https://doi.org/10.1007/978-3-319-00026-8_21</a>.</p>
 </div>
-<div id="ref-Rokem_2018">
-<p>Rokem, Ariel, and Fernando Chirigati. 2018. “Glossary.” In <em>The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences</em>, edited by Justin Kitzes, Daniel Turek, and Fatma Deniz. Oakland, CA: University of California Press. <a href="https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html" class="uri">https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html</a>.</p>
-</div>
-<div id="ref-Stodden2014">
-<p>Stodden, Victoria. 2014. “Intellectual Property and Computational Science.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 225–35. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-00026-8_15" class="uri">https://doi.org/10.1007/978-3-319-00026-8_15</a>.</p>
+<div id="ref-Fenner_2014">
+<p>Fenner, Martin, Kaja Scheliga, and Sönke Bartling. 2014. “Reference Management.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 125–37. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-00026-8_8" class="uri">https://doi.org/10.1007/978-3-319-00026-8_8</a>.</p>
 </div>
 <div id="ref-Forschungslizenzen">
 <p>“Forschungslizenzen.” 2019. <a href="http://forschungslizenzen.de/" class="uri">http://forschungslizenzen.de/</a>.</p>
 </div>
 <div id="ref-Friesike2014">
 <p>Friesike, Sascha. 2014. “Creative Commons Licences.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 287–88. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-00026-8_19" class="uri">https://doi.org/10.1007/978-3-319-00026-8_19</a>.</p>
+</div>
+<div id="ref-Grolemund_2017">
+<p>Grolemund, Garrett, and Hadley Wickham, eds. 2017. <em>R for Data Science</em>. 1st ed. Sebastopol, CA: O‘Reilly Media. <a href="https://r4ds.had.co.nz" class="uri">https://r4ds.had.co.nz</a>.</p>
+</div>
+<div id="ref-Hart_2016">
+<p>Hart, Edmund M., Pauline Barmby, David LeBauer, François Michonneau, Sarah Mount, Patrick Mulrooney, Timoth’ee Poisot, Kara H. Woo, Naupaka B. Zimmerman, and Jeffrey W. Hollister. 2016. “Ten Simple Rules for Digital Data Storage.” Edited by Scott Markel. <em>PLOS Computational Biology</em> 12 (10). Public Library of Science (PLoS): e1005097. <a href="https://doi.org/10.1371/journal.pcbi.1005097" class="uri">https://doi.org/10.1371/journal.pcbi.1005097</a>.</p>
+</div>
+<div id="ref-Kaden_2018">
+<p>Kaden, Ben, and Michael Kleineberg. 2018. “Guidelines Zur Veröffentlichung Dissertationsbezogener Forschungsdaten.” <a href="https://doi.org/10.18452/18811" class="uri">https://doi.org/10.18452/18811</a>.</p>
+</div>
+<div id="ref-R_Core_Team_2017">
+<p>R Core Team. 2017. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</p>
+</div>
+<div id="ref-Rokem_2018">
+<p>Rokem, Ariel, and Fernando Chirigati. 2018. “Glossary.” In <em>The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences</em>, edited by Justin Kitzes, Daniel Turek, and Fatma Deniz. Oakland, CA: University of California Press. <a href="https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html" class="uri">https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html</a>.</p>
+</div>
+<div id="ref-Sonnenberg_2018">
+<p>Sonnenberg, Hauke. 2018. “Kwb.logger (V 0.2.0).” <a href="https://doi.org/10.5281/zenodo.1289425" class="uri">https://doi.org/10.5281/zenodo.1289425</a>.</p>
+</div>
+<div id="ref-Stodden2014">
+<p>Stodden, Victoria. 2014. “Intellectual Property and Computational Science.” In <em>Opening Science: The Evolving Guide on How the Internet Is Changing Research, Collaboration and Scholarly Publishing</em>, edited by Sönke Bartling and Sascha Friesike, 225–35. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-00026-8_15" class="uri">https://doi.org/10.1007/978-3-319-00026-8_15</a>.</p>
 </div>
 </div>
 <script async defer src="https://hypothes.is/embed.js"></script>
