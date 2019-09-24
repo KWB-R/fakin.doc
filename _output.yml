@@ -4,6 +4,7 @@ bookdown::gitbook:
     after_body: hypothesis.html
   css: style.css
   split_by: chapter  
+  toc_depth: 4
   config:
     toc:
       collapse: section     
@@ -22,8 +23,10 @@ bookdown::pdf_book:
     in_header: preamble.tex
   latex_engine: xelatex
   citation_package: natbib
+  toc_depth: 4
 bookdown::epub_book:
   stylesheet: style.css
 bookdown::word_document2:
   toc: true
   fig_caption: true
+  toc_depth: 4
