@@ -1,4 +1,4 @@
-## Data Collection
+## Data Processing
 
 Data are often inconsistent, incomplete, incorrect, or misspelled. [Data cleaning]((https://www.practicereproducibleresearch.org/core-chapters/7-glossary.html#munging)) 
 is essential. 

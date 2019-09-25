@@ -153,7 +153,7 @@ by automatically browsing for YAML files, reading their content and
 creating overviews on available files and data.
 
 Once you have written a YAML file you can check the validity of the 
-format with this online validator: https://ci.appveyor.com/tools/validate-yaml
+format with this online validator: https://yamlchecker.com/
 
 ### Metadata Management Tools
 

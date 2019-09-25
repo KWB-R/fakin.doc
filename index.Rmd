@@ -51,7 +51,7 @@ knitr::include_graphics('images/cover.png', dpi = NA)
 This document is the outcome of the KWB project [FAKIN](http://www.kompetenz-wasser.de/en/project/fakin-research-data-management) 
 (Forschungsdatenmanagement an kleinen Instituten = research data management at small institutes).
 funded by [BMBF](https://bmbf.de) within the call ["Research of the Management of Research Data 
-Within Their Life Cyle at Universities and Independant Research Institutes"](https://www.bildung-forschung.digital/de/vorstellung-21-foerderprojekte-zum-forschungsdatenmanagement-2332.html). 
+Within Their Life Cycle at Universities and Independant Research Institutes"](https://www.bildung-forschung.digital/de/vorstellung-21-foerderprojekte-zum-forschungsdatenmanagement-2332.html). 
 
 
 

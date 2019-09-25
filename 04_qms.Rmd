@@ -1,0 +1,185 @@
+# Integration in QMS
+
+## Start a new project
+
+**Before starting with a new project**, perform the following actions that are 
+detailed in the following sections:
+
+* Choose a [project identifier](#project-identifier) and identifiers for the
+project partners and organisations that data are expected to be received from.
+
+* Create a [data management plan (DMP)](#data-management-plan) for the project.
+
+* Determine a ["data manager"](#data-manager) for the project. 
+
+* Setup the [folder structures](#folder-structures) for the project.
+
+
+**At the start of a research project**:
+
+* Create a subfolder for your project and subfolders for the organisations
+in the [rawdata folder structure](#rawdata-folder-structure).
+
+**At the start of a project** (or if an employee or trainee enters the project):
+
+* Give an introduction to our research data management as described in this 
+document.
+
+
+**Regularly during the project**:
+
+* Check if the folder structure within your project's rawdata subfolder still 
+complies with the [rawdata folder structure](#rawdata-folder-structure) and 
+clean the structure, if not.
+
+
+### Project and owner identifiers {-#project-identifier}
+
+Documents and data that are collected or created during the lifetime of a 
+project will be stored in the form of electronic files on the institute's file 
+server or on the personal computers of the employees. We aim at being able to 
+clearly identify the related project and the owner of the data for any file or 
+folder that resides on the institute's file system.
+
+Therefore, we recommend to use unique identifiers, either as (part of) the
+name of the file or as (part of) the name of the folder or parent folder that
+the file resides in. The usage of a consistent project identifier becomes
+particularly important when - as defined we suggest for a good [data workflow](#data-workflow), 
+different types of data and documents of the project are stored at different places 
+on the file system.
+
+Together with the team members, the project leader is requested to define the 
+project identifier at the start of the project. Whenever the belonging of a file or
+folder to the project is to be indicated, only this "official" identifier in 
+the exact spelling that was defined, has to be used. 
+
+The project identifier should
+
+* be unique within all identifiers of current or former projects that have ever 
+been carried out at the institute,
+
+* be as short as possible but as long as required to be meaningful and easy to
+remember.
+
+In order to minimise the risk of spelling mistakes and to avoid errors in 
+automated processing we require the identifier to
+
+* start with a lowercase letter,
+* consist of only lowercase letters (`a-z`), digits (`0-9`) or the hyphen (`-`),
+* end with a lowercase letter or digit,
+* consist of at least four and at last 16 letters,
+* not contain two hyphens in sequence (`--`).
+
+Examples for valid project identifiers are:
+
+* `sema-berlin-2`
+* `aquanes`
+* `ist4r`
+
+Invalid project identifiers are:
+
+* `sema-berlin_2` (has underscore)
+* `Aquanes` (has uppercase letters)
+* `4you` (starts with a digit)
+* `abc` (does not have at least four letters)
+* `this-project-name-is-too-long` (has more than 16 letters)
+
+The project identifier is not to be confused with the project acronym or project 
+title as it has been aggreed on by the project consortium during the project 
+development. 
+
+We propose to document the choice of project identifier, project acronym and
+project title in a [project's metadata file](#file-projects). This will be
+described in another chapter of this document.
+
+For data that are received from external partners or organisations we recommend
+to indicate the origin of the data by means of another type of identifier in the
+names of the corresponding files and folders. The same strict naming convention
+as for the project identifiers should be applied to these institutional
+identifiers that are to be documented in another special [metadata
+file](#file-organisations). At the start of a project it should be checked if 
+the organisations that are expected to receive data from are listed in this
+metadata file. If not, the metadata file is to be extended as necessary.
+
+### Data Management Plan {-#data-management-plan}
+
+Data Management Plans (DMP) document the type of data that is expected to be 
+acquired or generating during the life time of a project. The DMP will show you 
+and your colleagues how this data is described, analyzed and stored and how you 
+intend to share and preserve the data after the project has ended.  The DMP will 
+help you to formalize data handling processes and discloses potential weaknesses 
+in your project. The overall goal of a DMP is to comply with the FAIR principles 
+that will make your data:
+
+*	**F**indable
+*	**A**ccessible 
+*	**I**nteroperable 
+*	**R**eusable 
+
+The DMP gives information on how you intend to make the data findable with 
+metadata and standard identification mechanism (e.g. a 
+[DOI](https://en.wikipedia.org/wiki/Digital_object_identifier)). This is achieved 
+through e.g. repositories and usage of metadata standards. The DMP also contains 
+adequate documentation and necessary tools needed to access the data. You are 
+aware that the DMP needs to balance openness on one hand and protection of 
+scientific information, commercialisation and Intellectual Property Rights (IPR) 
+on the other hand. If certain datasets cannot be shared, provide a clear reason 
+why. 
+
+Interoperability enables data exchange and re-use between researchers and across 
+institutions and also requires standardised [metadata](#metadata) and methodologies. 
+Reusability of data requires the data to be tagged with a [license](#licenses) 
+that clarifies how data can be re-used.
+
+Please note that data management is a dynamic process, hence the DMP requires 
+regular adaptations during the course of a project. It is therefore strongly 
+recommended to announce a `data manager` who takes over responsibility for any 
+data management related issues. Please use DMP online to create the DMP. 
+[DMP online](https://dmponline.dcc.ac.uk/) is a tool with a lot of tips and links 
+that will construct your DMP according to the funder requirements. It will guide 
+you through the whole DMP process in a threefold process (initial, detailed and 
+the final DMP). 
+
+The costs for data management are eligible for most funders. The write up of an 
+initial DMP will cost you between 1 hour and 1 day of work, depending on nature 
+of your project and the data that is acquired.
+
+
+Data should normally be provided in a non-proprietary format (for example .csv
+Your organisation is coordinating a proposal for a EU H2020 call and requires a 
+DMP. You can inform the consortium members that each member has opt-out possibilities 
+at application phase, during grant agreement preparation and after signature of 
+the grant agreement.
+
+
+Look through a (Research) Data Management Planning (DMP) checklist, e.g. here:
+[DMP checklist](http://www.dcc.ac.uk/resources/data-management-plans/checklist)
+
+If the project's funding organisation demands a Data Management Plan, use the
+template that is provided by the funder. You find different DMP-templates (e.g. 
+that required for European Horizon 2020 projects) here: 
+[DMP Online](https://dmponline.dcc.ac.uk/). 
+
+
+### Responsibilities of the Data Manager {-#data-manager}
+
+The `data manager` is responsible for:
+
+* saving raw data in the `rawdata` network folder (see below). The data manager 
+gets a special login account with write-access to the `rawdata` folder. The login
+information can be got from [Michael Rustler](https://www.kompetenz-wasser.de/en/ueber-uns/team-2/?search-employee-grid=michael%20rustler) or [Hauke Sonnenberg](https://www.kompetenz-wasser.de/en/ueber-uns/team-2/?search-employee-grid=hauke%20sonnenberg), the members of
+the FAKIN project team.
+
+* regularly checking if both the file and folder names as well as the folder 
+structure comply with the best practices described in this document and with the
+naming conventions aggreed on at the start of the project. The data manager curator 
+checks if metadata files are available and up-to-date.
+
+### Setup folder structures {-}
+
+At the start of the project, define and create folder structures for the three 
+areas `rawdata`,`processing`, `results` that we propose in this document. 
+
+Create the folders and provide a metadata file (see below) describing their
+meaning. In addition to the general recommendations given in this document,
+create and document naming conventions for files and folders for your project.
