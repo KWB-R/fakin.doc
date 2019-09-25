@@ -22,7 +22,7 @@ data` and `processing` folders are divided in two parts `labor` and `archive`.
 
   * Manual pre-processing: due to heterogeneous formats -> data-cleaning
 
-  *Automated workflow: data-import, data aggregation and export with R.
+  * Automated workflow: data-import, data aggregation and export with R
 
 
 **Folder structure**
