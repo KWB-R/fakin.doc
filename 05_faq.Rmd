@@ -189,6 +189,35 @@ defined in "R/add_text.R" -->
 defined in "R/add_text.R" -->
 `r add_chapter_firefox_local_files()`
 
+## How should I organise my emails?
+
+Here are some general tips to ensure your email remains organised in the long
+term [University of Cambridge, 2018](https://www.data.cam.ac.uk/data-management-guide/organising-your-data#Refernces):
+
+- Delete emails you do not need. Remove any trivial or old messages from your
+inbox and sent items on a regular (ideally daily) basis.
+
+- 	Use folders to store messages. Establish a structured file directory by
+subject, activity or project.
+
+-	Separate personal emails. Set up a separate folder for these. Ideally, you
+should not receive any personal emails to your work email account.
+
+-	Limit the use of attachments. Use alternative and more secure methods to
+exchange data where possible (see ‘data sharing’ for options). If attachments
+are used, exercise version control and save important attachments to other
+places, such as a network drive.
+
+
+### Managing References {#endnote}
+
+For managing reference there are plenty of tools available. A detailed overview
+is provided by `r citep(manual["Fenner_2014"])` in the Chapter [Reference Management](http://book.openingscience.org.s3-website-eu-west-1.amazonaws.com/tools/reference_management.html)
+
+At KWB we use [Endnote](https://www.endnote.com/), for which an internal guideline 
+document ([KWB-EndNote-Guideline-v3.pdf](file://Y:/R&D Templates/Charts Guidelines Checklists/Endnote/KWB-EndNote-Guideline-v3.pdf), `r add_text_links()`) was developed.
+<!-- add_text_links() only adds more details in case of html output as
+defined in "R/add_text.R" --
 
 ## Working with Excel {#faq-excel}
 

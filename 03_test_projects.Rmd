@@ -14,7 +14,7 @@ data` and `processing` folders are divided in two parts `labor` and `archive`.
 
 - Archive data
 
-  * Import into Endnote DB
+  * Import into [Endnote DB](#endnote)
 
   * Getting data values out of pictures
 
