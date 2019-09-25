@@ -280,12 +280,78 @@ best-practices will be applied for this case studies and cross-checked whether
 their application is useful.</p>
 <div id="geogenic-salination" class="section level2">
 <h2><span class="header-section-number">3.1</span> Geogenic Salination</h2>
-<p>Adapt and test with new folder drive workflow as proposed</p>
+<p>Two types of datasets are handled in the Geosalz project, spread sheets of mostly
+hydrochemical laboratory analysis and archived paper files. Accordingly, the <code>raw  data</code> and <code>processing</code> folders are divided in two parts <code>labor</code> and <code>archive</code>.</p>
+<p><strong>Data processing</strong></p>
 <ul>
-<li><p><code>rawdata</code></p></li>
-<li><p><code>processing</code></p></li>
-<li><p><code>processing</code></p></li>
+<li><p>Archive data</p>
+<ul>
+<li><p>Import into Endnote DB</p></li>
+<li><p>Getting data values out of pictures</p></li>
+</ul></li>
+<li><p>Lab data</p>
+<ul>
+<li>Manual pre-processing: due to heterogeneous formats -&gt; data-cleaning</li>
 </ul>
+<p>*Automated workflow: data-import, data aggregation and export with R.</p></li>
+</ul>
+<p><strong>Folder structure</strong></p>
+<pre><code>//server/rawdata
+  geosalz
+    BWB_archiv
+    BWB_labor 
+    README.yml
+    
+    
+//server/processing
+  geosalz
+    archiv
+    labor 
+      README.yml 
+      documents/
+      precleaned-data/
+      cleaned-data/
+      figures/
+      &lt;rawdata.ink&gt; (link to “//server/rawdata/geosalz/BWB_labor”)
+      &lt;results.ink&gt; (link to “//server/results/geosalz/report/”)
+    
+//server/results
+  geosalz
+    admin
+    reports
+      final_report.docx
+      &lt;processing.ink&gt; (link to “//server/processing/geosalz/labor/cleaned_data/v1.0”)
+      README.yml 
+</code></pre>
+<p>Folder names indicate the owner of the data, here BWB. The <code>README.yml</code> gives
+information on licensing of the data. In this case for restricted use only.
+The <code>BWB_labor</code> folder contains:</p>
+<p>The <code>METADATA.yml</code> comprises information on the origin of each file. In this case
+data was received by email, thus each email is exported as a txt file (<code>select</code> -
+<code>export as…</code>) and copied to the <code>METADATA.yml</code>. The <code>METADATA.yml</code> also contains
+the email text itself, which may also provide meta information. The <code>METADATA.yml</code>
+makes clear when and from whom the data was send and who received it.
+A hyperlink can be inserted that directly links to the corresponding <code>processing</code>
+folder. No further subfolders are required.</p>
+<p><strong>Workflow for creating above folder structure</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Define project acronym <code>geosalz</code> (add in <code>PROJECTS.yml</code>)</p></li>
+<li><p>Create initial folder structure on <code>//servername/rawdata/geosalz</code></p></li>
+<li><p>Create initial folder structure on <code>//servername/processing/geosalz</code> with one
+subfolder for each task/work package, i.e.</p></li>
+<li><p>Create a <code>README.yml</code> for each task describing the folder contents</p></li>
+<li><p>Link relevant results to <code>//server/projekte/AUFTRAEGE/Rahmenvertrag GRW-WV/Data and documents/Versalzung</code></p></li>
+</ol>
+<p><strong>Lessons learnt:</strong></p>
+<ul>
+<li><p>Manual data preparation for heterogeneous data sets indispensable</p></li>
+<li><p>Naming conventions for large heterogeneous data sets not always in compliance
+with <a href="faq.html#naming">best-practices</a></p></li>
+</ul>
+<!-- Adapt and test with new folder drive workflow as proposed -->
+<!-- - `rawdata` -->
+<!-- - `processing` -->
+<!-- - `processing` -->
 </div>
 <div id="lca-modelling" class="section level2">
 <h2><span class="header-section-number">3.2</span> LCA Modelling</h2>

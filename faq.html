@@ -407,11 +407,11 @@ also available on Github. Please check the following website:
 <a href="https://github.com/KWB-R" class="uri">https://github.com/KWB-R</a></p>
 <p>Installation of these R packages can be performed with the following
 command in R(studio):</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">### Required to install an R package from Github </a>
-<a class="sourceLine" id="cb18-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>, <span class="dt">repos =</span> <span class="st">&quot;https://cloud.r-project.org&quot;</span>)</a>
-<a class="sourceLine" id="cb18-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb18-4" data-line-number="4">### Now install your desired R package (e.g. &quot;kwb.resilience&quot;)</a>
-<a class="sourceLine" id="cb18-5" data-line-number="5">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;kwb-r/kwb.resilience&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1">### Required to install an R package from Github </a>
+<a class="sourceLine" id="cb19-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>, <span class="dt">repos =</span> <span class="st">&quot;https://cloud.r-project.org&quot;</span>)</a>
+<a class="sourceLine" id="cb19-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb19-4" data-line-number="4">### Now install your desired R package (e.g. &quot;kwb.resilience&quot;)</a>
+<a class="sourceLine" id="cb19-5" data-line-number="5">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;kwb-r/kwb.resilience&quot;</span>)</a></code></pre></div>
 <p>However, in case your required R package that is not yet Github please read the
 following <a href="file:///Y:/Z-Exchange/_Tutorials/installing_kwb_packages.html">tutorial</a>
 <!-- Only adds more details in case of html output as 
@@ -528,7 +528,7 @@ der Erzeugung von R-Markdown-Dokumenten direkt am Anfang der Analyse im
 <p>Das Schreiben der Metadaten-Datei <code>session_info.txt</code> sollte standardisert über
 eine Funktion in einem KWB R-Paket (z.B. <code>kwb.utils</code>) implementiert werden.</p>
 <p>Direktausgabe in R Console / RMarkddown:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1"><span class="kw">sessionInfo</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="kw">sessionInfo</span>()</a></code></pre></div>
 <pre><code>## R version 3.6.1 (2017-01-27)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
 ## Running under: Ubuntu 16.04.6 LTS
@@ -567,9 +567,9 @@ eine Funktion in einem KWB R-Paket (z.B. <code>kwb.utils</code>) implementiert w
 ## [37] rvest_0.3.4       colorspace_1.4-1  stringi_1.4.3    
 ## [40] munsell_0.5.0     crayon_1.3.4</code></pre>
 <p>Schreiben in standardisierte Metadatei:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" data-line-number="1"><span class="kw">sink</span>(<span class="st">&quot;session_info.txt&quot;</span>)</a>
-<a class="sourceLine" id="cb21-2" data-line-number="2"><span class="kw">sessionInfo</span>()</a>
-<a class="sourceLine" id="cb21-3" data-line-number="3"><span class="kw">sink</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1"><span class="kw">sink</span>(<span class="st">&quot;session_info.txt&quot;</span>)</a>
+<a class="sourceLine" id="cb22-2" data-line-number="2"><span class="kw">sessionInfo</span>()</a>
+<a class="sourceLine" id="cb22-3" data-line-number="3"><span class="kw">sink</span>()</a></code></pre></div>
 <p>Hierzu ist auch noch ein Tutorial zu erstellen!</p>
 
 <div class="rmdnote">
@@ -710,12 +710,12 @@ mis-encoding of string literals.”</p>
 <p>— <span class="citation">(Ushey <a href="#ref-Ushey_2018">2018</a>)</span></p>
 </blockquote>
 <p><strong>Encoding example in R:</strong></p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1">### Richtiges Skript Encoding WICHTIG (richtiges Einlesen des Skripts nur wenn </a>
-<a class="sourceLine" id="cb22-2" data-line-number="2">### mit gleichem Encoding eingelesen  wie es auch abgespeichert wurde)</a>
-<a class="sourceLine" id="cb22-3" data-line-number="3"><span class="kw">print</span>(<span class="st">&quot;Ü&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" data-line-number="1">### Richtiges Skript Encoding WICHTIG (richtiges Einlesen des Skripts nur wenn </a>
+<a class="sourceLine" id="cb23-2" data-line-number="2">### mit gleichem Encoding eingelesen  wie es auch abgespeichert wurde)</a>
+<a class="sourceLine" id="cb23-3" data-line-number="3"><span class="kw">print</span>(<span class="st">&quot;Ü&quot;</span>)</a></code></pre></div>
 <pre><code>## [1] &quot;Ü&quot;</code></pre>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1">### Skript Encoding EGAL (da Umlaut in Unicode codiert wurde)</a>
-<a class="sourceLine" id="cb24-2" data-line-number="2"><span class="kw">print</span>(<span class="st">&quot;\u00dc&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" data-line-number="1">### Skript Encoding EGAL (da Umlaut in Unicode codiert wurde)</a>
+<a class="sourceLine" id="cb25-2" data-line-number="2"><span class="kw">print</span>(<span class="st">&quot;\u00dc&quot;</span>)</a></code></pre></div>
 <pre><code>## [1] &quot;Ü&quot;</code></pre>
 <p>See also Hauke’s article
 <a href="https://kwb-r.github.io/kwb.fakin/dev/articles/understanding_encoding.html">Understanding Encoding</a>
