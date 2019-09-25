@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Introduction | Best Practices in Research Data Management</title>
+  <title>Chapter 4 Integration in QMS | Best Practices in Research Data Management</title>
   <meta name="description" content="FAKIN Best Practices" />
   <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 Introduction | Best Practices in Research Data Management" />
+  <meta property="og:title" content="Chapter 4 Integration in QMS | Best Practices in Research Data Management" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://kwb-r.github.io/fakin.doc" />
   <meta property="og:image" content="https://kwb-r.github.io/fakin.docimages/cover.png" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="kwb-r/fakin.doc" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Introduction | Best Practices in Research Data Management" />
+  <meta name="twitter:title" content="Chapter 4 Integration in QMS | Best Practices in Research Data Management" />
   
   <meta name="twitter:description" content="FAKIN Best Practices" />
   <meta name="twitter:image" content="https://kwb-r.github.io/fakin.docimages/cover.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="best-practices.html"/>
+<link rel="prev" href="test-projects.html"/>
+<link rel="next" href="literature-review.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -273,62 +273,171 @@ add your annotation,
   in the upper right hand corner of the page 
   <i class="fa fa-arrow-circle-right fa-rotate-315" aria-hidden="true"></i>
 </div>
-<div id="introduction" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
-<p>Research data management (RDM) comprises all parts of the “life cycle” of data,
-from its creation and initial storage over its active usage and preservation to
-the time when it may become obsolete and is deleted. RDM aims to make the whole
-research process more efficient for your own institute and to meet the ever
-growing requirements of partner organizations, research funders and legislation
-<span class="citation">Büttner, Hobohm, and Müller (<a href="#ref-Buettner_2011">2011</a>)</span>, <span class="citation">Bertelmann et al. (<a href="#ref-Bertelmann_2014">2014</a>)</span>, <span class="citation">Kitzes, Turek, and Deniz (<a href="#ref-Kitzesetal_2018">2018</a>)</span>.</p>
-<p>This report defines <a href="best-practices.html#best-practices">best-practices</a> for research data
-management especially designed for small research institutes. Small institutes
-with less than somewhat 50 employees are in particular addressed in this report
-because of the following characteristics:</p>
+<div id="integration-in-qms" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Integration in QMS</h1>
+<div id="start-a-new-project" class="section level2">
+<h2><span class="header-section-number">4.1</span> Start a new project</h2>
+<p><strong>Before starting with a new project</strong>, perform the following actions that are
+detailed in the following sections:</p>
 <ul>
-<li><p>usually no own IT department and lack of employees that are solely dedicated
-to data management related issues</p></li>
-<li><p>data management guidelines, if existent, are often not implemented in daily routine</p></li>
-<li><p>loss of knowledge may be disproportionately serious in case an employee leaves
-the company</p></li>
-<li><p>simple organisational structure and flexibility allows for fast adaptations of
-innovations</p></li>
+<li><p>Choose a <a href="integration-in-qms.html#project-identifier">project identifier</a> and identifiers for the
+project partners and organisations that data are expected to be received from.</p></li>
+<li><p>Create a <a href="integration-in-qms.html#data-management-plan">data management plan (DMP)</a> for the project.</p></li>
+<li><p>Determine a <a href="integration-in-qms.html#data-manager">“data manager”</a> for the project.</p></li>
+<li><p>Setup the <a href="#folder-structures">folder structures</a> for the project.</p></li>
 </ul>
-<p>Data management is often not centrally organised but is left to the project
-leaders and researchers. Employees are expected to be their own data experts.
-Depending on the individual skills and knowledge, different ways and levels of
-data handling are practiced.</p>
-<p>In small institutes, work is organised in terms of projects. There may not be an
-overall strategy or target that is followed by the institute. Targets are
-depending on research programs and requirements may set by funding organisations
-that may differ from project to project.</p>
-<p>The small number of employees allows for an easy and straight-forward exchange
-of information and fast decisions, but may lacks of sufficient documentation
-because decisions are made informally. In case of strong staff fluctuation this
-can lead to a disproportionately serious loss of knowledge.</p>
-<p>In small institutes with a simple organisational structure and a flat hierarchy
-innovations such as the usage of new methods or tools very often start as
-initiatives of individual employees applied in few projects. Practices that have
-been proven to be beneficial may then be used in future projects or even be set
-as a standard for the whole institute (bottom-up).</p>
-<p>This report shows how to implement <a href="best-practices.html#best-practices">best-practices</a> RDM tools
-and guidelines under the consideration of specific characteristics of small
-institutes, trying to find a good balance between flexibility and formality.</p>
-<p><a href="#case-studies">Test projects</a> serve as examples to show how <a href="best-practices.html#best-practices">best-practices</a><br />
-are realized in concrete projects. A <a href="literature-review.html#literature-review">literature review</a> an
-<a href="faq.html#faq">FAQ</a> and a <a href="glossary.html#glossary">glossary</a> for commonly used terms complete this report.</p>
+<p><strong>At the start of a research project</strong>:</p>
+<ul>
+<li>Create a subfolder for your project and subfolders for the organisations
+in the <a href="#rawdata-folder-structure">rawdata folder structure</a>.</li>
+</ul>
+<p><strong>At the start of a project</strong> (or if an employee or trainee enters the project):</p>
+<ul>
+<li>Give an introduction to our research data management as described in this
+document.</li>
+</ul>
+<p><strong>Regularly during the project</strong>:</p>
+<ul>
+<li>Check if the folder structure within your project’s rawdata subfolder still
+complies with the <a href="#rawdata-folder-structure">rawdata folder structure</a> and
+clean the structure, if not.</li>
+</ul>
+<div id="project-identifier" class="section level3 unnumbered">
+<h3>Project and owner identifiers</h3>
+<p>Documents and data that are collected or created during the lifetime of a
+project will be stored in the form of electronic files on the institute’s file
+server or on the personal computers of the employees. We aim at being able to
+clearly identify the related project and the owner of the data for any file or
+folder that resides on the institute’s file system.</p>
+<p>Therefore, we recommend to use unique identifiers, either as (part of) the
+name of the file or as (part of) the name of the folder or parent folder that
+the file resides in. The usage of a consistent project identifier becomes
+particularly important when - as defined we suggest for a good <a href="#data-workflow">data workflow</a>,
+different types of data and documents of the project are stored at different places
+on the file system.</p>
+<p>Together with the team members, the project leader is requested to define the
+project identifier at the start of the project. Whenever the belonging of a file or
+folder to the project is to be indicated, only this “official” identifier in
+the exact spelling that was defined, has to be used.</p>
+<p>The project identifier should</p>
+<ul>
+<li><p>be unique within all identifiers of current or former projects that have ever
+been carried out at the institute,</p></li>
+<li><p>be as short as possible but as long as required to be meaningful and easy to
+remember.</p></li>
+</ul>
+<p>In order to minimise the risk of spelling mistakes and to avoid errors in
+automated processing we require the identifier to</p>
+<ul>
+<li>start with a lowercase letter,</li>
+<li>consist of only lowercase letters (<code>a-z</code>), digits (<code>0-9</code>) or the hyphen (<code>-</code>),</li>
+<li>end with a lowercase letter or digit,</li>
+<li>consist of at least four and at last 16 letters,</li>
+<li>not contain two hyphens in sequence (<code>--</code>).</li>
+</ul>
+<p>Examples for valid project identifiers are:</p>
+<ul>
+<li><code>sema-berlin-2</code></li>
+<li><code>aquanes</code></li>
+<li><code>ist4r</code></li>
+</ul>
+<p>Invalid project identifiers are:</p>
+<ul>
+<li><code>sema-berlin_2</code> (has underscore)</li>
+<li><code>Aquanes</code> (has uppercase letters)</li>
+<li><code>4you</code> (starts with a digit)</li>
+<li><code>abc</code> (does not have at least four letters)</li>
+<li><code>this-project-name-is-too-long</code> (has more than 16 letters)</li>
+</ul>
+<p>The project identifier is not to be confused with the project acronym or project
+title as it has been aggreed on by the project consortium during the project
+development.</p>
+<p>We propose to document the choice of project identifier, project acronym and
+project title in a <a href="best-practices.html#file-projects">project’s metadata file</a>. This will be
+described in another chapter of this document.</p>
+<p>For data that are received from external partners or organisations we recommend
+to indicate the origin of the data by means of another type of identifier in the
+names of the corresponding files and folders. The same strict naming convention
+as for the project identifiers should be applied to these institutional
+identifiers that are to be documented in another special <a href="best-practices.html#file-organisations">metadata
+file</a>. At the start of a project it should be checked if
+the organisations that are expected to receive data from are listed in this
+metadata file. If not, the metadata file is to be extended as necessary.</p>
+</div>
+<div id="data-management-plan" class="section level3 unnumbered">
+<h3>Data Management Plan</h3>
+<p>Data Management Plans (DMP) document the type of data that is expected to be
+acquired or generating during the life time of a project. The DMP will show you
+and your colleagues how this data is described, analyzed and stored and how you
+intend to share and preserve the data after the project has ended. The DMP will
+help you to formalize data handling processes and discloses potential weaknesses
+in your project. The overall goal of a DMP is to comply with the FAIR principles
+that will make your data:</p>
+<ul>
+<li><strong>F</strong>indable</li>
+<li><strong>A</strong>ccessible</li>
+<li><strong>I</strong>nteroperable</li>
+<li><strong>R</strong>eusable</li>
+</ul>
+<p>The DMP gives information on how you intend to make the data findable with
+metadata and standard identification mechanism (e.g. a
+<a href="https://en.wikipedia.org/wiki/Digital_object_identifier">DOI</a>). This is achieved
+through e.g. repositories and usage of metadata standards. The DMP also contains
+adequate documentation and necessary tools needed to access the data. You are
+aware that the DMP needs to balance openness on one hand and protection of
+scientific information, commercialisation and Intellectual Property Rights (IPR)
+on the other hand. If certain datasets cannot be shared, provide a clear reason
+why.</p>
+<p>Interoperability enables data exchange and re-use between researchers and across
+institutions and also requires standardised <a href="best-practices.html#metadata">metadata</a> and methodologies.
+Reusability of data requires the data to be tagged with a <a href="best-practices.html#licenses">license</a>
+that clarifies how data can be re-used.</p>
+<p>Please note that data management is a dynamic process, hence the DMP requires
+regular adaptations during the course of a project. It is therefore strongly
+recommended to announce a <code>data manager</code> who takes over responsibility for any
+data management related issues. Please use DMP online to create the DMP.
+<a href="https://dmponline.dcc.ac.uk/">DMP online</a> is a tool with a lot of tips and links
+that will construct your DMP according to the funder requirements. It will guide
+you through the whole DMP process in a threefold process (initial, detailed and
+the final DMP).</p>
+<p>The costs for data management are eligible for most funders. The write up of an
+initial DMP will cost you between 1 hour and 1 day of work, depending on nature
+of your project and the data that is acquired.</p>
+<p>Data should normally be provided in a non-proprietary format (for example .csv
+Your organisation is coordinating a proposal for a EU H2020 call and requires a
+DMP. You can inform the consortium members that each member has opt-out possibilities
+at application phase, during grant agreement preparation and after signature of
+the grant agreement.</p>
+<p>Look through a (Research) Data Management Planning (DMP) checklist, e.g. here:
+<a href="http://www.dcc.ac.uk/resources/data-management-plans/checklist">DMP checklist</a></p>
+<p>If the project’s funding organisation demands a Data Management Plan, use the
+template that is provided by the funder. You find different DMP-templates (e.g.
+that required for European Horizon 2020 projects) here:
+<a href="https://dmponline.dcc.ac.uk/">DMP Online</a>.</p>
+</div>
+<div id="data-manager" class="section level3 unnumbered">
+<h3>Responsibilities of the Data Manager</h3>
+<p>The <code>data manager</code> is responsible for:</p>
+<ul>
+<li><p>saving raw data in the <code>rawdata</code> network folder (see below). The data manager
+gets a special login account with write-access to the <code>rawdata</code> folder. The login
+information can be got from <a href="https://www.kompetenz-wasser.de/en/ueber-uns/team-2/?search-employee-grid=michael%20rustler">Michael Rustler</a> or <a href="https://www.kompetenz-wasser.de/en/ueber-uns/team-2/?search-employee-grid=hauke%20sonnenberg">Hauke Sonnenberg</a>, the members of
+the FAKIN project team.</p></li>
+<li><p>regularly checking if both the file and folder names as well as the folder
+structure comply with the best practices described in this document and with the
+naming conventions aggreed on at the start of the project. The data manager curator
+checks if metadata files are available and up-to-date.</p></li>
+</ul>
+</div>
+<div id="setup-folder-structures" class="section level3 unnumbered">
+<h3>Setup folder structures</h3>
+<p>At the start of the project, define and create folder structures for the three
+areas <code>rawdata</code>,<code>processing</code>, <code>results</code> that we propose in this document.</p>
+<p>Create the folders and provide a metadata file (see below) describing their
+meaning. In addition to the general recommendations given in this document,
+create and document naming conventions for files and folders for your project.</p>
 
 </div>
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-Bertelmann_2014">
-<p>Bertelmann, Roland, Petra Gebauer, Tim Hasler, Ingo Kirchner, Wolfgang Peters-Kottig, Matthias Razum, Astrid Recker, D. Ulbricht, and Stephan van Gasselt. 2014. “Einstieg Ins Forschungsdatenmanagement in Den Geowissenschaften.” Booklet. GFZ Potsdam. <a href="https://doi.org/10.2312/lis.14.01" class="uri">https://doi.org/10.2312/lis.14.01</a>.</p>
-</div>
-<div id="ref-Buettner_2011">
-<p>Büttner, Stephan, Hans-Christoph Hobohm, and Lars Müller, eds. 2011. <em>Handbuch Forschungsdatenmanagement</em>. Bad Honnef: Bock u. Herchen. <a href="https://doi.org/10.34678/opus4-208" class="uri">https://doi.org/10.34678/opus4-208</a>.</p>
-</div>
-<div id="ref-Kitzesetal_2018">
-<p>Kitzes, Justin, Daniel Turek, and Fatma Deniz, eds. 2018. <em>The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences</em>. Oakland, CA: University of California Press. <a href="https://www.practicereproducibleresearch.org/" class="uri">https://www.practicereproducibleresearch.org/</a>.</p>
 </div>
 </div>
 <script async defer src="https://hypothes.is/embed.js"></script>
@@ -337,8 +446,8 @@ are realized in concrete projects. A <a href="literature-review.html#literature-
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="best-practices.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="test-projects.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="literature-review.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -368,7 +477,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/KWB-R/fakin.doc/blob/master/01_introduction.Rmd",
+"link": "https://github.com/KWB-R/fakin.doc/blob/master/04_qms.Rmd",
 "text": "Edit"
 },
 "history": {
