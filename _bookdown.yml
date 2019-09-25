@@ -10,7 +10,7 @@ rmd_files: [
   "02_metadata.Rmd",
   "02_data_collection.Rmd",
   "02_data_publication.Rmd",
-  "03_case_studies.Rmd",
+  "03_test_projects.Rmd",
   "04_other_projects.Rmd",
   "04a_literature-review.Rmd",
   "05_faq.Rmd",

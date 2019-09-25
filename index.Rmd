@@ -50,30 +50,10 @@ knitr::include_graphics('images/cover.png', dpi = NA)
 
 This document is the outcome of the KWB project [FAKIN](http://www.kompetenz-wasser.de/en/project/fakin-research-data-management) 
 (Forschungsdatenmanagement an kleinen Instituten = research data management at small institutes).
+funded by [BMBF](https://bmbf.de) within the call ["Research of the Management of Research Data 
+Within Their Life Cyle at Universities and Independant Research Institutes"](https://www.bildung-forschung.digital/de/vorstellung-21-foerderprojekte-zum-forschungsdatenmanagement-2332.html). 
 
-This report defines [Best Practices](#best-practices) for research data
-management especially designed for small reserach institutes.
 
-The document is outlined as follows:
-
-* [Chapter 1](#introduction) explains why and for whom research data management 
-is important
-
-* [Chapter 2](#best-practices) defines Best Practices for different topics.
-In section [Data workflow](#data-workflow) of this chapter we propose to
-distinguish between [raw data](#raw-data), processed data and project results.
-
-* [Chapter 3](#case-studies) gives an overview on three [case studies](#case-studies) 
-with different data related tasks that have been solved within the FAKIN project, 
-while 
-
-* [Chapter 4](#other-projects) what data challenges occured in the past in other 
-KWB projects and how they were solved in order to increase our awareness at KWB, 
-  
-* [Chapter 5](#faq) provides FAQs and finally 
-
-* [Chapter 6](#glossary) is a [glossary](#glossary) for explaining commonly used 
-terms within this document.
 
 `r if(!grepl('html', knitr:::pandoc_to())) 'This document is assumed to be a 
 "living" document. We highly appreciate any comments and suggestions for improvements. 

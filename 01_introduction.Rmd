@@ -1,80 +1,56 @@
 # Introduction {#introduction}
 
-## What is Research Data Management?
+Research data management (RDM) comprises all parts of the “life cycle” of data, 
+from its creation and initial storage over its active usage and preservation to 
+the time when it may become obsolete and is deleted. RDM aims to make the whole 
+research process more efficient for your own institute and to meet the ever 
+growing requirements of partner organizations, research funders and legislation 
+`r citet(manual[c("Buettner_2011", "Bertelmann_2014", "Kitzesetal_2018")])`. 
 
-Research data management comprises all parts of the "life cycle" of data.
+This report defines [best-practices](#best-practices) for research data 
+management especially designed for small research institutes. Small institutes 
+with less than somewhat 50 employees are in particular addressed in this report 
+because of the following characteristics:
 
-It "is part of the research process, and aims to make the research process as
-efficient as possible, and meet expectations and requirements of the university,
-research funders, and legislation."
-(https://www2.le.ac.uk/services/research-data/rdm/what-is-rdm)
+*	usually no own IT department and lack of employees that are solely dedicated 
+to data management related issues 
 
-## Why is Research Data Management important? 
+*	data management guidelines, if existent, are often not implemented in daily routine
 
-According to [Labfolder.com (2018)](https://www.labfolder.com/research-data-management/)
-research data management (RDM) is important as it:
+*	loss of knowledge may be disproportionately serious in case an employee leaves 
+the company
 
-- Saves time for research,
+*	simple organisational structure and flexibility allows for fast adaptations of 
+innovations 
 
-- Avoids risk of data loss,
+Data management is often not centrally organised but is left to the project 
+leaders and researchers. Employees are expected to be their own data experts. 
+Depending on the individual skills and knowledge, different ways and levels of 
+data handling are practiced.
 
-- Ensures transparency and reproducibility,
+In small institutes, work is organised in terms of projects. There may not be an 
+overall strategy or target that is followed by the institute. Targets are 
+depending on research programs and requirements may set by funding organisations 
+that may differ from project to project. 
 
-- Increases data visibility and number of citations,
+The small number of employees allows for an easy and straight-forward exchange 
+of information and fast decisions, but may lacks of sufficient documentation 
+because decisions are made informally. In case of strong staff fluctuation this 
+can lead to a disproportionately serious loss of knowledge. 
 
-- Fulfills funders’ requirements and receives more grants,
+In small institutes with a simple organisational structure and a flat hierarchy 
+innovations such as the usage of new methods or tools very often start as 
+initiatives of individual employees applied in few projects. Practices that have 
+been proven to be beneficial may then be used in future projects or even be set 
+as a standard for the whole institute (bottom-up). 
 
-- Produces new knowledge and makes more discoveries just by re-using data,
+This report shows how to implement [best-practices](#best-practices) RDM tools 
+and guidelines under the consideration of specific characteristics of small 
+institutes, trying to find a good balance between flexibility and formality. 
 
-- Archives, retrieves and re-uses own data.
+[Test projects](#case-studies) serve as examples to show how [best-practices](#best-practices)  
+are realized in concrete projects. A [literature review](#literature-review) an 
+[FAQ](#faq) and a [glossary](#glossary) for commonly used terms complete this report.
 
-## Why RDM for small institutes? 
 
-This document focuses on research data management at [small
-institues](glossary.html#small-institute). In terms of data management, we found
-the following characteristics of small institutes:
 
-The transfer of knowledge is particularly important because the loss of 
-knowledge can be considerable in case that an employee leaves the institute.
-
-Small institutes do not have an IT department. They do not have employees that
-are dedicated to data managment tasks only. Often, there are no data management
-guidelines defined. Data management is not centrally organised but is left to
-the different project leaders and researchers. All employees are expected to be
-their own data experts. Depending on the individual skills of the different
-employees, different levels of data handling practices are applied.
-
-In small institutes, work is organised in terms of projects. There may not be an
-overall strategy or target that is followed by the institute. Targets are
-depending on research programmes and requirements may be set by funding
-organisations. The projects may be very different in terms of amount and
-diversity of data.
-
-Small institutes have a simple organisational structure. This may allow for a 
-simple informal exchange of information. This can lead to fast answers and 
-decisions but very often has the drawback that processes are not documented 
-sufficiently. In small institutes with a flat hierarchy innovations such as the
-usage of new methods or tools very often start as initiatives of single 
-employees or are first applied in single projects. Practices that have been 
-proven to be beneficial may then be used in future projects or even be set as
-a standard for the whole institute (bottom-up). It is less probable that 
-the head of the institute sets guidelines to be followed consistently in all 
-projects (top-down).
-
-The aim of this document is to define best research data managment practices
-that are assumed to be particular useful for small institutes.
-
-<!-- Unterziele: z.B. Entwicklung eines internen Standards für Metadaten -->
-<!-- Info on the document – create links between projects and thematic groups -->
-
-## Recommended literature
-
-A very good book on how research data management (RDM) improves reproducibility 
-is provided by `r citet(manual["Kitzesetal_2018"])` and available online at: 
-[http://practicereproducibleresearch.org/](http://practicereproducibleresearch.org/).
-
-- [Introduction to research data management in the geosciences](http://doi.org/10.2312/lis.14.01) 
-(in German!)
-  
-- [Handbook research data management](http://www.forschungsdatenmanagement.de/)
-(in German!) `r citep(manual["Buettner_2011"])`

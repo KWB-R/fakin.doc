@@ -11,8 +11,8 @@ produced plots, documents, reports, etc.) we want to store,
 
 * [in what format](#metadata-format) to store metadata.
 
-We plan to specify the requirements in more detail when dealing with the test
-projects ([case studies](#case-studies)). Then, will also check 
+We plan to specify the requirements in more detail when dealing with the [test
+projects](#test-projects). Then, will also check 
 [metadata standards](#metadata-standards).
 
 Metadata about [raw data](#raw-data) should always be stored.
@@ -192,7 +192,7 @@ also: ZALF, GFZ Potsdam)
 2. Define minimum metadata requirements at KWB for raw and processed data.  
 projects. 
 
-The 'best-practices for metadata' will be developed for the [case studies](#case-studies) 
+The 'best-practices for metadata' will be developed for the [test projects](#test-projects) 
 which are assessed within FAKIN project.
 
 We propose to define some special files that contain metadata related 

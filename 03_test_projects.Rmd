@@ -1,4 +1,4 @@
-# Case Studies {#case-studies}
+# Test projects 
 
 The three following case-studies are tested in detail within FAKIN (i.e. proposed 
 best-practices will be applied for this case studies and cross-checked whether 
