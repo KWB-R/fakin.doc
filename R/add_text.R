@@ -23,12 +23,12 @@ add_text(pandoc_output_txt = txt)
 
 
 add_chapter_firefox_local_files <- function (
-txt = sprintf("%s\n\n%s\n\n%s\n\n%s\n\n", 
-"## How to open local file links in Firefox (>= v57) {#firefox-local-files}", 
+txt = sprintf("\n\n%s\n\n%s\n\n%s\n\n%s\n\n", 
+"## Open local file links in Firefox (>= v57) {-#firefox-local-files}", 
 "For opening the local file links in Firefox (>= v57), you either need to:",
-paste0("   - Install the Firefox plugin [Local Filesystem Links]", 
-"(https://addons.mozilla.org/de/firefox/addon/local-filesystem-links/) or "),
-"   - Copy the link manually and subsequently enter it in the browser")
+paste0("- Install the Firefox plugin [Local Filesystem Links]", 
+"(https://addons.mozilla.org/de/firefox/addon/local-filesystem-links/) or"),
+"- Copy the link manually and subsequently enter it in the browser")
 ) {
 
 add_text(pandoc_output_txt = txt)
