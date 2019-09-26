@@ -1,4 +1,4 @@
-# Integration in QMS
+# Integration in QMS {qms}
 
 ## Start a new project
 
